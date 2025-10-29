@@ -1,0 +1,15 @@
+.introduce {
+    background-color: bisque;
+
+    &__wrap {
+
+        .introduce__conts {
+            background-color: black;
+            color: $whiteColor01;
+            padding: 230px 0;
+            // height: 720px;
+            // width: 1240px;
+        }
+    }
+
+}

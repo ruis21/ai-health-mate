@@ -1,9 +1,10 @@
 .btn {
     font-size: 18px;
     padding: 20px 30px;
-    background-color: $whiteColor01;
-    color: $blackColor01 ;
+    // background-color: $whiteColor01;
+    // color: $blackColor01;
     border-radius: 30px;
+    border: none;
 
     &--lg {
         height: 60px;
@@ -12,17 +13,14 @@
     &--md {
         padding: 15px 30px;
         height: 48px;
-
     }
 
     &--sm {
         padding: 15px 30px;
         height: 44px;
-
     }
 }
 
-.container-xl {
-    // width: 1240px;
-    background-color: #000;
+.sec-pd {
+    padding: 120px 0;
 }

@@ -1,15 +1,9 @@
-.kv-sec {
+.kv {
     height: 974px;
     background-image: url("../image/kv-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    &__bg {
-        background-color: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.199));
-        width: 100%;
-        height: 100%;
-    }
 
     &__text-wrap {
         color: $whiteColor01;
@@ -20,7 +14,8 @@
     }
 
     &__btn {
-        background-color: $primaryColor01;
+        background-color: $whiteColor01;
+        color: $blackColor01;
 
         &:hover {
             background-color: $primaryColor02;
