@@ -2,14 +2,16 @@
     background-color: $pointColor01;
     color: $whiteColor01;
 
-    &__wrap {
+    &__card-wrap {
 
-        &__card-wrap {
+        &__card {
 
-            &__card {
+            .solution__card {
                 background-color: $pointColor02;
                 color: $whiteColor01;
+
             }
         }
     }
+
 }
