@@ -1,9 +1,18 @@
 .kv {
-    height: 974px;
-    background-image: url("../image/kv-bg.jpg");
+    // height: 974px;
+
+    background-image:
+        linear-gradient(to right, // 방향: 위 → 아래
+            rgba(0, 0, 0, 0.6), // 위쪽은 블랙 60%
+            rgba(0, 0, 0, 0) // 아래쪽은 완전 투명
+        ),
+        url("../image/kv-bg.jpg");
+
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 260px 0;
 
     &__text-wrap {
         color: $whiteColor01;
@@ -11,6 +20,13 @@
 
     &__title {
         font-family: 'akira_expandedsuper_bold';
+    }
+
+    &__box {
+        background: $gradientColor01;
+        width: 100px;
+        height: 70px;
+        top: 0;
     }
 
     &__btn {

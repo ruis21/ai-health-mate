@@ -4,7 +4,9 @@
 
     &__title {
         span {
-            background-color: $gradientColor01;
+            background: $gradientColor01;
+            -webkit-background-clip: text;
+            color: transparent;
         }
     }
 

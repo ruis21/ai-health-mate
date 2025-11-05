@@ -15,16 +15,4 @@
             }
         }
     }
-
-    &__menu-list {
-        line-height: 1;
-    }
-
-    // @include media-breakpoint-up(lg) {
-    //     background: blue; // 800px 이상부터
-    // }
-
-    // @include media-breakpoint-down(lg) {
-    //     background: green; // 500px 이하일 때
-    // }
 }

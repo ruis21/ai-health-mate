@@ -9,6 +9,7 @@ body {
     font-family: 'Pretendard', sans-serif;
 }
 
+
 li {
     list-style-type: none;
 }
@@ -16,8 +17,8 @@ li {
 dl,
 ol,
 ul {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -37,3 +38,18 @@ button {
     font-family: inherit;
     color: inherit;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-weight: 400;
+}
+
+// .card-body {
+//     padding: 0;
+// }s

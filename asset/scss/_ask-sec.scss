@@ -2,10 +2,36 @@
     background: $gradientColor01;
     color: $whiteColor01;
 
-    &__warp {
 
-        .ask-btn01 {
+    .ask-btn01 {
+        color: $whiteColor01;
+        background-color: transparent;
+        border: 2px solid $whiteColor01;
+
+        :hover {
+            background: $gradientColor01;
             color: $whiteColor01;
-
         }
+
     }
+
+    .ask-btn02 {
+        background: $whiteColor01;
+
+        :hover {
+            background: $gradientColor01;
+            color: $whiteColor01;
+        }
+
+        span {
+            background: $gradientColor01;
+            -webkit-background-clip: text;
+        }
+
+
+    }
+
+
+
+
+}

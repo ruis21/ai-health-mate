@@ -5,9 +5,36 @@ $grid-breakpoints: (
     xl: 1240px,
 );
 
-$container-max-widths: (
-    sm: 393px,
-    md: 541px,
-    lg: 768px,
-    xl: 1240px
-);
+// $container-max-widths: (
+//     sm: 393px,
+//     md: 541px,
+//     lg: 768px,
+//     xl: 1240px
+// );
+
+.container-sm {
+    max-width: 393px !important;
+    padding: 0 20px;
+}
+
+.container-md {
+    max-width: 541px !important;
+    padding: 0 20px;
+}
+
+.container-lg {
+    max-width: 768px !important;
+    padding: 0 20px;
+}
+
+.container-xl {
+    max-width: 1030px !important;
+    padding: 0 20px;
+}
+
+.container-xxl {
+    max-width: 1240px !important;
+    padding: 0 20px;
+}
+
+$container-padding-x: 20px;
