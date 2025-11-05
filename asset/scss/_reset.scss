@@ -13,6 +13,14 @@ li {
     list-style-type: none;
 }
 
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
 a {
     text-decoration: none;
     color: inherit;

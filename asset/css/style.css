@@ -73,6 +73,13 @@ li {
   list-style-type: none;
 }
 
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -113,8 +120,7 @@ button {
 }
 
 .header {
-  background-color: #000;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.7);
   height: 77px;
   color: #ffffff;
 }
@@ -123,6 +129,10 @@ button {
 }
 .header__logo a img {
   width: 300px;
+  display: block;
+}
+.header__menu-list {
+  line-height: 1;
 }
 
 .kv {
@@ -178,7 +188,7 @@ button {
   color: #ffffff;
 }
 .solution__title span {
-  color: linear-gradient(to right, #0097F6, #0ED058);
+  background-color: linear-gradient(45deg, #0097F6, #0ED058);
 }
 .solution__card-wrap .col .solution__card {
   background-color: #3B4352;
@@ -241,6 +251,10 @@ body {
   object-fit: cover;
 }
 
-.ask__warp {
-  background-color: linear-gradient(to right, #0097F6, #0ED058);
+.ask {
+  background: linear-gradient(45deg, #0097F6, #0ED058);
+  color: #ffffff;
+}
+.ask__warp .ask-btn01 {
+  color: #ffffff;
 }

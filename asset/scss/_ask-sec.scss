@@ -1,5 +1,11 @@
 .ask {
+    background: $gradientColor01;
+    color: $whiteColor01;
+
     &__warp {
-        background-color: $gradientColor01;
+
+        .ask-btn01 {
+            color: $whiteColor01;
+
+        }
     }
-}
