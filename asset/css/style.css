@@ -97,7 +97,7 @@ button {
   border: none;
 }
 .btn--lg {
-  height: 60px;
+  padding: 20px 30px;
 }
 .btn--md {
   padding: 15px 30px;
@@ -197,4 +197,50 @@ button {
   color: #ffffff;
   font-weight: 600;
   text-align: center;
+}
+
+.merit__card {
+  width: 100%;
+}
+.merit__card img {
+  width: 50%;
+}
+.merit__card .merit__text {
+  width: 50%;
+}
+
+.merit__text h3 {
+  color: #0ED058;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  height: 100%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.swiper-slide {
+  width: 100%;
+  background: #EEEEEE;
+  height: 320px;
+  margin-right: 20px;
+  padding: 30px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ask__warp {
+  background-color: linear-gradient(to right, #0097F6, #0ED058);
 }
