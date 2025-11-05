@@ -16,15 +16,14 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                object-fit: cover; // ✅ 영상이 꽉 차게
-                opacity: 0.4; // ✅ 살짝 어둡게
+                object-fit: cover;
+                opacity: 0.4;
                 z-index: 0;
-
             }
 
             .introduce__text {
                 position: relative;
-                z-index: 1; // ✅ 텍스트를 비디오 위로
+                z-index: 1;
             }
 
             .introduce__title,

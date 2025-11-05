@@ -4,9 +4,10 @@
 
     &__title {
         span {
-            background: $gradientColor01;
-            -webkit-background-clip: text;
-            color: transparent;
+            // background: $gradientColor01;
+            // -webkit-background-clip: text;
+            // color: transparent;
+            @include gradient;
         }
     }
 

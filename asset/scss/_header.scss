@@ -1,9 +1,11 @@
 .header {
     background-color: rgba(0, 0, 0, 0.7);
-    // width: 100%;
     height: 77px;
-    // padding: 20px 0;
     color: $whiteColor01;
+
+    &:hover {
+        background: $gradientColor01;
+    }
 
     &__logo {
         a {

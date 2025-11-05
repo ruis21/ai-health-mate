@@ -1,14 +1,10 @@
 .kv {
-    // height: 974px;
 
     background-image:
-        linear-gradient(to right, // 방향: 위 → 아래
-            rgba(0, 0, 0, 0.6), // 위쪽은 블랙 60%
-            rgba(0, 0, 0, 0) // 아래쪽은 완전 투명
-        ),
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0)),
         url("../image/kv-bg.jpg");
-
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

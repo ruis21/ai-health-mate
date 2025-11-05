@@ -160,6 +160,9 @@ p {
   height: 77px;
   color: #ffffff;
 }
+.header:hover {
+  background: linear-gradient(45deg, #0097F6, #0ED058);
+}
 .header__logo a {
   display: block;
 }
@@ -228,8 +231,8 @@ p {
 }
 .solution__title span {
   background: linear-gradient(45deg, #0097F6, #0ED058);
-  -webkit-background-clip: text;
   color: transparent;
+  -webkit-background-clip: text;
 }
 .solution__card-wrap .col .solution__card {
   background-color: #3B4352;
@@ -264,32 +267,27 @@ p {
   color: #0ED058;
 }
 
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-.swiper {
-  height: 100%;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-}
-
 .swiper-slide {
-  width: 100%;
   background: #EEEEEE;
   height: 320px;
-  margin-right: 20px;
   padding: 30px;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.news-btn {
+  position: relative;
+}
+.news-btn .swiper-button-next {
+  color: #ADADAD;
+  position: absolute;
+  right: 20%;
+  border: 1px solid #ADADAD;
+  border-radius: 50%;
+}
+.news-btn .swiper-button-prev {
+  color: #ADADAD;
+  position: absolute;
+  top: 60%;
+  right: 50px;
 }
 
 .ask {
@@ -301,20 +299,25 @@ body {
   background-color: transparent;
   border: 2px solid #ffffff;
 }
-.ask .ask-btn01 :hover {
+.ask .ask-btn01:hover {
   background: linear-gradient(45deg, #0097F6, #0ED058);
   color: #ffffff;
+  border: 2px solid transparent;
 }
 .ask .ask-btn02 {
   background: #ffffff;
 }
-.ask .ask-btn02 :hover {
+.ask .ask-btn02:hover {
   background: linear-gradient(45deg, #0097F6, #0ED058);
+  color: transparent;
+  -webkit-background-clip: text;
   color: #ffffff;
 }
 .ask .ask-btn02 span {
   background: linear-gradient(45deg, #0097F6, #0ED058);
+  color: transparent;
   -webkit-background-clip: text;
+  color: #ffffff;
 }
 
 .footer {
