@@ -1,0 +1,22 @@
+.vision {
+
+    &__card {
+        padding: 62px 126px;
+        margin: 10px;
+        color: $whiteColor01;
+        border-radius: 30px;
+    }
+
+
+    &__card01 {
+        background-color: $primaryColor01;
+    }
+
+    &__card02 {
+        background-color: $primaryColor02;
+    }
+
+    &__card03 {
+        background-color: $grayColor01;
+    }
+}

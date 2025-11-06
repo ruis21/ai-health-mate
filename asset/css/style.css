@@ -155,10 +155,15 @@ p {
   padding: 120px 0;
 }
 
+.t-pd--xxl {
+  padding-bottom: 120px;
+}
+
 .header {
   background-color: rgba(0, 0, 0, 0.7);
   height: 77px;
   color: #ffffff;
+  position: relative;
 }
 .header:hover {
   background: linear-gradient(45deg, #0097F6, #0ED058);
@@ -169,6 +174,36 @@ p {
 .header__logo a img {
   width: 300px;
   display: block;
+}
+.header__sub-menu-list {
+  position: absolute;
+  z-index: 5;
+  display: none;
+}
+.header__sub-menu a {
+  display: block;
+  width: 160px;
+  padding: 8px 10px;
+  color: #fff;
+}
+.header a {
+  display: block;
+  width: 160px;
+  padding: 8px 10px;
+  background-color: #0a9b97;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.header .menu-bg {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 4;
+  display: none;
 }
 
 .kv {
@@ -256,13 +291,12 @@ p {
 .merit__card {
   width: 100%;
 }
-.merit__card img {
+.merit img {
   width: 50%;
 }
-.merit__card .merit__text {
+.merit__text {
   width: 50%;
 }
-
 .merit__text h3 {
   color: #0ED058;
 }
@@ -316,6 +350,27 @@ p {
   background: linear-gradient(45deg, #0097F6, #0ED058);
   color: transparent;
   -webkit-background-clip: text;
+}
+
+.about__bg {
+  background-image: url(../image/about-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vision__card01, .vision__card02, .vision__card03 {
+  padding: 62px 126px;
+  margin: 10px;
+}
+.vision__card01 {
+  background-color: #0097F6;
+}
+.vision__card02 {
+  background-color: #0ED058;
+}
+.vision__card03 {
+  background-color: #7E7E7E;
 }
 
 .footer {

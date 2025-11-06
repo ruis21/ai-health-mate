@@ -1,17 +1,19 @@
-.merit__card {
-    width: 100%;
+.merit {
+    &__card {
+        width: 100%;
+    }
 
     img {
         width: 50%;
     }
 
-    .merit__text {
+    &__text {
         width: 50%;
     }
-}
 
-.merit__text {
-    h3 {
-        color: $primaryColor02;
+    &__text {
+        h3 {
+            color: $primaryColor02;
+        }
     }
 }

@@ -2,6 +2,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     height: 77px;
     color: $whiteColor01;
+    position: relative;
 
     &:hover {
         background: $gradientColor01;
@@ -16,11 +17,59 @@
                 display: block;
             }
         }
+    }
 
-        nav {
-            width: 800px;
-        }
+    nav {
+        // width: 800px;
     }
 
 
+    &__sub-menu-list {
+        position: absolute;
+        z-index: 5;
+        display: none;
+    }
+
+    &__sub-menu {
+        a {
+            display: block;
+            width: 160px;
+            padding: 8px 10px;
+            color: #fff;
+        }
+
+        // &__menu-list {
+        //     display: flex;
+        //     text-align: center;
+        // }
+    }
+
+    // &__menu {
+    //     position: absolute;
+    //     z-index: 5;
+    //     display: none;
+
+
+    a {
+        display: block;
+        width: 160px;
+        padding: 8px 10px;
+        background-color: #0a9b97;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+
+    }
+
+
+    .menu-bg {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 4;
+        display: none;
+    }
 }
