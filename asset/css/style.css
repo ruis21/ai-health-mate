@@ -178,32 +178,36 @@ p {
 .header__sub-menu-list {
   position: absolute;
   z-index: 5;
-  display: none;
+  top: 75px;
 }
 .header__sub-menu a {
   display: block;
-  width: 160px;
+  width: 200px;
   padding: 8px 10px;
-  color: #fff;
 }
-.header a {
+.header__sub-menu:hover {
+  background: linear-gradient(45deg, #0097F6, #0ED058);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.header__menu {
+  position: relative;
+  z-index: 5;
+}
+.header__menu a {
   display: block;
-  width: 160px;
+  width: 140px;
   padding: 8px 10px;
-  background-color: #0a9b97;
-  color: #fff;
   font-size: 18px;
-  font-weight: 600;
 }
 .header .menu-bg {
   position: absolute;
-  top: 100px;
+  top: 77px;
   left: 0;
   width: 100%;
   height: 200px;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 4;
-  display: none;
 }
 
 .kv {
@@ -357,11 +361,18 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: #ffffff;
+}
+.about__circle {
+  color: #111111;
+  border: 2px solid #0ED058;
 }
 
-.vision__card01, .vision__card02, .vision__card03 {
+.vision__card {
   padding: 62px 126px;
   margin: 10px;
+  color: #ffffff;
+  border-radius: 30px;
 }
 .vision__card01 {
   background-color: #0097F6;
