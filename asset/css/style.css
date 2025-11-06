@@ -295,14 +295,13 @@ p {
   color: #ffffff;
 }
 .ask .ask-btn01 {
-  color: #ffffff;
   background-color: transparent;
   border: 2px solid #ffffff;
 }
 .ask .ask-btn01:hover {
   background: linear-gradient(45deg, #0097F6, #0ED058);
   color: #ffffff;
-  border: 2px solid transparent;
+  border: 2px solid linear-gradient(45deg, #0097F6, #0ED058);
 }
 .ask .ask-btn02 {
   background: #ffffff;
@@ -317,7 +316,6 @@ p {
   background: linear-gradient(45deg, #0097F6, #0ED058);
   color: transparent;
   -webkit-background-clip: text;
-  color: #ffffff;
 }
 
 .footer {
