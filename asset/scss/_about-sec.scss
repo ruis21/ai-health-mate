@@ -4,11 +4,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        color: $whiteColor01;
+
     }
 
     &__circle {
-        color: $blackColor01;
-        border: 2px solid $primaryColor02;
+        color: $whiteColor01;
     }
 }

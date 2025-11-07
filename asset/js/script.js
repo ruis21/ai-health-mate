@@ -1,6 +1,6 @@
 // Initialize Swiper
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".newsSwiper", {
     slidesPerView: 3.5,
     spaceBetween: 15,
     // centeredSlides: true,
@@ -23,6 +23,26 @@ var swiper = new Swiper(".mySwiper", {
         },
     }
 });
+
+var swiper = new Swiper(".partnersSwiper", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    loop: true,
+
+    // centeredSlides: true,
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
+    autoplay: {
+        delay: 1000,
+        speed: 30000,
+        freemode: true,
+        effect: 'fade',
+        disableOnInteraction: false,
+    },
+});
+
 
 
 $(function () {
