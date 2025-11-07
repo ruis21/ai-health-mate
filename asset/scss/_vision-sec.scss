@@ -1,10 +1,10 @@
 .vision {
 
     &__card {
-        padding: 62px 126px;
+        padding: 62px 0;
         margin: 10px;
         color: $whiteColor01;
-        border-radius: 30px;
+        border-radius: 20px;
     }
 
     &__card01 {
@@ -18,4 +18,17 @@
     &__card03 {
         background-color: $grayColor01;
     }
+
+    &__circle {
+        padding: 100px;
+        border: 2px solid $primaryColor02;
+        border-radius: 50%;
+        background-color: $whiteColor01;
+    }
+
+    &__path {
+        top: 70px;
+        right: 300px;
+    }
+
 }

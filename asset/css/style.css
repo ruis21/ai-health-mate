@@ -165,30 +165,12 @@ p {
   color: #ffffff;
   position: relative;
 }
-.header:hover {
-  background: linear-gradient(45deg, #0097F6, #0ED058);
-}
 .header__logo a {
   display: block;
 }
 .header__logo a img {
   width: 300px;
   display: block;
-}
-.header__sub-menu-list {
-  position: absolute;
-  z-index: 5;
-  top: 75px;
-}
-.header__sub-menu a {
-  display: block;
-  width: 200px;
-  padding: 8px 10px;
-}
-.header__sub-menu:hover {
-  background: linear-gradient(45deg, #0097F6, #0ED058);
-  color: transparent;
-  -webkit-background-clip: text;
 }
 .header__menu {
   position: relative;
@@ -200,6 +182,11 @@ p {
   padding: 8px 10px;
   font-size: 18px;
 }
+.header__menu:hover {
+  background: linear-gradient(45deg, #0097F6, #0ED058);
+  color: transparent;
+  -webkit-background-clip: text;
+}
 .header .menu-bg {
   position: absolute;
   top: 77px;
@@ -208,6 +195,22 @@ p {
   height: 200px;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 4;
+  display: none;
+}
+.header__sub-menu-list {
+  position: absolute;
+  z-index: 5;
+  top: 75px;
+  display: none;
+}
+.header__sub-menu a {
+  display: block;
+  padding: 8px 10px;
+}
+.header__sub-menu:hover {
+  background: linear-gradient(45deg, #0097F6, #0ED058);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .kv {
@@ -369,10 +372,10 @@ p {
 }
 
 .vision__card {
-  padding: 62px 126px;
+  padding: 62px 0;
   margin: 10px;
   color: #ffffff;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 .vision__card01 {
   background-color: #0097F6;
@@ -382,6 +385,16 @@ p {
 }
 .vision__card03 {
   background-color: #7E7E7E;
+}
+.vision__circle {
+  padding: 100px;
+  border: 2px solid #0ED058;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.vision__path {
+  top: 70px;
+  right: 300px;
 }
 
 .footer {

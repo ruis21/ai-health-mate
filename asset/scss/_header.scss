@@ -4,9 +4,9 @@
     color: $whiteColor01;
     position: relative;
 
-    &:hover {
-        background: $gradientColor01;
-    }
+    // &:hover {
+    //     background: $gradientColor01;
+    // }
 
     &__logo {
         a {
@@ -16,26 +16,6 @@
                 width: 300px;
                 display: block;
             }
-        }
-    }
-
-
-    &__sub-menu-list {
-        position: absolute;
-        z-index: 5;
-        top: 75px;
-        // display: none;
-    }
-
-    &__sub-menu {
-        a {
-            display: block;
-            width: 200px;
-            padding: 8px 10px;
-        }
-
-        &:hover {
-            @include gradient;
         }
     }
 
@@ -51,6 +31,10 @@
             padding: 8px 10px;
             font-size: 18px;
         }
+
+        &:hover {
+            @include gradient;
+        }
     }
 
 
@@ -62,6 +46,25 @@
         height: 200px;
         background-color: rgba(0, 0, 0, 0.8);
         z-index: 4;
-        // display: none;
+        display: none;
+    }
+
+    &__sub-menu-list {
+        position: absolute;
+        z-index: 5;
+        top: 75px;
+        display: none;
+    }
+
+    &__sub-menu {
+        a {
+            display: block;
+            // width: 200px;
+            padding: 8px 10px;
+        }
+
+        &:hover {
+            @include gradient;
+        }
     }
 }

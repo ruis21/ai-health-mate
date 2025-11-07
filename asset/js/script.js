@@ -27,6 +27,11 @@ var swiper = new Swiper(".mySwiper", {
 
 $(function () {
     $(".header__menu").on("mouseenter", function () {
-        $(".header__menu - list").stop().slideDown();
+        $(".header__sub-menu-list, .menu-bg").stop().slideDown();
+    });
+});
+$(function () {
+    $(".header__menu").on("mouseleave", function () {
+        $(".header__sub-menu-list, .menu-bg").stop().slideUp();
     });
 });
