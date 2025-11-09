@@ -11,6 +11,13 @@
     @return #{$size}rem;
 }
 
+@mixin flex($justifyContent: space-betwween, $alignItems: stretch, $gap: null) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    gap: $gap;
+}
+
 // font size mixin
 @mixin defineFont($size: null, $weight: 400, $lineHeight: 1.3, $letterSpacing: 0) {
     font-size: rem($size);

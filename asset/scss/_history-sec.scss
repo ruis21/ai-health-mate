@@ -1,0 +1,16 @@
+.history {
+    position: relative;
+    padding-left: 70px; // (숫자와 텍스트 사이 간격)
+
+    .num {
+        position: absolute;
+        left: 50%;
+        font-weight: 700;
+    }
+
+    &__wrap {
+        h3 {
+            color: $primaryColor01;
+        }
+    }
+}

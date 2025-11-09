@@ -1,5 +1,9 @@
 .vision {
 
+    &__wrap {
+        align-items: center;
+    }
+
     &__card {
         padding: 62px 0;
         margin: 10px;
@@ -20,11 +24,15 @@
     }
 
     &__circle {
-        padding: 100px;
+        height: 350px;
+        width: 350px;
+        // line-height: 350px;
         border: 2px solid $primaryColor02;
         border-radius: 50%;
         background-color: $whiteColor01;
+        // transform: translate(10%, 30%);
     }
+
 
     &__path {
         top: 70px;

@@ -5,9 +5,9 @@
     }
 
     .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #444;
+        // text-align: center;
+        // font-size: 18px;
+        // background: #444;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,6 +18,12 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    &__txt {
+        color: $grayColor04;
+        font-size: 128px;
+        letter-spacing: 10px;
     }
 
 }
