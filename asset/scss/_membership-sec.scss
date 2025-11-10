@@ -1,0 +1,25 @@
+.membership {
+    // &__card-wrap {
+    //     width: 100%;
+    // }
+
+    &__card {
+        width: 32%;
+        gap: 2%;
+        border: 1px solid $grayColor02;
+        border-radius: 20px;
+        padding: 30px;
+        height: 588px;
+
+        p {
+            color: $grayColor01;
+        }
+    }
+
+    &__btn {
+        @include gradient;
+        background-color: $whiteColor01;
+        border: 1px solid $grayColor02;
+        border-radius: 30px;
+    }
+}

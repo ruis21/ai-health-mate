@@ -11,7 +11,7 @@
     @return #{$size}rem;
 }
 
-@mixin flex($justifyContent: space-betwween, $alignItems: stretch, $gap: null) {
+@mixin flex($justifyContent: center, $alignItems: center, $gap: null) {
     display: flex;
     justify-content: $justifyContent;
     align-items: $alignItems;

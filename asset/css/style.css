@@ -167,6 +167,13 @@ p {
   padding: 240px 0;
 }
 
+.membership-btn--lg {
+  background: linear-gradient(45deg, #0097F6, #0ED058);
+  color: white;
+  border-radius: 30px;
+  padding: 20px 88px;
+}
+
 .header {
   background-color: rgba(0, 0, 0, 0.7);
   height: 77px;
@@ -444,6 +451,26 @@ p {
   color: #EEEEEE;
   font-size: 128px;
   letter-spacing: 10px;
+}
+
+.membership__card {
+  width: 32%;
+  gap: 2%;
+  border: 1px solid #ADADAD;
+  border-radius: 20px;
+  padding: 30px;
+  height: 588px;
+}
+.membership__card p {
+  color: #7E7E7E;
+}
+.membership__btn {
+  background: linear-gradient(45deg, #0097F6, #0ED058);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-color: #ffffff;
+  border: 1px solid #ADADAD;
+  border-radius: 30px;
 }
 
 .footer {

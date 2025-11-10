@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>membership</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header fixed-top d-flex align-items-center">
+        <div class="container-xxl d-flex align-items-center justify-content-between">
+            <h1 class="header__logo">
+                <a href="#">
+                    <img src="./asset/image/logo_assult.png" alt="로고 이미지">
+                </a>
+            </h1>
+            <nav class="nav position-relative">
+                <ul class="header__menu-list d-flex align-items-center justify-content-between gap-3 text-center">
+                    <li class="header__menu">
+                        <a href="#">ABOUT</a>
+                        <ul class="header__sub-menu-list">
+                            <li class="header__sub-menu">
+                                <a href="#">ABOUT</a>
+                            </li>
+                            <li class="header__sub-menu">
+                                <a href="#">VISION</a>
+                            </li>
+                            <li class="header__sub-menu">
+                                <a href="#">HISTORY</a>
+                            </li>
+                            <li class="header__sub-menu">
+                                <a href="#">PARTNERS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__menu">
+                        <a href="#">NEWS</a>
+                        <ul class="header__sub-menu-list">
+                            <li class="header__sub-menu">
+                                <a href="#">NEWS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__menu">
+                        <a href="#">MEMBERSHIP</a>
+                        <ul class="header__sub-menu-list">
+                            <li class="header__sub-menu">
+                                <a href="#">MEMBERSHIP</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__menu">
+                        <a href="#">CONTACT</a>
+                        <ul class="header__sub-menu-list">
+                            <li class="header__sub-menu">
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li class="header__sub-menu">
+                                <a href="#">INQUIRY</a>
+                            </li>
+                            <li class="header__sub-menu">
+                                <a href="#">MAP</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-bg">-</div>
+    </header>
+
+    <!-- membership section -->
+    <main>
+        <section class="membership sec-pd">
+            <div class="container-xxl">
+                <h2 class="display-5 fw-bold t-pd--xxl text-center">MEMBERSHIP</h2>
+                <div class="membership__card-wrap d-flex justify-content-between align-items-center">
+                    <div class="membership__card01 membership__card d-flex justify-content-center gap-2 flex-column">
+                        <p class="text-center">free</p>
+                        <h4 class="text-center fs-2 fw-bold">무료</h4>
+                        <ul class="mt-5">
+                            <li>
+                                <p>
+                                    <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 스마트폰/웨어러블 데이터 연동
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 기본 대시보드 (걸음, 수면, 심박,
+                                스트레스)
+                            </li>
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> AI 기반 간단피드백 & 주간리포트
+                            </li>
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 생활습관 목표설정 + 알림
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary mt-5 membership__btn">Choose Plan</button>
+                    </div>
+                    <div class="membership__card02 membership__card d-flex justify-content-center flex-column gap-3">
+                        <p class="text-center">Expert Plan</p>
+                        <h4 class="text-center fs-2 fw-bold">월 6,900원</h4>
+                        <ul class="mt-4">
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 의료전문가(의사, 영양사, 트레이너)와
+                                1:1 채팅 상담
+                            </li>
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 맞춤형 건강 프로그램 (식단, 운동플랜)
+                            </li>
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 건강 위험 신호 알림 (심박, 수면 등
+                                이상 패턴)
+                            </li>
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 월 1회 전문가 피드백 리포트
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary mt-4 membership__btn">Choose Plan</button>
+
+                    </div>
+                    <div class="membership__card03 membership__card d-flex justify-content-center flex-column gap-3">
+                        <p class="text-center">Premium Plan</p>
+                        <h4 class="text-center fs-2 fw-bold">월 19,900원</h4>
+                        <ul class="mt-5">
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> Expert Plan의 모든 기능 포함
+                            </li>
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 주간 라이브 Q&A / 그룹세션 참여
+                            </li>
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 개인 건강 리포트 PDF 다운로드
+                                (보험/검진 활용)
+                            </li>
+                            <li>
+                                <img src="./asset/image/check-icon.png" alt="체크 아이콘"> 가족 계정 공유 (최대 4인)
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary mt-5 membership__btn">Choose Plan</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- footer  -->
+        <footer class="footer">
+            <div class="container-xxl d-flex justify-content-between align-items-center">
+                <div class="footer__txt">
+                    <img src="./asset/image/logo_footer.png" alt="푸터 로고">
+                    <ul class="d-flex gap-4 pt-2">
+                        <li>회사소개</li>
+                        <li>개인정보 처리방침</li>
+                        <li>서비스 이용약관</li>
+                        <li>정보보안인증</li>
+                        <li>제휴인증</li>
+                    </ul>
+
+                    <p class="pt-2">우| 01234 서울특별시 강남구 테헤란로 123 12층</p>
+                    <p>대표전화 : 02-593-1234 팩스 : 02-593-5678</p>
+
+                    <p class="pt-2">copyright@AIHealthMate All Rights Reserved</p>
+                </div>
+                <div class="footer__sns d-flex gap-3">
+                    <img src="./asset/image/facebook-icon.png" alt="페이스북 아이콘">
+                    <img src="./asset/image/youtube-icon.png" alt="유투브 아이콘">
+                </div>
+            </div>
+        </footer>
+
+        <!-- jquery js  -->
+        <script src="./asset/js/jquery-3.7.1.min.js"></script>
+
+        <!-- bootstrap js  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+        <!-- Swiper JS -->
+        <script src="./asset/js/swiper-bundle.min.js"></script>
+
+        <script src="./asset/js/script.js"></script>
+
+</body>
+
+</html>

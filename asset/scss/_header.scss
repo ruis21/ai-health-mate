@@ -4,8 +4,8 @@
     color: $whiteColor01;
     position: relative;
 
-    // &:hover {
-    //     background: $gradientColor01;
+    // &__wrap {
+    //     @include flex(space-between, center);
     // }
 
     &__logo {
