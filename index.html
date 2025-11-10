@@ -19,59 +19,59 @@
 <body>
 
     <!-- header -->
-    <header class="header fixed-top d-flex align-items-center">
-        <div class="container-xxl d-flex align-items-center justify-content-between">
+    <header class="header fixed-top">
+        <div class="container-xxl header__wrap">
             <h1 class="header__logo">
                 <a href="#">
                     <img src="./asset/image/logo_assult.png" alt="로고 이미지">
                 </a>
             </h1>
             <nav class="nav position-relative">
-                <ul class="header__menu-list d-flex align-items-center justify-content-between gap-3 text-center">
+                <ul class="header__menu-list text-center">
                     <li class="header__menu">
-                        <a href="#">ABOUT</a>
+                        <a href="about.html">ABOUT</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">ABOUT</a>
+                                <a href="about.html#about-sec">ABOUT</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">VISION</a>
+                                <a href="about.html#vision-sec">VISION</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">HISTORY</a>
+                                <a href="about.html#history-sec">HISTORY</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">PARTNERS</a>
+                                <a href="about.html#partners-sec">PARTNERS</a>
                             </li>
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#">NEWS</a>
+                        <a href="news.html">NEWS</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">NEWS</a>
+                                <a href="news.html">NEWS</a>
                             </li>
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#">MEMBERSHIP</a>
+                        <a href="membership.html">MEMBERSHIP</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">MEMBERSHIP</a>
+                                <a href="membership.html">MEMBERSHIP</a>
                             </li>
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#">CONTACT</a>
+                        <a href="faq.html">CONTACT</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">FAQ</a>
+                                <a href="faq.html">FAQ</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">INQUIRY</a>
+                                <a href="inquiry.html">INQUIRY</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">MAP</a>
+                                <a href="map.html">MAP</a>
                             </li>
                         </ul>
                     </li>
@@ -83,15 +83,15 @@
 
     <!-- kv section -->
     <main>
-        <section class="kv">
+        <section class="kv" id="kv-sec">
             <div class="container-xxl">
                 <div class="kv__text-wrap fw-bold position-relative">
-                    <h2 class="kv__title display-2 fw-bold z-3">
+                    <h2 class="kv__title display-2 fw-bold ">
                         <span>AI</span><br>
                         HEALTH<br>
                         MATE
                     </h2>
-                    <div class="kv__box position-absolute z-1"></div>
+                    <div class="kv__box position-absolute "></div>
                     <h3>당신을 위한 AI 건강솔루션<h3>
                             <button class="btn btn--lg btn-primary kv__btn fw-bold pt-3 mt-5">VIEW MORE</button>
                 </div>
@@ -99,7 +99,7 @@
         </section>
 
         <!-- introduce section -->
-        <section class="introduce sec-pd">
+        <section class="introduce sec-pd" id="introduce-sec">
             <div class="introduce__wrap container-xxl">
                 <div class="introduce__conts rounded-4">
                     <video class="introduce__video" type="video" autoplay loop>
@@ -123,12 +123,12 @@
 
 
         <!-- solution section -->
-        <section class="solution sec-pd">
+        <section class="solution sec-pd" id="solution-sec">
             <div class="solution__wrap container-xl">
                 <h2 class="solution__title display-5 fw-bold text-center"> AI가 제안하는 <span>맞춤솔루션</span></h2>
 
 
-                <ul class="solution__subtitle d-flex gap-5 justify-content-center align-items-center mt-5">
+                <ul class="solution__subtitle mt-5">
                     <li class="solution__items fs-3">데이터 수집</li>
                     <li>
                         <img src="./asset/image/arrow-right.png" alt="화살표 이미지">
@@ -144,8 +144,7 @@
                 <div class="solution__card-wrap row row-cols-1 row-cols-md-2 g-4 mt-5">
                     <div class="col">
                         <div class="card border-0 rounded-4 overflow-hidden">
-                            <div
-                                class="solution__card card-body d-flex flex-column justify-content-center align-items-center ">
+                            <div class="solution__card card-body">
                                 <img src="./asset/image/solution-card01-icon.png" alt="솔루션 아이콘">
                                 <p class="card-text pt-3  fs-2">맞춤형 운동</p>
                             </div>
@@ -154,8 +153,7 @@
 
                     <div class="col">
                         <div class="card border-0 rounded-4 overflow-hidden">
-                            <div
-                                class="solution__card card-body d-flex flex-column justify-content-center align-items-center">
+                            <div class="solution__card card-body">
                                 <img src="./asset/image/solution-card02-icon.png" alt="솔루션 아이콘">
                                 <p class="card-text pt-3 fs-2">식습관</p>
                             </div>
@@ -164,8 +162,7 @@
 
                     <div class="col">
                         <div class="card border-0 rounded-4 overflow-hidden">
-                            <div
-                                class="solution__card card-body d-flex flex-column justify-content-center align-items-center">
+                            <div class="solution__card card-body">
                                 <img src="./asset/image/solution-card03-icon.png" alt="솔루션 아이콘">
                                 <p class="card-text pt-3 fs-2">수면관리</p>
                             </div>
@@ -174,8 +171,7 @@
 
                     <div class="col">
                         <div class="card border-0 rounded-4 overflow-hidden">
-                            <div
-                                class="solution__card card-body d-flex flex-column justify-content-center align-items-center">
+                            <div class="solution__card card-body">
                                 <img src="./asset/image/solution-card04-icon.png" alt="솔루션 아이콘">
                                 <p class="card-text pt-3 fs-2">스트레스관리</p>
                             </div>
@@ -187,29 +183,29 @@
 
 
         <!-- merit section -->
-        <section class="merit sec-pd">
+        <section class="merit sec-pd" id="merit-sec">
             <div class="merit__wrap container-xl">
                 <div class="merit__title display-5 text-center fw-bold t-pd--xxl">우리가 만드는 차이</div>
                 <div class="row pt-5">
-                    <div class="">
-                        <div class="card border-0">
-                            <div class="merit__card card-body d-flex justify-content-center align-items-center gap-5">
-                                <div class="merit__text">
-                                    <h3 class="fw-bold">01</h3>
-                                    <h2 class="fs-2 fw-semibold mt-3">완벽하게 개인화된 <br>건강 관리</h2>
-                                    <hr>
-                                    <p class="fs-5">AI가 당신의 생활습관과 생체 데이터를 <br>
-                                        분석해, 맞춤형 운동, 식단, 수면,<br>
-                                        스트레스 관리 솔루션을 제공</p>
-                                </div>
-                                <img src="./asset/image/merit-section01-img.png" alt="메리트 이미지" class="img-fluid">
 
+                    <div class="card border-0">
+                        <div class="merit__card card-body">
+                            <div class="merit__text">
+                                <h3 class="fw-bold">01</h3>
+                                <h2 class="fs-2 fw-semibold mt-3">완벽하게 개인화된 <br>건강 관리</h2>
+                                <hr>
+                                <p class="fs-5">AI가 당신의 생활습관과 생체 데이터를 <br>
+                                    분석해, 맞춤형 운동, 식단, 수면,<br>
+                                    스트레스 관리 솔루션을 제공</p>
                             </div>
+                            <img src="./asset/image/merit-section01-img.png" alt="메리트 이미지" class="img-fluid">
+
                         </div>
                     </div>
+
                     <div class="col-12">
                         <div class="card border-0">
-                            <div class="merit__card card-body d-flex justify-content-center align-items-center gap-5 ">
+                            <div class="merit__card card-body">
                                 <div class="merit__text">
                                     <h3 class="fw-bold">02</h3>
                                     <h2 class="fs-2 fw-semibold mt-3">예방 중심의 선제적 케어</h2>
@@ -222,7 +218,7 @@
                     </div>
                     <div class="col-12">
                         <div class="card border-0">
-                            <div class="merit__card card-body d-flex justify-content-center align-items-center gap-5 ">
+                            <div class="merit__card card-body">
                                 <div class="merit__text">
                                     <h3 class="fw-bold">03</h3>
                                     <h2 class="fs-2 fw-semibold mt-3">근거 있는 AI, <br>
@@ -237,7 +233,7 @@
                     </div>
                     <div class="col-12">
                         <div class="card border-0">
-                            <div class="merit__card card-body d-flex justify-content-center align-items-center gap-5 ">
+                            <div class="merit__card card-body">
                                 <div class="merit__text">
                                     <h3 class="fw-bold">04</h3>
                                     <h2 class="fs-2 fw-semibold mt-3">지속 가능한 동기부여</h2>
@@ -252,7 +248,7 @@
                     </div>
                     <div class="col-12">
                         <div class="card border-0">
-                            <div class="merit__card card-body d-flex justify-content-center align-items-center gap-5 ">
+                            <div class="merit__card card-body">
                                 <div class="merit__text">
                                     <h3 class="fw-bold">05</h3>
                                     <h2 class="fs-2 fw-semibold mt-3">다양한 웨어러블 <br>& 플랫폼 연동</h2>
@@ -273,26 +269,26 @@
         </section>
 
         <!-- news section -->
-        <section class="news sec-pd">
+        <section class="news sec-pd" id="news-sec">
             <div class="news-wrap container-xxl position-relative">
                 <h2 class="news__title display-5 fw-bold text-center  t-pd--xxl">NEWS</h2>
 
                 <!-- Swiper -->
                 <div class="swiper newsSwiper pt-5">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide rounded-4 d-flex flex-column justify-content-between news__card">
+                        <div class="swiper-slide rounded-4 news__card">
                             <h5>글로벌 헬스케어 테크 컨퍼런스 2025에서 차세대 예방 의료 솔루션 공개하며 업계 주목...</h5>
                             <p>예측·예방 의료 시대 연다… 데이터 기반 건강관리 플랫폼 발표 ...</p>
                             <hr>
                             <p>2025.10.21</p>
                         </div>
-                        <div class="swiper-slide rounded-4 d-flex flex-column justify-content-between news__card">
+                        <div class="swiper-slide rounded-4 news__card">
                             <h5> 웨어러블 통합 연동 서비스 정식 출시 – 애플 워치·갤럭시 워치·WHOOP까지 지원하며 개인 맞춤형 데이터 분석 강화</h5>
                             <p>애플 워치·갤럭시 워치·WHOOP까지 지원하며 개인 맞춤형 데이터 분석 강화...</p>
                             <hr>
                             <p>2025.07.12</p>
                         </div>
-                        <div class="swiper-slide rounded-4 d-flex flex-column justify-content-between news__card">
+                        <div class="swiper-slide rounded-4 news__card">
                             <h5>AI Health Mate, 사용자 건강 데이터를 기반으로 수면·활동·스트레스까지 통합 분석하는 ‘AI 맞춤형 리포트’ 기능 베타 오픈</h5>
                             <p>AI 기반으로 수면·활동·스트레스 데이터를 통합 분석해 개인 맞춤 건강 인사이트를 제공하는 리포트 기능을 베타로 ...</p>
                             <hr>
@@ -302,7 +298,7 @@
                         <div class="swiper-slide rounded-4">Slide 5</div>
                         <div class="swiper-slide rounded-4">Slide 6</div>
                     </div>
-                    <div class="news-btn">
+                    <div class="news__btn">
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
@@ -314,7 +310,7 @@
         </section>
 
         <!-- ask section -->
-        <section class="ask sec-pd">
+        <section class="ask sec-pd" id="ask-sec">
             <div class="ask__wrap text-center">
                 <h2 class="ask__title">
                     궁금한 점이 있으신가요? <br>
@@ -336,7 +332,7 @@
 
     <!-- footer  -->
     <footer class="footer">
-        <div class="container-xxl d-flex justify-content-between align-items-center">
+        <div class="container-xxl footer__wrap">
             <div class="footer__txt">
                 <img src="./asset/image/logo_footer.png" alt="푸터 로고">
                 <ul class="d-flex gap-4 pt-2">

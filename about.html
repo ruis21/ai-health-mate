@@ -19,60 +19,61 @@
 
 <body>
 
+
     <!-- header -->
-    <header class="header fixed-top d-flex align-items-center">
-        <div class="container-xxl d-flex align-items-center justify-content-between">
+    <header class="header fixed-top ">
+        <div class="container-xxl header__wrap">
             <h1 class="header__logo">
-                <a href="#">
+                <a href="index.html">
                     <img src="./asset/image/logo_assult.png" alt="로고 이미지">
                 </a>
             </h1>
             <nav class="nav position-relative">
-                <ul class="header__menu-list d-flex align-items-center justify-content-between gap-3 text-center">
+                <ul class="header__menu-list text-center">
                     <li class="header__menu">
-                        <a href="#">ABOUT</a>
+                        <a href="#about-sec">ABOUT</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">ABOUT</a>
+                                <a href="#about-sec">ABOUT</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">VISION</a>
+                                <a href="#vision-sec">VISION</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">HISTORY</a>
+                                <a href="#history-sec">HISTORY</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">PARTNERS</a>
+                                <a href="#partners-sec">PARTNERS</a>
                             </li>
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#">NEWS</a>
+                        <a href="news.html">NEWS</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">NEWS</a>
+                                <a href="news.html">NEWS</a>
                             </li>
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#">MEMBERSHIP</a>
+                        <a href="membership.html">MEMBERSHIP</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">MEMBERSHIP</a>
+                                <a href="membership.html">MEMBERSHIP</a>
                             </li>
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#">CONTACT</a>
+                        <a href="faq.html">CONTACT</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">FAQ</a>
+                                <a href="faq.html">FAQ</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">INQUIRY</a>
+                                <a href="index.html">INQUIRY</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">MAP</a>
+                                <a href="map.html">MAP</a>
                             </li>
                         </ul>
                     </li>
@@ -85,7 +86,7 @@
 
     <!-- about section -->
     <main>
-        <section class="about sec-pd about__bg">
+        <section class="about sec-pd about__bg" id="about-sec">
             <div class="container-xxl text-center">
 
                 <h2 class="display-5 fw-bold t-pd--xxl">ABOUT</h2>
@@ -102,7 +103,7 @@
         </section>
 
         <!-- vision section -->
-        <section class="vision sec-pd">
+        <section class="vision sec-pd" id="vision-sec">
             <div class="container-xxl text-center">
                 <h2 class="display-5 fw-bold t-pd--xxl">VISION</h2>
                 <div class="vision__wrap d-flex justify-content-between gap-5 position-relative">
@@ -112,7 +113,7 @@
                         <li class="vision__card03 vision__card fs-3"><b>누구나 접근 가능한</b> 헬스케어 생태계</li>
                     </ul>
                     <img src="./asset/image/vision-path.png" alt="비전 이미지" class="position-absolute z-0 vision__path">
-                    <div class="vision__circle z-1 d-flex justify-content-center align-items-center">
+                    <div class="vision__circle z-1">
                         <div class="vison__circle-txt text-center align-middle">
                             <p class="fs-5">
                                 건강 수명을
@@ -129,7 +130,7 @@
 
     <!-- history section -->
 
-    <section class="history sec-pd">
+    <section class="history sec-pd" id="history-sec">
         <div class="container-xxl">
             <h2 class="display-5 fw-bold t-pd--xl text-center">HISTORY</h2>
             <div class="history__wrap">
@@ -227,7 +228,7 @@
 
 
     <!-- partners section -->
-    <section class="partners sec-pd">
+    <section class="partners sec-pd" id="partners-sec">
         <div class="container-xxl">
             <h2 class="display-5 fw-bold t-pd--xxl text-center">PARTNERS</h2>
             <div class="swiper partnersSwiper">
@@ -281,7 +282,7 @@
 
     <!-- footer  -->
     <footer class="footer">
-        <div class="container-xxl d-flex justify-content-between align-items-center">
+        <div class="container-xxl footer__wrap">
             <div class="footer__txt">
                 <img src="./asset/image/logo_footer.png" alt="푸터 로고">
                 <ul class="d-flex gap-4 pt-2">

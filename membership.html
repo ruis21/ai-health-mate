@@ -19,75 +19,76 @@
 <body>
 
     <!-- header -->
-    <header class="header fixed-top d-flex align-items-center">
-        <div class="container-xxl d-flex align-items-center justify-content-between">
+    <header class="header fixed-top ">
+        <div class="container-xxl header__wrap">
             <h1 class="header__logo">
-                <a href="#">
+                <a href="index.html">
                     <img src="./asset/image/logo_assult.png" alt="로고 이미지">
                 </a>
             </h1>
             <nav class="nav position-relative">
-                <ul class="header__menu-list d-flex align-items-center justify-content-between gap-3 text-center">
+                <ul class="header__menu-list text-center">
                     <li class="header__menu">
-                        <a href="#">ABOUT</a>
+                        <a href="about.html#about-sec">ABOUT</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">ABOUT</a>
+                                <a href="about.html#about-sec">ABOUT</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">VISION</a>
+                                <a href="about.html#vision-sec">VISION</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">HISTORY</a>
+                                <a href="about.html#history-sec">HISTORY</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">PARTNERS</a>
+                                <a href="about.html#partners-sec">PARTNERS</a>
                             </li>
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#">NEWS</a>
+                        <a href="news.html">NEWS</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">NEWS</a>
+                                <a href="news.html">NEWS</a>
                             </li>
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#">MEMBERSHIP</a>
+                        <a href="membership.html">MEMBERSHIP</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">MEMBERSHIP</a>
+                                <a href="membership.html">MEMBERSHIP</a>
                             </li>
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#">CONTACT</a>
+                        <a href="faq.html">CONTACT</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#">FAQ</a>
+                                <a href="faq.html">FAQ</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">INQUIRY</a>
+                                <a href="inquiry.html">INQUIRY</a>
                             </li>
                             <li class="header__sub-menu">
-                                <a href="#">MAP</a>
+                                <a href="map.html">MAP</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </div>
-        <div class="menu-bg">-</div>
+        <div class="menu-bg"></div>
     </header>
 
     <!-- membership section -->
     <main>
-        <section class="membership sec-pd">
+        <section class="membership sec-pd membership__bg" id="membership-sec">
+
             <div class="container-xxl">
                 <h2 class="display-5 fw-bold t-pd--xxl text-center">MEMBERSHIP</h2>
-                <div class="membership__card-wrap d-flex justify-content-between align-items-center">
-                    <div class="membership__card01 membership__card d-flex justify-content-center gap-2 flex-column">
+                <div class="membership__card-wrap">
+                    <div class="membership__card01 membership__card">
                         <p class="text-center">free</p>
                         <h4 class="text-center fs-2 fw-bold">무료</h4>
                         <ul class="mt-5">
@@ -107,7 +108,7 @@
                         </ul>
                         <button class="btn btn-primary mt-5 membership__btn">Choose Plan</button>
                     </div>
-                    <div class="membership__card02 membership__card d-flex justify-content-center flex-column gap-3">
+                    <div class="membership__card02 membership__card">
                         <p class="text-center">Expert Plan</p>
                         <h4 class="text-center fs-2 fw-bold">월 6,900원</h4>
                         <ul class="mt-4">
@@ -129,7 +130,7 @@
                         <button class="btn btn-primary mt-4 membership__btn">Choose Plan</button>
 
                     </div>
-                    <div class="membership__card03 membership__card d-flex justify-content-center flex-column gap-3">
+                    <div class="membership__card03 membership__card">
                         <p class="text-center">Premium Plan</p>
                         <h4 class="text-center fs-2 fw-bold">월 19,900원</h4>
                         <ul class="mt-5">
@@ -148,18 +149,16 @@
                             </li>
                         </ul>
                         <button class="btn btn-primary mt-5 membership__btn">Choose Plan</button>
-
                     </div>
-
                 </div>
-
             </div>
+
         </section>
 
 
         <!-- footer  -->
         <footer class="footer">
-            <div class="container-xxl d-flex justify-content-between align-items-center">
+            <div class="container-xxl footer__wrap">
                 <div class="footer__txt">
                     <img src="./asset/image/logo_footer.png" alt="푸터 로고">
                     <ul class="d-flex gap-4 pt-2">

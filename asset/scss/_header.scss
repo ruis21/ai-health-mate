@@ -2,11 +2,11 @@
     background-color: rgba(0, 0, 0, 0.7);
     height: 77px;
     color: $whiteColor01;
-    position: relative;
+    @include flex;
 
-    // &__wrap {
-    //     @include flex(space-between, center);
-    // }
+    &__wrap {
+        @include flex;
+    }
 
     &__logo {
         a {
@@ -17,6 +17,10 @@
                 display: block;
             }
         }
+    }
+
+    &__menu-list {
+        @include flex(space-between, center, 3%);
     }
 
     &__menu {

@@ -1,5 +1,6 @@
 .merit {
     &__card {
+        @include flex(center, center, 5%);
         width: 100%;
     }
 

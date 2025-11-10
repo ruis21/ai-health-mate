@@ -1,4 +1,9 @@
 .footer {
+
+    &__wrap {
+        @include flex;
+    }
+
     background-color: $blackColor01;
     color: $grayColor05;
     padding: 82px 0;

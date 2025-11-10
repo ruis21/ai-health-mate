@@ -1,0 +1,13 @@
+.faq {
+    &__tab-menu {
+        &:hover {
+            color: $blackColor01;
+            text-decoration: underline;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &__menu-list {
+        @include flex;
+    }
+}

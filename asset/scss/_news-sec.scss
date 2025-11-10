@@ -18,23 +18,30 @@
     //     object-fit: cover;
     // }
 
-    .news-btn {
+    &__card {
+        @include flex(space-between, stretch, 0px, column);
+    }
+
+    &__btn {
         position: relative;
 
         .swiper-button-next {
             color: $grayColor02;
             position: absolute;
-            // top: -50%;
-            right: 20%;
+            top: -350px;
             border: 1px solid $grayColor02;
+            padding: 30px;
             border-radius: 50%;
         }
 
         .swiper-button-prev {
             color: $grayColor02;
             position: absolute;
-            top: 60%;
-            right: 50px;
+            top: -350px;
+            right: 500px;
+            border: 1px solid $grayColor02;
+            padding: 30px;
+            border-radius: 50%;
         }
 
     }

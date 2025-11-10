@@ -167,6 +167,38 @@ p {
   padding: 240px 0;
 }
 
+.tab-menu--lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 106px;
+  color: #ADADAD;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 106px;
+  color: #ADADAD;
+  font-weight: bold;
+  font-size: 32px;
+}
+.tab-menu--lg {
+  gap: 106px;
+  font-size: 32px;
+}
+.tab-menu--md {
+  gap: 65px;
+  font-size: 26px;
+}
+.tab-menu--sm {
+  gap: 45px;
+  font-size: 22px;
+}
+
 .membership-btn--lg {
   background: linear-gradient(45deg, #0097F6, #0ED058);
   color: white;
@@ -178,7 +210,16 @@ p {
   background-color: rgba(0, 0, 0, 0.7);
   height: 77px;
   color: #ffffff;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 .header__logo a {
   display: block;
@@ -186,6 +227,13 @@ p {
 .header__logo a img {
   width: 300px;
   display: block;
+}
+.header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3%;
+  flex-direction: row;
 }
 .header__menu {
   position: relative;
@@ -240,12 +288,14 @@ p {
 }
 .kv__title {
   font-family: "akira_expandedsuper_bold";
+  z-index: 5;
 }
 .kv__box {
   background: linear-gradient(45deg, #0097F6, #0ED058);
   width: 100px;
   height: 70px;
   top: 0;
+  z-index: -1;
 }
 .kv__btn {
   background-color: #ffffff;
@@ -300,7 +350,20 @@ p {
   background-color: #0097F6;
   transition: all 0.3s ease-in-out;
 }
-
+.solution__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-direction: column;
+}
+.solution__subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-direction: row;
+}
 .solution__subtitle .solution__item {
   border: 1px solid #fff;
   border-radius: 30px;
@@ -311,6 +374,11 @@ p {
 }
 
 .merit__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-direction: row;
   width: 100%;
 }
 .merit img {
@@ -328,21 +396,32 @@ p {
   height: 320px;
   padding: 30px;
 }
-.news .news-btn {
+.news__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0px;
+  flex-direction: column;
+}
+.news__btn {
   position: relative;
 }
-.news .news-btn .swiper-button-next {
+.news__btn .swiper-button-next {
   color: #ADADAD;
   position: absolute;
-  right: 20%;
+  top: -350px;
   border: 1px solid #ADADAD;
+  padding: 30px;
   border-radius: 50%;
 }
-.news .news-btn .swiper-button-prev {
+.news__btn .swiper-button-prev {
   color: #ADADAD;
   position: absolute;
-  top: 60%;
-  right: 50px;
+  top: -350px;
+  right: 500px;
+  border: 1px solid #ADADAD;
+  padding: 30px;
+  border-radius: 50%;
 }
 
 .ask {
@@ -408,6 +487,10 @@ p {
   background-color: #7E7E7E;
 }
 .vision__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   height: 350px;
   width: 350px;
   border: 2px solid #0ED058;
@@ -453,7 +536,18 @@ p {
   letter-spacing: 10px;
 }
 
+.membership__card-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
 .membership__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  flex-direction: column;
   width: 32%;
   gap: 2%;
   border: 1px solid #ADADAD;
@@ -472,11 +566,38 @@ p {
   border: 1px solid #ADADAD;
   border-radius: 30px;
 }
+.membership__bg {
+  background-image: url("../image/membership-bg-grdient.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.membership__card {
+  background-color: #ffffff;
+}
+
+.faq__tab-menu:hover {
+  color: #111111;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+.faq__menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
 
 .footer {
   background-color: #111111;
   color: #F5F5F5;
   padding: 82px 0;
+}
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 .footer img {
   display: block;

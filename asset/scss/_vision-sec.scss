@@ -24,6 +24,7 @@
     }
 
     &__circle {
+        @include flex(center);
         height: 350px;
         width: 350px;
         // line-height: 350px;
