@@ -12,7 +12,7 @@
     }
 
     span {
-        color: $primaryColor01;
+        color: $primaryColor02;
     }
 
     img {
@@ -36,11 +36,11 @@
     }
 
     &__card01 {
-        background-color: $primaryColor01;
+        background-color: $primaryColor02;
     }
 
     &__card02 {
-        background-color: $primaryColor02;
+        background-color: $primaryColor01;
     }
 
     &__card03 {
@@ -52,7 +52,7 @@
         height: 350px;
         width: 350px;
         // line-height: 350px;
-        border: 2px solid $primaryColor02;
+        border: 2px solid $primaryColor01;
         border-radius: 50%;
         background-color: $whiteColor01;
         // transform: translate(10%, 30%);
@@ -79,7 +79,7 @@
 
     &__wrap {
         h3 {
-            color: $primaryColor01;
+            color: $primaryColor02;
         }
     }
 }
@@ -98,6 +98,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        img {}
     }
 
     .swiper-slide img {

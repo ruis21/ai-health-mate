@@ -1,5 +1,6 @@
 // btn 공통 - 사이즈별
 .btn {
+
     padding: rem(15) rem(30);
     background-color: $whiteColor01;
     color: $blackColor01;
@@ -9,7 +10,7 @@
 
     // &--lg {
     //     font-size: rem(18);
-    // }
+    // } 라지사이즈는 이미 정의가 되어있어서 필요가없음.
 
     &--md {
         height: rem(48);
@@ -73,7 +74,7 @@
         color: $grayColor01;
 
         &:hover {
-            background-color: $primaryColor01;
+            background-color: $primaryColor02;
             color: $whiteColor01;
         }
     }

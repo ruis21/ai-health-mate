@@ -1,5 +1,5 @@
 
-// header 메뉴 다운 & 업
+// header 메뉴 호버시 서브메뉴 및 배경 나타남
 $(function () {
     $(".header__menu").on("mouseenter", function () {
         $(".header__sub-menu-list, .menu-bg").stop().slideDown();
@@ -8,6 +8,21 @@ $(function () {
 $(function () {
     $(".header__menu").on("mouseleave", function () {
         $(".header__sub-menu-list, .menu-bg").stop().slideUp();
+    });
+});
+
+// 햄버거 버튼 클릭 시 메뉴 토글 : 모바일 전용
+$(function () {
+
+    $(".hamburger__btn").on("click", function () {
+        $(".header__nav").stop().slideToggle();
+        $(this).toggleClass("active");
+    });
+
+    $(".header__menu").on("click", function () {
+        if ($(window).width() <= 1024) {
+            $(".header__nav").stop().slideUp();
+        }
     });
 });
 

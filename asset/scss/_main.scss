@@ -45,7 +45,7 @@
     &__btn {
 
         &:hover {
-            background-color: $primaryColor02;
+            background-color: $primaryColor01;
         }
     }
 
@@ -108,17 +108,37 @@
                 background-color: $pointColor02;
                 color: $whiteColor01;
                 padding: rem(53) 0;
-            }
 
-            :hover {
-                background-color: $primaryColor01;
-                transition: all 0.3s ease-in-out;
+                &:hover {
+                    background-color: $primaryColor02;
+                    transition: all 0.3s ease-in-out;
+
+                    // img {
+                    //     opacity: 0;
+                    // }
+                }
             }
         }
     }
 
     &__card {
         @include flex(center, center, 5%, column);
+        position: relative;
+
+        // ul {
+        //     position: absolute;
+        //     top: 50px;
+        //     opacity: 0;
+
+        //     &:hover {
+        //         opacity: 1;
+        //         top: 20;
+        //         top: 0;
+        //     }
+    }
+
+    &__card-text {
+        height: 240px;
     }
 
     &__subtitle {
@@ -127,15 +147,19 @@
 
 
         .solution__items {
+
             border: 1px solid $whiteColor01;
             border-radius: rem(30);
             padding: rem(10) rem(20);
             color: $whiteColor01;
-            font-weight: 600;
             text-align: center;
         }
     }
 }
+
+
+
+
 
 // merit section 
 .merit {
@@ -155,7 +179,7 @@
 
         h3 {
             @include defineFont(rem(30), bold);
-            color: $primaryColor02;
+            color: $primaryColor01;
         }
 
         h2 {
@@ -212,7 +236,7 @@
         }
 
         &:hover {
-            background-color: $primaryColor02;
+            background-color: $primaryColor01;
             color: $whiteColor01;
             transition: all 0.3s ease-in-out;
         }
@@ -235,7 +259,6 @@
             border: 1px solid $grayColor02;
             border-radius: 50%;
         }
-
     }
 }
 
