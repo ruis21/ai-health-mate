@@ -1,0 +1,55 @@
+.faq {
+    &__menu-list {
+        @include flex;
+        background-color: $grayColor04;
+        padding: 20px 45px;
+        border-radius: 40px;
+        color: $grayColor01;
+        font-size: 22px;
+    }
+
+    &__menu {
+
+        a {
+            display: block;
+
+            &:hover {
+                background-color: $primaryColor02;
+                color: $whiteColor01;
+                padding: 5px 20px;
+                border-radius: 40px;
+            }
+
+        }
+    }
+
+    &__board {
+
+        height: 100%;
+        border: 1px solid $grayColor02;
+        border-radius: 30px;
+        padding: 76px 45px;
+
+        // @include flex(center, stretch, 25%, column);
+
+        &__board-title {
+            // display: block;
+            @include flex;
+        }
+    }
+
+    &__board-conts {
+        display: none;
+    }
+
+    &__search-box {
+        form {
+            input {
+                padding: 10px 20xp;
+            }
+
+        }
+
+    }
+
+}

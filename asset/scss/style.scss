@@ -6,25 +6,25 @@
 @import 'extend';
 @import 'button';
 
+// header 
 @import 'header';
 
-@import 'kv-sec';
-@import 'introduce-sec';
-@import 'solution-sec';
-@import 'merit-sec';
-@import 'news-sec';
-@import 'ask-sec';
+// main page
+@import 'main';
 
-@import 'about-sec';
-@import 'vision-sec';
-@import 'history-sec';
-@import 'partners-sec';
+// about page 
+@import 'about';
 
-@import 'membership-sec';
+// news page 
+@import 'news';
 
-@import 'faq-sec';
-@import 'inquiry-sec';
-@import 'map-sec';
+// membership page
+@import 'membership';
 
+// contact page
+@import 'faq';
+@import 'inquiry';
+@import 'map';
 
+// footer
 @import 'footer';

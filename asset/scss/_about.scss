@@ -1,0 +1,116 @@
+// about section
+.about {
+    &__bg {
+        background-image: url(../image/about-bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__circle {
+        color: $whiteColor01;
+    }
+
+    span {
+        color: $primaryColor01;
+    }
+
+    img {
+        margin: 0 auto;
+    }
+}
+
+
+// vision section 
+.vision {
+
+    &__wrap {
+        align-items: center;
+    }
+
+    &__card {
+        padding: 62px 0;
+        margin: 10px;
+        color: $whiteColor01;
+        border-radius: 20px;
+    }
+
+    &__card01 {
+        background-color: $primaryColor01;
+    }
+
+    &__card02 {
+        background-color: $primaryColor02;
+    }
+
+    &__card03 {
+        background-color: $grayColor01;
+    }
+
+    &__circle {
+        @include flex(center);
+        height: 350px;
+        width: 350px;
+        // line-height: 350px;
+        border: 2px solid $primaryColor02;
+        border-radius: 50%;
+        background-color: $whiteColor01;
+        // transform: translate(10%, 30%);
+    }
+
+
+    &__path {
+        top: 70px;
+        right: 300px;
+    }
+
+}
+
+// history section 
+.history {
+    position: relative;
+    padding-left: 70px; // (숫자와 텍스트 사이 간격)
+
+    .num {
+        position: absolute;
+        left: 50%;
+        font-weight: 700;
+    }
+
+    &__wrap {
+        h3 {
+            color: $primaryColor01;
+        }
+    }
+}
+
+// partners section 
+.partners {
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        // text-align: center;
+        // font-size: 18px;
+        // background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__txt {
+        color: $grayColor04;
+        font-size: 128px;
+        letter-spacing: 10px;
+    }
+
+}

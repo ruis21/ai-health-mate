@@ -46,10 +46,10 @@
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#news-sec">NEWS</a>
+                        <a href="news.html">NEWS</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#news-sec">NEWS</a>
+                                <a href="news.html">NEWS</a>
                             </li>
                         </ul>
                     </li>
@@ -82,25 +82,57 @@
     </header>
 
     <main>
-        <section class="faq-sec sec-pd" id="faq-sec">
+        <!-- inquiry section -->
+        <section class="inquiry-sec sec-pd-t" id="inquiry-sec">
             <div class="container-xxl">
-                <h2 class="display-5 fw-bold t-pd--xxl text-center">FAQ</h2>
+                <h2 class="display-5 fw-bold m-b--xxl text-center">FAQ</h2>
 
-                <ul class="faq__tab-menu-list tab-menu--lg">
-                    <li class="faq__tab-menu fs-2 fw-bold">
+                <ul class="tab-menu-list tab-menu--lg m-b--xxl">
+                    <li class="tab-menu fs-2 fw-bold">
                         <a href="faq.html">FAQ</a>
                     </li>
-                    <li class="faq__tab-menu fs-2 fw-bold">
+                    <li class="tab-menu fs-2 fw-bold">
                         <a href="inquiry.html">INQUIRY</a>
                     </li>
-                    <li class="faq__tab-menu fs-2 fw-bold">
+                    <li class="tab-menu fs-2 fw-bold">
                         <a href="map.html">MAP</a>
                     </li>
                 </ul>
 
-                <div class="faq__wrap">
-
-
+                <div class="inquiry__wrap">
+                    <div class="inquiry__left-box rounded-4">
+                        <span class="fs-4">AI HEALTHMATE</span> 에
+                        <p>
+                            궁금하신 사항이
+                            있으시면 문의해주세요</p>
+                    </div>
+                    <div class="inquiry__right-box">
+                        <form action="">
+                            <fieldset>
+                                <label for="" class="pb-3 fw-bold"><span>* </span>성함 <br>
+                                    <input type="text" placeholder="성함을 입력해주세요" class="h6 mt-2">
+                                </label>
+                                <br>
+                                <label for="" class="pb-3 fw-bold"><span>* </span>이메일 <br>
+                                    <input type="email" placeholder="이메일을 입력해주세요" class="h6 mt-3">
+                                </label>
+                                <br>
+                                <label for="" class="pb-3 fw-bold"><span>* </span>연락처<br>
+                                    <input type="tell" placeholder="연락처를 입력해주세요" class="h6 mt-3">
+                                </label>
+                                <br>
+                                <label for="" class="pb-3 fw-bold"><span>* </span>문의 내용 <br>
+                                    <textarea rows=12 cols=12 placeholder="문의 내용을 입력해주세요" class="h6 mt-3"></textarea>
+                                </label>
+                                <br>
+                                <label for="">
+                                    <input type="checkbox">
+                                    개인정보 수집 및 이용동의(필수)
+                                </label>
+                                <button class="inquiry__btn btn fw-bold">문의하기</button>
+                            </fieldset>
+                        </form>
+                    </div>
 
                 </div>
             </div>

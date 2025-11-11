@@ -46,10 +46,10 @@
                         </ul>
                     </li>
                     <li class="header__menu">
-                        <a href="#news-sec">NEWS</a>
+                        <a href="news.html">NEWS</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
-                                <a href="#news-sec">NEWS</a>
+                                <a href="news.html">NEWS</a>
                             </li>
                         </ul>
                     </li>
@@ -82,24 +82,25 @@
     </header>
 
     <main>
-        <section class="faq-sec sec-pd" id="faq-sec">
+        <!-- faq section -->
+        <section class="faq-sec sec-pd-t" id="faq-sec">
             <div class="container-xxl">
-                <h2 class="display-5 fw-bold t-pd--xxl text-center">FAQ</h2>
+                <h2 class="display-5 fw-bold m-b--xxl text-center">FAQ</h2>
 
-                <ul class="faq__tab-menu-list tab-menu--lg t-pd--xxl">
-                    <li class="faq__tab-menu fs-2 fw-bold">
+                <ul class="tab-menu-list tab-menu--lg m-b--xxl">
+                    <li class="tab-menu fs-2 fw-bold">
                         <a href="faq.html">FAQ</a>
                     </li>
-                    <li class="faq__tab-menu fs-2 fw-bold">
+                    <li class="tab-menu fs-2 fw-bold">
                         <a href="inquiry.html">INQUIRY</a>
                     </li>
-                    <li class="faq__tab-menu fs-2 fw-bold">
+                    <li class="tab-menu fs-2 fw-bold">
                         <a href="map.html">MAP</a>
                     </li>
                 </ul>
 
                 <div class="faq__wrap">
-                    <ul class="faq__menu-list">
+                    <ul class="faq__menu-list fw-bold m-b--xxl ">
                         <li class="faq__menu">
                             <a href="">서비스 이용관련</a>
                         </li>
@@ -116,6 +117,57 @@
                             <a href="">고객지원 및 기타</a>
                         </li>
                     </ul>
+                    <div class="faq__search-box">
+                        <form action="/search" method="get">
+                            <input type="text" name="query" placeholder="검색어를 입력하세요">
+                            <button type="submit" class="search-btn">
+                                <img src="./asset/image/search-icon-inactive.png" alt="검색 아이콘">
+                            </button>
+                        </form>
+                    </div>
+                    <div class="faq__board">
+                        <ul>
+                            <li>
+                                <a href="" class="faq__board-title">
+                                    <h5>AI Health Mate는 어떤 서비스를 제공하나요?</h5>
+                                    <img src="./asset/image/faq-plus-icon.png" alt="플러스 아이콘">
+                                </a>
+                                <div class="faq__board-conts">
+                                    <p>AI Health Mate는 개인의 건강 데이터를 기반으로 맞춤형 솔루션을 제공하는 AI 헬스케어 플랫폼입니다. 스마트폰과 웨어러블 기기를 통해
+                                        수집된 걸음 수, 심박수, 수면, 스트레스 등의 데이터를 분석하여,
+                                    <ul>
+                                        <li>맞춤형 운동·식습관·수면 관리 제안</li>
+                                        <li>건강 이상 신호 조기 감지 및 예방적 조치 안내</li>
+                                        <li>전문가(의사·영양사·트레이너)와 1:1 상담 연결</li>
+                                    </ul>
+                                    등의 서비스를 제공합니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="">
+                                    <h5>무료로 사용할 수 있는 기능과 유료 기능의 차이는 무엇인가요?</h5>
+                                    <img src="./asset/image/faq-plus-icon.png" alt="플러스 아이콘">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="">
+                                    <h5>회원가입 없이도 이용할 수 있나요?</h5>
+                                    <img src="./asset/image/faq-plus-icon.png" alt="플러스 아이콘">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="">
+                                    <h5>웨어러블 기기가 없어도 사용 가능한가요?</h5>
+                                    <img src="./asset/image/faq-plus-icon.png" alt="플러스 아이콘">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
 
 
                 </div>

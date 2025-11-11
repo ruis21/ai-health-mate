@@ -1,6 +1,19 @@
-// Initialize Swiper
 
-var swiper = new Swiper(".newsSwiper", {
+// header 메뉴 다운 & 업
+$(function () {
+    $(".header__menu").on("mouseenter", function () {
+        $(".header__sub-menu-list, .menu-bg").stop().slideDown();
+    });
+});
+$(function () {
+    $(".header__menu").on("mouseleave", function () {
+        $(".header__sub-menu-list, .menu-bg").stop().slideUp();
+    });
+});
+
+
+// Initialize Swiper
+var swiper = new Swiper(".previewSwiper", {
     slidesPerView: 3.5,
     spaceBetween: 15,
     // centeredSlides: true,
@@ -44,14 +57,62 @@ var swiper = new Swiper(".partnersSwiper", {
 });
 
 
+/*
+inspiration
+https://dribbble.com/shots/4684682-Aquatic-Animals
+*/
 
-$(function () {
-    $(".header__menu").on("mouseenter", function () {
-        $(".header__sub-menu-list, .menu-bg").stop().slideDown();
-    });
+var swiper = new Swiper(".newsSwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 3,
+        slideShadows: true,
+        slidesPerView: 3
+    },
+
+    keyboard: {
+        enabled: true
+    },
+    mousewheel: {
+        thresholdDelta: 70
+    },
+    loop: true,
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true
+    // },
+    breakpoints: {
+        // 540: {
+        //     slidesPerView: 1
+        // },
+        768: {
+            slidesPerView: 1
+        },
+        1024: {
+            slidesPerView: 2
+        },
+        1240: {
+            slidesPerView: 3
+        }
+    }
 });
-$(function () {
-    $(".header__menu").on("mouseleave", function () {
-        $(".header__sub-menu-list, .menu-bg").stop().slideUp();
+
+$(document).ready(function () {
+
+    $(".faq__board-title").on("click", function () {
+
+        // 현재 클릭한 요소 외 나머지 닫기
+        $(".faq__board-conts").not($(this).next()).slideUp();
+
+        // 현재 요소 토글
+        $(this).next().slideToggle();
     });
+
 });
+
+

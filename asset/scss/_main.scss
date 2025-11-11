@@ -1,0 +1,277 @@
+// kv section 
+.kv {
+
+    background-image:
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0)),
+        url("../image/kv-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: calc(rem(260) + rem(77)) 0 rem(260);
+
+    .container-xxl {
+        position: relative;
+    }
+
+    &__text-wrap {
+        color: $whiteColor01;
+        // position: relative;
+    }
+
+    &__title {
+        font-family: 'akira_expandedsuper_bold';
+        z-index: 10;
+        @include defineFont (rem(70));
+
+        span {
+            @include defineFont (rem(80));
+        }
+
+        h3 {
+            @include defineFont (rem(32));
+        }
+    }
+
+    &__box {
+        background: $gradientColor01;
+        width: rem(110);
+        height: rem(77);
+        top: rem(0);
+        z-index: 0;
+    }
+
+    &__btn {
+
+        &:hover {
+            background-color: $primaryColor02;
+        }
+    }
+
+}
+
+
+// introduce section 
+.introduce {
+    // background-color: bisque;
+
+    &__wrap {
+
+        .introduce__conts {
+            position: relative;
+            background-color: black;
+            color: $whiteColor01;
+            padding: rem(260) 0;
+            overflow: hidden;
+
+            .introduce__video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.4;
+                z-index: 0;
+            }
+
+            .introduce__text {
+                position: relative;
+                z-index: 1;
+            }
+
+            .introduce__title,
+            .introduce__subtitle {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
+// solution section 
+.solution {
+    background-color: $pointColor01;
+    color: $whiteColor01;
+
+    &__title {
+        span {
+            @include gradient;
+        }
+    }
+
+    &__card-wrap {
+        .col {
+            .solution__card {
+                background-color: $pointColor02;
+                color: $whiteColor01;
+                padding: rem(53) 0;
+            }
+
+            :hover {
+                background-color: $primaryColor01;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &__card {
+        @include flex(center, center, 5%, column);
+    }
+
+    &__subtitle {
+        @include flex(center, center, 5%);
+        @include defineFont(rem(26));
+
+
+        .solution__items {
+            border: 1px solid $whiteColor01;
+            border-radius: rem(30);
+            padding: rem(10) rem(20);
+            color: $whiteColor01;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+}
+
+// merit section 
+.merit {
+    &__card {
+        @include flex(center, center, 5%);
+        width: 100%;
+
+    }
+
+    img {
+        width: 50%;
+    }
+
+    &__text {
+        width: 50%;
+
+
+        h3 {
+            @include defineFont(rem(30), bold);
+            color: $primaryColor02;
+        }
+
+        h2 {
+            @include defineFont(rem(36), bold);
+        }
+
+        p {
+            @include defineFont(rem(22), regular, 1.6);
+        }
+    }
+}
+
+// preview section 
+.preview {
+    .swiper {
+        // left: 50%;
+        // transform: translate(-50%);
+    }
+
+    .swiper-slide {
+        // width: 50%;
+        background: $grayColor04;
+        height: rem(320);
+        padding: rem(30);
+    }
+
+    // .swiper-slide img {
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    // }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__card {
+        @include flex(space-between, stretch, 0px, column);
+
+        h5 {
+            @include defineFont (rem(22), 600);
+        }
+
+        p {
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        &:hover {
+            background-color: $primaryColor02;
+            color: $whiteColor01;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        right: 20px;
+
+        .swiper-button-next {
+            padding: rem(30);
+            border-radius: 50%;
+            color: $grayColor02;
+            border: 1px solid $grayColor02;
+        }
+
+        .swiper-button-prev {
+            padding: rem(30);
+            color: $grayColor02;
+            border: 1px solid $grayColor02;
+            border-radius: 50%;
+        }
+
+    }
+}
+
+
+// ask section 
+.ask {
+    background: $gradientColor01;
+    color: $whiteColor01;
+
+    &__title {
+        @include defineFont (rem(36), 600);
+    }
+
+
+    // .ask-btn01 {
+    //     // color: $whiteColor01;
+    //     background-color: transparent;
+    //     border: 2px solid $whiteColor01;
+
+    //     &:hover {
+    //         @include gradient;
+    //         color: $whiteColor01;
+    //         border: 2px solid $gradientColor01;
+    //     }
+    // }
+
+    // .ask-btn02 {
+    //     background: $whiteColor01;
+
+    //     &:hover {
+    //         @include gradient;
+    //         color: $whiteColor01;
+    //     }
+
+    //     span {
+    //         @include gradient;
+    //     }
+    // }
+}

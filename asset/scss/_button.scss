@@ -1,6 +1,80 @@
-.membership-btn--lg {
-    background: $gradientColor01;
-    color: white;
-    border-radius: 30px;
-    padding: 20px 88px;
+// btn 공통 - 사이즈별
+.btn {
+    padding: rem(15) rem(30);
+    background-color: $whiteColor01;
+    color: $blackColor01;
+    border-radius: rem(30);
+    border: none;
+    @include defineFont (rem(18), 600);
+
+    // &--lg {
+    //     font-size: rem(18);
+    // }
+
+    &--md {
+        height: rem(48);
+    }
+
+    &--sm {
+        height: rem(18);
+    }
+}
+
+.ask {
+    &__btn01 {
+        background-color: transparent;
+        color: $whiteColor01;
+        border: 2px solid $whiteColor01;
+
+        &:hover {
+            background: $gradientColor01;
+            color: $whiteColor01;
+            // border: 2px solid $gradientColor01;
+        }
+    }
+
+    //     span {
+    //         @include gradient;
+    //     }
+    // }
+
+    &__btn02 {
+        @include gradient;
+        background: $whiteColor01;
+
+        &:hover {
+            background: $gradientColor01;
+            color: $whiteColor01;
+        }
+    }
+}
+
+
+
+
+.membership {
+    &__btn {
+        @include gradient;
+        background: $whiteColor01;
+        padding: rem(20) rem(88);
+
+        &:hover {
+            background: $gradientColor01;
+            color: $whiteColor01;
+        }
+    }
+
+}
+
+.inquiry {
+    &__btn {
+        border-radius: 10px;
+        width: 100%;
+        color: $grayColor01;
+
+        &:hover {
+            background-color: $primaryColor01;
+            color: $whiteColor01;
+        }
+    }
 }

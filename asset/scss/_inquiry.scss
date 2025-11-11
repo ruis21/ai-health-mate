@@ -1,0 +1,55 @@
+.inquiry {
+    &__wrap {
+        @include flex(center, flex-start, 5%);
+        width: 100%;
+
+    }
+
+    &__left-box {
+        width: 38%;
+        background-color: $primaryColor01;
+        padding: 230px 66px;
+        color: $whiteColor01;
+
+        span {
+            font-family: 'akira_expandedsuper_bold';
+        }
+    }
+
+    &__right-box {
+        width: 58%;
+
+        fieldset {
+            background-color: $grayColor04;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        span {
+            color: $primaryColor02;
+        }
+
+        input {
+            border: none;
+            padding: 16px 20px;
+            // font-size: 16px;
+            border-radius: 10px;
+            width: 635px;
+            // width: 500px;
+        }
+
+        p {
+            color: $grayColor01;
+        }
+
+        textarea {
+            width: 635px;
+            height: 380px;
+            border: none;
+            border-radius: 10px;
+            padding: 16px 20px;
+            resize: none;
+        }
+    }
+
+}

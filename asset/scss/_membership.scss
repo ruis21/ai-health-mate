@@ -11,7 +11,8 @@
         border-radius: 20px;
         padding: 30px;
         height: 588px;
-        // flex-direction: column;
+        line-height: 2.0;
+        word-break: keep-all;
 
         p {
             color: $grayColor01;
@@ -23,10 +24,6 @@
         background-color: $whiteColor01;
         border: 1px solid $grayColor02;
         border-radius: 30px;
-
-        // &:hover {
-        //     background: $gradient;
-        // }
     }
 
     &__bg {

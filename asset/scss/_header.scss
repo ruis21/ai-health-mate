@@ -11,6 +11,7 @@
     &__logo {
         a {
             display: block;
+            border: none;
 
             img {
                 width: 300px;
@@ -21,6 +22,10 @@
 
     &__menu-list {
         @include flex(space-between, center, 3%);
+
+        &:hover {
+            // @include gradient;
+        }
     }
 
     &__menu {
@@ -37,7 +42,9 @@
         }
 
         &:hover {
-            @include gradient;
+            color: $whiteColor01;
+            font-weight: 500;
+            // @include gradient;
         }
     }
 

@@ -1,34 +1,14 @@
-.btn {
-    font-size: 18px;
-    padding: 20px 30px;
-    // background-color: $whiteColor01;
-    // color: $blackColor01;
-    border-radius: 30px;
-    border: none;
-
-    &--lg {
-        padding: 20px 30px;
-        // height: 60px;
-    }
-
-    &--md {
-        padding: 15px 30px;
-        height: 48px;
-    }
-
-    &--sm {
-        padding: 15px 30px;
-        height: 44px;
-    }
+// padding컴포넌트
+.sec-pd-t {
+    padding: calc(120px + 77px) 0 120px;
 }
 
-// padding컴포넌트
 .sec-pd {
     padding: 120px 0;
 }
 
-.t-pd--xxl {
-    padding-bottom: 120px;
+.m-b--xxl {
+    margin-bottom: 120px;
 }
 
 .history-pd {
@@ -36,21 +16,11 @@
 }
 
 // tab menu 컴포넌트
-.tab-menu--lg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 106px;
-    color: $grayColor02;
-    font-weight: bold;
-    font-size: 32px;
+.tab-menu-list {
+    @include flex(center, center, 106px);
 }
 
 .tab-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 106px;
     color: $grayColor02;
     font-weight: bold;
     font-size: 32px;
@@ -70,5 +40,18 @@
         font-size: 22px;
     }
 
+    &:hover {
+        color: $blackColor01;
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+    }
+}
 
+// field box 컴포넌트
+.field-box {
+    background-color: $grayColor02;
+    color: $grayColor02;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
 }
