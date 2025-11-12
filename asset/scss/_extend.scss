@@ -11,6 +11,24 @@
     margin-bottom: 120px;
 }
 
+.kv-pd {
+    &--lg {
+        padding: calc(rem(260) + rem(77)) 0 rem(260);
+    }
+
+    &--md {
+        padding: calc(rem(200) + rem(77)) 0 rem(200);
+    }
+
+    &--sm {
+        padding: calc(rem(170) + rem(77)) 0 rem(170);
+    }
+}
+
+.solution-pd {
+    padding: 60px 0;
+}
+
 .history-pd {
     padding: 240px 0;
 }

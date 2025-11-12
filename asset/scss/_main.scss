@@ -1,15 +1,20 @@
 // kv section 
 .kv {
 
-    background-image:
-        linear-gradient(to right,
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0)),
+    background: linear-gradient(to left,
+            rgba(20, 20, 20, 0) 10%,
+            rgba(20, 20, 20, 0.25) 25%,
+            rgba(20, 20, 20, 0.5) 50%,
+            rgba(20, 20, 20, 0.75) 75%,
+            rgba(20, 20, 20, 1) 100%),
+        // linear-gradient(to right,
+        //     rgba(0, 0, 0, 0.6),
+        //     rgba(0, 0, 0, 0)),
         url("../image/kv-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: calc(rem(260) + rem(77)) 0 rem(260);
+
 
     .container-xxl {
         position: relative;
@@ -18,19 +23,19 @@
     &__text-wrap {
         color: $whiteColor01;
         // position: relative;
+
+        h3 {
+            @include defineFont (rem(32));
+        }
     }
 
     &__title {
         font-family: 'akira_expandedsuper_bold';
-        z-index: 10;
         @include defineFont (rem(70));
 
         span {
+            z-index: 10;
             @include defineFont (rem(80));
-        }
-
-        h3 {
-            @include defineFont (rem(32));
         }
     }
 
@@ -38,7 +43,7 @@
         background: $gradientColor01;
         width: rem(110);
         height: rem(77);
-        top: rem(0);
+        top: rem(340);
         z-index: 0;
     }
 
@@ -79,6 +84,7 @@
             .introduce__text {
                 position: relative;
                 z-index: 1;
+                padding: 20px;
             }
 
             .introduce__title,
@@ -177,28 +183,47 @@
 
 
         h3 {
-            @include defineFont(rem(30), bold);
+            @include defineFont(rem(30), 600);
             color: $primaryColor01;
         }
 
         h2 {
-            @include defineFont(rem(36), bold);
+            @include defineFont(rem(36), 600);
         }
 
         p {
             @include defineFont(rem(22), regular, 1.6);
         }
     }
-}
 
+    /* responsive 48% / 48% layout for merit cards */
+    //     &__wrap {
+    //         .row {
+    //             display: flex;
+    //             flex-wrap: wrap;
+    //             gap: rem(24);
+
+    //             /* target only the direct .col-12 children inside merit row */
+    //             >.col-12 {
+    //                 box-sizing: border-box;
+    //                 flex: 0 0 48%;
+    //                 max-width: 48%;
+    //             }
+
+    //             /* stack on smaller screens */
+    //             @include media(768px) {
+    //                 >.col-12 {
+    //                     flex: 0 0 100%;
+    //                     max-width: 100%;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}
 
 // preview section 
 .preview {
-    .swiper {
-        // left: 50%;
-        // transform: translate(-50%);
-    }
-
     .swiper-slide {
         // width: 50%;
         background: $grayColor04;
@@ -221,7 +246,7 @@
         @include flex(space-between, stretch, 0px, column);
 
         h5 {
-            @include defineFont (rem(22), 600);
+            @include defineFont (rem(20), 600);
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -245,29 +270,58 @@
             color: $grayColor01;
         }
 
+        hr {
+            border: 1.5px solid $grayColor01;
+        }
+
         &:hover {
             background-color: $primaryColor01;
             color: $whiteColor01;
             transition: all 0.3s ease-in-out;
+
+            h5,
+            p,
+            hr,
+            span {
+                color: $whiteColor01;
+            }
         }
+
+
     }
 
     &__btn {
         position: absolute;
-        right: 20px;
+        right: rem(20);
+        width: rem(120);
+        display: flex;
+        justify-content: end;
+        gap: rem(15);
 
-        .swiper-button-next {
-            padding: rem(30);
-            border-radius: 50%;
-            color: $grayColor02;
-            border: 1px solid $grayColor02;
+        /* 가상요소 안 보이게 처리 */
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: rem(16);
+            color: $blackColor01;
         }
 
+        /* 새로 디자인 */
+        .swiper-button-next,
         .swiper-button-prev {
-            padding: rem(30);
+            position: relative;
+            top: -70px;
+            margin-top: initial;
+            left: initial;
+            right: initial;
+            background-color: $whiteColor01;
             color: $grayColor02;
-            border: 1px solid $grayColor02;
+            // background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid $grayColor01;
             border-radius: 50%;
+            width: 53px;
+            height: 53px;
+            color: #fff;
+
         }
     }
 }
@@ -278,8 +332,10 @@
     background: $gradientColor01;
     color: $whiteColor01;
 
+
     &__title {
         @include defineFont (rem(36), 600);
+        padding: 0 rem(20);
     }
 
 
@@ -307,4 +363,247 @@
     //         @include gradient;
     //     }
     // }
+}
+
+
+@media (max-width:1240px) {
+
+    // kv 영역
+    .kv {
+        &__text-wrap {
+            padding: 200px 120px 130px 120px;
+
+            h3 {
+                @include defineFont(rem(28));
+            }
+        }
+
+        &__title {
+            @include defineFont(rem(50));
+
+            span {
+
+                @include defineFont(rem(50));
+            }
+        }
+
+        &__box {
+            background: $gradientColor01;
+            width: rem(70);
+            height: rem(50);
+            top: rem(200);
+            left: rem(140);
+            z-index: 0;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    // 공통영역
+    .title {
+        @include defineFont (rem(36), 700);
+    }
+
+    .sec-pd-t {
+        padding: calc(80px + 77px) 0 80px;
+    }
+
+    .sec-pd {
+        padding: 80px 0;
+    }
+
+    .m-b--xxl {
+        margin-bottom: 80px;
+    }
+
+
+    // kv영역
+    .kv {
+        &__text-wrap {
+            padding: 244px 0 170px;
+        }
+
+        &__box {
+            background: $gradientColor01;
+            width: rem(70);
+            height: rem(60);
+            top: rem(240);
+            left: rem(20);
+            z-index: 0;
+        }
+    }
+
+    // introduce 영역   
+    .introduce {
+        &__title {
+            @include defineFont(rem(36));
+        }
+
+        &__subtitle {
+            @include defineFont(rem(26));
+        }
+    }
+
+    // solution 영역
+    .solution {
+        .row {
+            padding: 0 127px;
+        }
+
+    }
+
+    // merit 영역
+    .merit {
+        &__text {
+            // width: 50%;
+
+            h3 {
+                @include defineFont(rem(22), 600);
+                color: $primaryColor01;
+            }
+
+            h2 {
+                @include defineFont(rem(32), 600);
+            }
+
+            p {
+                @include defineFont(rem(18), regular, 1.6);
+            }
+
+        }
+
+        &__card {
+            flex-direction: column-reverse;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    }
+
+    // ask 영역
+
+    .ask {
+        &__title {
+            @include defineFont(rem(32), 600)
+        }
+    }
+}
+
+@media (max-width: 541px) {
+
+    // 공통 영역
+    .title {
+        @include defineFont (rem(26), 700);
+    }
+
+    .sec-pd-t {
+        padding: calc(60px + 77px) 0 60px;
+    }
+
+    .sec-pd {
+        padding: 60px 0;
+    }
+
+    .m-b--xxl {
+        margin-bottom: 60px;
+    }
+
+    // kv영역
+    .kv {
+        &__text-wrap {
+            padding: 277px 0 200px;
+
+            h3 {
+                @include defineFont(rem(18));
+
+            }
+        }
+
+        &__title {
+            @include defineFont(rem(30));
+
+            span {
+                @include defineFont(rem(30))
+            }
+        }
+
+        &__box {
+            width: rem(50);
+            height: rem(30);
+            top: 280px;
+        }
+    }
+
+    // solution 영역
+    .solution {
+        &__subtitle {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+
+        &__items {
+            @include defineFont (rem(22));
+        }
+
+        .row {
+            padding: 0 45px;
+        }
+
+    }
+
+    .solution-pd {
+        padding: 60px 0;
+    }
+
+
+    // preview 영역
+    .preview {
+        &__btn {
+            // position: absolute;
+            // right: rem(20);
+            // width: rem(120);
+            display: flex;
+            justify-content: space-between;
+            // justify-content: end;
+            // gap: rem(15);
+
+            /* 가상요소 안 보이게 처리 */
+            // .swiper-button-next:after,
+            // .swiper-button-prev:after {
+            //     font-size: rem(16);
+            //     color: $blackColor01;
+            // }
+
+            /* 새로 디자인 */
+            .swiper-button-next,
+            .swiper-button-prev {
+                // position: relative;
+                // top: -70px;
+                margin-top: 0;
+                left: initial;
+                // right: initial;
+                background-color: $whiteColor01;
+                color: $grayColor02;
+                // background-color: rgba(0, 0, 0, 0.5);
+                border: 1px solid $grayColor01;
+                border-radius: 50%;
+                width: 53px;
+                height: 53px;
+                color: #fff;
+
+            }
+        }
+    }
+
+
+
+    // ask 영역
+    .ask {
+        &__title {
+            @include defineFont(rem(22), 600)
+        }
+    }
+
 }

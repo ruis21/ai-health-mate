@@ -29,10 +29,10 @@
     }
 
     &__card {
-        padding: 62px 0;
-        margin: 10px;
+        padding: rem(62) 0;
+        margin: rem(10);
         color: $whiteColor01;
-        border-radius: 20px;
+        border-radius: rem(20);
     }
 
     &__card01 {
@@ -49,8 +49,8 @@
 
     &__circle {
         @include flex(center);
-        height: 350px;
-        width: 350px;
+        height: rem(350);
+        width: rem(350);
         // line-height: 350px;
         border: 2px solid $primaryColor01;
         border-radius: 50%;
@@ -60,8 +60,8 @@
 
 
     &__path {
-        top: 70px;
-        right: 300px;
+        top: rem(70);
+        right: rem(300);
     }
 
 }
@@ -98,8 +98,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        img {}
     }
 
     .swiper-slide img {
@@ -111,7 +109,7 @@
 
     &__txt {
         color: $grayColor04;
-        font-size: 128px;
+        font-size: rem(128);
         letter-spacing: 10px;
     }
 

@@ -20,16 +20,16 @@ $(function () {
     });
 
     $(".header__menu").on("click", function () {
-        if ($(window).width() <= 1024) {
+        if ($(window).width(1024)) {
             $(".header__nav").stop().slideUp();
         }
     });
 });
 
 
-// Initialize Swiper
+// preview Swiper
 var swiper = new Swiper(".previewSwiper", {
-    slidesPerView: 3.5,
+    slidesPerView: 1,
     spaceBetween: 15,
     // centeredSlides: true,
     navigation: {
@@ -52,6 +52,8 @@ var swiper = new Swiper(".previewSwiper", {
     }
 });
 
+
+// partners Swiper 
 var swiper = new Swiper(".partnersSwiper", {
     slidesPerView: 5,
     spaceBetween: 10,
@@ -72,11 +74,8 @@ var swiper = new Swiper(".partnersSwiper", {
 });
 
 
-/*
-inspiration
-https://dribbble.com/shots/4684682-Aquatic-Animals
-*/
 
+// news Swiper 
 var swiper = new Swiper(".newsSwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -117,6 +116,8 @@ var swiper = new Swiper(".newsSwiper", {
     }
 });
 
+
+// faq title 클릭 시 contents 등장
 $(document).ready(function () {
 
     $(".faq__board-title").on("click", function () {
