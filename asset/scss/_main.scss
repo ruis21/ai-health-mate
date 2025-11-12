@@ -160,7 +160,6 @@
 
 
 
-
 // merit section 
 .merit {
     &__card {
@@ -192,6 +191,7 @@
     }
 }
 
+
 // preview section 
 .preview {
     .swiper {
@@ -222,17 +222,27 @@
 
         h5 {
             @include defineFont (rem(22), 600);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
         }
 
         p {
             // white-space: nowrap;
             // overflow: hidden;
             // text-overflow: ellipsis;
+            color: $grayColor02;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
+        }
+
+        span {
+            color: $grayColor01;
         }
 
         &:hover {

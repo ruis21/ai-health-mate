@@ -199,8 +199,7 @@ p {
   color: #3a3838;
 }
 .field-box--focus {
-  border: 1px solid #0ED058;
-  color: #3a3838;
+  border: 1px solid #0097F6;
 }
 
 .title {
@@ -529,13 +528,22 @@ p {
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .preview__card p {
+  color: #ADADAD;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+.preview__card span {
+  color: #7E7E7E;
 }
 .preview__card:hover {
   background-color: #0ED058;
