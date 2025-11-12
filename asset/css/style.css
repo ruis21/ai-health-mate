@@ -151,13 +151,13 @@ p {
 }
 
 .kv-pd--lg {
-  padding: calc(16.25rem + 4.8125rem) 0 16.25rem;
+  padding: 16.25rem 0;
 }
 .kv-pd--md {
-  padding: calc(12.5rem + 4.8125rem) 0 12.5rem;
+  padding: 12.5rem 0;
 }
 .kv-pd--sm {
-  padding: calc(10.625rem + 4.8125rem) 0 10.625rem;
+  padding: 10.625rem 0;
 }
 
 .solution-pd {
@@ -178,12 +178,13 @@ p {
 
 .tab-menu {
   color: #ADADAD;
-  font-weight: bold;
-  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
 }
 .tab-menu--lg {
   gap: 106px;
-  font-size: 32px;
 }
 .tab-menu--md {
   gap: 65px;
@@ -237,7 +238,9 @@ p {
   letter-spacing: 0;
   display: inline-flex;
   justify-content: space-between;
-  gap: 45px;
+  gap: 1.25rem;
+  width: fit-content;
+  text-align: center;
 }
 .btn--md {
   height: 3rem;
@@ -302,6 +305,7 @@ p {
 }
 
 .inquiry__btn {
+  justify-content: center;
   border-radius: 10px;
   width: 100%;
   color: #7E7E7E;
@@ -312,7 +316,7 @@ p {
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 4.8125rem;
   color: #ffffff;
   width: 100%;
@@ -385,12 +389,9 @@ p {
   color: transparent;
   -webkit-background-clip: text;
 }
-.header .hamburger__btn {
+.header .hamburger-btn {
   width: 25px;
   height: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background: none;
   border: none;
   padding: 0;
@@ -399,7 +400,29 @@ p {
 .header__nav {
   display: none;
 }
+.header .hamburger-btn .line {
+  height: 3px;
+  background: #3a3838;
+  transition: 0.3s;
+}
+.header .hamburger-btn.active .line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.header .hamburger-btn.active .line:nth-child(2) {
+  opacity: 0;
+}
+.header .hamburger-btn.active .line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
 
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+}
 .kv {
   background: linear-gradient(to left, rgba(20, 20, 20, 0) 10%, rgba(20, 20, 20, 0.25) 25%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("../image/kv-bg.jpg");
   background-position: center;
@@ -435,8 +458,8 @@ p {
 .kv__box {
   background: linear-gradient(45deg, #0ED058, #0097F6);
   width: 6.875rem;
-  height: 4.8125rem;
-  top: 21.25rem;
+  height: 4.375rem;
+  top: 16.875rem;
   z-index: 0;
 }
 .kv__btn:hover {
@@ -652,7 +675,7 @@ p {
 
 @media (max-width: 1240px) {
   .kv__text-wrap {
-    padding: 200px 120px 130px 120px;
+    padding: 10.625rem 5rem;
   }
   .kv__text-wrap h3 {
     font-size: 1.75rem;
@@ -676,8 +699,8 @@ p {
     background: linear-gradient(45deg, #0ED058, #0097F6);
     width: 4.375rem;
     height: 3.125rem;
-    top: 12.5rem;
-    left: 8.75rem;
+    top: 10.625rem;
+    left: 6.25rem;
     z-index: 0;
   }
 }
@@ -698,13 +721,13 @@ p {
     margin-bottom: 80px;
   }
   .kv__text-wrap {
-    padding: 244px 0 170px;
+    padding: 170px 0;
   }
   .kv__box {
     background: linear-gradient(45deg, #0ED058, #0097F6);
     width: 4.375rem;
-    height: 3.75rem;
-    top: 15rem;
+    height: 3.125rem;
+    top: 10.625rem;
     left: 1.25rem;
     z-index: 0;
   }
@@ -744,6 +767,7 @@ p {
   }
   .merit__card {
     flex-direction: column-reverse;
+    width: 100%;
     gap: 20px;
     flex-wrap: wrap;
   }
@@ -771,7 +795,7 @@ p {
     margin-bottom: 60px;
   }
   .kv__text-wrap {
-    padding: 277px 0 200px;
+    padding: 12.5rem 0;
   }
   .kv__text-wrap h3 {
     font-size: 1.125rem;
@@ -794,7 +818,7 @@ p {
   .kv__box {
     width: 3.125rem;
     height: 1.875rem;
-    top: 280px;
+    top: 12.5rem;
   }
   .solution__subtitle {
     flex-wrap: wrap;
@@ -1030,7 +1054,10 @@ p {
   padding: 20px 45px;
   border-radius: 40px;
   color: #7E7E7E;
-  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
 }
 .faq__menu a {
   display: block;
@@ -1088,7 +1115,7 @@ p {
   border-radius: 20px;
 }
 .inquiry__right-box span {
-  color: #0097F6;
+  color: #0ED058;
 }
 .inquiry__right-box input {
   border: none;
@@ -1106,6 +1133,10 @@ p {
   border-radius: 10px;
   padding: 16px 20px;
   resize: none;
+}
+
+.map {
+  width: 100%;
 }
 
 .footer {

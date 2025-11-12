@@ -19,17 +19,25 @@
 <body>
 
     <!-- header -->
-    <header class="header fixed-top ">
+    <header class="header sticky-top">
         <div class="container-xxl header__wrap">
             <h1 class="header__logo">
                 <a href="index.html">
                     <img src="./asset/image/logo_assult.png" alt="로고 이미지">
                 </a>
             </h1>
+
+            <!-- 햄버거 버튼. 모바일에서만 보이게 -->
+            <button type="button" class="hamburger-btn">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+
             <nav class="nav position-relative">
                 <ul class="header__menu-list text-center">
                     <li class="header__menu">
-                        <a href="about.html#about-sec">ABOUT</a>
+                        <a href="about.html">ABOUT</a>
                         <ul class="header__sub-menu-list">
                             <li class="header__sub-menu">
                                 <a href="about.html#about-sec">ABOUT</a>
@@ -77,12 +85,66 @@
                     </li>
                 </ul>
             </nav>
+
+            <div class="menu-bg"></div>
+
+            <nav class="header__nav">
+                <ul class="header__menu-list pretendard">
+                    <li>
+                        <a href="#plan-sec" class="header__menu">ABOUT</a>
+                        <ul>
+                            <li>
+                                <a href="#">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="#">VISION</a>
+                            </li>
+                            <li>
+                                <a href="#">HISTORY</a>
+                            </li>
+                            <li>
+                                <a href="#">PARTNERS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#discount-sec" class="header__menu">NEWS</a>
+                        <ul>
+                            <li>
+                                <a href="#">NEWS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#event-sec" class="header__menu">MEMBERSHIP</a>
+                        <ul>
+                            <li>
+                                <a href="#">MEMBERSHIP</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#contact-sec" class="header__menu">CONTACT</a>
+                        <ul>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">INQUIRY</a>
+                            </li>
+                            <li>
+                                <a href="#">MAP</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div class="menu-bg"></div>
     </header>
 
-    <!-- membership section -->
+
     <main>
+        <!-- membership section -->
         <section class="membership sec-pd-t membership__bg" id="membership-sec">
 
             <div class="container-xxl">

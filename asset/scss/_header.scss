@@ -1,5 +1,5 @@
 .header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     height: rem(77);
     color: $whiteColor01;
     width: 100%;
@@ -76,12 +76,10 @@
         }
     }
 
-    .hamburger__btn {
+    .hamburger-btn {
         width: 25px;
         height: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        // @include flex (center, space-between, 5px, column);
         background: none;
         border: none;
         padding: 0;
@@ -92,13 +90,34 @@
         display: none;
 
     }
+
+    .hamburger-btn .line {
+        height: 3px;
+        background: $blackColor02;
+        transition: 0.3s;
+    }
+
+    // hamburger btn -> close btn 변경 시 애니메이션 
+    .hamburger-btn.active .line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger-btn.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-btn.active .line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
 }
 
+@media (max-width: 1024px) {
 
+    .nav {
+        display: none;
+    }
 
-
-@media (max-width: 768px) {
     .hamburger-btn {
-        // display: block;
+        display: flex;
     }
 }

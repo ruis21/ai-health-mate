@@ -14,7 +14,7 @@ $(function () {
 // 햄버거 버튼 클릭 시 메뉴 토글 : 모바일 전용
 $(function () {
 
-    $(".hamburger__btn").on("click", function () {
+    $(".hamburger-btn").on("click", function () {
         $(".header__nav").stop().slideToggle();
         $(this).toggleClass("active");
     });

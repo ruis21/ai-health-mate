@@ -42,8 +42,8 @@
     &__box {
         background: $gradientColor01;
         width: rem(110);
-        height: rem(77);
-        top: rem(340);
+        height: rem(70);
+        top: rem(270);
         z-index: 0;
     }
 
@@ -366,12 +366,13 @@
 }
 
 
+
 @media (max-width:1240px) {
 
     // kv 영역
     .kv {
         &__text-wrap {
-            padding: 200px 120px 130px 120px;
+            padding: rem(170) rem(80);
 
             h3 {
                 @include defineFont(rem(28));
@@ -391,12 +392,13 @@
             background: $gradientColor01;
             width: rem(70);
             height: rem(50);
-            top: rem(200);
-            left: rem(140);
+            top: rem(170);
+            left: rem(100);
             z-index: 0;
         }
     }
 }
+
 
 
 @media (max-width: 768px) {
@@ -422,14 +424,14 @@
     // kv영역
     .kv {
         &__text-wrap {
-            padding: 244px 0 170px;
+            padding: 170px 0;
         }
 
         &__box {
             background: $gradientColor01;
             width: rem(70);
-            height: rem(60);
-            top: rem(240);
+            height: rem(50);
+            top: rem(170);
             left: rem(20);
             z-index: 0;
         }
@@ -476,6 +478,7 @@
 
         &__card {
             flex-direction: column-reverse;
+            width: 100%;
             gap: 20px;
             flex-wrap: wrap;
         }
@@ -512,7 +515,7 @@
     // kv영역
     .kv {
         &__text-wrap {
-            padding: 277px 0 200px;
+            padding: rem(200) 0;
 
             h3 {
                 @include defineFont(rem(18));
@@ -531,7 +534,7 @@
         &__box {
             width: rem(50);
             height: rem(30);
-            top: 280px;
+            top: rem(200)
         }
     }
 

@@ -5,7 +5,7 @@
         padding: 20px 45px;
         border-radius: 40px;
         color: $grayColor01;
-        font-size: 22px;
+        @include defineFont(rem(22), 600)
     }
 
     &__menu {
@@ -19,7 +19,6 @@
                 padding: 5px 20px;
                 border-radius: 40px;
             }
-
         }
     }
 

@@ -13,15 +13,15 @@
 
 .kv-pd {
     &--lg {
-        padding: calc(rem(260) + rem(77)) 0 rem(260);
+        padding: rem(260) 0;
     }
 
     &--md {
-        padding: calc(rem(200) + rem(77)) 0 rem(200);
+        padding: rem(200) 0;
     }
 
     &--sm {
-        padding: calc(rem(170) + rem(77)) 0 rem(170);
+        padding: rem(170) 0;
     }
 }
 
@@ -40,12 +40,10 @@
 
 .tab-menu {
     color: $grayColor02;
-    font-weight: bold;
-    font-size: 32px;
+    @include defineFont (rem(32), 600);
 
     &--lg {
         gap: 106px;
-        font-size: 32px;
     }
 
     &--md {

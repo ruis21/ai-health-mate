@@ -3,14 +3,14 @@ $grid-breakpoints: (
     md: 541px,
     lg: 768px,
     xl: 1240px,
-);
+    ) !default;
 
-// $container-max-widths: (
-//     sm: 393px,
-//     md: 541px,
-//     lg: 768px,
-//     xl: 1240px
-// );
+$container-max-widths: (
+    sm: 393px,
+    md: 541px,
+    lg: 768px,
+    xl: 1240px,
+    ) !default;
 
 .container-sm {
     max-width: 393px !important;

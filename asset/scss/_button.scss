@@ -8,7 +8,9 @@
     @include defineFont (rem(18), 600);
     display: inline-flex;
     justify-content: space-between;
-    gap: 45px;
+    gap: rem(20);
+    width: fit-content;
+    text-align: center;
 
     // &--lg {
     //     font-size: rem(18);
@@ -95,6 +97,8 @@
 
 .inquiry {
     &__btn {
+        justify-content: center;
+        ;
         border-radius: 10px;
         width: 100%;
         color: $grayColor01;
