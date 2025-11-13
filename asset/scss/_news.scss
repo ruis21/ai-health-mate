@@ -61,7 +61,33 @@
         width: 100px;
     }
 
+    &__board-wrap {
+
+        h5,
+        p {
+            padding: rem(10) 0;
+            margin-left: rem(40);
+        }
+
+        h5 {
+            @include defineFont (rem(22), 600);
+        }
+
+        p {
+            @include defineFont (rem(16), 600);
+            color: $grayColor02;
+        }
+    }
+
     &__txt {
         @include flex(space-between, center, 0, column);
+    }
+
+    &__pagination {
+        margin-top: rem(42);
+
+        ul {
+            @include flex(center, center, rem(30));
+        }
     }
 }

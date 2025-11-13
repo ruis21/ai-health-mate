@@ -24,7 +24,7 @@
 <body>
 
     <!-- header -->
-    <header class="header sticky-top">
+    <header class="header fixed-top">
         <div class="container-xxl header__wrap">
             <h1 class="header__logo">
                 <a href="index.html">
@@ -167,46 +167,52 @@
 
                 <div class="map__wrap">
                     <div id="map" style="width:100%;height:630px;"></div>
-                    <ul>
-                        <li>
-                            <p>주소</p>
-                            <span>서울 강남구 테헤란로 000</span>
-                        </li>
-                        <li>
-                            <p>문의</p>
-                            <span>02-000-1234</span>
-                        </li>
-                        <li>
-                            <p>이메일</p>
-                            <span>contact@aihealthmate.com</span>
-                        </li>
-                    </ul>
 
-                    <div class="transit">
+                    <div class="map__txt mt-5">
+                        <ul>
+                            <li>
+                                <p>주 &nbsp&nbsp&nbsp&nbsp 소
+                                    <span>서울 강남구 테헤란로 000</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>문 &nbsp&nbsp&nbsp&nbsp 의
+                                    <span>02-000-1234</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>이 메 일
+                                    <span>contact@aihealthmate.com</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="transit mt-5">
                         <div class="subway">
-                            <div class="subway-title">
+                            <div class="subway__title">
                                 <img src="./asset/image/map-subway-icon.png" alt="지하철 아이콘">
                                 <h3>지하철 이용 시</h3>
                             </div>
                             <hr>
-                            <div class="subway-conts">
-                                <span>2호선</span>
-                                <p>역삼역 5번 출구 도보 10분</p>
-                                <span>신분당</span>
-                                <p>강남역 12번 출구 도보 10분</p>
+                            <div class="subway__conts">
+                                <p><span class="subway__conts01">2호선</span>
+                                    역삼역 5번 출구 도보 10분</p>
+                                <p><span class="subway__conts02">신분당</span>
+                                    강남역 12번 출구 도보 10분</p>
                             </div>
                         </div>
                         <div class="bus">
-                            <div class="bus-title">
+                            <div class="bus__title">
                                 <img src="./asset/image/map-bus-icon.png" alt="버스 아이콘">
                                 <h3>버스 이용 시</h3>
                             </div>
                             <hr>
-                            <div class="bus-conts">
-                                <span>지선버스</span>
-                                <p>3313, 3314, 2312, 2441</p>
-                                <span>간선버스</span>
-                                <p>6-1, 8, 112, 88</p>
+                            <div class="bus__conts">
+                                <p><span class="bus__conts03">지선버스</span>
+                                    3313, 3314, 2312, 2441</p>
+                                <p><span class="bus__conts04">간선버스</span>
+                                    6-1, 8, 112, 88</p>
                             </div>
                         </div>
                     </div>

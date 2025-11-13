@@ -19,7 +19,7 @@
 <body>
 
     <!-- header -->
-    <header class="header sticky-top">
+    <header class="header fixed-top">
         <div class="container-xxl header__wrap">
             <h1 class="header__logo">
                 <a href="index.html">
@@ -141,6 +141,8 @@
             </nav>
         </div>
     </header>
+
+
     <main>
         <!-- faq section -->
         <section class="faq-sec sec-pd-t" id="faq-sec">
@@ -177,12 +179,14 @@
                             <a href="">고객지원 및 기타</a>
                         </li>
                     </ul>
-                    <div class="faq__search-box">
+                    <div class="faq__search-box field-box">
                         <form action="/search" method="get">
-                            <input type="text" name="query" placeholder="검색어를 입력하세요">
-                            <button type="submit" class="search-btn">
-                                <img src="./asset/image/search-icon-inactive.png" alt="검색 아이콘">
-                            </button>
+                            <label for="">
+                                <input type="text" name="query" placeholder="검색어를 입력하세요">
+                                <button type="submit" class="search-btn">
+                                    <img src="./asset/image/search-icon-inactive.png" alt="검색 아이콘">
+                                </button>
+                            </label>
                         </form>
                     </div>
                     <div class="faq__board">
@@ -228,13 +232,12 @@
                         </ul>
                     </div>
 
-
+                    <div class="faq__pagination mt-5">
+                        <p>1</p>
+                    </div>
 
                 </div>
             </div>
-
-
-
 
         </section>
     </main>

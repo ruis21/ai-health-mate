@@ -1,6 +1,6 @@
 // padding컴포넌트
 .sec-pd-t {
-    padding: calc(120px + 77px) 0 120px;
+    padding: calc(rem(120) + rem(77)) 0 rem(120);
 }
 
 .sec-pd {
@@ -13,15 +13,15 @@
 
 .kv-pd {
     &--lg {
-        padding: rem(260) 0;
+        padding: calc(rem(176) + rem(77)) 0 rem(176);
     }
 
     &--md {
-        padding: rem(200) 0;
+        padding: calc(rem(200) + rem(77)) 0 rem(200);
     }
 
     &--sm {
-        padding: rem(170) 0;
+        padding: calc(rem(170) + rem(77)) 0 rem(170);
     }
 }
 
@@ -65,11 +65,17 @@
 
 // field box 컴포넌트
 .field-box {
-    background-color: $grayColor02;
-    color: $grayColor02;
-    border-radius: rem(30);
-    padding: rem(10) rem(20);
-    @include defineFont (rem(16));
+    label {
+        border: 1px solid $grayColor02;
+        color: $grayColor02;
+        border-radius: rem(30);
+        padding: rem(10) rem(20);
+        @include defineFont (rem(16));
+    }
+
+    input {
+        border: none;
+    }
 
     &--activated {
         border: 1px solid $blackColor02;

@@ -14,6 +14,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    // height: 100vh;
 
 
     .container-xxl {
@@ -43,12 +44,11 @@
         background: $gradientColor01;
         width: rem(110);
         height: rem(70);
-        top: rem(270);
+        top: rem(260);
         z-index: 0;
     }
 
     &__btn {
-
         &:hover {
             background-color: $primaryColor01;
         }
@@ -95,6 +95,44 @@
         }
     }
 
+    &__arrow {
+
+        /* btn-motion5 */
+        .btn-motion5 {
+            position: relative;
+        }
+
+        .btn-motion5 span {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(-45deg);
+            animation: btn-motion5 1.5s infinite;
+            box-sizing: border-box;
+        }
+
+        @keyframes btn-motion5 {
+            0% {
+                transform: rotate(-45deg) translate(0, 0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: rotate(-45deg) translate(-20px, 20px);
+                opacity: 0;
+            }
+        }
+    }
+
 }
 
 // solution section 
@@ -108,24 +146,33 @@
         }
     }
 
+
+
     &__card-wrap {
-        .col {
-            .solution__card {
-                background-color: $pointColor02;
-                color: $whiteColor01;
-                padding: rem(53) 0;
+        // overflow: hidden;
 
-                &:hover {
-                    background-color: $primaryColor02;
-                    transition: all 0.3s ease-in-out;
+    }
 
-                    // img {
-                    //     opacity: 0;
-                    // }
-                }
-            }
+    .col {
+        .card {
+            border-radius: rem(20);
         }
     }
+
+    &__card {
+        background-color: $pointColor02;
+        color: $whiteColor01;
+        padding: rem(53) 0;
+        overflow: hidden;
+
+        &:hover {
+            background-color: $primaryColor02;
+            transition: all 0.3s ease-in-out;
+
+        }
+    }
+
+
 
     &__card {
         @include flex(center, center, 5%, column);
@@ -172,15 +219,14 @@
         @include flex(center, center, 5%);
         width: 100%;
 
+        img {
+            width: 100%
+        }
     }
 
-    img {
-        width: 50%;
-    }
 
     &__text {
-        width: 50%;
-
+        width: 100%;
 
         h3 {
             @include defineFont(rem(30), 600);
@@ -195,31 +241,6 @@
             @include defineFont(rem(22), regular, 1.6);
         }
     }
-
-    /* responsive 48% / 48% layout for merit cards */
-    //     &__wrap {
-    //         .row {
-    //             display: flex;
-    //             flex-wrap: wrap;
-    //             gap: rem(24);
-
-    //             /* target only the direct .col-12 children inside merit row */
-    //             >.col-12 {
-    //                 box-sizing: border-box;
-    //                 flex: 0 0 48%;
-    //                 max-width: 48%;
-    //             }
-
-    //             /* stack on smaller screens */
-    //             @include media(768px) {
-    //                 >.col-12 {
-    //                     flex: 0 0 100%;
-    //                     max-width: 100%;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 }
 
 // preview section 
@@ -372,7 +393,7 @@
     // kv 영역
     .kv {
         &__text-wrap {
-            padding: rem(170) rem(80);
+            padding: calc(rem(150) + rem(77)) 80 rem(150) 80;
 
             h3 {
                 @include defineFont(rem(28));
@@ -397,6 +418,12 @@
             z-index: 0;
         }
     }
+
+    .merit {
+        &__card {
+            @include flex(center, center, 5px, column-reverse)
+        }
+    }
 }
 
 
@@ -409,22 +436,22 @@
     }
 
     .sec-pd-t {
-        padding: calc(80px + 77px) 0 80px;
+        padding: calc(rme(80) + rem(77)) 0 rem(80);
     }
 
     .sec-pd {
-        padding: 80px 0;
+        padding: rem(80) 0;
     }
 
     .m-b--xxl {
-        margin-bottom: 80px;
+        margin-bottom: rem(80);
     }
 
 
     // kv영역
     .kv {
         &__text-wrap {
-            padding: 170px 0;
+            padding: calc(rem(200) + rem(77)) 0 rem(200);
         }
 
         &__box {
@@ -515,7 +542,7 @@
     // kv영역
     .kv {
         &__text-wrap {
-            padding: rem(200) 0;
+            padding: calc(rem(200) + rem(77)) 0 rem(200);
 
             h3 {
                 @include defineFont(rem(18));

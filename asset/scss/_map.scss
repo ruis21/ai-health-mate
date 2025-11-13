@@ -1,5 +1,68 @@
 .map {
     width: 100%;
 
+    &__txt {
+
+        p {
+            @include defineFont(rem(32), 600, 1.9);
+        }
+
+        span {
+            @include defineFont(rem(22), 400);
+            padding-left: 30px;
+        }
+    }
+
+    .transit {
+        @include flex;
+    }
+
+    .subway,
+    .bus {
+        width: 45%;
+        gap: 10%;
+
+        &__title {
+            @include flex(flex-start, center, rem(40));
+
+            h3 {
+                @include defineFont(rem(26), 500);
+            }
+        }
+
+        &__conts {
+            @include defineFont(rem(18), 400, 2.6);
+        }
+
+        span {
+            padding: rem(5) rem(8);
+            border-radius: rem(10);
+            margin-right: rem(20);
+        }
+
+        &__conts01 {
+            color: #00A242;
+            border: 1px solid #00A242;
+        }
+
+        &__conts02 {
+            color: #C02D2E;
+            border: 1px solid #C02D2E;
+        }
+
+        &__conts03 {
+            color: #59BE0A;
+            border: 1px solid #59BE0A;
+        }
+
+        &__conts04 {
+            color: #1E7BDB;
+            border: 1px solid #1E7BDB;
+        }
+
+
+    }
+
+
 
 }

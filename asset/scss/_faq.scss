@@ -25,15 +25,19 @@
     &__board {
 
         height: 100%;
+        width: 100%;
         border: 1px solid $grayColor02;
-        border-radius: 30px;
-        padding: 76px 45px;
+        border-radius: rem(30);
+        padding: rem(76) rem(45);
 
         // @include flex(center, stretch, 25%, column);
 
         &__board-title {
-            // display: block;
-            @include flex;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            // @include flex();
         }
     }
 
@@ -42,13 +46,31 @@
     }
 
     &__search-box {
+        position: relative;
+
         form {
-            input {
-                padding: 10px 20xp;
+            position: absolute;
+
+            top: rem(-80);
+            right: 0;
+
+            .search-btn {
+                background-color: transparent;
             }
-
         }
+    }
 
+    &__pagination {
+        p {
+            @include defineFont (rem(20), 500, 2.5);
+            border-radius: 50%;
+            background-color: $primaryColor01;
+            color: $whiteColor01;
+            width: rem(53);
+            height: rem(53);
+            text-align: center;
+            margin: 0 auto;
+        }
     }
 
 }
