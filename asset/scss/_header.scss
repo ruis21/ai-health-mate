@@ -80,28 +80,25 @@
     .hamburger-btn {
         width: 25px;
         height: 20px;
-        // @include flex (center, space-between, 5px, column);
+        @include flex (center, space-between, 5px, column);
         background: none;
         border: none;
         padding: 0;
-        display: none;
+        // display: none;
     }
 
-    &__nav {
-        display: none;
-
-    }
 
     .hamburger-btn .line {
-        display: block;
-        height: 3px;
+        @include flex;
+        height: 2px;
         background: $whiteColor01;
         transition: 0.3s;
+        // position: absolute;
     }
 
     // hamburger btn -> close btn 변경 시 애니메이션 
     .hamburger-btn.active .line:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(-5px) rotate(45deg);
     }
 
     .hamburger-btn.active .line:nth-child(2) {
@@ -111,7 +108,14 @@
     .hamburger-btn.active .line:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
+
+    &__nav {
+        display: none;
+    }
 }
+
+
+
 
 @media (max-width: 1024px) {
 
