@@ -74,17 +74,19 @@
     }
 
     input {
-        border: none;
+        // border: none;
+
+        &:active {
+            border: 1px solid $blackColor02;
+            color: $blackColor02;
+        }
+
+        &:focus {
+            border: 1px solid $primaryColor02;
+            cursor: $primaryColor02;
+        }
     }
 
-    &--activated {
-        border: 1px solid $blackColor02;
-        color: $blackColor02;
-    }
-
-    &--focus {
-        border: 1px solid $primaryColor02;
-    }
 }
 
 .title {

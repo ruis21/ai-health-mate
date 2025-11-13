@@ -210,15 +210,13 @@ p {
   line-height: 1.3;
   letter-spacing: 0;
 }
-.field-box input {
-  border: none;
-}
-.field-box--activated {
+.field-box input:active {
   border: 1px solid #3a3838;
   color: #3a3838;
 }
-.field-box--focus {
+.field-box input:focus {
   border: 1px solid #0097F6;
+  cursor: #0097F6;
 }
 
 .title {
@@ -1228,6 +1226,9 @@ p {
   padding: 16px 20px;
   border-radius: 10px;
   width: 635px;
+}
+.inquiry__right-box input:focus {
+  border: 1px solid #0097F6;
 }
 .inquiry__right-box p {
   color: #7E7E7E;
