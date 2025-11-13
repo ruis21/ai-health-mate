@@ -154,27 +154,56 @@
     .col {
         .card {
             border-radius: rem(20);
+            height: 240px;
+            background-color: $pointColor02;
+            color: $whiteColor01;
+            padding: rem(53) 0;
+
+            &:hover {
+                background-color: $primaryColor02;
+                transition: all 0.3s ease-in-out;
+
+            }
         }
     }
 
-    &__card {
-        background-color: $pointColor02;
-        color: $whiteColor01;
-        padding: rem(53) 0;
-        overflow: hidden;
+    // &__card {
+    //     background-color: $pointColor02;
+    //     color: $whiteColor01;
+    //     padding: rem(53) 0;
+    //     overflow: hidden;
 
-        &:hover {
-            background-color: $primaryColor02;
-            transition: all 0.3s ease-in-out;
+    //     &:hover {
+    //         background-color: $primaryColor02;
+    //         transition: all 0.3s ease-in-out;
 
-        }
-    }
-
-
+    //     }
+    // }
 
     &__card {
         @include flex(center, center, 5%, column);
         position: relative;
+        transition: 0.3s all ease;
+
+        img {
+            transition: 0.3s all ease;
+        }
+        ul {
+            opacity: 0;
+            transition: 0.3s all ease;
+        }
+        
+        &:hover {
+            transform: translateY(-90px);
+            img {
+                // display: none;
+                opacity: 0;
+            }
+            ul {
+                opacity: 1;
+            }
+        }
+
 
         // ul {
         //     position: absolute;
@@ -188,9 +217,6 @@
         //     }
     }
 
-    &__card-text {
-        height: 240px;
-    }
 
     &__subtitle {
         @include flex(center, center, 5%);
@@ -419,11 +445,11 @@
         }
     }
 
-    .merit {
-        &__card {
-            @include flex(center, center, 5px, column-reverse)
-        }
-    }
+    // .merit {
+    //     &__card {
+    //         @include flex(center, center, 5px, column-reverse)
+    //     }
+    // }
 }
 
 @media(max-width: 1024px) {

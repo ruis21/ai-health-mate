@@ -71,7 +71,8 @@
             padding: 15px 10px;
         }
 
-        &:hover {
+        &:hover a {
+            font-weight: 600;
             @include gradient;
         }
     }
@@ -92,8 +93,9 @@
     }
 
     .hamburger-btn .line {
+        display: block;
         height: 3px;
-        background: $blackColor02;
+        background: $whiteColor01;
         transition: 0.3s;
     }
 

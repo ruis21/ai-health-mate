@@ -54,23 +54,18 @@ var swiper = new Swiper(".previewSwiper", {
 
 
 // partners Swiper 
+
 var swiper = new Swiper(".partnersSwiper", {
     slidesPerView: 5,
-    spaceBetween: 10,
-    loop: true,
-
-    // centeredSlides: true,
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    // },
-    autoplay: {
-        delay: 1000,
-        speed: 30000,
-        freemode: true,
-        effect: 'fade',
-        disableOnInteraction: false,
-    },
+    spaceBetween : 20,
+    loop : true,
+    freeMode : true,
+    speed :3500,
+    allowTouchMove : false,
+    autoplay : {
+        delay : 0,
+        disableOnInteraction : false
+    }
 });
 
 
@@ -89,17 +84,7 @@ var swiper = new Swiper(".newsSwiper", {
         slidesPerView: 3
     },
 
-    keyboard: {
-        enabled: true
-    },
-    mousewheel: {
-        thresholdDelta: 70
-    },
     loop: true,
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true
-    // },
     breakpoints: {
         // 540: {
         //     slidesPerView: 1

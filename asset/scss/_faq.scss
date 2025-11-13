@@ -2,22 +2,22 @@
     &__menu-list {
         @include flex;
         background-color: $grayColor04;
-        padding: 20px 45px;
         border-radius: 40px;
         color: $grayColor01;
-        @include defineFont(rem(22), 600)
+        @include defineFont(rem(22), 600);
     }
-
+    
     &__menu {
-
+        
         a {
+            padding: 20px 45px;
             display: block;
+            border-radius: 40px;
 
-            &:hover {
+            &.on {
                 background-color: $primaryColor01;
                 color: $whiteColor01;
-                padding: 5px 20px;
-                border-radius: 40px;
+                // padding: 5px 20px;
             }
         }
     }
