@@ -113,27 +113,27 @@ p {
   font-weight: 400;
 }
 
-.container-sm {
+.container--sm {
   max-width: 393px !important;
   padding: 0 20px;
 }
 
-.container-md {
+.container--md {
   max-width: 541px !important;
   padding: 0 20px;
 }
 
-.container-lg {
+.container--lg {
   max-width: 768px !important;
   padding: 0 20px;
 }
 
-.container-xl {
+.container--xl {
   max-width: 1030px !important;
   padding: 0 20px;
 }
 
-.container-xxl {
+.container--xxl {
   max-width: 1240px !important;
   padding: 0 20px;
 }
@@ -151,13 +151,13 @@ p {
 }
 
 .kv-pd--lg {
-  padding: calc(11rem + 4.8125rem) 0 11rem;
+  padding: calc(11rem + 4.8125rem) 1.25rem 11rem;
 }
 .kv-pd--md {
-  padding: calc(12.5rem + 4.8125rem) 0 12.5rem;
+  padding: calc(12.5rem + 4.8125rem) 1.25rem 12.5rem;
 }
 .kv-pd--sm {
-  padding: calc(10.625rem + 4.8125rem) 0 10.625rem;
+  padding: calc(10.625rem + 4.8125rem) 1.25rem 10.625rem;
 }
 
 .solution-pd {
@@ -431,9 +431,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.kv .container-xxl {
-  position: relative;
+  height: 100vh;
 }
 .kv__text-wrap {
   color: #ffffff;
@@ -710,8 +708,11 @@ p {
 }
 
 @media (max-width: 1240px) {
+  .kv {
+    height: 100%;
+  }
   .kv__text-wrap {
-    padding: calc(9.375rem + 4.8125rem) 80 9.375rem 80;
+    padding: calc(9.375rem + 4.8125rem) 5rem 9.375rem;
   }
   .kv__text-wrap h3 {
     font-size: 1.75rem;
@@ -735,8 +736,8 @@ p {
     background: linear-gradient(45deg, #0ED058, #0097F6);
     width: 4.375rem;
     height: 3.125rem;
-    top: 10.625rem;
-    left: 6.25rem;
+    top: 14.375rem;
+    left: 5.625rem;
     z-index: 0;
   }
   .merit__card {
@@ -763,6 +764,9 @@ p {
   .m-b--xxl {
     margin-bottom: 5rem;
   }
+  .kv {
+    height: 100%;
+  }
   .kv__text-wrap {
     padding: calc(12.5rem + 4.8125rem) 0 12.5rem;
   }
@@ -770,8 +774,8 @@ p {
     background: linear-gradient(45deg, #0ED058, #0097F6);
     width: 4.375rem;
     height: 3.125rem;
-    top: 10.625rem;
-    left: 1.25rem;
+    top: 17.5rem;
+    left: 0.75rem;
     z-index: 0;
   }
   .introduce__title {
@@ -836,6 +840,9 @@ p {
   }
   .m-b--xxl {
     margin-bottom: 60px;
+  }
+  .kv {
+    height: 100%;
   }
   .kv__text-wrap {
     padding: calc(12.5rem + 4.8125rem) 0 12.5rem;

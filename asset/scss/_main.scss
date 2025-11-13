@@ -14,12 +14,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // height: 100vh;
+    height: 100vh;
 
-
-    .container-xxl {
-        position: relative;
-    }
 
     &__text-wrap {
         color: $whiteColor01;
@@ -392,8 +388,10 @@
 
     // kv 영역
     .kv {
+        height: 100%;
+
         &__text-wrap {
-            padding: calc(rem(150) + rem(77)) 80 rem(150) 80;
+            padding: calc(rem(150) + rem(77)) rem(80) rem(150);
 
             h3 {
                 @include defineFont(rem(28));
@@ -413,8 +411,8 @@
             background: $gradientColor01;
             width: rem(70);
             height: rem(50);
-            top: rem(170);
-            left: rem(100);
+            top: rem(230);
+            left: rem(90);
             z-index: 0;
         }
     }
@@ -450,6 +448,8 @@
 
     // kv영역
     .kv {
+        height: 100%;
+
         &__text-wrap {
             padding: calc(rem(200) + rem(77)) 0 rem(200);
         }
@@ -458,8 +458,8 @@
             background: $gradientColor01;
             width: rem(70);
             height: rem(50);
-            top: rem(170);
-            left: rem(20);
+            top: rem(280);
+            left: rem(12);
             z-index: 0;
         }
     }
@@ -541,6 +541,8 @@
 
     // kv영역
     .kv {
+        height: 100%;
+
         &__text-wrap {
             padding: calc(rem(200) + rem(77)) 0 rem(200);
 

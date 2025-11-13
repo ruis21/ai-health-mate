@@ -12,29 +12,60 @@ $container-max-widths: (
     xl: 1240px,
     ) !default;
 
-.container-sm {
+// .container {
+
+//     &__sm {
+//         max-width: 393px !important;
+//         padding: 0 20px;
+//     }
+
+//     &__md {
+//         max-width: 541px !important;
+//         padding: 0 20px;
+//     }
+
+
+//     &__lg {
+//         max-width: 768px !important;
+//         padding: 0 20px;
+//     }
+
+//     &__xl {
+//         max-width: 1030px !important;
+//         padding: 0 20px;
+//     }
+
+//     &__xxl {
+//         max-width: 1240px !important;
+//         padding: 0 20px;
+//     }
+// }
+
+
+.container--sm {
     max-width: 393px !important;
     padding: 0 20px;
 }
 
-.container-md {
+.container--md {
     max-width: 541px !important;
     padding: 0 20px;
 }
 
-.container-lg {
+.container--lg {
     max-width: 768px !important;
     padding: 0 20px;
 }
 
-.container-xl {
+.container--xl {
     max-width: 1030px !important;
     padding: 0 20px;
 }
 
-.container-xxl {
+.container--xxl {
     max-width: 1240px !important;
     padding: 0 20px;
 }
 
-// $container-padding-x: 20px;
+
+$container-padding-x: 20px;
