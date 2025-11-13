@@ -41,6 +41,7 @@
         width: rem(110);
         height: rem(70);
         top: rem(260);
+        // left: rem(32);
         z-index: 0;
     }
 
@@ -145,6 +146,7 @@
 
 
     &__card-wrap {
+        // margin: 0 rem(120);
         // overflow: hidden;
 
     }
@@ -420,6 +422,14 @@
     .merit {
         &__card {
             @include flex(center, center, 5px, column-reverse)
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .header {
+        .hamburger-btn {
+            display: block;
         }
     }
 }

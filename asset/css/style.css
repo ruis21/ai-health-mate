@@ -143,7 +143,7 @@ p {
 }
 
 .sec-pd {
-  padding: 120px 0;
+  padding: 7.5rem 0;
 }
 
 .m-b--xxl {
@@ -746,6 +746,11 @@ p {
     align-items: center;
     gap: 5px;
     flex-direction: column-reverse;
+  }
+}
+@media (max-width: 1024px) {
+  .header .hamburger-btn {
+    display: block;
   }
 }
 @media (max-width: 768px) {
