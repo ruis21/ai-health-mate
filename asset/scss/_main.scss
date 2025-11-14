@@ -237,17 +237,17 @@
 // merit section 
 .merit {
     &__card {
-        @include flex(center, center, 5%);
-        width: 100%;
+        @include flex(space-between, center, 5%);
+        // width: 100%;
 
         img {
-            width: 100%
+            width: 50%
         }
     }
 
 
     &__text {
-        width: 100%;
+        width: 50%;
 
         h3 {
             @include defineFont(rem(30), 600);
@@ -338,9 +338,7 @@
         position: absolute;
         right: rem(20);
         width: rem(120);
-        display: flex;
-        justify-content: end;
-        gap: rem(15);
+        @include flex(flex-end, center, rem(15));
 
         /* 가상요소 안 보이게 처리 */
         .swiper-button-next:after,
@@ -507,6 +505,8 @@
     // merit 영역
     .merit {
         &__text {
+            width: 100%;
+
             h3 {
                 @include defineFont(rem(22), 600);
                 color: $primaryColor01;
@@ -519,18 +519,27 @@
             p {
                 @include defineFont(rem(18), regular, 1.6);
             }
-
         }
-    }
 
-    // ask 영역
+        &__card {
+            flex-direction: column-reverse;
 
-    .ask {
-        &__title {
-            @include defineFont(rem(32), 600)
+            img {
+                width: 100%;
+            }
+        }
+
+        // ask 영역
+
+        .ask {
+            &__title {
+                @include defineFont(rem(32), 600)
+            }
         }
     }
 }
+
+
 
 @media (max-width: 541px) {
 
