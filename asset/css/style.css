@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "akira_expandedsuper_bold";
-  src: url("../font/akira_expanded_demo-webfont.woff2") format("woff2"), url("../font/akira_expanded_demo-webfont.woff") format("woff");
+  src: url("../font/akira_expanded_demo-webfont.woff2") format("woff2"), url("../font/akira_expanded_demo-webfont.woff") format("woff"), url("../font/akira_expanded_demo-webfont.eot") format("eot"), url("../font/akira_expanded_demo-webfont.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
