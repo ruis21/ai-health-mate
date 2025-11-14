@@ -15,13 +15,13 @@ $(function () {
 $(function () {
 
     $(".hamburger-btn").on("click", function () {
-        $(".header__nav").stop().slideToggle();
+        $(".m-header__nav").stop().slideToggle();
         $(this).toggleClass("active");
     });
 
-    $(".header__menu").on("click", function () {
+    $(".close-btn").on("click", function () {
         if ($(window).width(1024)) {
-            $(".header__nav").stop().slideUp();
+            $(".m-header__nav").stop().slideUp();
         }
     });
 });
@@ -57,14 +57,14 @@ var swiper = new Swiper(".previewSwiper", {
 
 var swiper = new Swiper(".partnersSwiper", {
     slidesPerView: 5,
-    spaceBetween : 20,
-    loop : true,
-    freeMode : true,
-    speed :3500,
-    allowTouchMove : false,
-    autoplay : {
-        delay : 0,
-        disableOnInteraction : false
+    spaceBetween: 20,
+    loop: true,
+    freeMode: true,
+    speed: 3500,
+    allowTouchMove: false,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false
     }
 });
 

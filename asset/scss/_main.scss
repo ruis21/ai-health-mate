@@ -1,4 +1,4 @@
-// kv section 
+﻿// kv section 
 .kv {
 
     background: linear-gradient(to left,
@@ -403,33 +403,7 @@
         padding: 0 rem(20);
     }
 
-
-    // .ask-btn01 {
-    //     // color: $whiteColor01;
-    //     background-color: transparent;
-    //     border: 2px solid $whiteColor01;
-
-    //     &:hover {
-    //         @include gradient;
-    //         color: $whiteColor01;
-    //         border: 2px solid $gradientColor01;
-    //     }
-    // }
-
-    // .ask-btn02 {
-    //     background: $whiteColor01;
-
-    //     &:hover {
-    //         @include gradient;
-    //         color: $whiteColor01;
-    //     }
-
-    //     span {
-    //         @include gradient;
-    //     }
-    // }
 }
-
 
 
 @media (max-width:1240px) {
