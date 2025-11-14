@@ -285,6 +285,8 @@
             @include defineFont(rem(22), regular, 1.6);
         }
     }
+
+
 }
 
 // preview section 
@@ -443,11 +445,11 @@
         }
     }
 
-    // .merit {
-    //     &__card {
-    //         @include flex(center, center, 5px, column-reverse)
-    //     }
-    // }
+    .merit {
+        &__card {
+            flex-direction: column-reverse;
+        }
+    }
 }
 
 @media(max-width: 1024px) {
@@ -456,8 +458,10 @@
             display: block;
         }
 
-        .m-header__nav {
-            display: block;
+        .m-header {
+            &__nav {
+                display: block;
+            }
         }
     }
 }
@@ -524,8 +528,6 @@
     // merit 영역
     .merit {
         &__text {
-            // width: 50%;
-
             h3 {
                 @include defineFont(rem(22), 600);
                 color: $primaryColor01;
@@ -539,13 +541,6 @@
                 @include defineFont(rem(18), regular, 1.6);
             }
 
-        }
-
-        &__card {
-            flex-direction: column-reverse;
-            width: 100%;
-            gap: 20px;
-            flex-wrap: wrap;
         }
     }
 

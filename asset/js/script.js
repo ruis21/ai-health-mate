@@ -20,9 +20,7 @@ $(function () {
     });
 
     $(".close-btn").on("click", function () {
-        if ($(window).width(1024)) {
-            $(".m-header__nav").stop().slideUp();
-        }
+        $(".m-header__nav").stop().slideUp();
     });
 });
 

@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -737,7 +747,7 @@ progress {
 .container-lg,
 .container-md,
 .container-sm {
-  --bs-gutter-x: 20px;
+  --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
@@ -4752,7 +4762,7 @@ textarea.form-control-lg {
   --bs-toast-zindex: 1090;
   --bs-toast-padding-x: 0.75rem;
   --bs-toast-padding-y: 0.5rem;
-  --bs-toast-spacing: 20px;
+  --bs-toast-spacing: 1.5rem;
   --bs-toast-max-width: 350px;
   --bs-toast-font-size: 0.875rem;
   --bs-toast-color: ;
@@ -8911,11 +8921,7 @@ p {
 .header .hamburger-btn {
   width: 25px;
   height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: space-between;
-  gap: 5px;
-  flex-direction: column;
+  display: none;
   background: none;
   border: none;
 }
@@ -8979,14 +8985,11 @@ p {
 }
 
 @media (max-width: 1024px) {
-  .nav {
+  .header .nav {
     display: none;
   }
-  .hamburger-btn {
+  .header .hamburger-btn {
     display: flex;
-  }
-  .m-header__nav {
-    display: block;
   }
 }
 .kv {
@@ -9331,6 +9334,9 @@ p {
     left: 5rem;
     z-index: 0;
   }
+  .merit__card {
+    flex-direction: column-reverse;
+  }
 }
 @media (max-width: 1024px) {
   .header .hamburger-btn {
@@ -9403,12 +9409,6 @@ p {
     font-weight: regular;
     line-height: 1.6;
     letter-spacing: 0;
-  }
-  .merit__card {
-    flex-direction: column-reverse;
-    width: 100%;
-    gap: 20px;
-    flex-wrap: wrap;
   }
   .ask__title {
     font-size: 2rem;

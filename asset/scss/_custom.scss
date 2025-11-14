@@ -12,5 +12,15 @@ $container-max-widths: (
     xl: 1240px,
 );
 
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
 
-$container-padding-x: 20px;
+
+// $container-padding-x: 20px;
