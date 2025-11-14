@@ -96,4 +96,10 @@
     @media(max-width:768px) {
         @include defineFont (rem(36));
     }
+
+    @media(max-width:541px) {
+        @include defineFont (rem(26));
+    }
+
+
 }

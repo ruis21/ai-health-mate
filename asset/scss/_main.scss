@@ -249,16 +249,16 @@
     &__text {
         width: 50%;
 
-        h3 {
+        .card-num {
             @include defineFont(rem(30), 600);
             color: $primaryColor01;
         }
 
-        h2 {
+        .card-title {
             @include defineFont(rem(36), 600);
         }
 
-        p {
+        .card-conts {
             @include defineFont(rem(22), regular, 1.6);
         }
     }
@@ -507,17 +507,17 @@
         &__text {
             width: 100%;
 
-            h3 {
+            .card-num {
                 @include defineFont(rem(22), 600);
                 color: $primaryColor01;
             }
 
-            h2 {
+            .card-title {
                 @include defineFont(rem(32), 600);
             }
 
-            p {
-                @include defineFont(rem(18), regular, 1.6);
+            .card-conts {
+                @include defineFont(rem(18), 400, 1.6);
             }
         }
 
@@ -615,52 +615,26 @@
             @include defineFont(rem(22))
         }
 
+        .solution-pd {
+            padding: 60px 0;
+        }
     }
 
-    .solution-pd {
-        padding: 60px 0;
-    }
+    // merit 영역 
+    .merit {
+        &__text {
+            .card-title {
+                @include defineFont(rem(22), 600);
+            }
 
-
-    // preview 영역
-    .preview {
-        &__btn {
-            // position: absolute;
-            // right: rem(20);
-            // width: rem(120);
-            display: flex;
-            justify-content: space-between;
-            // justify-content: end;
-            // gap: rem(15);
-
-            /* 가상요소 안 보이게 처리 */
-            // .swiper-button-next:after,
-            // .swiper-button-prev:after {
-            //     font-size: rem(16);
-            //     color: $blackColor01;
-            // }
-
-            /* 새로 디자인 */
-            .swiper-button-next,
-            .swiper-button-prev {
-                // position: relative;
-                // top: -70px;
-                margin-top: 0;
-                left: initial;
-                // right: initial;
-                background-color: $whiteColor01;
-                color: $grayColor02;
-                // background-color: rgba(0, 0, 0, 0.5);
-                border: 1px solid $grayColor01;
-                border-radius: 50%;
-                width: 53px;
-                height: 53px;
-                color: #fff;
-
+            .card-conts {
+                @include defineFont(rem(16), 400, 1.6);
             }
         }
     }
 
+
+    // preview 영역
 
 
     // ask 영역
