@@ -9565,12 +9565,25 @@ p {
   padding-left: 70px;
 }
 .history .num {
-  position: absolute;
-  left: 50%;
   font-weight: 700;
+  line-height: 2;
+}
+.history .txt-wrap {
+  line-height: 2;
 }
 .history__wrap h3, .history__wrap .h3 {
   color: #0097F6;
+}
+.history__box-txt {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.875rem;
+  flex-direction: row;
 }
 
 .partners .swiper {

@@ -72,15 +72,23 @@
     padding-left: 70px; // (숫자와 텍스트 사이 간격)
 
     .num {
-        position: absolute;
-        left: 50%;
         font-weight: 700;
+        line-height: 2.0;
+    }
+
+    .txt-wrap {
+        line-height: 2.0;
     }
 
     &__wrap {
         h3 {
             color: $primaryColor02;
         }
+    }
+
+    &__box-txt {
+        @include defineFont(rem(22));
+        @include flex(flex-start, center, rem(30));
     }
 }
 
