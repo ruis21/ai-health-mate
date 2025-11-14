@@ -162,11 +162,7 @@
         }
     }
 
-    &__card-wrap {
-        // padding: 0 rem(120);
-        // overflow: hidden;
-
-    }
+    &__card-wrap {}
 
     .col {
         .card {
@@ -184,18 +180,6 @@
         }
     }
 
-    // &__card {
-    //     background-color: $pointColor02;
-    //     color: $whiteColor01;
-    //     padding: rem(53) 0;
-    //     overflow: hidden;
-
-    //     &:hover {
-    //         background-color: $primaryColor02;
-    //         transition: all 0.3s ease-in-out;
-
-    //     }
-    // }
 
     &__card {
         @include flex(center, center, 5%, column);
@@ -224,17 +208,10 @@
             }
         }
 
+        .card-text {
+            @include defineFont(rem(32));
+        }
 
-        // ul {
-        //     position: absolute;
-        //     top: 50px;
-        //     opacity: 0;
-
-        //     &:hover {
-        //         opacity: 1;
-        //         top: 20;
-        //         top: 0;
-        //     }
     }
 
 
@@ -448,20 +425,6 @@
     .merit {
         &__card {
             flex-direction: column-reverse;
-        }
-    }
-}
-
-@media(max-width: 1024px) {
-    .header {
-        .hamburger-btn {
-            display: block;
-        }
-
-        .m-header {
-            &__nav {
-                display: block;
-            }
         }
     }
 }

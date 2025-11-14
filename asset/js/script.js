@@ -19,7 +19,7 @@ $(function () {
         $(this).toggleClass("active");
     });
 
-    $(".close-btn").on("click", function () {
+    $(".hamburger-btn").on("click", function () {
         $(".m-header__nav").stop().slideUp();
     });
 });
