@@ -1,0 +1,732 @@
+﻿// kv section 
+.kv {
+
+    background: linear-gradient(to left,
+            rgba(20, 20, 20, 0) 10%,
+            rgba(20, 20, 20, 0.25) 25%,
+            rgba(20, 20, 20, 0.5) 50%,
+            rgba(20, 20, 20, 0.75) 75%,
+            rgba(20, 20, 20, 1) 100%),
+        // linear-gradient(to right,
+        //     rgba(0, 0, 0, 0.6),
+        //     rgba(0, 0, 0, 0)),
+        url("../image/kv-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+
+    &__text-wrap {
+        color: $whiteColor01;
+        position: relative;
+
+        .ai {
+            @include defineFont (rem(70));
+            font-family: 'akira_expandedsuper_bold';
+            // position: relative;
+            z-index: 100;
+
+            // &::before {
+            //     // position: relative;
+            //     z-index: 0;
+            //     left: 100px;
+            //     top: rem(-20);
+            //     display: inline-block;
+            //     content: '';
+            //     background: $gradientColor01;
+            //     height: 70px;
+            //     width: 100px;
+            // }
+        }
+
+        h3 {
+            @include defineFont (rem(32));
+        }
+    }
+
+    &__title {
+        font-family: 'akira_expandedsuper_bold';
+        @include defineFont (rem(70));
+
+        span {
+            @include defineFont (rem(80));
+        }
+    }
+
+    &__box {
+        position: relative;
+        background: $gradientColor01;
+        width: rem(110);
+        height: rem(70);
+        top: rem(260);
+        left: rem(20);
+        z-index: 1;
+    }
+
+    &__btn {
+        &:hover {
+            background-color: $primaryColor01;
+        }
+    }
+
+}
+
+
+// introduce section 
+.introduce {
+    // background-color: bisque;
+
+    &__wrap {
+
+        .introduce__conts {
+            position: relative;
+            background-color: black;
+            color: $whiteColor01;
+            padding: rem(260) 0;
+            overflow: hidden;
+
+            .introduce__video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.4;
+                z-index: 0;
+            }
+
+            .introduce__text {
+                position: relative;
+                z-index: 1;
+                padding: 20px;
+            }
+
+            .introduce__title,
+            .introduce__subtitle {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__arrow {
+
+        /* btn-motion5 */
+        .btn-motion5 {
+            position: relative;
+        }
+
+        .btn-motion5 span {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(-45deg);
+            animation: btn-motion5 1.5s infinite;
+            box-sizing: border-box;
+        }
+
+        @keyframes btn-motion5 {
+            0% {
+                transform: rotate(-45deg) translate(0, 0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: rotate(-45deg) translate(-20px, 20px);
+                opacity: 0;
+            }
+        }
+    }
+
+}
+
+// solution section 
+.solution {
+    background-color: $pointColor01;
+    color: $whiteColor01;
+
+    &__title {
+        span {
+            @include gradient;
+        }
+    }
+
+
+
+    .col {
+        .card {
+            border-radius: rem(20);
+            height: 240px;
+            background-color: $pointColor02;
+            color: $whiteColor01;
+            padding: rem(53) 0;
+
+            &:hover {
+                background-color: $primaryColor02;
+                transition: all 0.3s ease-in-out;
+
+            }
+        }
+    }
+
+    // &__card {
+    //     background-color: $pointColor02;
+    //     color: $whiteColor01;
+    //     padding: rem(53) 0;
+    //     overflow: hidden;
+
+    //     &:hover {
+    //         background-color: $primaryColor02;
+    //         transition: all 0.3s ease-in-out;
+
+    //     }
+    // }
+
+    &__card {
+        @include flex(center, center, 5%, column);
+        position: relative;
+        transition: 0.3s all ease;
+
+        img {
+            transition: 0.3s all ease;
+        }
+
+        ul {
+            opacity: 0;
+            transition: 0.3s all ease;
+        }
+
+        &:hover {
+            transform: translateY(-90px);
+
+            img {
+                // display: none;
+                opacity: 0;
+            }
+
+            ul {
+                opacity: 1;
+            }
+        }
+
+
+        // ul {
+        //     position: absolute;
+        //     top: 50px;
+        //     opacity: 0;
+
+        //     &:hover {
+        //         opacity: 1;
+        //         top: 20;
+        //         top: 0;
+        //     }
+    }
+
+
+    &__subtitle {
+        @include flex(center, center, 5%);
+        @include defineFont(rem(26));
+
+
+        .solution__items {
+
+            border: 1px solid $whiteColor01;
+            border-radius: rem(30);
+            padding: rem(10) rem(20);
+            color: $whiteColor01;
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+// merit section 
+.merit {
+    &__card {
+        width: 100%;
+        /* Bootstrap card flex layout */
+        flex-direction: column-reverse;
+        /* column-reverse by default */
+        align-items: center;
+        gap: rem(20);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        width: 100%;
+
+        h3 {
+            @include defineFont(rem(30), 600);
+            color: $primaryColor01;
+        }
+
+        h2 {
+            @include defineFont(rem(36), 600);
+        }
+
+        p {
+            @include defineFont(rem(22), regular, 1.6);
+        }
+    }
+
+    /* xxl ?�상 (1240px~): row�?변�?*/
+    @media (min-width: 1240px) {
+        &__card {
+            flex-direction: row;
+            gap: rem(40);
+
+            img {
+                width: 50%;
+            }
+        }
+
+        &__text {
+            width: 50%;
+        }
+    }
+}
+
+// preview section 
+.preview {
+    .swiper-slide {
+        // width: 50%;
+        background: $grayColor04;
+        height: rem(320);
+        padding: rem(30);
+    }
+
+    // .swiper-slide img {
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    // }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__card {
+        @include flex(space-between, stretch, 0px, column);
+
+        h5 {
+            @include defineFont (rem(20), 600);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        p {
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            color: $grayColor02;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        span {
+            color: $grayColor01;
+        }
+
+        hr {
+            border: 1.5px solid $grayColor01;
+        }
+
+        &:hover {
+            background-color: $primaryColor01;
+            color: $whiteColor01;
+            transition: all 0.3s ease-in-out;
+
+            h5,
+            p,
+            hr,
+            span {
+                color: $whiteColor01;
+            }
+        }
+
+
+    }
+
+    &__btn {
+        position: absolute;
+        right: rem(20);
+        width: rem(120);
+        display: flex;
+        justify-content: end;
+        gap: rem(15);
+
+        /* 가?�요????보이�?처리 */
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: rem(16);
+            color: $blackColor01;
+        }
+
+        /* ?�로 ?�자??*/
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: relative;
+            top: -70px;
+            margin-top: initial;
+            left: initial;
+            right: initial;
+            background-color: $whiteColor01;
+            color: $grayColor02;
+            // background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid $grayColor01;
+            border-radius: 50%;
+            width: 53px;
+            height: 53px;
+            color: #fff;
+
+        }
+    }
+}
+
+
+// ask section 
+.ask {
+    background: $gradientColor01;
+    color: $whiteColor01;
+
+
+    &__title {
+        @include defineFont (rem(36), 600);
+        padding: 0 rem(20);
+    }
+
+
+    // .ask-btn01 {
+    //     // color: $whiteColor01;
+    //     background-color: transparent;
+    //     border: 2px solid $whiteColor01;
+
+    //     &:hover {
+    //         @include gradient;
+    //         color: $whiteColor01;
+    //         border: 2px solid $gradientColor01;
+    //     }
+    // }
+
+    // .ask-btn02 {
+    //     background: $whiteColor01;
+
+    //     &:hover {
+    //         @include gradient;
+    //         color: $whiteColor01;
+    //     }
+
+    //     span {
+    //         @include gradient;
+    //     }
+    // }
+}
+
+
+
+@media (max-width:1240px) {
+
+    // kv ?�역
+    .kv {
+        height: 100%;
+
+        &__text-wrap {
+            padding: calc(rem(150) + rem(77)) rem(80) rem(150);
+
+            h3 {
+                @include defineFont(rem(28));
+            }
+
+            .ai {
+                @include defineFont (rem(50));
+            }
+        }
+
+        &__title {
+            @include defineFont(rem(50));
+
+            span {
+
+                @include defineFont(rem(50));
+            }
+        }
+
+        &__box {
+            background: $gradientColor01;
+            width: rem(70);
+            height: rem(50);
+            top: rem(230);
+            left: rem(80);
+            z-index: 0;
+        }
+    }
+
+    // .merit {
+    //     &__card {
+    //         @include flex(center, center, 5px, column-reverse)
+    //     }
+    // }
+}
+
+@media(max-width: 1024px) {
+    .header {
+        .hamburger-btn {
+            display: block;
+        }
+    }
+
+    .merit {
+
+        &__card {
+            /* Bootstrap card flex layout */
+            flex-direction: column-reverse;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    // 공통?�역
+    .title {
+        @include defineFont (rem(36), 700);
+    }
+
+    .sec-pd-t {
+        padding: calc(rme(80) + rem(77)) 0 rem(80);
+    }
+
+    .sec-pd {
+        padding: rem(80) 0;
+    }
+
+    .m-b--xxl {
+        margin-bottom: rem(80);
+    }
+
+
+    // kv?�역
+    .kv {
+        height: 100%;
+
+        &__text-wrap {
+            padding: calc(rem(200) + rem(77)) 0 rem(200);
+        }
+
+        &__box {
+            background: $gradientColor01;
+            width: rem(70);
+            height: rem(50);
+            top: rem(280);
+            left: rem(0);
+            z-index: 0;
+        }
+    }
+
+    // introduce ?�역   
+    .introduce {
+        &__title {
+            @include defineFont(rem(36));
+        }
+
+        &__subtitle {
+            @include defineFont(rem(26));
+        }
+    }
+
+    // solution ?�역
+    .solution {
+        .row {
+            padding: 0 127px;
+        }
+
+    }
+
+    // merit ?�역
+    .merit {
+        &__text {
+            // width: 50%;
+
+            h3 {
+                @include defineFont(rem(22), 600);
+                color: $primaryColor01;
+            }
+
+            h2 {
+                @include defineFont(rem(32), 600);
+            }
+
+            p {
+                @include defineFont(rem(18), regular, 1.6);
+            }
+
+        }
+
+        &__card {
+            flex-direction: column-reverse;
+            width: 100%;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    }
+
+    // ask ?�역
+
+    .ask {
+        &__title {
+            @include defineFont(rem(32), 600)
+        }
+    }
+}
+
+@media (max-width: 541px) {
+
+    // 공통 ?�역
+    .title {
+        @include defineFont (rem(26), 700);
+    }
+
+    .sec-pd-t {
+        padding: calc(60px + 77px) 0 60px;
+    }
+
+    .sec-pd {
+        padding: 60px 0;
+    }
+
+    .m-b--xxl {
+        margin-bottom: 60px;
+    }
+
+    // kv?�역
+    .kv {
+        height: 100%;
+
+        &__text-wrap {
+            padding: calc(rem(200) + rem(77)) 0 rem(200);
+
+            h3 {
+                @include defineFont(rem(18));
+
+            }
+
+            .ai {
+                @include defineFont(rem(30));
+            }
+        }
+
+        &__title {
+            @include defineFont(rem(30));
+
+            span {
+                @include defineFont(rem(30));
+            }
+
+        }
+
+        &__box {
+            width: rem(50);
+            height: rem(30);
+            top: rem(280);
+            left: 0;
+        }
+    }
+
+    // solution ?�역
+    .solution {
+        &__subtitle {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+
+        &__items {
+            @include defineFont (rem(22));
+        }
+
+        .row {
+            padding: 0 45px;
+        }
+
+    }
+
+    .solution-pd {
+        padding: 60px 0;
+    }
+
+
+    // preview ?�역
+    .preview {
+        &__btn {
+            // position: absolute;
+            // right: rem(20);
+            // width: rem(120);
+            display: flex;
+            justify-content: space-between;
+            // justify-content: end;
+            // gap: rem(15);
+
+            /* 가?�요????보이�?처리 */
+            // .swiper-button-next:after,
+            // .swiper-button-prev:after {
+            //     font-size: rem(16);
+            //     color: $blackColor01;
+            // }
+
+            /* ?�로 ?�자??*/
+            .swiper-button-next,
+            .swiper-button-prev {
+                // position: relative;
+                // top: -70px;
+                margin-top: 0;
+                left: initial;
+                // right: initial;
+                background-color: $whiteColor01;
+                color: $grayColor02;
+                // background-color: rgba(0, 0, 0, 0.5);
+                border: 1px solid $grayColor01;
+                border-radius: 50%;
+                width: 53px;
+                height: 53px;
+                color: #fff;
+
+            }
+        }
+    }
+
+
+
+    // ask ?�역
+    .ask {
+        &__title {
+            @include defineFont(rem(22), 600)
+        }
+    }
+
+}
