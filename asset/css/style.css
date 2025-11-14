@@ -9342,9 +9342,6 @@ p {
     left: 5rem;
     z-index: 0;
   }
-  .merit__card {
-    flex-direction: column-reverse;
-  }
 }
 @media (max-width: 768px) {
   .title {
@@ -9388,8 +9385,26 @@ p {
     line-height: 1.3;
     letter-spacing: 0;
   }
+  .solution__subtitle {
+    gap: 2%;
+  }
   .solution .row {
-    padding: 0 127px;
+    padding: 0 15%;
+  }
+  .solution .col {
+    gap: 1.25rem;
+  }
+  .solution__items {
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  .solution .card-text {
+    font-size: 1.625rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
   }
   .merit__text h3, .merit__text .h3 {
     font-size: 1.375rem;
@@ -9481,6 +9496,12 @@ p {
   }
   .solution .row {
     padding: 0 45px;
+  }
+  .solution .card-text {
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
   }
   .solution-pd {
     padding: 60px 0;

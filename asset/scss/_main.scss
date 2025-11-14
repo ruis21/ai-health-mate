@@ -424,7 +424,7 @@
 
     .merit {
         &__card {
-            flex-direction: column-reverse;
+            // flex-direction: column-reverse;
         }
     }
 }
@@ -482,8 +482,24 @@
 
     // solution 영역
     .solution {
+        &__subtitle {
+            gap: 2%;
+        }
+
         .row {
-            padding: 0 127px;
+            padding: 0 15%;
+        }
+
+        .col {
+            gap: rem(20);
+        }
+
+        &__items {
+            @include defineFont(rem(22));
+        }
+
+        .card-text {
+            @include defineFont(rem(26));
         }
 
     }
@@ -571,6 +587,7 @@
 
     // solution 영역
     .solution {
+
         &__subtitle {
             flex-wrap: wrap;
             gap: 20px;
@@ -583,6 +600,10 @@
 
         .row {
             padding: 0 45px;
+        }
+
+        .card-text {
+            @include defineFont(rem(22))
         }
 
     }
