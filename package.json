@@ -15,10 +15,15 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass --watch asset/scss/style.scss:asset/css/style.css",
+    "sass:build": "sass asset/scss/style.scss:asset/css/style.css --style compressed"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
   }
 }
