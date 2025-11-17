@@ -7,13 +7,13 @@
     border: none;
     @include defineFont (rem(18), 600);
     display: inline-flex;
-    gap: rem(20);
-    width: fit-content;
-    height: fit-content;
-    text-align: center;
+    gap: 45px;
 
     // &--lg {
-    //     font-size: rem(18);
+    //  
+    height: fit-content;
+    font-size: rem(18);
+
     // } 라지사이즈는 이미 정의가 되어있어서 필요가없음.
 
     &--md {
@@ -22,23 +22,21 @@
 
     &--sm {
         height: rem(44);
-        font-size: rem(17);
     }
 }
 
-
-// ask btn 사이즈별
 .ask {
     &__btn01 {
-        background-color: transparent;
+        background: transparent;
+        font-size: rem(17);
+        ound-color: transparent;
         color: $whiteColor01;
         border: 2px solid $whiteColor01;
-        background-image: transparent, $whiteColor01;
-        background-origin: border-box;
-        background-clip: content-box, border-box;
 
         &:hover {
-            background-image: $gradientColor01, $gradientColor01;
+            background: $gradientColor01;
+            color: $whiteColor01;
+            // border: 2px solid $gradientColor01;
         }
 
         &--md {
@@ -83,7 +81,8 @@
 }
 
 
-// membership btn 사이즈별
+
+
 .membership {
     &__btn {
         @include gradient;
@@ -98,18 +97,15 @@
 
 }
 
-
-// inquiry btn 사이즈별
 .inquiry {
     &__btn {
-        justify-content: center;
         border-radius: 10px;
         width: 100%;
         color: $grayColor01;
 
         &:hover {
             background-color: $primaryColor02;
-            color: $whiteColor01;
+            // coloror01;
         }
     }
 }

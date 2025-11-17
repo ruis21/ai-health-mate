@@ -23,4 +23,13 @@ $container-max-widths: (
 }
 
 
+$utilities: (
+    "btn-height": (property: height,
+        class: btn,
+        responsive: true,
+        values: (sm: 2.75rem,
+            md: 3rem,
+            lg: auto))
+);
+
 // $container-padding-x: 20px;

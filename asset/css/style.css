@@ -6858,6 +6858,15 @@ textarea.form-control-lg {
   .text-sm-center {
     text-align: center !important;
   }
+  .btn-sm-sm {
+    height: 2.75rem !important;
+  }
+  .btn-sm-md {
+    height: 3rem !important;
+  }
+  .btn-sm-lg {
+    height: auto !important;
+  }
 }
 @media (min-width: 541px) {
   .float-md-start {
@@ -7407,6 +7416,15 @@ textarea.form-control-lg {
   }
   .text-md-center {
     text-align: center !important;
+  }
+  .btn-md-sm {
+    height: 2.75rem !important;
+  }
+  .btn-md-md {
+    height: 3rem !important;
+  }
+  .btn-md-lg {
+    height: auto !important;
   }
 }
 @media (min-width: 768px) {
@@ -7958,6 +7976,15 @@ textarea.form-control-lg {
   .text-lg-center {
     text-align: center !important;
   }
+  .btn-lg-sm {
+    height: 2.75rem !important;
+  }
+  .btn-lg-md {
+    height: 3rem !important;
+  }
+  .btn-lg-lg {
+    height: auto !important;
+  }
 }
 @media (min-width: 1240px) {
   .float-xl-start {
@@ -8508,6 +8535,15 @@ textarea.form-control-lg {
   .text-xl-center {
     text-align: center !important;
   }
+  .btn-xl-sm {
+    height: 2.75rem !important;
+  }
+  .btn-xl-md {
+    height: 3rem !important;
+  }
+  .btn-xl-lg {
+    height: auto !important;
+  }
 }
 @media print {
   .d-print-inline {
@@ -8779,29 +8815,27 @@ p {
   line-height: 1.3;
   letter-spacing: 0;
   display: inline-flex;
-  gap: 1.25rem;
-  width: fit-content;
+  gap: 45px;
   height: fit-content;
-  text-align: center;
+  font-size: 1.125rem;
 }
 .btn--md {
   height: 3rem;
 }
 .btn--sm {
   height: 2.75rem;
-  font-size: 1.0625rem;
 }
 
 .ask__btn01 {
-  background-color: transparent;
+  background: transparent;
+  font-size: 1.0625rem;
+  ound-color: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
-  background-image: transparent, #ffffff;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
 }
 .ask__btn01:hover {
-  background-image: linear-gradient(135deg, #0ED058, #0097F6), linear-gradient(135deg, #0ED058, #0097F6);
+  background: linear-gradient(135deg, #0ED058, #0097F6);
+  color: #ffffff;
 }
 .ask__btn01--md {
   height: 3rem;
@@ -8850,14 +8884,12 @@ p {
 }
 
 .inquiry__btn {
-  justify-content: center;
   border-radius: 10px;
   width: 100%;
   color: #7E7E7E;
 }
 .inquiry__btn:hover {
   background-color: #0097F6;
-  color: #ffffff;
 }
 
 .header {
