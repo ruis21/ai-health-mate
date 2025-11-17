@@ -71,7 +71,7 @@
     .hamburger-btn {
         width: 25px;
         height: 20px;
-        display: none; // 기본적으로 숨김
+        display: none;
         background: none;
         border: none;
         height: 50px;
@@ -88,17 +88,17 @@
 
 
     // hamburger btn -> close btn 변경 시 애니메이션 
-    .hamburger-btn.active .line:nth-child(1) {
-        transform: translateY(-5px) rotate(45deg);
-    }
+    // .hamburger-btn.active .line:nth-child(1) {
+    //     transform: translateY(-5px) rotate(45deg);
+    // }
 
-    .hamburger-btn.active .line:nth-child(2) {
-        opacity: 0;
-    }
+    // .hamburger-btn.active .line:nth-child(2) {
+    //     opacity: 0;
+    // }
 
-    .hamburger-btn.active .line:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
+    // .hamburger-btn.active .line:nth-child(3) {
+    //     transform: translateY(-9px) rotate(-45deg);
+    // }
 
     &__nav {
         display: none;

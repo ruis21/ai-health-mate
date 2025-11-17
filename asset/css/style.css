@@ -8942,15 +8942,6 @@ p {
   background: #ffffff;
   transition: 0.3s;
 }
-.header .hamburger-btn.active .line:nth-child(1) {
-  transform: translateY(-5px) rotate(45deg);
-}
-.header .hamburger-btn.active .line:nth-child(2) {
-  opacity: 0;
-}
-.header .hamburger-btn.active .line:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
 .header__nav {
   display: none;
 }
