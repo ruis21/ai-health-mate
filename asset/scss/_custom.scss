@@ -29,7 +29,14 @@ $utilities: (
         responsive: true,
         values: (sm: 2.75rem,
             md: 3rem,
-            lg: auto))
+            lg: auto)),
+    "btn-font-size": (property: font-size,
+        class: btn-fs,
+        responsive: true,
+        values: (sm: 1rem, // 16px
+            md: 1.125rem, // 18px
+            lg: 1.125rem // 18px
+        ))
 );
 
 // $container-padding-x: 20px;

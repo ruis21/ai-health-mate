@@ -167,7 +167,7 @@
     .col {
         .card {
             border-radius: rem(20);
-            height: 240px;
+            height: rem(240);
             background-color: $pointColor02;
             color: $whiteColor01;
             padding: rem(53) 0;
@@ -181,9 +181,9 @@
     }
 
 
-    .row {
-        padding: 0 12%;
-    }
+    // .row {
+    //     padding: 0 12%;
+    // }
 
 
 
@@ -490,13 +490,13 @@
             gap: 2%;
         }
 
-        .row {
-            padding: 0 15%;
-        }
+        // .row {
+        //     padding: 0 15%;
+        // }
 
-        .col {
-            gap: rem(20);
-        }
+        // .col {
+        //     gap: rem(20);
+        // }
 
         &__items {
             @include defineFont(rem(22));
@@ -615,9 +615,9 @@
             @include defineFont (rem(22));
         }
 
-        .row {
-            padding: 0 45px;
-        }
+        // .row {
+        //     padding: 0 45px;
+        // }
 
         .card-text {
             @include defineFont(rem(22))
