@@ -9420,7 +9420,7 @@ p {
     height: 100%;
   }
   .kv__text-wrap {
-    padding: calc(9.375rem + 4.8125rem) 5rem 9.375rem;
+    padding: 9.375rem 5rem 9.375rem;
   }
   .kv__text-wrap h3, .kv__text-wrap .h3 {
     font-size: 1.75rem;
@@ -9475,7 +9475,7 @@ p {
     height: 100%;
   }
   .kv__text-wrap {
-    padding: calc(12.5rem + 4.8125rem) 0 12.5rem;
+    padding: 12.5rem 0 12.5rem;
   }
   .kv__box {
     background: linear-gradient(135deg, #0ED058, #0097F6);
@@ -9567,7 +9567,7 @@ p {
     height: 100%;
   }
   .kv__text-wrap {
-    padding: calc(12.5rem + 4.8125rem) 0 12.5rem;
+    padding: 12.5rem 0 12.5rem;
   }
   .kv__text-wrap h3, .kv__text-wrap .h3 {
     font-size: 1.125rem;

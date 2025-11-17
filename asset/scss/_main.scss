@@ -412,7 +412,7 @@
         height: 100%;
 
         &__text-wrap {
-            padding: calc(rem(150) + rem(77)) rem(80) rem(150);
+            padding: rem(150) rem(80) rem(150);
 
             h3 {
                 @include defineFont(rem(28));
@@ -476,7 +476,7 @@
         height: 100%;
 
         &__text-wrap {
-            padding: calc(rem(200) + rem(77)) 0 rem(200);
+            padding: rem(200) 0 rem(200);
         }
 
         &__box {
@@ -587,7 +587,7 @@
         height: 100%;
 
         &__text-wrap {
-            padding: calc(rem(200) + rem(77)) 0 rem(200);
+            padding: rem(200) 0 rem(200);
 
             h3 {
                 @include defineFont(rem(18));
