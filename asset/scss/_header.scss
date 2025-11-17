@@ -175,11 +175,11 @@
 
         .m-header__nav {
             // display: none; // 기본적으로 숨김, JS로 토글
-            position: absolute;
             top: 77px;
             left: 0;
             width: 100%;
             background: rgba(0, 0, 0, 0.9);
+            height: 100vh;
             z-index: 10;
             color: $whiteColor01;
         }
