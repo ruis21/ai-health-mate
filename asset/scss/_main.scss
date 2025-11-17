@@ -209,6 +209,11 @@
 
             ul {
                 opacity: 1;
+                list-style-type: disc;
+            }
+
+            .card-text {
+                @include defineFont(rem(32), 600)
             }
         }
 
@@ -393,278 +398,391 @@
         z-index: 0;
     }
 
-    &__title {
-        @include defineFont (rem(36), 600);
-        padding: 0 rem(20);
-        position: relative;
-        z-index: 1;
+    // &__wrap {
+    //     word-break: keep-all;
+    //     font-size: rem(36);
+    //     font-weight: 700;
+    //     margin: rem(50);
+    //     width: rem(450);
+    //     text-align: center;
+    // }
+
+    // #cursor {
+    //     border-left: 2px solid #ffffff;
+    //     /* 커서 스타일 */
+    //     animation: blink 0.7s infinite;
+    //     display: inline-block;
+    //     margin-left: 2px;
+    //     height: 35px;
+    //     /* 폰트 크기와 동일하게 설정 */
+    //     vertical-align: middle;
+    // }
+
+    // @keyframes blink {
+    //     0% {
+    //         opacity: 1;
+    //     }
+
+    //     50% {
+    //         opacity: 0;
+    //     }
+
+    //     100% {
+    //         opacity: 1;
+    //     }
+    // }
+
+    .typing-container {
+        width: max-content;
+        margin: 0 auto;
     }
 
-}
-
-
-@media (max-width:1240px) {
-
-    // kv 영역
-    .kv {
-        height: 100%;
-
-        &__text-wrap {
-            padding: calc(rem(150) + rem(77)) rem(80) rem(150);
-
-            h3 {
-                @include defineFont(rem(28));
-            }
-
-            .ai {
-                @include defineFont (rem(50));
-            }
-        }
-
-        &__title {
-            @include defineFont(rem(50));
-
-            span {
-
-                @include defineFont(rem(50));
-            }
-        }
-
-        &__box {
-            background: $gradientColor01;
-            width: rem(70);
-            height: rem(35);
-            top: rem(240);
-            left: rem(80);
-            z-index: 0;
-        }
+    .typing-line {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        // box-sizing: content-box;
+        width: 0;
+        border-right: .15em solid transparent;
+        /* 기본은 투명 */
+        @include defineFont(rem(36), 600);
+        /* 폰트사이즈 36 */
+        animation-fill-mode: forwards;
     }
 
-    .merit {
-        &__card {
-            // flex-direction: column-reverse;
-        }
-    }
-}
-
-
-
-@media (max-width: 768px) {
-
-    // 공통영역
-    .title {
-        @include defineFont (rem(36), 700);
+    /* 1번째 줄: 타이핑 중에는 커서 표시, 타이핑 끝나면 커서 제거 */
+    .typing-line:nth-child(1) {
+        animation:
+            typing 1.2s steps(12, end) forwards,
+            caret-typing 2.4s linear forwards;
+        animation-delay: 0s, 0s;
     }
 
-    .sec-pd-t {
-        padding: calc(rme(80) + rem(77)) 0 rem(80);
+    /* 마지막 줄: 앞줄이 끝난 뒤 시작
+       - typing: 글자 표시
+       - caret-typing-keep: 타이핑 동안 커서 지속(끝나도 유지)
+       - blink-caret: 타이핑 끝난 뒤 깜빡임 시작 */
+    .typing-line:last-child {
+        animation:
+            typing 1.8s steps(18, end) forwards,
+            caret-typing-keep 1.8s linear forwards,
+            blink-caret .75s step-end infinite;
+        /* delays: 시작(2.7s), caret-typing-keep 같은 시작(2.7s), blink 시작은 타이핑 끝난 뒤(4.5s) */
+        animation-delay: 2.7s, 2.7s, 4.5s;
     }
 
-    .sec-pd {
-        padding: rem(80) 0;
-    }
-
-    .m-b--xxl {
-        margin-bottom: rem(80);
-    }
-
-
-    // kv영역
-    .kv {
-        height: 100%;
-
-        &__text-wrap {
-            padding: calc(rem(200) + rem(77)) 0 rem(200);
+    @keyframes typing {
+        from {
+            width: 0;
         }
 
-        &__box {
-            background: $gradientColor01;
-            width: rem(70);
-            height: rem(35);
-            top: rem(290);
-            left: rem(0);
-            z-index: 0;
-        }
-    }
-
-    // introduce 영역   
-    .introduce {
-        &__title {
-            @include defineFont(rem(36));
-        }
-
-        &__subtitle {
-            @include defineFont(rem(26));
-        }
-    }
-
-    // solution 영역
-    .solution {
-        &__subtitle {
-            gap: 2%;
-        }
-
-        // .row {
-        //     padding: 0 15%;
-        // }
-
-        // .col {
-        //     gap: rem(20);
-        // }
-
-        &__items {
-            @include defineFont(rem(22));
-        }
-
-        .card-text {
-            @include defineFont(rem(26));
-        }
-
-    }
-
-    // merit 영역
-    .merit {
-        &__text {
+        to {
             width: 100%;
+        }
+    }
 
-            .card-num {
-                @include defineFont(rem(22), 600);
-                color: $primaryColor01;
-            }
-
-            .card-title {
-                @include defineFont(rem(32), 600);
-            }
-
-            .card-conts {
-                @include defineFont(rem(18), 400, 1.6);
-            }
+    /* 첫 줄 전용: 타이핑 기간에는 커서 보이고 끝에서 사라짐 */
+    @keyframes caret-typing {
+        0% {
+            border-right-color: rgba(255, 255, 255, 0.9);
         }
 
-        &__card {
-            flex-direction: column-reverse;
-
-            img {
-                width: 100%;
-            }
+        99% {
+            border-right-color: rgba(255, 255, 255, 0.9);
         }
 
-        // ask 영역
+        100% {
+            border-right-color: transparent;
+        }
+    }
 
-        .ask {
+    /* 마지막 줄: 타이핑 기간 동안 커서 유지(끝나도 유지, 이후 blink가 작동) */
+    @keyframes caret-typing-keep {
+        0% {
+            border-right-color: rgba(255, 255, 255, 0.9);
+        }
+
+        100% {
+            border-right-color: rgba(255, 255, 255, 0.9);
+        }
+    }
+
+    /* 마지막 줄 깜빡이 커서 (투명 <-> 흰색) */
+    @keyframes blink-caret {
+
+        0%,
+        100% {
+            border-right-color: transparent;
+        }
+
+        50% {
+            border-right-color: rgba(255, 255, 255, 0.9);
+        }
+    }
+
+
+    @media (max-width:1240px) {
+
+        // kv 영역
+        .kv {
+            height: 100%;
+
+            &__text-wrap {
+                padding: calc(rem(150) + rem(77)) rem(80) rem(150);
+
+                h3 {
+                    @include defineFont(rem(28));
+                }
+
+                .ai {
+                    @include defineFont (rem(50));
+                }
+            }
+
             &__title {
-                @include defineFont(rem(32), 600)
-            }
-        }
-    }
-}
+                @include defineFont(rem(50));
 
+                span {
 
-
-@media (max-width: 541px) {
-
-    // 공통 영역
-    .title {
-        @include defineFont (rem(26), 700);
-    }
-
-    .sec-pd-t {
-        padding: calc(60px + 77px) 0 60px;
-    }
-
-    .sec-pd {
-        padding: 60px 0;
-    }
-
-    .m-b--xxl {
-        margin-bottom: 60px;
-    }
-
-    // kv영역
-    .kv {
-        height: 100%;
-
-        &__text-wrap {
-
-
-            h3 {
-                @include defineFont(rem(18));
-
+                    @include defineFont(rem(50));
+                }
             }
 
-            .ai {
-                @include defineFont(rem(30));
-                z-index: 5;
+            &__box {
+                background: $gradientColor01;
+                width: rem(70);
+                height: rem(35);
+                top: rem(240);
+                left: rem(80);
+                z-index: 0;
             }
         }
 
-        &__title {
-            @include defineFont(rem(30));
+        .merit {
+            &__card {
+                // flex-direction: column-reverse;
+            }
+        }
+    }
 
-            span {
-                @include defineFont(rem(30));
+
+
+    @media (max-width: 768px) {
+
+        // 공통영역
+        .title {
+            @include defineFont (rem(36), 700);
+        }
+
+        .sec-pd-t {
+            padding: calc(rme(80) + rem(77)) 0 rem(80);
+        }
+
+        .sec-pd {
+            padding: rem(80) 0;
+        }
+
+        .m-b--xxl {
+            margin-bottom: rem(80);
+        }
+
+
+        // kv영역
+        .kv {
+            height: 100%;
+
+            &__text-wrap {
+                padding: calc(rem(200) + rem(77)) 0 rem(200);
+            }
+
+            &__box {
+                background: $gradientColor01;
+                width: rem(70);
+                height: rem(35);
+                top: rem(290);
+                left: rem(0);
+                z-index: 0;
+            }
+        }
+
+        // introduce 영역   
+        .introduce {
+            &__title {
+                @include defineFont(rem(36));
+            }
+
+            &__subtitle {
+                @include defineFont(rem(26));
+            }
+        }
+
+        // solution 영역
+        .solution {
+            &__subtitle {
+                gap: 2%;
+            }
+
+            // .row {
+            //     padding: 0 15%;
+            // }
+
+            // .col {
+            //     gap: rem(20);
+            // }
+
+            &__items {
+                @include defineFont(rem(22));
+            }
+
+            .card-text {
+                @include defineFont(rem(26));
             }
 
         }
 
-        &__box {
-            width: rem(42);
-            height: rem(20);
-            top: rem(285);
-            left: 0;
-            z-index: 0;
+        // merit 영역
+        .merit {
+            &__text {
+                width: 100%;
+
+                .card-num {
+                    @include defineFont(rem(22), 600);
+                    color: $primaryColor01;
+                }
+
+                .card-title {
+                    @include defineFont(rem(32), 600);
+                }
+
+                .card-conts {
+                    @include defineFont(rem(18), 400, 1.6);
+                }
+            }
+
+            &__card {
+                flex-direction: column-reverse;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            // ask 영역
+
+            .ask {
+                &__title {
+                    @include defineFont(rem(32), 600)
+                }
+            }
         }
     }
 
-    // solution 영역
-    .solution {
 
-        &__subtitle {
-            flex-wrap: wrap;
-            gap: 20px;
+
+    @media (max-width: 541px) {
+
+        // 공통 영역
+        .title {
+            @include defineFont (rem(26), 700);
         }
 
-
-        &__items {
-            @include defineFont (rem(22));
+        .sec-pd-t {
+            padding: calc(60px + 77px) 0 60px;
         }
 
-        // .row {
-        //     padding: 0 45px;
-        // }
-
-        .card-text {
-            @include defineFont(rem(22))
-        }
-
-        .solution-pd {
+        .sec-pd {
             padding: 60px 0;
         }
 
-    }
+        .m-b--xxl {
+            margin-bottom: 60px;
+        }
 
-    // merit 영역 
-    .merit {
-        &__text {
-            .card-title {
-                @include defineFont(rem(22), 600);
+        // kv영역
+        .kv {
+            height: 100%;
+
+            &__text-wrap {
+
+
+                h3 {
+                    @include defineFont(rem(18));
+
+                }
+
+                .ai {
+                    @include defineFont(rem(30));
+                    z-index: 5;
+                }
             }
 
-            .card-conts {
-                @include defineFont(rem(16), 400, 1.6);
+            &__title {
+                @include defineFont(rem(30));
+
+                span {
+                    @include defineFont(rem(30));
+                }
+
+            }
+
+            &__box {
+                width: rem(42);
+                height: rem(20);
+                top: rem(285);
+                left: 0;
+                z-index: 0;
+            }
+        }
+
+        // solution 영역
+        .solution {
+
+            &__subtitle {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+
+            &__items {
+                @include defineFont (rem(22));
+            }
+
+            // .row {
+            //     padding: 0 45px;
+            // }
+
+            .card-text {
+                @include defineFont(rem(22))
+            }
+
+            .solution-pd {
+                padding: 60px 0;
+            }
+
+        }
+
+        // merit 영역 
+        .merit {
+            &__text {
+                .card-title {
+                    @include defineFont(rem(22), 600);
+                }
+
+                .card-conts {
+                    @include defineFont(rem(16), 400, 1.6);
+                }
+            }
+        }
+
+
+        // preview 영역
+
+
+        // ask 영역
+        .ask {
+            &__title {
+                @include defineFont(rem(22), 600)
             }
         }
     }
-
-
-    // preview 영역
-
-
-    // ask 영역
-    .ask {
-        &__title {
-            @include defineFont(rem(22), 600)
-        }
-    }
-
 }
