@@ -8931,6 +8931,7 @@ p {
   display: none;
   background: none;
   border: none;
+  height: 50px;
 }
 .header .hamburger-btn .line {
   display: flex;
@@ -8997,17 +8998,19 @@ p {
 }
 
 @media (max-width: 1024px) {
-  .header .nav {
-    display: none;
-  }
-  .header .hamburger-btn {
+  .hamburger-btn {
     display: flex;
   }
-  .header .m-header__nav {
-    position: relative;
+  .nav {
+    display: none;
   }
-  .header .m-header__menu-list {
+  .m-header__nav {
+    display: block;
     position: absolute;
+    top: 77px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
   }
 }
 .kv {
@@ -9140,6 +9143,9 @@ p {
 .solution .col .card:hover {
   background-color: #0097F6;
   transition: all 0.3s ease-in-out;
+}
+.solution .row {
+  padding: 0 12%;
 }
 .solution__card {
   display: flex;

@@ -26,6 +26,8 @@
     }
 }
 
+
+// ask btn 사이즈별
 .ask {
     &__btn01 {
         background-color: transparent;
@@ -81,6 +83,7 @@
 }
 
 
+// membership btn 사이즈별
 .membership {
     &__btn {
         @include gradient;
@@ -95,6 +98,8 @@
 
 }
 
+
+// inquiry btn 사이즈별
 .inquiry {
     &__btn {
         justify-content: center;

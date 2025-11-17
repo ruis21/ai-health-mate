@@ -181,6 +181,12 @@
     }
 
 
+    .row {
+        padding: 0 12%;
+    }
+
+
+
     &__card {
         @include flex(center, center, 5%, column);
         position: relative;
@@ -618,6 +624,7 @@
         .solution-pd {
             padding: 60px 0;
         }
+
     }
 
     // merit 영역 
