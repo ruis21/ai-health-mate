@@ -7,12 +7,9 @@
     border: none;
     @include defineFont (rem(18), 600);
     display: inline-flex;
-    gap: 45px;
-
-    // &--lg {
-    //  
-    height: fit-content;
-    font-size: rem(18);
+    align-items: center;
+    // justify-content: center;
+    gap: rem(20);
 
     // } 라지사이즈는 이미 정의가 되어있어서 필요가없음.
 
