@@ -69,36 +69,42 @@
     }
 
     .hamburger-btn {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
         width: 25px;
-        height: 20px;
+        height: 50px;
         display: none;
+        flex-direction: column;
+        justify-content: space-around;
         background: none;
         border: none;
-        height: 50px;
+        padding: 10px 0;
 
 
         .line {
-            @include flex;
+            display: block;
+            width: 100%;
             height: 2px;
             background: $whiteColor01;
             transition: 0.3s;
-            // position: absolute;
         }
     }
 
 
     // hamburger btn -> close btn 변경 시 애니메이션 
-    // .hamburger-btn.active .line:nth-child(1) {
-    //     transform: translateY(-5px) rotate(45deg);
-    // }
+    .hamburger-btn.active .line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
 
-    // .hamburger-btn.active .line:nth-child(2) {
-    //     opacity: 0;
-    // }
+    .hamburger-btn.active .line:nth-child(2) {
+        opacity: 0;
+    }
 
-    // .hamburger-btn.active .line:nth-child(3) {
-    //     transform: translateY(-9px) rotate(-45deg);
-    // }
+    .hamburger-btn.active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 
     &__nav {
         display: none;
@@ -152,25 +158,25 @@
         z-index: 4;
         display: none;
     }
-}
 
+    // 반응형: 1024px 이하
+    @media (max-width: 1024px) {
+        .hamburger-btn {
+            display: flex;
+        }
 
-@media (max-width: 1024px) {
-    .hamburger-btn {
-        display: flex;
+        .nav {
+            display: none;
+        }
+
+        .m-header__nav {
+            display: none; // 기본적으로 숨김, JS로 토글
+            position: absolute;
+            top: 77px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10;
+        }
     }
-
-    .nav {
-        display: none;
-    }
-
-    .m-header__nav {
-        display: block; // 햄버거 클릭 시에만 slideToggle()으로 제어됨
-        position: absolute;
-        top: 77px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9)
-    }
-
 }
