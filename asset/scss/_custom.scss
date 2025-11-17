@@ -22,7 +22,7 @@ $container-max-widths: (
     padding-right: 20px !important;
 }
 
-
+// 부트스트랩 중단점별 btn 높이, 폰트사이즈 지정
 $utilities: (
     "btn-height": (property: height,
         class: btn,
