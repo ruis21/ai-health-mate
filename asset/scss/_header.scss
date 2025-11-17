@@ -1,10 +1,9 @@
 .header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     height: rem(77);
     color: $whiteColor01;
     width: 100%;
     @include flex;
-    position: relative;
 
     &__wrap {
         @include flex;
@@ -139,7 +138,6 @@
             &:hover {
                 color: $whiteColor01;
                 font-weight: 600;
-                // @include gradient;
             }
         }
 
@@ -163,7 +161,7 @@
         display: none;
     }
 
-    // 반응형: 1024px 이하
+
     @media (max-width: 1024px) {
         .hamburger-btn {
             display: flex;
