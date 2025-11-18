@@ -28,6 +28,10 @@
         align-items: center;
     }
 
+    &__card-wrap {
+        width: 50%;
+    }
+
     &__card {
         padding: rem(62) 0;
         margin: rem(10);
@@ -125,4 +129,31 @@
         letter-spacing: 10px;
     }
 
+}
+
+@media (max-width:1024px) {
+    .vision {
+        &__path {
+            display: none;
+        }
+
+        &__wrap {
+            flex-direction: column-reverse;
+        }
+
+        &__card-wrap {
+            width: 90%;
+        }
+
+    }
+
+}
+
+@media (max-width:540px) {
+    .vision {
+        &__circle {
+            height: rem(300);
+            width: rem(300);
+        }
+    }
 }

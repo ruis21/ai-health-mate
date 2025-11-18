@@ -9739,6 +9739,9 @@ p {
 .vision__wrap {
   align-items: center;
 }
+.vision__card-wrap {
+  width: 50%;
+}
 .vision__card {
   padding: 3.875rem 0;
   margin: 0.625rem;
@@ -9820,6 +9823,23 @@ p {
   letter-spacing: 10px;
 }
 
+@media (max-width: 1024px) {
+  .vision__path {
+    display: none;
+  }
+  .vision__wrap {
+    flex-direction: column-reverse;
+  }
+  .vision__card-wrap {
+    width: 90%;
+  }
+}
+@media (max-width: 540px) {
+  .vision__circle {
+    height: 18.75rem;
+    width: 18.75rem;
+  }
+}
 .news__wrap {
   position: relative;
   margin: 0 auto;
