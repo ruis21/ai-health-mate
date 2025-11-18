@@ -85,7 +85,7 @@
 // history section 
 .history {
     position: relative;
-    padding-left: 70px; // (숫자와 텍스트 사이 간격)
+    padding-left: rem(70); // (숫자와 텍스트 사이 간격)
 
     .num {
         font-weight: 700;
@@ -97,8 +97,32 @@
     }
 
     &__wrap {
+        width: 100%;
+
         h3 {
             color: $primaryColor02;
+        }
+    }
+
+    &__bg01 {
+        position: relative;
+        z-index: -1;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: -50px;
+        }
+    }
+
+    &__bg02 {
+        position: relative;
+        z-index: -1;
+
+        img {
+            position: absolute;
+            top: 300px;
+            right: 0;
         }
     }
 
@@ -106,6 +130,15 @@
         @include defineFont(rem(22));
         @include flex(flex-start, center, rem(30));
     }
+
+    &__box01-left,
+    &__box02-left,
+    &__box03-left,
+    &__box04-left,
+    {
+    position: sticky;
+    top: 200px;
+}
 }
 
 // partners section 
@@ -178,6 +211,11 @@
                 @include defineFont (rem(36), 700);
             }
         }
+
+        &__card {
+            @include defineFont (rem(22));
+        }
+
     }
 
 
@@ -195,8 +233,8 @@
             width: rem(300);
         }
 
-        &__card {
-            @include defineFont (rem(22));
+        &__card-wrap {
+            width: 100%;
         }
 
     }
