@@ -9830,8 +9830,8 @@ p {
   z-index: -1;
 }
 .history__bg01 img {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 100px;
   left: -50px;
 }
 .history__bg02 {
@@ -9839,8 +9839,8 @@ p {
   z-index: -1;
 }
 .history__bg02 img {
-  position: absolute;
-  top: 300px;
+  position: sticky;
+  top: 100px;
   right: 0;
 }
 .history__box-txt {
@@ -9853,10 +9853,6 @@ p {
   align-items: center;
   gap: 1.875rem;
   flex-direction: row;
-}
-.history__box01-left, .history__box02-left, .history__box03-left, .history__box04-left {
-  position: sticky;
-  top: 200px;
 }
 
 .partners .swiper {
