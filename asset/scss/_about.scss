@@ -97,7 +97,10 @@
     }
 
     &__wrap {
-        width: 100%;
+        @include flex(center, flex-start, rem(40));
+        // display: flex;
+        // gap: rem(40);
+        // align-items: flex-start;
 
         h3 {
             color: $primaryColor02;
@@ -120,33 +123,38 @@
         z-index: -1;
 
         img {
-            position: sticky;
+            position: fixed;
             top: 100px;
             right: 0;
         }
     }
 
-    &__box-txt {
-        @include defineFont(rem(22));
-        @include flex(flex-start, center, rem(30));
+    &__box-left-wrap {
+        width: 40%;
+        position: sticky; // ← Left 전체를 sticky로
+        top: 150px;
     }
 
-    // &__box01,
-    // &__box02,
-    // &__box03,
-    // &__box04 {
-    //     height: 100%;
 
-    // }
+    &__box-left-txt {
+        min-height: 100vh;
+    }
 
-    // &__box01-left,
-    // &__box02-left,
-    // &__box03-left,
-    // &__box04-left {
-    //     position: sticky;
-    //     top: 200px;
-    //     align-self: flex-start;
-    // }
+
+    &__box-right-wrap {
+        min-height: 100vh; // ← Right가 충분히 길어야 함
+        @include flex (center, center, rem(20), column);
+    }
+
+    &__box-right {
+        min-height: 100vh;
+        @include defineFont(rem(22));
+        @include flex(flex-start, space-between, rem(30), column);
+    }
+
+    &__box-right-txt {
+        @include flex(flex-start, center, rem(40))
+    }
 }
 
 // partners section 
@@ -183,6 +191,7 @@
     }
 
 }
+
 
 @media (max-width:1024px) {
     .vision {
