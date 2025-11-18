@@ -207,7 +207,10 @@
 
             ul {
                 opacity: 1;
-                list-style-type: disc;
+            }
+
+            li {
+                // list-style-type: disc;
             }
 
             .card-text {
@@ -669,7 +672,7 @@
 
         .ask {
             .typing-line {
-                @include defineFont(rem(32), 600)
+                @include defineFont(rem(32), 600);
             }
 
 
@@ -781,7 +784,7 @@
     // ask 영역
     .ask {
         .typing-line {
-            @include defineFont(rem(22), 600)
+            @include defineFont(rem(22), 600);
         }
     }
 }

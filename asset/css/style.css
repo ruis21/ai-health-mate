@@ -9262,7 +9262,6 @@ p {
 }
 .solution__card:hover ul {
   opacity: 1;
-  list-style-type: disc;
 }
 .solution__card:hover .card-text {
   font-size: 2rem;
