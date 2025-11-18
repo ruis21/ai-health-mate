@@ -9232,6 +9232,10 @@ p {
   color: transparent;
   -webkit-background-clip: text;
 }
+.solution__card-wrap {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
 .solution .col .card {
   border-radius: 1.25rem;
   height: 15rem;

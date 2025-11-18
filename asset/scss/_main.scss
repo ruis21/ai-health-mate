@@ -160,6 +160,11 @@
         }
     }
 
+    &__card-wrap {
+        --bs-gutter-x: 1.5rem; // 가로 간격 32px
+        --bs-gutter-y: 1.5rem; // 세로 간격 32px
+    }
+
     .col {
         .card {
             border-radius: rem(20);
