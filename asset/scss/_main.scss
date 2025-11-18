@@ -8,7 +8,7 @@
             rgba(20, 20, 20, 0.75) 75%,
             rgba(20, 20, 20, 1) 100%),
 
-        url("../image/bg02.jpg");
+        url("../image/kv-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -519,270 +519,271 @@
             border-right-color: rgba(255, 255, 255, 0.9);
         }
     }
+}
 
+@media (max-width:1240px) {
 
-    @media (max-width:1240px) {
+    // kv 영역
+    .kv {
+        height: 100%;
 
-        // kv 영역
-        .kv {
-            height: 100%;
+        &__text-wrap {
+            padding: calc(rem(150) + rem(77)) rem(80) rem(150);
 
-            &__text-wrap {
-                padding: calc(rem(150) + rem(77)) rem(80) rem(150);
-
-                h3 {
-                    @include defineFont(rem(28));
-                }
-
-                .ai {
-                    @include defineFont (rem(50));
-                }
+            h3 {
+                @include defineFont(rem(28));
             }
 
-            &__title {
+            .ai {
+                @include defineFont (rem(50));
+            }
+        }
+
+        &__title {
+            @include defineFont(rem(50));
+
+            span {
+
                 @include defineFont(rem(50));
-
-                span {
-
-                    @include defineFont(rem(50));
-                }
-            }
-
-            &__box {
-                background: $gradientColor01;
-                width: rem(70);
-                height: rem(35);
-                top: rem(240);
-                left: rem(80);
-                z-index: 0;
             }
         }
 
-        .merit {
-            &__card {
-                // flex-direction: column-reverse;
-            }
+        &__box {
+            background: $gradientColor01;
+            width: rem(70);
+            height: rem(35);
+            top: rem(240);
+            left: rem(80);
+            z-index: 0;
         }
     }
 
+    .merit {
+        &__card {
+            // flex-direction: column-reverse;
+        }
+    }
+}
 
 
-    @media (max-width: 768px) {
 
-        // 공통영역
-        .title {
-            @include defineFont (rem(36), 700);
+@media (max-width: 768px) {
+
+    // 공통영역
+    .title {
+        @include defineFont (rem(36), 700);
+    }
+
+    .sec-pd-t {
+        padding: calc(rme(80) + rem(77)) 0 rem(80);
+    }
+
+    .sec-pd {
+        padding: rem(80) 0;
+    }
+
+    .m-b--xxl {
+        margin-bottom: rem(80);
+    }
+
+
+    // kv영역
+    .kv {
+        height: 100%;
+
+        &__text-wrap {
+            padding: calc(rem(200) + rem(77)) 0 rem(200);
         }
 
-        .sec-pd-t {
-            padding: calc(rme(80) + rem(77)) 0 rem(80);
+        &__box {
+            background: $gradientColor01;
+            width: rem(70);
+            height: rem(35);
+            top: rem(290);
+            left: rem(0);
+            z-index: 0;
+        }
+    }
+
+    // introduce 영역   
+    .introduce {
+        &__title {
+            @include defineFont(rem(36));
         }
 
-        .sec-pd {
-            padding: rem(80) 0;
+        &__subtitle {
+            @include defineFont(rem(26));
+        }
+    }
+
+    // solution 영역
+    .solution {
+        &__subtitle {
+            gap: 2%;
         }
 
-        .m-b--xxl {
-            margin-bottom: rem(80);
+        // .row {
+        //     padding: 0 15%;
+        // }
+
+        // .col {
+        //     gap: rem(20);
+        // }
+
+        &__items {
+            @include defineFont(rem(22));
         }
 
+        .card-text {
+            @include defineFont(rem(26));
+        }
 
-        // kv영역
-        .kv {
-            height: 100%;
+    }
 
-            &__text-wrap {
-                padding: calc(rem(200) + rem(77)) 0 rem(200);
+    // merit 영역
+    .merit {
+        &__text {
+            width: 100%;
+
+            .card-num {
+                @include defineFont(rem(22), 600);
+                color: $primaryColor01;
             }
 
-            &__box {
-                background: $gradientColor01;
-                width: rem(70);
-                height: rem(35);
-                top: rem(290);
-                left: rem(0);
-                z-index: 0;
+            .card-title {
+                @include defineFont(rem(32), 600);
+            }
+
+            .card-conts {
+                @include defineFont(rem(18), 400, 1.6);
             }
         }
 
-        // introduce 영역   
-        .introduce {
-            &__title {
-                @include defineFont(rem(36));
-            }
+        &__card {
+            flex-direction: column-reverse;
 
-            &__subtitle {
-                @include defineFont(rem(26));
-            }
-        }
-
-        // solution 영역
-        .solution {
-            &__subtitle {
-                gap: 2%;
-            }
-
-            // .row {
-            //     padding: 0 15%;
-            // }
-
-            // .col {
-            //     gap: rem(20);
-            // }
-
-            &__items {
-                @include defineFont(rem(22));
-            }
-
-            .card-text {
-                @include defineFont(rem(26));
-            }
-
-        }
-
-        // merit 영역
-        .merit {
-            &__text {
+            img {
                 width: 100%;
+            }
+        }
 
-                .card-num {
-                    @include defineFont(rem(22), 600);
-                    color: $primaryColor01;
-                }
+        // ask 영역
 
-                .card-title {
-                    @include defineFont(rem(32), 600);
-                }
-
-                .card-conts {
-                    @include defineFont(rem(18), 400, 1.6);
-                }
+        .ask {
+            .typing-line {
+                @include defineFont(rem(32), 600)
             }
 
-            &__card {
-                flex-direction: column-reverse;
 
-                img {
-                    width: 100%;
-                }
+        }
+    }
+}
+
+
+
+@media (max-width: 541px) {
+
+    // 공통 영역
+    .title {
+        @include defineFont (rem(26), 700);
+    }
+
+    .sec-pd-t {
+        padding: calc(60px + 77px) 0 60px;
+    }
+
+    .sec-pd {
+        padding: 60px 0;
+    }
+
+    .m-b--xxl {
+        margin-bottom: 60px;
+    }
+
+    // kv영역
+    .kv {
+        height: 100%;
+
+        &__text-wrap {
+
+
+            h3 {
+                @include defineFont(rem(18));
+
             }
 
-            // ask 영역
-
-            .ask {
-                &__title {
-                    @include defineFont(rem(32), 600)
-                }
+            .ai {
+                @include defineFont(rem(30));
+                z-index: 5;
             }
+        }
+
+        &__title {
+            @include defineFont(rem(30));
+
+            span {
+                @include defineFont(rem(30));
+            }
+
+        }
+
+        &__box {
+            width: rem(42);
+            height: rem(20);
+            top: rem(285);
+            left: 0;
+            z-index: 0;
         }
     }
 
+    // solution 영역
+    .solution {
 
-
-    @media (max-width: 541px) {
-
-        // 공통 영역
-        .title {
-            @include defineFont (rem(26), 700);
+        &__subtitle {
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .sec-pd-t {
-            padding: calc(60px + 77px) 0 60px;
+
+        &__items {
+            @include defineFont (rem(22));
         }
 
-        .sec-pd {
+        // .row {
+        //     padding: 0 45px;
+        // }
+
+        .card-text {
+            @include defineFont(rem(22))
+        }
+
+        .solution-pd {
             padding: 60px 0;
         }
 
-        .m-b--xxl {
-            margin-bottom: 60px;
-        }
+    }
 
-        // kv영역
-        .kv {
-            height: 100%;
-
-            &__text-wrap {
-
-
-                h3 {
-                    @include defineFont(rem(18));
-
-                }
-
-                .ai {
-                    @include defineFont(rem(30));
-                    z-index: 5;
-                }
+    // merit 영역 
+    .merit {
+        &__text {
+            .card-title {
+                @include defineFont(rem(22), 600);
             }
 
-            &__title {
-                @include defineFont(rem(30));
-
-                span {
-                    @include defineFont(rem(30));
-                }
-
-            }
-
-            &__box {
-                width: rem(42);
-                height: rem(20);
-                top: rem(285);
-                left: 0;
-                z-index: 0;
+            .card-conts {
+                @include defineFont(rem(16), 400, 1.6);
             }
         }
-
-        // solution 영역
-        .solution {
-
-            &__subtitle {
-                flex-wrap: wrap;
-                gap: 20px;
-            }
+    }
 
 
-            &__items {
-                @include defineFont (rem(22));
-            }
-
-            // .row {
-            //     padding: 0 45px;
-            // }
-
-            .card-text {
-                @include defineFont(rem(22))
-            }
-
-            .solution-pd {
-                padding: 60px 0;
-            }
-
-        }
-
-        // merit 영역 
-        .merit {
-            &__text {
-                .card-title {
-                    @include defineFont(rem(22), 600);
-                }
-
-                .card-conts {
-                    @include defineFont(rem(16), 400, 1.6);
-                }
-            }
-        }
+    // preview 영역
 
 
-        // preview 영역
-
-
-        // ask 영역
-        .ask {
-            &__title {
-                @include defineFont(rem(22), 600)
-            }
+    // ask 영역
+    .ask {
+        .typing-line {
+            @include defineFont(rem(22), 600)
         }
     }
 }
