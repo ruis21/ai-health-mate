@@ -160,8 +160,6 @@
         }
     }
 
-    &__card-wrap {}
-
     .col {
         .card {
             border-radius: rem(20);
@@ -186,7 +184,7 @@
 
 
     &__card {
-        @include flex(center, center, 5%, column);
+        // @include flex(center, center, 5%, column);
         position: relative;
         transition: 0.3s all ease;
 

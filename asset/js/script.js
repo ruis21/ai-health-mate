@@ -77,23 +77,6 @@ var swiper = new Swiper(".previewSwiper", {
 });
 
 
-// ask 영역 
-
-// const text = "궁금한 점이 있으신가요?      AI Health Mate의 이야기를 들어보세요"; // 타이핑할 문구
-// let index = 0;
-// let speed = 100; // 글자 타이핑 속도 (밀리초 단위)
-
-// function typeWriter() {
-//     if (index < text.length) {
-//         document.getElementById("text").textContent += text.charAt(index);
-//         index++;
-//         setTimeout(typeWriter, speed);
-//     }
-// }
-
-// typeWriter();
-
-
 // partners Swiper 
 
 var swiper = new Swiper(".partnersSwiper", {

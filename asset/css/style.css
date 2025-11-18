@@ -9222,11 +9222,6 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .solution__card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-  flex-direction: column;
   position: relative;
   transition: 0.3s all ease;
 }
@@ -10029,13 +10024,13 @@ p {
   border: none;
   padding: 16px 20px;
   border-radius: 10px;
-  width: 635px;
+  flex: 1;
 }
 .inquiry__right-box p {
   color: #7E7E7E;
 }
 .inquiry__right-box textarea {
-  width: 635px;
+  flex: 1;
   height: 380px;
   border: none;
   border-radius: 10px;
