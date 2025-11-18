@@ -123,8 +123,8 @@
             width: 24px;
             height: 24px;
             margin-left: -12px;
-            border-left: 1px solid #000;
-            border-bottom: 1px solid #000;
+            border-left: 2px solid $blackColor01;
+            border-bottom: 2px solid $blackColor01;
             transform: rotate(-45deg);
             animation: btn-motion5 1.5s infinite;
             box-sizing: border-box;
@@ -298,6 +298,7 @@
 
     &__card {
         @include flex(space-between, stretch, 0px, column);
+        position: relative;
 
         h5 {
             @include defineFont (rem(20), 600);
@@ -339,9 +340,29 @@
             span {
                 color: $whiteColor01;
             }
+
+            .preview__direct-btn {
+                display: block;
+                transition: all 0.3s ease-in-out;
+            }
         }
 
 
+    }
+
+    &__direct-btn {
+        position: absolute;
+        width: rem(53);
+        height: rem(53);
+        border-radius: 50%;
+        background-color: $blackColor01;
+        color: $whiteColor01;
+        text-align: center;
+        line-height: 1.6;
+        font-size: 32px;
+        display: none;
+        right: rem(20);
+        bottom: rem(20);
     }
 
     &__btn {
@@ -652,7 +673,7 @@
             }
 
             .card-title {
-                @include defineFont(rem(32), 600);
+                @include defineFont(rem(28), 600);
             }
 
             .card-conts {
