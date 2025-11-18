@@ -8929,7 +8929,7 @@ p {
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 4.8125rem;
   color: #ffffff;
   width: 100%;
@@ -8937,6 +8937,7 @@ p {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  position: relative;
 }
 .header__wrap {
   display: flex;
@@ -9028,71 +9029,46 @@ p {
 }
 .header .m-header__nav {
   display: none;
-  position: absolute;
-  top: 4.8125rem;
-  right: 0;
+  background-color: bisque;
+  height: 100vh;
   width: 70vw;
-  background: #000;
-  height: calc(100vh - 4.8125rem);
-  z-index: 10;
-  color: #ffffff;
 }
 .header .m-header__menu-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.625rem;
-  flex-direction: column;
+  gap: 3%;
+  flex-direction: row;
+  margin-right: 20px;
 }
 .header .m-header__menu {
-  font-size: 1.625rem;
-  font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: 0;
   position: relative;
   z-index: 5;
 }
-.header .m-header__menu:hover > a {
-  background: linear-gradient(135deg, #0ED058, #0097F6);
-  color: transparent;
-  -webkit-background-clip: text;
-  font-weight: 600;
-}
 .header .m-header__menu a {
   display: block;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 2;
-  letter-spacing: 0;
-}
-.header .m-header__menu .line {
-  height: 1.5px;
-  background-color: #ffffff;
-  width: 100%;
-}
-.header .m-header__sub-menu-list {
-  display: none;
-  width: 100%;
-}
-.header .m-header__sub-menu {
-  font-size: 1.375rem;
+  width: 140px;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0;
 }
-.header .m-header__sub-menu:hover {
-  background: linear-gradient(135deg, #0ED058, #0097F6);
-  color: transparent;
-  -webkit-background-clip: text;
+.header .m-header__menu:hover {
+  color: #ffffff;
   font-weight: 600;
+}
+.header .m-header .m-menu-bg {
+  width: 100%;
+  height: 500px;
+  color: #111111;
 }
 .header .menu-bg {
   position: absolute;
-  top: 4.8125rem;
+  top: 77px;
   left: 0;
   width: 100%;
-  height: 16.25rem;
-  background-color: rgba(0, 0, 0, 0.9);
+  height: 260px;
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 4;
   display: none;
 }
@@ -9104,11 +9080,13 @@ p {
     display: none;
   }
   .header .m-header__nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    flex-direction: column;
+    position: absolute;
+    top: 77px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    color: #ffffff;
   }
 }
 
