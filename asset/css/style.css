@@ -8999,13 +8999,13 @@ p {
   top: 50%;
   transform: translateY(-50%);
   width: 25px;
-  height: 50px;
+  height: 20px;
   display: none;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   background: none;
   border: none;
-  padding: 10px 0;
+  padding: 0;
 }
 .header .hamburger-btn .line {
   display: block;
@@ -9045,7 +9045,7 @@ p {
   flex-direction: column;
 }
 .header .m-header__menu {
-  font-size: 1.625rem;
+  font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0;
@@ -9244,6 +9244,11 @@ p {
   transition: all 0.3s ease-in-out;
 }
 .solution__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-direction: column;
   position: relative;
   transition: 0.3s all ease;
 }
@@ -9835,8 +9840,8 @@ p {
 }
 .history__bg01 img {
   position: fixed;
-  top: 100px;
-  left: -50px;
+  top: 6.25rem;
+  left: 9.375rem;
 }
 .history__bg02 {
   position: relative;
@@ -9844,34 +9849,50 @@ p {
 }
 .history__bg02 img {
   position: fixed;
-  top: 100px;
-  right: 0;
+  bottom: 0;
+  right: 6.25rem;
 }
 .history__box-left-wrap {
   width: 40%;
-  position: sticky;
-  top: 150px;
 }
 .history__box-left-txt {
+  position: sticky;
+  top: 15.625rem;
   min-height: 100vh;
+  padding-bottom: 50vh;
+  z-index: 10;
+}
+.history__box-left-txt:nth-child(1) {
+  z-index: 14;
+}
+.history__box-left-txt:nth-child(2) {
+  z-index: 13;
+}
+.history__box-left-txt:nth-child(3) {
+  z-index: 12;
+}
+.history__box-left-txt:nth-child(4) {
+  z-index: 11;
 }
 .history__box-right-wrap {
-  min-height: 100vh;
+  width: 60%;
+  min-height: 400vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
+  align-items: flex-start;
+  gap: 2.5rem;
   flex-direction: column;
 }
 .history__box-right {
-  min-height: 100vh;
+  min-height: 90vh;
+  margin-bottom: 5vh;
   font-size: 1.375rem;
   font-weight: 400;
   line-height: 1.3;
   letter-spacing: 0;
   display: flex;
   justify-content: flex-start;
-  align-items: space-between;
+  align-items: flex-start;
   gap: 1.875rem;
   flex-direction: column;
 }
@@ -9918,6 +9939,14 @@ p {
   }
   .vision__card-wrap {
     width: 90%;
+  }
+  .history__bg01 img {
+    left: 0;
+    top: 0;
+  }
+  .history__bg02 img {
+    right: 0;
+    bottom: 0;
   }
   .partners__txt {
     font-size: 5rem;
