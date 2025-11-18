@@ -80,7 +80,7 @@ var swiper = new Swiper(".previewSwiper", {
 // partners Swiper 
 
 var swiper = new Swiper(".partnersSwiper", {
-    slidesPerView: 5,
+    slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
     freeMode: true,
@@ -89,6 +89,20 @@ var swiper = new Swiper(".partnersSwiper", {
     autoplay: {
         delay: 0,
         disableOnInteraction: false
+    },
+    breakpoints: {
+        540: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        },
     }
 });
 

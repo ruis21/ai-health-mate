@@ -37,6 +37,7 @@
         margin: rem(10);
         color: $whiteColor01;
         border-radius: rem(20);
+        @include defineFont (rem(32));
     }
 
     &__card01 {
@@ -60,6 +61,17 @@
         border-radius: 50%;
         background-color: $whiteColor01;
         // transform: translate(10%, 30%);
+    }
+
+    &__circle-txt {
+        p {
+
+            @include defineFont (rem(28));
+        }
+
+        span {
+            @include defineFont (rem(48), 700);
+        }
     }
 
 
@@ -125,8 +137,8 @@
 
     &__txt {
         color: $grayColor04;
-        font-size: rem(128);
-        letter-spacing: 10px;
+        @include defineFont (rem(112), 600, 1.2, rem(5));
+
     }
 
 }
@@ -147,6 +159,33 @@
 
     }
 
+    .partners {
+        &__txt {
+            @include defineFont (rem(80), 600, 1.2, rem(5));
+        }
+    }
+
+}
+
+@media (max-width:768px) {
+    .vision {
+        &__circle-txt {
+            p {
+                @include defineFont (rem(26));
+            }
+
+            span {
+                @include defineFont (rem(36), 700);
+            }
+        }
+    }
+
+
+    .partners {
+        &__txt {
+            @include defineFont (rem(40), 600, 1.2, rem(5));
+        }
+    }
 }
 
 @media (max-width:540px) {
@@ -155,5 +194,15 @@
             height: rem(300);
             width: rem(300);
         }
+
+        &__card {
+            @include defineFont (rem(22));
+        }
+
     }
+
+}
+
+@media (max-width:393px) {
+    .vision {}
 }
