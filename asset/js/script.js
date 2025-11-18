@@ -12,11 +12,11 @@ $(function () {
 });
 
 
-// 햄버거 버튼 클릭 시 메뉴 토글 : 모바일 전용 (최소 구현)
+// 햄버거 버튼 클릭 시 메뉴 토글 : 모바일 전용
 $(function () {
     $(".hamburger-btn").on("click", function () {
+        $(".m-header__nav").stop().slideToggle();
         $(this).toggleClass("active");
-        $(".m-header__nav").toggleClass("is-open");
     });
 });
 

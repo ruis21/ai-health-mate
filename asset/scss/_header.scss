@@ -1,10 +1,9 @@
 .header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     height: rem(77);
     color: $whiteColor01;
     width: 100%;
     @include flex;
-    position: relative;
 
     &__wrap {
         @include flex;
@@ -114,56 +113,72 @@
     .m-header {
         &__nav {
             display: none;
-            background-color: bisque;
-            height: 100vh;
+            position: absolute;
+            top: rem(77);
+            right: 0;
             width: 70vw;
+            background: #000;
+            height: calc(100vh - rem(77));
+            z-index: 10;
+            color: $whiteColor01;
         }
 
         &__menu-list {
-            @include flex(space-between, center, 3%);
-            margin-right: 20px;
+            @include flex(center, center, rem(10), column);
         }
 
         &__menu {
-
+            @include defineFont(rem(26), 500);
             position: relative;
             z-index: 5;
-            // display: none;
+
+            &:hover>a {
+                @include gradient;
+                font-weight: 600;
+            }
 
             a {
                 display: block;
-                width: 140px;
-                @include defineFont(rem(18), 500)
+                @include defineFont(rem(32), 500, 2.0);
             }
+
+            .line {
+                height: 1.5px;
+                background-color: $whiteColor01;
+                width: 100%;
+            }
+
+        }
+
+        &__sub-menu-list {
+            display: none;
+            width: 100%;
+        }
+
+        &__sub-menu {
+            @include defineFont(rem(22), 500);
 
             &:hover {
-                color: $whiteColor01;
+                @include gradient;
                 font-weight: 600;
-                // @include gradient;
             }
         }
 
-
-        .m-menu-bg {
-            width: 100%;
-            height: 500px;
-            color: $blackColor01;
-        }
 
     }
 
     .menu-bg {
         position: absolute;
-        top: 77px;
+        top: rem(77);
         left: 0;
         width: 100%;
-        height: 260px;
-        background-color: rgba(0, 0, 0, 0.8);
+        height: rem(260);
+        background-color: rgba(0, 0, 0, 0.9);
         z-index: 4;
         display: none;
     }
 
-    // 반응형: 1024px 이하
+
     @media (max-width: 1024px) {
         .hamburger-btn {
             display: flex;
@@ -173,15 +188,16 @@
             display: none;
         }
 
-        .m-header__nav {
-            // display: none; // 기본적으로 숨김, JS로 토글
-            position: absolute;
-            top: 77px;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 10;
-            color: $whiteColor01;
+        .m-header {
+            &__nav {
+                @include flex(center, center, rem(10), column);
+            }
+
+
         }
+
+
+
+
     }
 }
