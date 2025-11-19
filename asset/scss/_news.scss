@@ -15,11 +15,11 @@
 
     .swiper-slide {
         background-color: $grayColor05;
-        padding: 33px;
-        border-radius: 30px;
+        padding: rem(33);
+        border-radius: rem(30);
         // width: 1050px;
         // height: 28.125rem;
-        height: 470px;
+        // height: rem(470);
     }
 
     .swiper-slide a {
@@ -28,19 +28,18 @@
 
     .swiper-slide h2 {
         color: $blackColor02;
-        font-size: 1.4rem;
+        // font-size: 1.4rem;
     }
 
     .swiper-slide p {
         color: $blackColor02;
-        line-height: 1.6;
-        font-size: 0.75rem;
+        // line-height: 1.6;
+        // font-size: 0.75rem;
         display: -webkit-box;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
-
 
     .swiper-slide div {
         display: none;
@@ -58,7 +57,11 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100px;
+        padding: rem(300);
+        height: rem(500);
+        border-top-left-radius: rem(20);
+        border-bottom-left-radius: rem(20);
+        margin-right: rem(30);
     }
 
     &__board-wrap {
@@ -80,7 +83,23 @@
     }
 
     &__txt {
-        @include flex(space-between, center, 0, column);
+        // @include flex(space-between, space-between, 0, column);
+        display: flex;
+
+        h2 {
+            @include defineFont (rem(32), 600);
+        }
+
+        span {
+            @include defineFont (rem(16));
+            color: $grayColor02;
+
+        }
+
+        span,
+        p {
+            @include defineFont (rem(16));
+        }
     }
 
     &__pagination {

@@ -177,18 +177,21 @@
     }
 
     &__box-right-txt {
-        @include flex(flex-start, center, rem(40))
+        @include flex(flex-start, flex-start, rem(40))
     }
 }
 
 // partners section 
 .partners {
+    background-color: $whiteColor01;
+
     .swiper {
         width: 100%;
         height: 100%;
 
         .swiper-wrapper {
             transition-timing-function: linear !important;
+            align-items: center;
         }
     }
 

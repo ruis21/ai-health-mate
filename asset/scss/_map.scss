@@ -4,16 +4,18 @@
     &__txt {
 
         p {
-            @include defineFont(rem(32), 600, 1.9);
+            padding: 0 rem(20);
+            @include defineFont(rem(26), 600, 1.9);
         }
 
         span {
-            @include defineFont(rem(22), 400);
-            padding-left: 30px;
+            @include defineFont(rem(18), 400);
+            padding-left: rem(50);
         }
     }
 
     .transit {
+        padding: 0 rem(20);
         @include flex;
     }
 
@@ -26,7 +28,7 @@
             @include flex(flex-start, center, rem(40));
 
             h3 {
-                @include defineFont(rem(26), 500);
+                @include defineFont(rem(22), 500);
             }
         }
 
@@ -59,10 +61,49 @@
             color: #1E7BDB;
             border: 1px solid #1E7BDB;
         }
+    }
+}
 
+@media (max-width:768px) {
+    .map {
+        .transit {
+            flex-direction: column;
+            gap: rem(30);
+        }
+
+        .subway,
+        .bus {
+            width: 100%;
+        }
 
     }
+}
 
+@media (max-width:540px) {
+    .map {
+        &__txt {
 
+            p {
+                padding: 0;
+                font-size: rem(18);
+            }
 
+            span {
+                padding-left: rem(20);
+                font-size: rem(16);
+            }
+        }
+
+        .transit {
+            padding: 0;
+
+            h3 {
+                font-size: rem(18);
+            }
+
+            p {
+                font-size: rem(16);
+            }
+        }
+    }
 }

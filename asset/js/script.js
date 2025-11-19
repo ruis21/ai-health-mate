@@ -104,7 +104,6 @@ var swiper = new Swiper(".newsSwiper", {
         slideShadows: true,
         slidesPerView: 3
     },
-
     loop: true,
     breakpoints: {
         // 540: {
@@ -113,12 +112,12 @@ var swiper = new Swiper(".newsSwiper", {
         768: {
             slidesPerView: 1
         },
-        1024: {
-            slidesPerView: 2
-        },
-        1240: {
-            slidesPerView: 3
-        }
+        // 1024: {
+        //     slidesPerView: 2
+        // },
+        // 1240: {
+        //     slidesPerView: 3
+        // }
     }
 });
 
