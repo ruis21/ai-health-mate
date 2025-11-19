@@ -20,23 +20,6 @@ $(function () {
     });
 });
 
-
-
-// 모바일에서 m-nav 메뉴는 hover 대신 click/touch로 서브메뉴 토글
-$(function () {
-    // 서브메뉴가 있는 항목 클릭 시 펼치고, 다른 항목은 닫기
-    $(document).on("click touchstart", ".m-header__menu > a, .m-header__menu", function (e) {
-        var $menu = $(this).closest(".m-header__menu");
-        var $sub = $menu.find(".m-header__sub-menu-list");
-        if ($sub.length) {
-            e.preventDefault();
-            // 다른 열려있는 서브메뉴 닫기
-            $(".m-header__sub-menu-list").not($sub).stop().slideUp();
-            $sub.stop().slideToggle();
-        }
-    });
-});
-
 // 모바일에서 m-nav 메뉴 클릭시 서브메뉴 등장
 $(function () {
     $(".m-header__menu").on("click", function () {

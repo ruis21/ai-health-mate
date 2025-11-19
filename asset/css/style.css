@@ -9040,9 +9040,10 @@ p {
 .header .m-header__menu-list {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.625rem;
   flex-direction: column;
+  padding: 0 3.125rem;
 }
 .header .m-header__menu {
   font-size: 1.375rem;
@@ -9102,13 +9103,6 @@ p {
   }
   .header .nav {
     display: none;
-  }
-  .header .m-header__nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    flex-direction: column;
   }
 }
 

@@ -124,7 +124,8 @@
         }
 
         &__menu-list {
-            @include flex(center, center, rem(10), column);
+            @include flex(center, flex-end, rem(10), column);
+            padding: 0 rem(50);
         }
 
         &__menu {
@@ -186,14 +187,6 @@
 
         .nav {
             display: none;
-        }
-
-        .m-header {
-            &__nav {
-                @include flex(center, center, rem(10), column);
-            }
-
-
         }
 
 
