@@ -45,11 +45,10 @@
 
     }
 
+    /* 기본 아이콘 스타일 */
     &__board-title {
-
         width: 100%;
         @include flex(space-between, center, 5%);
-
 
         h5 {
             @include defineFont (rem(18), 600);
@@ -61,18 +60,13 @@
             height: rem(2);
             background-color: $blackColor02;
         }
-    }
-
-    /* 기본 아이콘 스타일 */
-    &__board-title {
-        width: 100%;
-        @include flex(space-between, center);
 
         .faq-icon {
             position: relative;
             width: 18px;
             height: 18px;
             transition: transform 0.35s ease;
+            display: inline-block;
         }
 
         .faq-icon::before {
@@ -99,13 +93,6 @@
         }
     }
 
-    .faq__board-title.active .faq-icon {
-        transform: rotate(45deg);
-    }
-
-    .faq__board-title.active .faq-icon::after {
-        opacity: 0;
-    }
 
     &__board-conts {
         display: none;
@@ -134,7 +121,8 @@
     }
 
     &__pagination {
-        p {
+        a {
+            display: block;
             @include defineFont (rem(20), 500, 2.5);
             border-radius: 50%;
             background-color: $primaryColor01;
@@ -145,6 +133,15 @@
             margin: 0 auto;
         }
     }
+
+}
+
+.faq__board-title.active .faq-icon {
+    transform: rotate(0deg);
+}
+
+.faq__board-title.active .faq-icon::after {
+    opacity: 0;
 }
 
 @media (max-width: 768px) {

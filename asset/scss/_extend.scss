@@ -34,48 +34,75 @@
 }
 
 // tab menu 컴포넌트
-.tab-menu-list {
-    @include flex(center, center, 106px);
-}
-
-.tab-menu {
+.tab-menu-custom {
+    @include flex(center, center, rem(106));
     color: $grayColor02;
     @include defineFont (rem(32), 600);
 
-    &--lg {
-        gap: 106px;
-    }
+    // &--lg {
+    //     gap: 106px;
+    // }
 
-    &--md {
-        gap: 65px;
-        font-size: 26px;
-    }
+    // &--md {
+    //     gap: 65px;
+    //     font-size: 26px;
+    // }
 
-    &--sm {
-        gap: 45px;
-        font-size: 22px;
-    }
+    // &--sm {
+    //     gap: 45px;
+    //     font-size: 22px;
+    // }
 
-    &:hover {
+    li:hover {
         color: $blackColor01;
         text-decoration: underline;
         transition: all 0.3s ease-in-out;
     }
 
-    @media (min-width: 540px) {
-        // md
-        gap: 65px;
-        font-size: 26px;
+    @media (max-width: 1024px) {
+        gap: rem(65);
+        @include defineFont(rem(26), 600);
     }
 
-    @media (min-width: 1024px) {
-        // lg
-        gap: 106px;
-        font-size: 32px;
+    @media (max-width: 541px) {
+        gap: rem(45);
+        @include defineFont(rem(22), 600);
     }
 }
 
-// min-width 말고 max-width로 바꾸기 
+// faq tab-menu custom 
+
+.faq__tab-menu {
+    @include flex;
+    background-color: $grayColor04;
+    border-radius: rem(40);
+    color: $grayColor01;
+    @include defineFont(rem(22), 600);
+
+    a {
+        padding: rem(20) rem(45);
+        display: block;
+        border-radius: rem(40);
+
+        &.on {
+            background-color: $primaryColor01;
+            color: $whiteColor01;
+            // padding: 5px 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        gap: rem(65);
+        @include defineFont(rem(18), 600);
+    }
+
+    @media (max-width: 541px) {
+        gap: rem(45);
+        @include defineFont(rem(16), 600);
+    }
+
+}
 
 // field box 컴포넌트
 .field-box {
