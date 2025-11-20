@@ -37,18 +37,24 @@
             display: none;
         }
 
+        hr {
+            margin: 0;
+            ;
+        }
+
 
     }
 
     &__board-title {
 
         width: 100%;
-        @include flex(space-between, center);
+        @include flex(space-between, center, );
 
-        // h5,
-        // .faq-icon {
-        //     pointer-events: none;
-        // }
+
+        h5 {
+            @include defineFont (rem(18), 600);
+            padding: rem(20) 0;
+        }
 
         .line {
             width: rem(20);
@@ -103,6 +109,10 @@
 
     &__board-conts {
         display: none;
+        padding: rem(20);
+        // background-color: $grayColor05;
+        @include defineFont (rem(16), 400);
+        color: $grayColor01;
     }
 
     &__search-box {
