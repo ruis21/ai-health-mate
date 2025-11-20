@@ -1,21 +1,40 @@
 .membership {
     &__card-wrap {
         @include flex;
+        flex-wrap: wrap;
+        // gap: 3%
     }
 
     &__card {
         @include flex(center, center, 0px, column);
-        width: 32%;
-        gap: 2%;
+        // width: 32%;
+        // gap: 2%;
         border: 1px solid $grayColor02;
-        border-radius: 20px;
-        padding: 30px;
-        height: 588px;
+        border-radius: rem(20);
+        padding: rem(30);
+        height: rem(588);
+        // height: 100%;
         line-height: 2.0;
         word-break: keep-all;
+        background-color: $whiteColor01;
 
-        p {
+        .plan {
             color: $grayColor01;
+            font-size: rem(22);
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+        h4 {
+            @include defineFont (rem(32), 600);
+        }
+    }
+
+    &__card-txt {
+
+        li {
+            @include flex(flex-start, flex-start, rem(10));
+            font-size: rem(18);
         }
     }
 
@@ -33,7 +52,4 @@
         background-size: cover;
     }
 
-    &__card {
-        background-color: $whiteColor01;
-    }
 }

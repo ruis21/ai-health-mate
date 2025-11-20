@@ -15,7 +15,7 @@
 
     .swiper-slide {
         background-color: $grayColor05;
-        padding: rem(33);
+        padding: rem(50);
         border-radius: rem(30);
         // width: 1050px;
         // height: 28.125rem;
@@ -57,11 +57,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: rem(300);
+        padding: 24%;
         height: rem(500);
-        border-top-left-radius: rem(20);
-        border-bottom-left-radius: rem(20);
-        margin-right: rem(30);
+        border-top-left-radius: rem(30);
+        border-bottom-left-radius: rem(30);
     }
 
     &__board-wrap {
@@ -85,6 +84,7 @@
     &__txt {
         // @include flex(space-between, space-between, 0, column);
         display: flex;
+        padding: rem(30);
 
         h2 {
             @include defineFont (rem(32), 600);

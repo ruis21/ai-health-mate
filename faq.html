@@ -170,72 +170,343 @@
                 <div class="faq__wrap">
                     <ul class="faq__menu-list m-b--xxl ">
                         <li class="faq__menu">
-                            <a href="" class="on">서비스 이용관련</a>
+                            <a href="#" class="on">서비스 이용관련</a>
                         </li>
                         <li class="faq__menu">
-                            <a href="">데이터 및 개인정보보호</a>
+                            <a href="#">데이터 및 개인정보보호</a>
+                        </li>
+                        <li class="faq__meㄴnu">
+                            <a href="#">기술 및 기능</a>
                         </li>
                         <li class="faq__menu">
-                            <a href="">기술 및 기능</a>
+                            <a href="#">결제 및 기능</a>
                         </li>
                         <li class="faq__menu">
-                            <a href="">결제 및 기능</a>
-                        </li>
-                        <li class="faq__menu">
-                            <a href="">고객지원 및 기타</a>
+                            <a href="#">고객지원 및 기타</a>
                         </li>
                     </ul>
+
                     <div class="faq__search-box field-box">
                         <form action="/search" method="get">
-                            <label for="">
-                                <input type="text" name="query" placeholder="검색어를 입력하세요">
+                            <label for="#">
+                                <input type="text" name="inquery" placeholder="검색어를 입력하세요">
                                 <button type="submit" class="search-btn">
                                     <img src="./asset/image/search-icon-inactive.png" alt="검색 아이콘">
                                 </button>
                             </label>
                         </form>
                     </div>
+
                     <div class="faq__board">
-                        <ul>
-                            <li>
-                                <a href="" class="faq__board-title">
-                                    <h5>AI Health Mate는 어떤 서비스를 제공하나요?</h5>
-                                    <img src="./asset/image/faq-plus-icon.png" alt="플러스 아이콘">
-                                </a>
-                                <div class="faq__board-conts">
-                                    <p>AI Health Mate는 개인의 건강 데이터를 기반으로 맞춤형 솔루션을 제공하는 AI 헬스케어 플랫폼입니다. 스마트폰과 웨어러블 기기를 통해
-                                        수집된 걸음 수, 심박수, 수면, 스트레스 등의 데이터를 분석하여,
-                                    <ul>
-                                        <li>맞춤형 운동·식습관·수면 관리 제안</li>
-                                        <li>건강 이상 신호 조기 감지 및 예방적 조치 안내</li>
-                                        <li>전문가(의사·영양사·트레이너)와 1:1 상담 연결</li>
-                                    </ul>
-                                    등의 서비스를 제공합니다.
-                                    </p>
-                                </div>
-                            </li>
-                            <hr>
-                            <li>
-                                <a href="">
-                                    <h5>무료로 사용할 수 있는 기능과 유료 기능의 차이는 무엇인가요?</h5>
-                                    <img src="./asset/image/faq-plus-icon.png" alt="플러스 아이콘">
-                                </a>
-                            </li>
-                            <hr>
-                            <li>
-                                <a href="">
-                                    <h5>회원가입 없이도 이용할 수 있나요?</h5>
-                                    <img src="./asset/image/faq-plus-icon.png" alt="플러스 아이콘">
-                                </a>
-                            </li>
-                            <hr>
-                            <li>
-                                <a href="">
-                                    <h5>웨어러블 기기가 없어도 사용 가능한가요?</h5>
-                                    <img src="./asset/image/faq-plus-icon.png" alt="플러스 아이콘">
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="faq__board01 on">
+                            <ul>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q1. AI Health Mate는 어떤 서비스인가요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. AI Health Mate는 웨어러블·스마트폰 데이터를 기반으로 활동·수면·스트레스 등 건강 상태를 분석하여 개인 맞춤형 리포트와
+                                            코칭을 제공하는 AI 헬스케어 서비스입니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q2. 웨어러블 기기를 사용하지 않아도 이용할 수 있나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 네. 기본적인 건강 정보는 스마트폰 센서를 통해서도 수집 가능하며, 웨어러블을 연동하면 더 정확한 분석과 확장된 기능을 이용할
+                                            수 있습니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q3. 여러 개의 웨어러블을 동시에 연동할 수 있나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 가능합니다. 애플 워치·갤럭시 워치·WHOOP 등 여러 기기를 등록할 수 있으며, 서비스는 자동으로 데이터를 통합하여
+                                            분석합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q4. 제공되는 리포트는 얼마나 자주 업데이트되나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 리포트는 매일 데이터가 수집되는 즉시 자동 업데이트되며, 주간·월간 단위의 통합 분석 리포트도 제공됩니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q5. 무료 버전과 유료 버전의 차이는 무엇인가요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 무료 버전은 기본 건강 지표 확인 및 일부 분석 기능을 제공하며, 유료 버전은 고도화된 AI 분석·개인 코칭·장기 건강 예측
+                                            등 확장 기능을 제공합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="faq__board02">
+                            <ul>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q1. 제 건강 데이터는 안전하게 보호되고 있나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 네. AI Health Mate는 국제 정보보안 인증 ISO 27001을 획득했으며, 모든 데이터는 암호화(Encryption)되어
+                                            안전하게 저장·전송됩니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q2. 어떤 데이터를 수집하나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 활동량, 심박수, 수면 패턴, 스트레스 지수 등 웨어러블 및 스마트폰에서 제공하는 건강 관련 데이터만 수집합니다. 불필요한 개인
+                                            정보는 요구하지 않습니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q3. 데이터는 어디에 저장되나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 모든 데이터는 보안이 강화된 클라우드 서버에서 관리되며, 엄격한 접근 통제 정책을 적용하고 있습니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q4. 데이터 삭제를 요청할 수 있나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 가능합니다. 앱 내 ‘개인정보 관리 > 데이터 삭제 요청’을 통해 모든 데이터를 즉시 삭제할 수 있으며, 삭제 후에는 복구가
+                                            불가능합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q5. 제 정보가 외부에 공유되거나 판매되나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 절대 그렇지 않습니다. 모든 데이터는 사용자 동의 없이는 외부에 제공되지 않으며, 연구 목적 공유 시에도 반드시 익명화 과정을
+                                            거칩니다.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="faq__board03">
+                            <ul>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q1. AI 맞춤형 리포트는 어떤 방식으로 생성되나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. AI 알고리즘이 수집된 건강 데이터를 분석해 사용자의 패턴·이상 징후·변화 추이를 자동으로 파악하고, 개선이 필요한 영역을 시각적으로
+                                            정리한 리포트입니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q2. 스트레스 지수는 어떻게 측정되나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 심박수 변화(HRV), 활동량, 수면 질 등의 데이터를 종합해 AI가 스트레스 수준을 예측합니다. 웨어러블 기기와 연동 시 정확도가
+                                            높아집니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q3. 건강 목표 설정 기능도 있나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 네. 사용자는 수면·운동·활동량 등 원하는 목표를 직접 설정할 수 있으며, AI가 달성률을 분석해 주간 목표 조정 및 코칭을
+                                            제공합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q4. 여러 웨어러블 기기 데이터를 하나로 합산해주나요?</h5>
+                                        <img src="./asset/image/faq-plus-icon.png" alt="플러스 아이콘">
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 네. 기기별 중복 데이터를 자동으로 정리해 가장 정확한 수치를 반영합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q5. 연동 기기에 문제가 생기면 어떻게 해야 하나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 앱 내 ‘연동 관리’에서 기기 연결 상태를 확인한 뒤 재연동을 시도해보세요. 문제가 지속되면 고객센터로 문의하시면 원격으로 도움드릴
+                                            수 있습니다.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="faq__board04">
+                            <ul>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q1. 결제 방식은 어떤 종류가 있나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 신용카드, 체크카드, 간편결제(네이버페이·카카오페이) 등을 지원합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q2. 결제 후 환불이 가능한가요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 정기 결제의 경우 결제일 기준 7일 이내 미사용 시 전액 환불이 가능합니다. 단, 이미 분석 리포트가 발행된 경우 일부 금액이 차감될
+                                            수 있습니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q3. 멤버십 변경은 자유롭게 할 수 있나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 가능합니다. 월 단위로 상향·하향 조정할 수 있으며, 상향 변경 시 즉시 적용됩니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q4. 구독을 해지하면 데이터는 어떻게 되나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 서비스 이용은 제한되지만 데이터는 일정 기간 보관되며, 언제든지 다시 로그인해 복구할 수 있습니다. 단, 사용자가 직접 삭제 요청 시
+                                            즉시 삭제됩니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q5. 할인 프로모션이나 쿠폰도 제공되나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 네. 신규 가입 이벤트, 연간 구독 할인 등 다양한 프로모션을 수시로 운영하고 있으며, 앱 공지에서 확인할 수 있습니다.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="faq__board05">
+                            <ul>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q1. 고객센터 운영 시간은 어떻게 되나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 평일 오전 9시~오후 6시까지 운영되며, 앱 내 ‘문의하기’를 통해 언제든지 접수 가능합니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q2. 사용 중 오류가 발생하면 어떻게 하나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 앱 재실행 후 동일 증상이 지속된다면 고객센터로 오류 메시지 캡처와 함께 문의해주세요. 신속하게 원인을 확인해 드립니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q3. 서비스 개선 의견을 제출할 수 있나요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 네. ‘설정 > 의견 보내기’를 통해 기능 개선 제안이나 신규 기능 요청을 남기면 내부 검토 후 반영 여부를 안내드립니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q4. 기기 연동이 자주 끊겨요. 해결 방법이 있을까요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 스마트폰 블루투스 상태 확인 후, 백그라운드 앱 제한이 활성화되어 있는지 확인해주세요. 기기 제조사별 절전 모드 해제도 필요할 수
+                                            있습니다.
+                                        </p>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a href="#" class="faq__board-title">
+                                        <h5>Q5. 해외에서도 앱 사용이 가능한가요?</h5>
+                                        <span class="faq-icon"></span>
+                                    </a>
+                                    <div class="faq__board-conts">
+                                        <p>A. 네. 인터넷이 연결되어 있다면 대부분 국가에서 이용할 수 있으며, 글로벌 버전은 향후 추가 언어 지원을 통해 지속 확대될 예정입니다.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="faq__pagination mt-5">
@@ -266,10 +537,10 @@
                         <a href="#">서비스 이용약관</a>
                     </li>
                     <li>
-                        <a href="">정보보안인증</a>
+                        <a href="#">정보보안인증</a>
                     </li>
                     <li>
-                        <a href="">제휴인증</a>
+                        <a href="#">제휴인증</a>
                     </li>
                 </ul>
 

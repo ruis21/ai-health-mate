@@ -164,9 +164,17 @@
                 font-weight: 600;
             }
         }
-
-
     }
+
+    .bg-line {
+        height: rem(1);
+        background-color: $grayColor05;
+        opacity: 0.5;
+        width: 100%;
+        position: fixed;
+        top: rem(77);
+    }
+
 
     .menu-bg {
         position: absolute;
@@ -174,7 +182,7 @@
         left: 0;
         width: 100%;
         height: rem(260);
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: $blackColor01;
         z-index: 4;
         display: none;
     }

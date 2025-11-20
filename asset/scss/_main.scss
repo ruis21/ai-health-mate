@@ -182,12 +182,6 @@
     }
 
 
-    // .row {
-    //     padding: 0 12%;
-    // }
-
-
-
     &__card {
         @include flex(center, center, 5%, column);
         position: relative;
@@ -219,7 +213,7 @@
             }
 
             .card-text {
-                @include defineFont(rem(32), 600)
+                @include defineFont(rem(32), 600);
             }
         }
 
@@ -649,20 +643,8 @@
             gap: 2%;
         }
 
-        // .row {
-        //     padding: 0 15%;
-        // }
-
-        // .col {
-        //     gap: rem(20);
-        // }
-
         &__items {
             @include defineFont(rem(22));
-        }
-
-        .card-text {
-            @include defineFont(rem(26));
         }
 
     }
@@ -776,9 +758,13 @@
             @include defineFont (rem(22));
         }
 
-        // .row {
-        //     padding: 0 45px;
-        // }
+        &__card {
+            &:hover {
+                .card-text {
+                    @include defineFont(rem(22), 600);
+                }
+            }
+        }
 
         .card-text {
             @include defineFont(rem(22))
