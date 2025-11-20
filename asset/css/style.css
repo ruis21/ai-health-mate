@@ -10158,6 +10158,9 @@ p {
   background-size: cover;
 }
 
+.faq {
+  /* 기본 아이콘 스타일 */
+}
 .faq__menu-list {
   display: flex;
   justify-content: space-between;
@@ -10199,16 +10202,18 @@ p {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  /* 아이콘 기본 스타일 */
-  /* 가로 라인 */
-  /* 세로 라인 */
-  /* 열렸을 때 : + → - 로 회전 */
-  /* 세로 라인 사라짐 */
 }
 .faq__board-title .line {
   width: 1.25rem;
   height: 0.125rem;
   background-color: #3a3838;
+}
+.faq__board-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 .faq__board-title .faq-icon {
   position: relative;
@@ -10237,10 +10242,10 @@ p {
   transform: translateX(-50%);
   transition: opacity 0.35s ease;
 }
-.faq__board-title .faq__board-title.active .faq-icon {
+.faq .faq__board-title.active .faq-icon {
   transform: rotate(45deg);
 }
-.faq__board-title .faq__board-title.active .faq-icon::after {
+.faq .faq__board-title.active .faq-icon::after {
   opacity: 0;
 }
 .faq__board-conts {
@@ -10327,7 +10332,7 @@ p {
 }
 .map__txt p {
   padding: 0 1.25rem;
-  font-size: 1.625rem;
+  font-size: 1.375rem;
   font-weight: 600;
   line-height: 1.9;
   letter-spacing: 0;
