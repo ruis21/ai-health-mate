@@ -61,7 +61,21 @@
         text-decoration: underline;
         transition: all 0.3s ease-in-out;
     }
+
+    @media (min-width: 540px) {
+        // md
+        gap: 65px;
+        font-size: 26px;
+    }
+
+    @media (min-width: 1024px) {
+        // lg
+        gap: 106px;
+        font-size: 32px;
+    }
 }
+
+// min-width 말고 max-width로 바꾸기 
 
 // field box 컴포넌트
 .field-box {
