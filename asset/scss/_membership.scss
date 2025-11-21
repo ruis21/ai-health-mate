@@ -5,7 +5,7 @@
     }
 
     &__card {
-        @include flex(space-between, center, 0px, column);
+        @include flex(center, center, 0px, column);
         // width: 32%;
         // gap: 2%;
         border: 1px solid $grayColor02;
@@ -17,8 +17,11 @@
         word-break: keep-all;
         background-color: $whiteColor01;
 
+
+
         &:hover {
-            border: 1px solid $gradient;
+            border: 1px solid $primaryColor01;
+            transition: all 0.3s ease-in-out;
         }
 
         .plan {

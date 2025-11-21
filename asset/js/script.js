@@ -122,15 +122,17 @@ var swiper = new Swiper(".newsSwiper", {
 
 // faq tab menu 효과 
 $(function () {
-    $(".faq__menu-list li").on("click", function (e) {
+    $(".faq__tab-menu li").on("click", function (e) {
         e.preventDefault();
         let idx = $(this).index();
 
-        $(".faq__menu").removeClass("on");
-        $(this).addClass("on");
+        // a 태그에 on 붙이기
+        $(".faq__tab-menu a").removeClass("on");
+        $(this).find("a").addClass("on");
 
-        $(".faq__board > div").hide();
-        $(".faq__board > div").eq(idx).show();
+        // 게시판 영역 전환
+        $(".faq__board > div").hide().removeClass("on");
+        $(".faq__board > div").eq(idx).fadeIn().addClass("on");
     });
 });
 

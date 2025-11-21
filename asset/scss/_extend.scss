@@ -1,6 +1,14 @@
 // padding컴포넌트
 .sec-pd-t {
     padding: calc(rem(120) + rem(77)) 0 rem(120);
+
+    @media (max-width:768px) {
+        padding: calc(rem(80) + rem(77)) 0 rem(80);
+    }
+
+    @media (max-width:541px) {
+        padiing: calc(rem(60) + rem(77)) 0 rem(60);
+    }
 }
 
 .sec-pd {

@@ -1,6 +1,8 @@
 .faq {
-    &__menu-list {
+    &__tab-menu {
         @include flex;
+        justify-content: space-between;
+        align-items: center;
         background-color: $grayColor04;
         border-radius: rem(40);
         color: $grayColor01;
@@ -8,15 +10,17 @@
     }
 
     &__menu {
+        // width: 100%;
 
         a {
-            padding: rem(20) rem(45);
             display: block;
             border-radius: rem(40);
+            padding: rem(20) rem(30);
 
             &.on {
                 background-color: $primaryColor01;
                 color: $whiteColor01;
+                transition: all 0.3s ease-in-out;
                 // padding: 5px 20px;
             }
         }
@@ -112,6 +116,7 @@
 
             input {
                 border: none;
+                outline: none;
             }
 
             .search-btn {
@@ -142,6 +147,33 @@
 
 .faq__board-title.active .faq-icon::after {
     opacity: 0;
+}
+
+
+@media (max-width:1240px) {
+    .faq {
+        &__tab-menu {
+            @include defineFont (rem(18), 600);
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .faq {
+        &__tab-menu {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            background-color: $whiteColor01;
+            border-radius: rem(40);
+            color: none;
+        }
+
+        &__menu {
+            background-color: $grayColor04;
+            border-radius: rem(40);
+            color: $grayColor01;
+        }
+    }
 }
 
 @media (max-width: 768px) {
