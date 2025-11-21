@@ -85,7 +85,7 @@
 // history section 
 .history {
     position: relative;
-    padding-left: rem(70); // (숫자와 텍스트 사이 간격)
+    // padding-left: rem(70);
 
     .num {
         font-weight: 700;
@@ -126,12 +126,12 @@
         }
     }
 
-    &__box-left-wrap {
+    &__left-wrap {
         width: 40%;
     }
 
 
-    &__box-left-txt {
+    &__left-txt {
         position: sticky;
         top: rem(250);
         min-height: 100vh; // 각 연도가 차지하는 공간
@@ -163,20 +163,20 @@
 
 
 
-    &__box-right-wrap {
+    &__right-wrap {
         width: 60%;
         min-height: 400vh; // ← Right가 충분히 길어야 sticky 효과 작동
-        @include flex (center, flex-start, rem(40), column);
+        @include flex (flex-start, flex-start, rem(40), column);
     }
 
-    &__box-right {
+    &__right {
         min-height: 90vh; // 각 연도의 left-txt와 매칭
         margin-bottom: 5vh; // 박스 간 간격
         @include defineFont(rem(22));
         @include flex(flex-start, flex-start, rem(30), column);
     }
 
-    &__box-right-txt {
+    &__right-txt {
         @include flex(flex-start, flex-start, rem(40))
     }
 }
