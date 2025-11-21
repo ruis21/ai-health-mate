@@ -11,6 +11,14 @@
     margin-bottom: 120px;
 }
 
+.m-b {
+
+    &--xxl {
+        margin-bottom: 120px;
+
+    }
+}
+
 .kv-pd {
     &--lg {
         padding: calc(rem(176) + rem(77)) rem(20) rem(176);

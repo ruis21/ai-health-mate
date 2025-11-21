@@ -132,6 +132,10 @@
             @include defineFont(rem(22), 500);
             position: relative;
             z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
 
             &:hover>a {
                 @include gradient;
@@ -140,7 +144,7 @@
 
             a {
                 display: block;
-                @include defineFont(rem(32), 500, 2.0);
+                @include defineFont(rem(26), 500, 2.0);
             }
 
             .line {

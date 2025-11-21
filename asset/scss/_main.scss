@@ -73,41 +73,41 @@
 
 // introduce section 
 .introduce {
-    // background-color: bisque;
 
-    &__wrap {
-
-        .introduce__conts {
-            position: relative;
-            background-color: black;
-            color: $whiteColor01;
-            padding: rem(260) 0;
-            overflow: hidden;
-
-            .introduce__video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                opacity: 0.4;
-                z-index: 0;
-            }
-
-            .introduce__text {
-                position: relative;
-                z-index: 1;
-                padding: 20px;
-            }
-
-            .introduce__title,
-            .introduce__subtitle {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-        }
+    &__conts {
+        position: relative;
+        background-color: black;
+        color: $whiteColor01;
+        padding: rem(260) 0;
+        overflow: hidden;
     }
+
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.4;
+        z-index: 0;
+    }
+
+    &__title {
+        @include defineFont (rem(48), 600);
+    }
+
+    &__subtitle {
+        @include defineFont (rem(32), 600);
+        padding-top: rem(30);
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        padding: 0 rem(20);
+    }
+
 
     &__arrow {
 
@@ -146,7 +146,6 @@
             }
         }
     }
-
 }
 
 // solution section 
@@ -163,6 +162,7 @@
     &__card-wrap {
         --bs-gutter-x: 1.5rem; // 가로 간격 32px
         --bs-gutter-y: 1.5rem; // 세로 간격 32px
+        padding: 0 10%;
     }
 
     .col {
@@ -628,14 +628,35 @@
 
     // introduce 영역   
     .introduce {
+
+
+        &__conts {
+            padding: 30% 0;
+            // overflow: hidden;
+
+            // .introduce__video {
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     object-fit: cover;
+            //     opacity: 0.4;
+            //     z-index: 0;
+            // }
+        }
+
         &__title {
-            @include defineFont(rem(36));
+            @include defineFont(rem(36), 600);
+            word-break: keep-all;
         }
 
         &__subtitle {
-            @include defineFont(rem(26));
+            @include defineFont(rem(26), 600);
+            word-break: keep-all;
         }
     }
+
 
     // solution 영역
     .solution {
@@ -682,8 +703,6 @@
             .typing-line {
                 @include defineFont(rem(32), 600);
             }
-
-
         }
     }
 }
@@ -745,6 +764,21 @@
         }
     }
 
+    //introduce 영역
+
+    .introduce {
+
+        &__title {
+            @include defineFont (rem(22), 600);
+
+        }
+
+        &__subtitle {
+            @include defineFont (rem(18), 600);
+        }
+
+    }
+
     // solution 영역
     .solution {
 
@@ -764,6 +798,11 @@
                     @include defineFont(rem(22), 600);
                 }
             }
+        }
+
+        &__card-wrap {
+
+            padding: 0;
         }
 
         .card-text {

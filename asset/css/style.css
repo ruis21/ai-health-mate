@@ -8747,6 +8747,10 @@ p {
   margin-bottom: 120px;
 }
 
+.m-b--xxl {
+  margin-bottom: 120px;
+}
+
 .kv-pd--lg {
   padding: calc(11rem + 4.8125rem) 1.25rem 11rem;
 }
@@ -9097,6 +9101,9 @@ p {
   letter-spacing: 0;
   position: relative;
   z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header .m-header__menu:hover > a {
   background: linear-gradient(135deg, #0ED058, #0097F6);
@@ -9106,7 +9113,7 @@ p {
 }
 .header .m-header__menu a {
   display: block;
-  font-size: 2rem;
+  font-size: 1.625rem;
   font-weight: 500;
   line-height: 2;
   letter-spacing: 0;
@@ -9210,14 +9217,14 @@ p {
   background-color: #0ED058;
 }
 
-.introduce__wrap .introduce__conts {
+.introduce__conts {
   position: relative;
   background-color: black;
   color: #ffffff;
   padding: 16.25rem 0;
   overflow: hidden;
 }
-.introduce__wrap .introduce__conts .introduce__video {
+.introduce__video {
   position: absolute;
   top: 0;
   left: 0;
@@ -9227,15 +9234,23 @@ p {
   opacity: 0.4;
   z-index: 0;
 }
-.introduce__wrap .introduce__conts .introduce__text {
+.introduce__title {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+.introduce__subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+  padding-top: 1.875rem;
+}
+.introduce__text {
   position: relative;
   z-index: 1;
-  padding: 20px;
-}
-.introduce__wrap .introduce__conts .introduce__title,
-.introduce__wrap .introduce__conts .introduce__subtitle {
-  margin-top: 0;
-  margin-bottom: 0;
+  padding: 0 1.25rem;
 }
 .introduce__arrow {
   /* btn-motion5 */
@@ -9282,6 +9297,7 @@ p {
 .solution__card-wrap {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 1.5rem;
+  padding: 0 10%;
 }
 .solution .col .card {
   border-radius: 1.25rem;
@@ -9644,17 +9660,22 @@ p {
     left: 0rem;
     z-index: 0;
   }
+  .introduce__conts {
+    padding: 30% 0;
+  }
   .introduce__title {
     font-size: 2.25rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
+    word-break: keep-all;
   }
   .introduce__subtitle {
     font-size: 1.625rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
+    word-break: keep-all;
   }
   .solution__subtitle {
     gap: 2%;
@@ -9751,6 +9772,18 @@ p {
     left: 0;
     z-index: 0;
   }
+  .introduce__title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  .introduce__subtitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
   .solution__subtitle {
     flex-wrap: wrap;
     gap: 20px;
@@ -9766,6 +9799,9 @@ p {
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
+  }
+  .solution__card-wrap {
+    padding: 0;
   }
   .solution .card-text {
     font-size: 1.375rem;
@@ -10147,16 +10183,9 @@ p {
   flex-direction: row;
 }
 
-.membership__card-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 .membership__card {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 0px;
   flex-direction: column;
@@ -10167,6 +10196,9 @@ p {
   line-height: 2;
   word-break: keep-all;
   background-color: #ffffff;
+}
+.membership__card:hover {
+  border: 1px solid linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 .membership__card .plan {
   color: #7E7E7E;
