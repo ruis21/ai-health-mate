@@ -161,7 +161,7 @@
 @media (max-width:1024px) {
     .faq {
         &__tab-menu {
-            justify-content: flex-start;
+            // justify-content: flex-start;
             flex-wrap: wrap;
             background-color: $whiteColor01;
             border-radius: rem(40);
@@ -180,6 +180,11 @@
     .faq {
         &__board {
             padding: rem(40) rem(40);
+
+        }
+
+        &__tab-menu {
+            gap: 0;
 
         }
     }

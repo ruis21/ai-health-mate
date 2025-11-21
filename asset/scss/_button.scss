@@ -8,7 +8,7 @@
     @include defineFont (rem(18), 600);
     display: inline-flex;
     align-items: center;
-    // justify-content: center;
+    justify-content: center;
     gap: rem(20);
 
     // } 라지사이즈는 이미 정의가 되어있어서 필요가없음.
@@ -100,7 +100,7 @@
         border-radius: 10px;
         width: 100%;
         color: $grayColor01;
-        // text-align: center;
+        text-align: center;
 
         &:hover {
             background-color: $primaryColor02;

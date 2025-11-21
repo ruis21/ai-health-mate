@@ -8770,12 +8770,6 @@ p {
 .kv-pd--lg {
   padding: calc(11rem + 4.8125rem) 1.25rem 11rem;
 }
-.kv-pd--md {
-  padding: calc(12.5rem + 4.8125rem) 1.25rem 12.5rem;
-}
-.kv-pd--sm {
-  padding: calc(10.625rem + 4.8125rem) 1.25rem 10.625rem;
-}
 
 .solution-pd {
   padding: 60px 0;
@@ -8917,6 +8911,7 @@ p {
   letter-spacing: 0;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 1.25rem;
 }
 .btn--md {
@@ -8988,6 +8983,7 @@ p {
   border-radius: 10px;
   width: 100%;
   color: #7E7E7E;
+  text-align: center;
 }
 .inquiry__btn:hover {
   background-color: #0097F6;
@@ -10426,7 +10422,6 @@ p {
 }
 @media (max-width: 1024px) {
   .faq__tab-menu {
-    justify-content: flex-start;
     flex-wrap: wrap;
     background-color: #ffffff;
     border-radius: 2.5rem;
@@ -10442,6 +10437,9 @@ p {
   .faq__board {
     padding: 2.5rem 2.5rem;
   }
+  .faq__tab-menu {
+    gap: 0;
+  }
 }
 @media (max-width: 541px) {
   .faq__board-title h5, .faq__board-title .h5 {
@@ -10456,12 +10454,11 @@ p {
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
-  width: 100%;
 }
 .inquiry__left-box {
   width: 38%;
   background-color: #0097F6;
-  padding: 230px 66px;
+  padding: 14.375rem 3.75rem;
   color: #ffffff;
 }
 .inquiry__left-box span {
@@ -10471,12 +10468,15 @@ p {
   width: 58%;
 }
 .inquiry__right-box label {
-  text-align: left;
+  display: block;
+  width: 100%;
 }
 .inquiry__right-box fieldset {
   background-color: #EEEEEE;
-  padding: 30px;
-  border-radius: 20px;
+  padding: 1.875rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
 }
 .inquiry__right-box span {
   color: #0ED058;
@@ -10485,20 +10485,35 @@ p {
   border: none;
   padding: 16px 20px;
   border-radius: 10px;
-  flex: 1;
+  width: 100%;
 }
 .inquiry__right-box p {
   color: #7E7E7E;
 }
 .inquiry__right-box textarea {
-  flex: 1;
-  height: 380px;
+  width: 100%;
+  height: 23.75rem;
   border: none;
   border-radius: 10px;
   padding: 16px 20px;
   resize: none;
 }
 
+@media (max-width: 768px) {
+  .inquiry__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    flex-direction: column;
+  }
+  .inquiry__left-box {
+    width: 100%;
+  }
+  .inquiry__right-box {
+    width: 100%;
+  }
+}
 .map {
   width: 100%;
 }
