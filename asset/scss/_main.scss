@@ -154,8 +154,26 @@
     color: $whiteColor01;
 
     &__title {
+        margin-bottom: rem(40);
+
         span {
             @include gradient;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: rem(40);
+        @include flex(center, center, 5%);
+        @include defineFont(rem(26));
+
+
+        .solution__items {
+
+            border: 1px solid $whiteColor01;
+            border-radius: rem(30);
+            padding: rem(10) rem(20);
+            color: $whiteColor01;
+            text-align: center;
         }
     }
 
@@ -224,20 +242,6 @@
     }
 
 
-    &__subtitle {
-        @include flex(center, center, 5%);
-        @include defineFont(rem(26));
-
-
-        .solution__items {
-
-            border: 1px solid $whiteColor01;
-            border-radius: rem(30);
-            padding: rem(10) rem(20);
-            color: $whiteColor01;
-            text-align: center;
-        }
-    }
 }
 
 
@@ -586,6 +590,14 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .solution {
+        &__card-wrap {
+            padding: 0;
+        }
+    }
+}
+
 
 
 @media (max-width: 768px) {
@@ -620,7 +632,7 @@
             background: $gradientColor01;
             width: rem(70);
             height: rem(35);
-            top: rem(290);
+            top: rem(240);
             left: rem(0);
             z-index: 0;
         }
@@ -748,17 +760,23 @@
 
         &__title {
             @include defineFont(rem(30));
+            margin-bottom: rem(30);
 
             span {
                 @include defineFont(rem(30));
             }
+        }
+
+        &__subtitle {
+            margin-bottom: rem(30);
+            @include flex(space-evenly, center, rem(5));
 
         }
 
         &__box {
             width: rem(42);
             height: rem(20);
-            top: rem(285);
+            top: rem(235);
             left: 0;
             z-index: 0;
         }
@@ -782,15 +800,22 @@
     // solution 영역
     .solution {
 
+        &__title {
+            margin-bottom: rem(30);
+        }
+
         &__subtitle {
-            flex-wrap: wrap;
-            gap: 20px;
+            @include flex(center, center, 1%);
+            margin-bottom: rem(30);
+
+            // flex-wrap: wrap;
+
+            .solution__items {
+                @include defineFont (rem(18));
+                padding: rem(6) rem(10);
+            }
         }
 
-
-        &__items {
-            @include defineFont (rem(22));
-        }
 
         &__card {
             &:hover {
@@ -801,7 +826,6 @@
         }
 
         &__card-wrap {
-
             padding: 0;
         }
 
@@ -814,6 +838,7 @@
         }
 
     }
+
 
     // merit 영역 
     .merit {

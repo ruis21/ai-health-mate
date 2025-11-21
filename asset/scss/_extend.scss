@@ -5,36 +5,20 @@
 
 .sec-pd {
     padding: rem(120) 0;
+
+    @media (max-width:768px) {
+        padding: rem(80) 0;
+    }
+
+    @media (max-width:541px) {
+        padding: rem(60) 0;
+    }
 }
 
-// .m-b--xxl {
-//     margin-bottom: 120px;
-// }
-
-// margin컴포넌트
-.m-b {
-    &--xxl {
-        margin-bottom: rem(120);
-    }
-
-    &--xl {
-        margin-bottom: rem(80);
-    }
-
-    &--lg {
-        margin-bottom: rem(60);
-    }
-
-    &--md {
-        margin-bottom: rem(40);
-    }
-
-    &--sm {
-        margin-bottom: rem(30);
-    }
-
-
+.m-b--xxl {
+    margin-bottom: rem(120);
 }
+
 
 .kv-pd {
     &--lg {
