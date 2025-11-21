@@ -8744,11 +8744,19 @@ p {
 }
 
 .m-b--xxl {
-  margin-bottom: 120px;
+  margin-bottom: 7.5rem;
 }
-
-.m-b--xxl {
-  margin-bottom: 120px;
+.m-b--xl {
+  margin-bottom: 5rem;
+}
+.m-b--lg {
+  margin-bottom: 3.75rem;
+}
+.m-b--md {
+  margin-bottom: 2.5rem;
+}
+.m-b--sm {
+  margin-bottom: 1.875rem;
 }
 
 .kv-pd--lg {
@@ -9650,7 +9658,7 @@ p {
     height: 100%;
   }
   .kv__text-wrap {
-    padding: calc(12.5rem + 4.8125rem) 0 12.5rem;
+    padding: calc(9.375rem + 4.8125rem) 0 9.375rem;
   }
   .kv__box {
     background: linear-gradient(135deg, #0ED058, #0097F6);
