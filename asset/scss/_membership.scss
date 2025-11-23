@@ -1,7 +1,10 @@
 .membership {
     &__card-wrap {
-        // @include flex(flex-start, flex-start);
-        // flex-wrap: wrap;
+
+        --bs-gutter-x: 1.5rem; // 가로 간격 32px
+        --bs-gutter-y: 1.5rem; // 세로 간격 32px
+        // padding: 0 10%;
+
     }
 
     &__card {
@@ -20,7 +23,7 @@
 
 
         &:hover {
-            border: 1px solid $primaryColor01;
+            border: 1.5px solid $primaryColor01;
             transition: all 0.3s ease-in-out;
         }
 
@@ -46,9 +49,7 @@
 
     &__btn {
         @include gradient;
-        background-color: $whiteColor01;
         border: 1px solid $grayColor02;
-        border-radius: 30px;
     }
 
     &__bg {
@@ -58,4 +59,28 @@
         background-size: cover;
     }
 
+}
+
+@media (max-width: 1240px) {
+    .membership {
+        &__card-wrap {
+            padding: 0 20%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .membership {
+        &__card-wrap {
+            padding: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 541px) {
+    .membership {
+        &__card-txt {
+            font-size: rem(16);
+        }
+    }
 }

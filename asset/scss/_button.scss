@@ -12,14 +12,15 @@
     gap: rem(20);
 
     // } 라지사이즈는 이미 정의가 되어있어서 필요가없음.
-
-    &--md {
+    @media(max-width: 768px) {
         height: rem(48);
+
     }
 
-    &--sm {
+    @media(max-width: 541px) {
         height: rem(44);
         font-size: rem(16);
+
     }
 }
 
@@ -27,7 +28,7 @@
     &__btn01 {
         background: transparent;
         font-size: rem(17);
-        ound-color: transparent;
+        background-color: transparent;
         color: $whiteColor01;
         border: 2px solid $whiteColor01;
 
@@ -36,6 +37,7 @@
             color: $whiteColor01;
             // border: 2px solid $gradientColor01;
         }
+
 
         &--md {
             height: rem(48);
@@ -83,7 +85,7 @@
 
 .membership {
     &__btn {
-        @include gradient;
+        // @include gradient;
         background: $whiteColor01;
         padding: rem(20) rem(88);
 
@@ -93,6 +95,15 @@
         }
     }
 
+    @media(max-width: 768px) {
+        .membership {
+            &__btn {
+                padding: rem(20) rem(40);
+
+            }
+        }
+
+    }
 }
 
 .inquiry {

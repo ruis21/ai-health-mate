@@ -8914,18 +8914,22 @@ p {
   justify-content: center;
   gap: 1.25rem;
 }
-.btn--md {
-  height: 3rem;
+@media (max-width: 768px) {
+  .btn {
+    height: 3rem;
+  }
 }
-.btn--sm {
-  height: 2.75rem;
-  font-size: 1rem;
+@media (max-width: 541px) {
+  .btn {
+    height: 2.75rem;
+    font-size: 1rem;
+  }
 }
 
 .ask__btn01 {
   background: transparent;
   font-size: 1.0625rem;
-  ound-color: transparent;
+  background-color: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
 }
@@ -8968,15 +8972,17 @@ p {
 }
 
 .membership__btn {
-  background: linear-gradient(135deg, #0ED058, #0097F6);
-  color: transparent;
-  -webkit-background-clip: text;
   background: #ffffff;
   padding: 1.25rem 5.5rem;
 }
 .membership__btn:hover {
   background: linear-gradient(135deg, #0ED058, #0097F6);
   color: #ffffff;
+}
+@media (max-width: 768px) {
+  .membership .membership__btn {
+    padding: 1.25rem 2.5rem;
+  }
 }
 
 .inquiry__btn {
@@ -10220,6 +10226,10 @@ p {
   flex-direction: row;
 }
 
+.membership__card-wrap {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
 .membership__card {
   display: flex;
   justify-content: center;
@@ -10235,7 +10245,7 @@ p {
   background-color: #ffffff;
 }
 .membership__card:hover {
-  border: 1px solid #0ED058;
+  border: 1.5px solid #0ED058;
   transition: all 0.3s ease-in-out;
 }
 .membership__card .plan {
@@ -10262,9 +10272,7 @@ p {
   background: linear-gradient(135deg, #0ED058, #0097F6);
   color: transparent;
   -webkit-background-clip: text;
-  background-color: #ffffff;
   border: 1px solid #ADADAD;
-  border-radius: 30px;
 }
 .membership__bg {
   background-image: url("../image/membership-bg-grdient.png");
@@ -10273,6 +10281,21 @@ p {
   background-size: cover;
 }
 
+@media (max-width: 1240px) {
+  .membership__card-wrap {
+    padding: 0 20%;
+  }
+}
+@media (max-width: 768px) {
+  .membership__card-wrap {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 541px) {
+  .membership__card-txt {
+    font-size: 1rem;
+  }
+}
 .faq {
   /* 기본 아이콘 스타일 */
 }
