@@ -1,8 +1,8 @@
 .faq {
     &__tab-menu {
-        @include flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(space-between, center);
+        // justify-content: space-between;
+        // align-items: center;
         background-color: $grayColor04;
         border-radius: rem(40);
         color: $grayColor01;
@@ -180,12 +180,12 @@
     .faq {
         &__board {
             padding: rem(40) rem(40);
-
         }
 
         &__tab-menu {
             gap: 0;
-
+            justify-content: flex-start;
+            margin-bottom: rem(120);
         }
     }
 }

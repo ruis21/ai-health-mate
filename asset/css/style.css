@@ -10226,6 +10226,112 @@ p {
   gap: 1.875rem;
   flex-direction: row;
 }
+.news * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+.news main {
+  position: relative;
+  width: min(90rem, 90%);
+  margin: 0 auto;
+  min-height: 100vh;
+  column-gap: 3rem;
+  padding-block: min(20vh, 3rem);
+}
+.news .swiper {
+  width: 100%;
+  padding-top: 3.125rem;
+}
+.news .swiper-pagination-bullet,
+.news .swiper-pagination-bullet-active {
+  background: #fff;
+}
+.news .swiper-pagination {
+  bottom: 1.25rem !important;
+}
+.news .swiper-slide {
+  width: 18.75rem;
+  height: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+}
+.news .swiper-slide h2, .news .swiper-slide .h2 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 0.625rem;
+  padding: 0 0 0 1.563rem;
+  text-transform: uppercase;
+}
+.news .swiper-slide p {
+  color: #dadada;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 0 1.563rem;
+  line-height: 1.6;
+  font-size: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.news .swiper-slide a {
+  margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+  padding: 0.438em 1.875rem;
+  font-size: 0.9rem;
+}
+.news .swiper-slide a:hover {
+  color: #005baa;
+}
+.news .swiper-slide div {
+  display: none;
+  opacity: 0;
+  padding-bottom: 0.625rem;
+}
+.news .swiper-slide-active div {
+  display: block;
+  opacity: 1;
+}
+.news .swiper-slide--one {
+  background: linear-gradient(to top, #0f2027, rgba(32, 58, 67, 0), rgba(44, 83, 100, 0)), url("https://images.unsplash.com/photo-1628944682084-831f35256163?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80") no-repeat 50% 50%/cover;
+}
+.news .swiper-slide--two {
+  background: linear-gradient(to top, #0f2027, rgba(32, 58, 67, 0), rgba(44, 83, 100, 0)), url("https://images.unsplash.com/photo-1515309025403-4b0184873cef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80") no-repeat 50% 50%/cover;
+}
+.news .swiper-slide--three {
+  background: linear-gradient(to top, #0f2027, rgba(32, 58, 67, 0), rgba(44, 83, 100, 0)), url("https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat 50% 50%/cover;
+}
+.news .swiper-slide--four {
+  background: linear-gradient(to top, #0f2027, rgba(32, 58, 67, 0), rgba(44, 83, 100, 0)), url("https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat 50% 50%/cover;
+}
+.news .swiper-slide--five {
+  background: linear-gradient(to top, #0f2027, rgba(32, 58, 67, 0), rgba(44, 83, 100, 0)), url("https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80") no-repeat 50% 50%/cover;
+}
+.news .swiper-3d .swiper-slide-shadow-left,
+.news .swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+@media screen and (min-width: 48rem) {
+  .news main {
+    display: flex;
+    align-items: center;
+  }
+  .news .bg,
+  .news .bg2 {
+    opacity: 0.1;
+  }
+}
+@media screen and (min-width: 93.75rem) {
+  .news .swiper {
+    width: 85%;
+  }
+}
 
 .membership__card-wrap {
   --bs-gutter-x: 1.5rem;
@@ -10305,8 +10411,6 @@ p {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   background-color: #EEEEEE;
   border-radius: 2.5rem;
   color: #7E7E7E;
@@ -10463,6 +10567,8 @@ p {
   }
   .faq__tab-menu {
     gap: 0;
+    justify-content: flex-start;
+    margin-bottom: 7.5rem;
   }
 }
 @media (max-width: 541px) {
@@ -10574,6 +10680,7 @@ p {
 }
 .map {
   width: 100%;
+  border-radius: 0.625rem;
 }
 .map__txt p {
   padding: 0 1.25rem;
