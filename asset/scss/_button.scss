@@ -54,7 +54,6 @@
         span,
         p {
             @include gradient;
-
         }
 
         &:hover {
@@ -99,10 +98,8 @@
         .membership {
             &__btn {
                 padding: rem(20) rem(40);
-
             }
         }
-
     }
 }
 
@@ -115,7 +112,7 @@
 
         &:hover {
             background-color: $primaryColor02;
-            // coloror01;
+            color: $whiteColor01;
         }
     }
 }

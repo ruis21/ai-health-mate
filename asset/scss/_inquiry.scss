@@ -8,9 +8,12 @@
         background-color: $primaryColor02;
         padding: rem(230) rem(60);
         color: $whiteColor01;
+        @include defineFont (rem(22), 600);
+        word-break: keep-all;
 
         span {
             font-family: 'akira_expandedsuper_bold';
+            @include defineFont (rem(24), 600);
         }
     }
 
@@ -18,48 +21,50 @@
         width: 58%;
 
         label {
-            // text-align: left;
             display: block;
             width: 100%;
+            @include defineFont (rem(22), 600)
         }
 
         fieldset {
             background-color: $grayColor04;
             padding: rem(30);
             border-radius: rem(20);
-            display: flex;
-            flex-direction: column;
+            @include flex(flex-start, center, 0, column);
         }
 
         span {
             color: $primaryColor01;
         }
 
-        input {
+        .input-txt {
             border: none;
-            padding: 16px 20px;
-            // font-size: 16px;
-            border-radius: 10px;
+            padding: rem(16) rem(20);
+            border-radius: rem(10);
             width: 100%;
         }
 
-        p {
-            color: $grayColor01;
+
+        .checkbox {
+            span {
+                color: $grayColor01;
+                @include defineFont (rem(16), 400);
+            }
         }
 
         textarea {
             width: 100%;
             height: rem(380);
             border: none;
-            border-radius: 10px;
-            padding: 16px 20px;
+            border-radius: rem(10);
+            padding: rem(16) rem(20);
             resize: none;
         }
     }
-
 }
 
-@media (max-width:768px) {
+
+@media (max-width:1024px) {
     .inquiry {
         &__wrap {
             @include flex(center, center, 2%, column);
@@ -71,6 +76,31 @@
 
         &__right-box {
             width: 100%;
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+
+    .inquiry {
+
+
+        &__right-box {
+            fieldset {
+                --bs-gutter-x: 1.5rem;
+                --bs-gutter-y: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width:541px) {
+    .inquiry {
+        &__right-box {
+            label {
+                @include defineFont (rem(18), 600)
+            }
         }
     }
 }
