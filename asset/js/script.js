@@ -91,34 +91,33 @@ var swiper = new Swiper(".partnersSwiper", {
 
 
 // news Swiper 
-var swiper = new Swiper(".newsSwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 3,
-        slideShadows: true,
-        slidesPerView: 3
-    },
-    loop: true,
-    breakpoints: {
-        // 540: {
-        //     slidesPerView: 1
-        // },
-        768: {
-            slidesPerView: 1
-        },
-        // 1024: {
-        //     slidesPerView: 2
-        // },
-        // 1240: {
-        //     slidesPerView: 3
-        // }
-    }
-});
+// var swiper = new Swiper(".newsSwiper", {
+//     effect: "coverflow",
+//     grabCursor: true,
+//     centeredSlides: true,
+//     coverflowEffect: {
+//         rotate: 0,
+//         stretch: 0,
+//         depth: 100,
+//         modifier: 3,
+//         slideShadows: true,
+//         slidesPerView: 3
+//     },
+//     loop: true,
+//     breakpoints: {
+// 540: {
+//     slidesPerView: 1
+// },
+// 768: {
+//     slidesPerView: 1
+// },
+// 1024: {
+//     slidesPerView: 2
+// },
+// 1240: {
+//     slidesPerView: 3
+// }
+
 
 // faq tab menu 효과 
 $(function () {
@@ -156,12 +155,7 @@ $(document).ready(function () {
 });
 
 
-/*
-inspiration
-https://dribbble.com/shots/4684682-Aquatic-Animals
-*/
-
-var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".newsSwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -171,21 +165,15 @@ var swiper = new Swiper(".swiper", {
         depth: 100,
         modifier: 3,
         slideShadows: true
-    },
-    keyboard: {
-        enabled: true
+        // slidesPerView: 3
     },
     mousewheel: {
         thresholdDelta: 70
     },
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-    },
     breakpoints: {
-        640: {
-            slidesPerView: 2
+        541: {
+            slidesPerView: 1
         },
         768: {
             slidesPerView: 1
@@ -193,7 +181,7 @@ var swiper = new Swiper(".swiper", {
         1024: {
             slidesPerView: 2
         },
-        1560: {
+        1240: {
             slidesPerView: 3
         }
     }
