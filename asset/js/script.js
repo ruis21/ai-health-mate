@@ -90,33 +90,36 @@ var swiper = new Swiper(".partnersSwiper", {
 
 
 
-// news Swiper 
-// var swiper = new Swiper(".newsSwiper", {
-//     effect: "coverflow",
-//     grabCursor: true,
-//     centeredSlides: true,
-//     coverflowEffect: {
-//         rotate: 0,
-//         stretch: 0,
-//         depth: 100,
-//         modifier: 3,
-//         slideShadows: true,
-//         slidesPerView: 3
-//     },
-//     loop: true,
-//     breakpoints: {
-// 540: {
-//     slidesPerView: 1
-// },
-// 768: {
-//     slidesPerView: 1
-// },
-// 1024: {
-//     slidesPerView: 2
-// },
-// 1240: {
-//     slidesPerView: 3
-// }
+// newsSwiper
+
+var swiper = new Swiper(".newsSwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 3,
+        slideShadows: true,
+        slidesPerView: 3,
+    },
+    loop: true,
+    breakpoints: {
+        540: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 1
+        },
+        1024: {
+            slidesPerView: 2
+        },
+        1240: {
+            slidesPerView: 3
+        }
+    }
+});
 
 
 // faq tab menu 효과 
@@ -155,36 +158,5 @@ $(document).ready(function () {
 });
 
 
-var swiper = new Swiper(".newsSwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 3,
-    coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 3,
-        slideShadows: true
-    },
-    mousewheel: {
-        thresholdDelta: 70
-    },
-    loop: true,
-    breakpoints: {
-        541: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 1
-        },
-        1024: {
-            slidesPerView: 2
-        },
-        1240: {
-            slidesPerView: 3
-        }
-    }
-});
 
 
