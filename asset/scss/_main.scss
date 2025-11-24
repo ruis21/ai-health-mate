@@ -346,7 +346,9 @@
             p,
             hr,
             span {
+                transition: all 0.3s ease-in-out;
                 color: $whiteColor01;
+                // border: $whiteColor01;
             }
 
             .preview__direct-btn {
@@ -714,12 +716,14 @@
             }
         }
 
-        // ask 영역
 
-        .ask {
-            .typing-line {
-                @include defineFont(rem(32), 600);
-            }
+    }
+
+    // ask 영역
+
+    .ask {
+        .typing-line {
+            @include defineFont(rem(22), 600);
         }
     }
 }
@@ -858,14 +862,4 @@
         }
     }
 
-
-    // preview 영역
-
-
-    // ask 영역
-    .ask {
-        .typing-line {
-            @include defineFont(rem(22), 600);
-        }
-    }
 }

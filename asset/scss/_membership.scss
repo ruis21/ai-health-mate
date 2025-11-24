@@ -1,16 +1,15 @@
 .membership {
     &__card-wrap {
 
-        --bs-gutter-x: 1.5rem; // 가로 간격 32px
-        --bs-gutter-y: 1.5rem; // 세로 간격 32px
-        // padding: 0 10%;
-
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 1.5rem;
+        gap: 2%;
     }
 
     &__card {
         @include flex(center, center, 0px, column);
-        // width: 32%;
-        // gap: 2%;
+        width: 32%;
+        gap: 2%;
         border: 1px solid $grayColor02;
         border-radius: rem(20);
         padding: rem(30);
@@ -19,8 +18,6 @@
         line-height: 2.0;
         word-break: keep-all;
         background-color: $whiteColor01;
-
-
 
         &:hover {
             border: 1.5px solid $primaryColor01;
@@ -65,6 +62,11 @@
     .membership {
         &__card-wrap {
             padding: 0 20%;
+            gap: 0;
+        }
+
+        &__card {
+            width: 100%;
         }
     }
 }

@@ -166,6 +166,7 @@
             background-color: $whiteColor01;
             border-radius: rem(40);
             color: none;
+            text-align: center;
         }
 
         &__menu {
@@ -187,6 +188,7 @@
             justify-content: flex-start;
             margin-bottom: rem(120);
         }
+
     }
 }
 
@@ -198,5 +200,6 @@
 
             }
         }
+
     }
 }

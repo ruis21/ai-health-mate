@@ -13,7 +13,7 @@
 
         span {
             font-family: 'akira_expandedsuper_bold';
-            @include defineFont (rem(24), 600);
+            @include defineFont (rem(26), 600);
         }
     }
 
@@ -72,6 +72,8 @@
 
         &__left-box {
             width: 100%;
+            height: auto;
+            padding: rem(170) rem(60);
         }
 
         &__right-box {
@@ -97,10 +99,23 @@
 
 @media (max-width:541px) {
     .inquiry {
-        &__right-box {
-            label {
-                @include defineFont (rem(18), 600)
+        &__left-box {
+            padding: rem(110) rem(40);
+
+            span {
+                @include defineFont (rem(22), 600);
+            }
+
+            p {
+                @include defineFont (rem(18), 400);
             }
         }
+
+        &__right-box {
+            label {
+                @include defineFont (rem(18), 600);
+            }
+        }
+
     }
 }
