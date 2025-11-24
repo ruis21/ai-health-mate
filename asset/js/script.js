@@ -159,13 +159,13 @@ var swiper = new Swiper(".newsSwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
+    slidesPerView: 3,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
         depth: 100,
         modifier: 3,
         slideShadows: true
-        // slidesPerView: 3
     },
     mousewheel: {
         thresholdDelta: 70
