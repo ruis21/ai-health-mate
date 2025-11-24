@@ -18,6 +18,7 @@
     &__text-wrap {
         color: $whiteColor01;
 
+
         .ai {
             @include defineFont (rem(80));
             font-family: 'akira_expandedsuper_bold';
@@ -256,6 +257,10 @@
         img {
             width: 50%
         }
+    }
+
+    .col {
+        top: rem(120);
     }
 
 

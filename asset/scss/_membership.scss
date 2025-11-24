@@ -42,7 +42,7 @@
     &__card-txt {
 
         li {
-            @include flex(flex-start, flex-start, rem(10));
+            @include flex(flex-start, center, rem(10));
             font-size: rem(18);
         }
     }
@@ -81,6 +81,23 @@
     .membership {
         &__card-txt {
             font-size: rem(16);
+        }
+
+        &__card {
+            height: 100%;
+            padding: rem(40) rem(20);
+
+            .plan {
+                @include defineFont (rem(16), 600);
+            }
+
+            p {
+                @include defineFont (rem(16), 400, 2.0);
+            }
+
+            h4 {
+                @include defineFont (rem(22), 600);
+            }
         }
     }
 }
