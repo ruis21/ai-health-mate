@@ -89,8 +89,7 @@
     }
 
     &__txt {
-        // @include flex(space-between, space-between, 0, column);
-        display: flex;
+        @include flex(space-between, space-between, rem(20), column);
         padding: rem(30);
 
         h2 {
@@ -122,8 +121,36 @@
 
 @media (max-width: 768px) {
     .news {
+        .swiper-slide a {
+            @include flex (flex-start, center, 0px, column);
+        }
 
+        &__img {
+            width: 100%;
+            border-top-left-radius: rem(30);
+            border-top-right-radius: rem(30);
+            border-bottom-left-radius: 0;
+        }
 
+        &__txt {
+            @include flex(space-between, space-between, rem(20), column);
+            padding: rem(30);
+            word-break: keep-all;
+
+            h2 {
+                @include defineFont (rem(26), 600);
+            }
+
+            span {
+                @include defineFont (rem(16));
+                color: $grayColor02;
+            }
+
+            p {
+                display: none;
+                opacity: 0;
+            }
+        }
 
         &__board-wrap {
 
