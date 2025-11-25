@@ -8,6 +8,11 @@
         // padding-block: min(20vh, 3rem);
     }
 
+    // .newsSwiper {
+    //     width: 100%;
+    //     height: 100%;
+    // }
+
     .swiper {
         width: 100%;
         padding-top: 3.125rem;
@@ -15,7 +20,7 @@
 
     .swiper-slide {
         background-color: $grayColor05;
-        padding: rem(50);
+        // padding: rem(50);
         border-radius: rem(30);
         // width: 1050px;
         // height: 28.125rem;
@@ -24,6 +29,7 @@
 
     .swiper-slide a {
         @include flex;
+        // display: block;
     }
 
     .swiper-slide h2 {
@@ -57,11 +63,11 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 24%;
+        // padding: 24%;
         height: rem(500);
         border-top-left-radius: rem(30);
         border-bottom-left-radius: rem(30);
-        width: 100%;
+        width: 500%;
     }
 
     &__board-wrap {
@@ -69,7 +75,7 @@
         h5,
         p {
             padding: rem(10) 0;
-            margin-left: rem(40);
+            margin: 0 rem(40);
         }
 
         h5 {
@@ -112,4 +118,25 @@
     }
 
 
+}
+
+@media (max-width: 768px) {
+    .news {
+
+
+
+        &__board-wrap {
+
+            h5,
+            p {
+                margin: 0 rem(20);
+            }
+
+            h5 {
+                @include defineFont (rem(18), 600);
+            }
+
+        }
+
+    }
 }

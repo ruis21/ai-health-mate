@@ -7,6 +7,7 @@
         border-radius: rem(40);
         color: $grayColor01;
         @include defineFont(rem(22), 600);
+
     }
 
     &__menu {

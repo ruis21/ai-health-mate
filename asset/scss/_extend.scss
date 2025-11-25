@@ -56,19 +56,13 @@
     color: $grayColor02;
     @include defineFont (rem(32), 600);
 
-    // &--lg {
-    //     gap: 106px;
-    // }
-
-    // &--md {
-    //     gap: 65px;
-    //     font-size: 26px;
-    // }
-
-    // &--sm {
-    //     gap: 45px;
-    //     font-size: 22px;
-    // }
+    .tab-menu {
+        &.on {
+            color: $blackColor01;
+            text-decoration: underline;
+            transition: all 0.3s ease-in-out;
+        }
+    }
 
     li:hover {
         color: $blackColor01;

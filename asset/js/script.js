@@ -22,12 +22,10 @@ $(function () {
 
 // 모바일에서 m-nav 메뉴 클릭시 서브메뉴 등장
 $(function () {
-    $(".m-header__menu").on("click", function () {
+    $(".m-header__menu>a").on("click", function () {
         $(this).find(".m-header__sub-menu-list").stop().slideDown();
     });
-});
-$(function () {
-    $(".m-header__menu").on("click", function () {
+    $(".m-header__menu>a").on("click", function () {
         $(this).find(".m-header__sub-menu-list").stop().slideUp();
     });
 });
@@ -102,7 +100,7 @@ var swiper = new Swiper(".newsSwiper", {
         depth: 100,
         modifier: 3,
         slideShadows: true,
-        slidesPerView: 3,
+        slidesPerView: 2,
     },
     loop: true,
     breakpoints: {
@@ -116,7 +114,7 @@ var swiper = new Swiper(".newsSwiper", {
             slidesPerView: 2
         },
         1240: {
-            slidesPerView: 3
+            slidesPerView: 2
         }
     }
 });

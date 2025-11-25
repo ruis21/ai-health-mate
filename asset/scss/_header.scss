@@ -47,7 +47,6 @@
     }
 
 
-
     &__sub-menu-list {
         position: absolute;
         z-index: 5;
@@ -68,6 +67,8 @@
         }
     }
 
+
+    // hamburget-btn
     .hamburger-btn {
         position: absolute;
         right: 20px;
@@ -95,7 +96,7 @@
 
     // hamburger btn -> close btn 변경 시 애니메이션 
     .hamburger-btn.active .line:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
+        transform: translateY(9px) rotate(45deg);
     }
 
     .hamburger-btn.active .line:nth-child(2) {
@@ -103,13 +104,15 @@
     }
 
     .hamburger-btn.active .line:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
+        transform: translateY(-9px) rotate(-45deg);
     }
 
     &__nav {
         display: none;
     }
 
+
+    // mobile header
     .m-header {
         &__nav {
             display: none;
@@ -118,23 +121,22 @@
             right: 0;
             width: 70vw;
             background: #000;
-            height: calc(100vh - rem(77));
+            // height: calc(100vh - rem(77));
+            height: 100vh;
             z-index: 10;
             color: $whiteColor01;
         }
 
         &__menu-list {
-            @include flex(center, flex-end, rem(10), column);
+            @include flex(center, flex-end, rem(20), column);
             padding: 0 rem(50);
+            transform: translateY(100%);
         }
 
         &__menu {
             @include defineFont(rem(22), 500);
-            position: relative;
+            // position: relative;
             z-index: 5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
 
             &:hover>a {
@@ -200,9 +202,5 @@
         .nav {
             display: none;
         }
-
-
-
-
     }
 }
