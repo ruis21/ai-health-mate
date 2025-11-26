@@ -8939,8 +8939,7 @@ p {
   border: 2px solid #ffffff;
 }
 .ask__btn01:hover {
-  background: linear-gradient(135deg, #0ED058, #0097F6);
-  color: #ffffff;
+  background-color: #111111;
 }
 .ask__btn01--md {
   height: 3rem;
@@ -8958,7 +8957,7 @@ p {
   -webkit-background-clip: text;
 }
 .ask__btn02:hover {
-  background: linear-gradient(135deg, #0ED058, #0097F6);
+  background-color: #111111;
 }
 .ask__btn02:hover span,
 .ask__btn02:hover p {

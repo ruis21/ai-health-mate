@@ -125,6 +125,11 @@ var swiper = new Swiper(".newsSwiper", {
     }
 });
 
+$(".faq__tab-menu").on("click", function () {
+    $(".faq__menu>a").removeClass("on");
+    $(this).addClass("on");
+});
+
 
 // faq title 클릭 시 contents 등장
 $(document).ready(function () {
