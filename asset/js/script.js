@@ -101,8 +101,12 @@ var swiper = new Swiper(".newsSwiper", {
         stretch: 0,
         depth: 100,
         modifier: 3,
-        slideShadows: true,
+        slideShadows: false,
         slidesPerView: 3
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     loop: true,
     breakpoints: {

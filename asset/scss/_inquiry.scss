@@ -115,7 +115,17 @@
             label {
                 @include defineFont (rem(18), 600);
             }
+
+            fieldset {
+
+                padding: rem(20);
+
+            }
         }
+
+
+
+
 
     }
 }
