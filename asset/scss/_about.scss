@@ -11,9 +11,17 @@
         color: $whiteColor01;
     }
 
-    span {
-        color: $primaryColor02;
+    &__txt {
+        p {
+            @include defineFont (rem(32));
+        }
+
+        span {
+            color: $primaryColor02;
+            @include defineFont (rem(36), 600, 1.8);
+        }
     }
+
 
     img {
         margin: 0 auto;
@@ -34,7 +42,7 @@
 
     &__card {
         padding: rem(62) 0;
-        margin: rem(10);
+        margin: rem(10) 0;
         color: $whiteColor01;
         border-radius: rem(20);
         @include defineFont (rem(32));
@@ -308,6 +316,19 @@
 }
 
 @media (max-width:768px) {
+    .about {
+        &__txt {
+            p {
+                @include defineFont (rem(18));
+            }
+
+            span {
+                color: $primaryColor02;
+                @include defineFont (rem(22), 600, 1.8);
+            }
+        }
+    }
+
     .vision {
         &__circle-txt {
             p {
@@ -380,11 +401,21 @@
 
 
 
-@media (max-width:540px) {
+@media (max-width:541px) {
     .vision {
         &__circle {
             height: rem(300);
             width: rem(300);
+        }
+
+        &__circle-txt {
+            p {
+                @include defineFont (rem(22), 400, 1.5);
+            }
+
+            span {
+                @include defineFont (rem(32), 700);
+            }
         }
 
         &__card-wrap {

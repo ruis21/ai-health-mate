@@ -87,7 +87,7 @@
 
         &__card {
             height: 100%;
-            padding: rem(40) rem(20);
+            padding: rem(60) rem(20);
 
             .plan {
                 @include defineFont (rem(16), 600);
