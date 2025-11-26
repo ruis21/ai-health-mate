@@ -9989,21 +9989,17 @@ p {
 .history__left-txt {
   position: sticky;
   top: 15.625rem;
+  z-index: 30;
+}
+.history_right-wrap {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+.history__right {
   min-height: 100vh;
-  padding-bottom: 50vh;
-  z-index: 10;
-}
-.history__left-txt:nth-child(1) {
-  z-index: 14;
-}
-.history__left-txt:nth-child(2) {
-  z-index: 13;
-}
-.history__left-txt:nth-child(3) {
-  z-index: 12;
-}
-.history__left-txt:nth-child(4) {
-  z-index: 11;
+  /* 한 섹션이 화면을 꽉 채워야 감지가 확실함 */
 }
 .history__right-wrap {
   width: 60%;

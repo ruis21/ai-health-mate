@@ -57,8 +57,11 @@ var swiper = new Swiper(".previewSwiper", {
 });
 
 
-// partners Swiper 
 
+
+
+
+// partners Swiper 
 var swiper = new Swiper(".partnersSwiper", {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -89,7 +92,6 @@ var swiper = new Swiper(".partnersSwiper", {
 
 
 // newsSwiper
-
 var swiper = new Swiper(".newsSwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -155,6 +157,26 @@ $(document).ready(function () {
     });
 });
 
+
+
+const yearTitle = document.getElementById("year-title");
+const yearSub = document.getElementById("year-sub");
+
+const sections = document.querySelectorAll(".history__right");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const year = entry.target.dataset.year;
+            const sub = entry.target.dataset.sub;
+
+            yearTitle.textContent = year + "년";
+            yearSub.innerHTML = sub;
+        }
+    });
+}, { threshold: 0.4 });
+
+sections.forEach(section => observer.observe(section));
 
 
 
