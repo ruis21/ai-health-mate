@@ -22,13 +22,16 @@ $(function () {
 
 // 모바일에서 m-nav 메뉴 클릭시 서브메뉴 등장
 $(function () {
-    $(".m-header__menu>a").on("click", function () {
+    $(".m-header__menu").on("click", function () {
         $(this).find(".m-header__sub-menu-list").stop().slideDown();
     });
-    $(".m-header__menu>a").on("click", function () {
+});
+$(function () {
+    $(".m-header__menu").on("click", function () {
         $(this).find(".m-header__sub-menu-list").stop().slideUp();
     });
 });
+
 
 
 // preview Swiper
@@ -57,11 +60,8 @@ var swiper = new Swiper(".previewSwiper", {
 });
 
 
-
-
-
-
 // partners Swiper 
+
 var swiper = new Swiper(".partnersSwiper", {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -91,7 +91,7 @@ var swiper = new Swiper(".partnersSwiper", {
 
 
 
-// newsSwiper
+// news Swiper 
 var swiper = new Swiper(".newsSwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -102,81 +102,38 @@ var swiper = new Swiper(".newsSwiper", {
         depth: 100,
         modifier: 3,
         slideShadows: true,
-        slidesPerView: 2,
+        slidesPerView: 3
     },
     loop: true,
     breakpoints: {
-        540: {
-            slidesPerView: 1
-        },
+        // 540: {
+        //     slidesPerView: 1
+        // },
         768: {
             slidesPerView: 1
         },
-        1024: {
-            slidesPerView: 2
-        },
-        1240: {
-            slidesPerView: 2
-        }
+        // 1024: {
+        //     slidesPerView: 2
+        // },
+        // 1240: {
+        //     slidesPerView: 3
+        // }
     }
 });
 
 
-// faq tab menu 효과 
-$(function () {
-    $(".faq__tab-menu li").on("click", function (e) {
-        e.preventDefault();
-        let idx = $(this).index();
-
-        // a 태그에 on 붙이기
-        $(".faq__tab-menu a").removeClass("on");
-        $(this).find("a").addClass("on");
-
-        // 게시판 영역 전환
-        $(".faq__board > div").hide().removeClass("on");
-        $(".faq__board > div").eq(idx).fadeIn().addClass("on");
-    });
-});
-
 // faq title 클릭 시 contents 등장
 $(document).ready(function () {
 
-    $(".faq__board-title").on("click", function (e) {
-        e.preventDefault();
+    $(".faq__board-title").on("click", function () {
 
-        const cont = $(this).next(".faq__board-conts");
+        // 현재 클릭한 요소 외 나머지 닫기
+        $(".faq__board-conts").not($(this).next()).slideUp();
 
-        // 나머지 모두 닫기
-        $(".faq__board-conts").not(cont).slideUp();
-        $(".faq__board-title").not(this).removeClass("active");
-
-        // 현재 것 열기/닫기
-        $(this).toggleClass("active");
-        cont.stop().slideToggle();
-
+        // 현재 요소 토글
+        $(this).next().slideToggle();
     });
+
 });
-
-
-
-const yearTitle = document.getElementById("year-title");
-const yearSub = document.getElementById("year-sub");
-
-const sections = document.querySelectorAll(".history__right");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const year = entry.target.dataset.year;
-            const sub = entry.target.dataset.sub;
-
-            yearTitle.textContent = year + "년";
-            yearSub.innerHTML = sub;
-        }
-    });
-}, { threshold: 0.4 });
-
-sections.forEach(section => observer.observe(section));
-
 
 
