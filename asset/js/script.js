@@ -157,3 +157,7 @@ $(".faq__board-title").on("click", function (e) {
 });
 
 
+$(".inquiry__btn").addClass("active");
+$(".inquiry__btn").removeClass("active");
+
+

@@ -113,7 +113,7 @@
         color: $grayColor01;
         text-align: center;
 
-        &:hover {
+        &.active {
             background-color: $primaryColor02;
             color: $whiteColor01;
         }

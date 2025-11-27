@@ -8997,7 +8997,7 @@ p {
   color: #7E7E7E;
   text-align: center;
 }
-.inquiry__btn:hover {
+.inquiry__btn.active {
   background-color: #0097F6;
   color: #ffffff;
 }
