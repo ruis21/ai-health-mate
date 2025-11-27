@@ -4,32 +4,30 @@ $(function () {
     $(".header__menu").on("mouseenter", function () {
         $(".header__sub-menu-list, .menu-bg").stop().slideDown();
     });
-});
-$(function () {
+
     $(".header__menu").on("mouseleave", function () {
         $(".header__sub-menu-list, .menu-bg").stop().slideUp();
     });
-});
+
 
 
 // 햄버거 버튼 클릭 시 메뉴 토글 : 모바일 전용
-$(function () {
+
     $(".hamburger-btn").on("click", function () {
         $(".m-header__nav").stop().slideToggle();
         $(this).toggleClass("active");
     });
-});
+
 
 // 모바일에서 m-nav 메뉴 클릭시 서브메뉴 등장
-$(function () {
-    $(".m-header__menu").on("click", function () {
-        $(this).find(".m-header__sub-menu-list").stop().slideDown();
+    $(".m-header__menu a").on("click", function (event) {
+        event.preventDefault();
+        $(this).next(".m-header__sub-menu-list").stop().slideToggle();
     });
-});
-$(function () {
-    $(".m-header__menu").on("click", function () {
-        $(this).find(".m-header__sub-menu-list").stop().slideUp();
-    });
+
+    // $(".m-header__menu").on("click", function () {
+    //     $(this).find(".m-header__sub-menu-list").stop().slideUp();
+    // });
 });
 
 
@@ -92,17 +90,18 @@ var swiper = new Swiper(".partnersSwiper", {
 
 
 // news Swiper 
-var swiper = new Swiper(".newsSwiper", {
+var newsSwiper = new Swiper(".newsSwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
+    slidesPerView: 1,
+    speed: 1000,
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
         depth: 100,
         modifier: 3,
-        slideShadows: false,
-        slidesPerView: 3
+        slideShadows: true,
     },
     navigation: {
         nextEl: ".swiper-button-next",
@@ -113,8 +112,8 @@ var swiper = new Swiper(".newsSwiper", {
         // 540: {
         //     slidesPerView: 1
         // },
-        768: {
-            slidesPerView: 1
+        769: {
+            slidesPerView: 1.2
         },
         // 1024: {
         //     slidesPerView: 2
