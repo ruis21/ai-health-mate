@@ -13,10 +13,10 @@
     //     height: 100%;
     // }
 
-    .swiper {
-        // width: 90%;
-        padding-top: 3.125rem;
-    }
+    // .swiper {
+    //     // width: 90%;
+    //     padding-top: 3.125rem;
+    // }
 
     .swiper-slide {
         background-color: $grayColor05;
@@ -24,6 +24,7 @@
         border-radius: rem(30);
         // height: 28.125rem;
         // height: rem(470);
+        width: 80%;
     }
 
     .swiper-slide a {
