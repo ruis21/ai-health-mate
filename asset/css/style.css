@@ -10231,10 +10231,12 @@ p {
   margin: 0 auto;
   column-gap: 3rem;
 }
+.news .swiper {
+  padding-top: 3.125rem;
+}
 .news .swiper-slide {
   background-color: #F5F5F5;
   border-radius: 1.875rem;
-  width: 80%;
 }
 .news .swiper-slide a {
   display: flex;
