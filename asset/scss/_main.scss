@@ -17,6 +17,8 @@
 
     &__text-wrap {
         color: $whiteColor01;
+        @include flex(center, stretch, rem(20), column);
+        height: calc(100vh + rem(77));
 
 
         .ai {
@@ -57,9 +59,9 @@
         position: relative;
         background: $gradientColor01;
         width: rem(80);
-        height: rem(44);
-        top: rem(270);
-        left: rem(18);
+        height: rem(43);
+        top: rem(310);
+        left: 0;
         z-index: 1;
     }
 
