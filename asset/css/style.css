@@ -10544,6 +10544,9 @@ p {
   line-height: 1.3;
   letter-spacing: 0;
 }
+.faq__tab-menu li {
+  margin: 0.3125rem 0;
+}
 .faq__menu a {
   display: block;
   padding: 1.25rem 1.875rem;

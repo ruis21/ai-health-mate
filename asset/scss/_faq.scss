@@ -8,6 +8,9 @@
         color: $grayColor01;
         @include defineFont(rem(22), 600);
 
+        li {
+            margin: rem(5) 0;
+        }
     }
 
     &__menu {

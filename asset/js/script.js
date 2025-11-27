@@ -34,7 +34,7 @@ $(function () {
 
 
 
-// preview Swiper
+// preview Swiper 
 var swiper = new Swiper(".previewSwiper", {
     slidesPerView: 1,
     spaceBetween: 15,
@@ -125,31 +125,34 @@ var swiper = new Swiper(".newsSwiper", {
     }
 });
 
-// faq__menu 클릭시 faq__board 탭메뉴형식으로 등장
-$(".faq__menu").on("click", function () {
+// faq__menu 클릭시 faq__board 내용이 등장
+$(".faq__menu").on("click", function (e) {
     let idx = $(this).index();
-    // e.preventDefault();
+
+    // 스크롤 튕김 방지
+    e.preventDefault();
     $(".faq__menu").removeClass("on");
     $(this).addClass("on");
 
     $(".faq__board > div").hide();
-    $(this).eq(idx).show();
+    $(".faq__board > div").eq(idx).show();
 });
 
 
 
 
 // faq title 클릭 시 contents 등장
-$(document).ready(function () {
 
-    $(".faq__board-title").on("click", function () {
+$(".faq__board-title").on("click", function (e) {
+    // 스크롤 튕김 방지
+    e.preventDefault();
 
-        // 현재 클릭한 요소 외 나머지 닫기
-        $(".faq__board-conts").not($(this).next()).slideUp();
+    // 현재 클릭한 요소 외 나머지 닫기
+    $(".faq__board-conts").not($(this).next()).slideUp();
 
-        // 현재 요소 토글
-        $(this).next().slideToggle();
-    });
+    // 현재 요소 토글
+    $(this).next().slideToggle();
+
 
 });
 
