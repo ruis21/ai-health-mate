@@ -134,6 +134,7 @@
         &__menu {
             @include defineFont(rem(22), 500);
             // position: relative;
+            z-index: 5;
 
 
             &:hover>a {
@@ -188,19 +189,9 @@
         width: 100%;
         height: rem(230);
         background-color: $blackColor01;
-        z-index: 5;
+        z-index: 4;
         display: none;
     }
-
-    // .menu-bg-wrap {
-    //     position: fixed;
-    //     width: 100%;
-    //     height: 100%;
-    //     color: #0000004b;
-    //     left: 0;
-    //     top: 0;
-    //     z-index: 3;
-    // }
 
 
     @media (max-width: 1024px) {
