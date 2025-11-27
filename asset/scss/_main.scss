@@ -20,8 +20,8 @@
 
 
         .ai {
-            @include defineFont (rem(80));
-            font-family: 'akira_expandedsuper_bold';
+            @include defineFont (rem(60), 600);
+            font-family: "Science Gothic", sans-serif;
             position: relative;
             z-index: 10;
 
@@ -44,8 +44,8 @@
     }
 
     &__title {
-        font-family: 'akira_expandedsuper_bold';
-        @include defineFont (rem(70));
+        font-family: "Science Gothic", sans-serif;
+        @include defineFont (rem(60), 600);
 
         span {
             @include defineFont (rem(80));
@@ -56,10 +56,10 @@
     &__box {
         position: relative;
         background: $gradientColor01;
-        width: rem(110);
-        height: rem(54);
-        top: rem(275);
-        left: rem(20);
+        width: rem(80);
+        height: rem(44);
+        top: rem(270);
+        left: rem(18);
         z-index: 1;
     }
 
@@ -567,12 +567,12 @@
             }
 
             .ai {
-                @include defineFont (rem(50));
+                @include defineFont (rem(50), 600);
             }
         }
 
         &__title {
-            @include defineFont(rem(50));
+            @include defineFont(rem(50), 600);
 
             span {
 
@@ -582,9 +582,9 @@
 
         &__box {
             background: $gradientColor01;
-            width: rem(70);
+            width: rem(60);
             height: rem(35);
-            top: rem(240);
+            top: rem(242);
             left: rem(80);
             z-index: 0;
         }
@@ -637,9 +637,9 @@
 
         &__box {
             background: $gradientColor01;
-            width: rem(70);
+            width: rem(60);
             height: rem(35);
-            top: rem(240);
+            top: rem(242);
             left: rem(0);
             z-index: 0;
         }
@@ -762,13 +762,13 @@
             }
 
             .ai {
-                @include defineFont(rem(30));
+                @include defineFont(rem(30), 600);
                 z-index: 5;
             }
         }
 
         &__title {
-            @include defineFont(rem(30));
+            @include defineFont(rem(30), 600);
             margin-bottom: rem(30);
 
             span {

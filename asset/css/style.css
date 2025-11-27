@@ -8623,6 +8623,18 @@ textarea.form-control-lg {
   font-style: normal;
 }
 @font-face {
+  font-family: "Science Gothic", sans-serif;
+  src: url("../font/ScienceGothic-Bold.woff") format("woff"), url("../font/AnyConv.com__ScienceGothic-Bold.woff2") format("woff2"), url("../font/AnyConv.com__ScienceGothic-Bold.eot") format("eot"), url("../font/ScienceGothic-Bold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: Bold;
+}
+@font-face {
+  font-family: "Science Gothic", sans-serif;
+  src: url("../font/ScienceGothic-SemiBold.woff") format("woff"), url("../font/AnyConv.com__ScienceGothic-SemiBold.woff2") format("woff2"), url("../font/AnyConv.com__ScienceGothic-SemiBold.eot") format("eot"), url("../font/ScienceGothic-SemiBold.ttf") format("ttf");
+  font-weight: 500;
+  font-style: SemiBold;
+}
+@font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2") format("woff2");
   font-weight: 100;
@@ -9135,7 +9147,7 @@ p {
 .header .m-header__menu a {
   display: block;
   padding: 0 3.125rem;
-  font-size: 1.625rem;
+  font-size: 1.375rem;
   font-weight: 500;
   line-height: 2;
   letter-spacing: 0;
@@ -9162,20 +9174,12 @@ p {
   -webkit-background-clip: text;
   font-weight: 600;
 }
-.header .bg-line {
-  height: 0.0625rem;
-  background-color: #F5F5F5;
-  opacity: 0.5;
-  width: 100%;
-  position: fixed;
-  top: 4.8125rem;
-}
 .header .menu-bg {
   position: absolute;
   top: 4.8125rem;
   left: 0;
   width: 100%;
-  height: 16.25rem;
+  height: 14.375rem;
   background-color: #111111;
   z-index: 4;
   display: none;
@@ -9200,11 +9204,11 @@ p {
   color: #ffffff;
 }
 .kv__text-wrap .ai {
-  font-size: 5rem;
-  font-weight: 400;
+  font-size: 3.75rem;
+  font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0;
-  font-family: "akira_expandedsuper_bold";
+  font-family: "Science Gothic", sans-serif;
   position: relative;
   z-index: 10;
 }
@@ -9215,9 +9219,9 @@ p {
   letter-spacing: 0;
 }
 .kv__title {
-  font-family: "akira_expandedsuper_bold";
-  font-size: 4.375rem;
-  font-weight: 400;
+  font-family: "Science Gothic", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0;
 }
@@ -9230,10 +9234,10 @@ p {
 .kv__box {
   position: relative;
   background: linear-gradient(135deg, #0ED058, #0097F6);
-  width: 6.875rem;
-  height: 3.375rem;
-  top: 17.1875rem;
-  left: 1.25rem;
+  width: 5rem;
+  height: 2.75rem;
+  top: 16.875rem;
+  left: 1.125rem;
   z-index: 1;
 }
 .kv__btn:hover {
@@ -9636,13 +9640,13 @@ p {
   }
   .kv__text-wrap .ai {
     font-size: 3.125rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
   }
   .kv__title {
     font-size: 3.125rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
   }
@@ -9654,9 +9658,9 @@ p {
   }
   .kv__box {
     background: linear-gradient(135deg, #0ED058, #0097F6);
-    width: 4.375rem;
+    width: 3.75rem;
     height: 2.1875rem;
-    top: 15rem;
+    top: 15.125rem;
     left: 5rem;
     z-index: 0;
   }
@@ -9690,9 +9694,9 @@ p {
   }
   .kv__box {
     background: linear-gradient(135deg, #0ED058, #0097F6);
-    width: 4.375rem;
+    width: 3.75rem;
     height: 2.1875rem;
-    top: 15rem;
+    top: 15.125rem;
     left: 0rem;
     z-index: 0;
   }
@@ -9784,14 +9788,14 @@ p {
   }
   .kv__text-wrap .ai {
     font-size: 1.875rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
     z-index: 5;
   }
   .kv__title {
     font-size: 1.875rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
     margin-bottom: 1.875rem;

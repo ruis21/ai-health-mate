@@ -11,7 +11,7 @@ $(function () {
 
 
 
-// 햄버거 버튼 클릭 시 메뉴 토글 : 모바일 전용
+    // 햄버거 버튼 클릭 시 메뉴 토글 : 모바일 전용
 
     $(".hamburger-btn").on("click", function () {
         $(".m-header__nav").stop().slideToggle();
@@ -19,7 +19,7 @@ $(function () {
     });
 
 
-// 모바일에서 m-nav 메뉴 클릭시 서브메뉴 등장
+    // 모바일에서 m-nav 메뉴 클릭시 서브메뉴 등장
     $(".m-header__menu a").on("click", function (event) {
         event.preventDefault();
         $(this).next(".m-header__sub-menu-list").stop().slideToggle();
