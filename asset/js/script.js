@@ -125,18 +125,18 @@ var swiper = new Swiper(".newsSwiper", {
     }
 });
 
-let idx = $(this).index();
-$(".faq__menu").on("click", function (e) {
-    e.preventDefault();
+// faq__menu 클릭시 faq__board 탭메뉴형식으로 등장
+$(".faq__menu").on("click", function () {
+    let idx = $(this).index();
+    // e.preventDefault();
     $(".faq__menu").removeClass("on");
     $(this).addClass("on");
 
-    // $(".faq__board>div").removeClass("on");
-    // $(this).addClass("on");
-
-    // $(".faq__contents").hide();
-    // $(".faq__contents").eq(idx).show();
+    $(".faq__board > div").hide();
+    $(this).eq(idx).show();
 });
+
+
 
 
 // faq title 클릭 시 contents 등장

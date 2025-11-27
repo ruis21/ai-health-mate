@@ -10546,10 +10546,10 @@ p {
 }
 .faq__menu a {
   display: block;
-  border-radius: 2.5rem;
   padding: 1.25rem 1.875rem;
 }
 .faq__menu.on {
+  border-radius: 2.5rem;
   background-color: #0ED058;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
