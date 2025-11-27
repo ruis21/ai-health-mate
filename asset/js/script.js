@@ -125,9 +125,17 @@ var swiper = new Swiper(".newsSwiper", {
     }
 });
 
-$(".faq__tab-menu").on("click", function () {
-    $(".faq__menu>a").removeClass("on");
+let idx = $(this).index();
+$(".faq__menu").on("click", function (e) {
+    e.preventDefault();
+    $(".faq__menu").removeClass("on");
     $(this).addClass("on");
+
+    // $(".faq__board>div").removeClass("on");
+    // $(this).addClass("on");
+
+    // $(".faq__contents").hide();
+    // $(".faq__contents").eq(idx).show();
 });
 
 

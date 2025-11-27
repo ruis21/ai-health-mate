@@ -8961,7 +8961,9 @@ p {
 }
 .ask__btn02:hover span,
 .ask__btn02:hover p {
-  color: #ffffff;
+  background: linear-gradient(135deg, #0ED058, #0097F6);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 .ask__btn02 span {
   background: linear-gradient(135deg, #0ED058, #0097F6);
@@ -10428,8 +10430,8 @@ p {
   }
 }
 .membership__card-wrap {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 1.5rem;
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
   gap: 2%;
 }
 .membership__card {
@@ -10547,7 +10549,7 @@ p {
   border-radius: 2.5rem;
   padding: 1.25rem 1.875rem;
 }
-.faq__menu a.on {
+.faq__menu.on {
   background-color: #0ED058;
   color: #ffffff;
   transition: all 0.3s ease-in-out;

@@ -63,7 +63,8 @@
 
             span,
             p {
-                color: $whiteColor01;
+                // color: $whiteColor01;
+                @include gradient;
             }
         }
 

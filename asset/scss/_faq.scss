@@ -18,12 +18,13 @@
             border-radius: rem(40);
             padding: rem(20) rem(30);
 
-            &.on {
-                background-color: $primaryColor01;
-                color: $whiteColor01;
-                transition: all 0.3s ease-in-out;
-                // padding: 5px 20px;
-            }
+        }
+
+        &.on {
+            background-color: $primaryColor01;
+            color: $whiteColor01;
+            transition: all 0.3s ease-in-out;
+            // padding: 5px 20px;
         }
     }
 
