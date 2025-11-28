@@ -47,65 +47,142 @@ ScrollTrigger.create({
 });
 
 
+// merit 애니메이션 테스트 
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: "#pinned",
-        start: "top top",
-        end: () => `+=500%`,
-        pin: true,
-        pinSpacing: true,
-        scrub: 1,
-        invalidateOnRefresh: true,
-    },
-});
+let mm = gsap.matchMedia();
 
-tl.fromTo(
-    ".hello",
-    {
-        y: 0,
-        opacity: 1
-    },
-    {
-        y: -40,
-        opacity: 0,
-    }
-);
+// ★ 1) PC: 769px 이상 — 카드 1개씩
+mm.add("(min-width: 769px)", () => {
 
+    // 초기화
+    gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
 
-tl.fromTo(
-    ".world",
-    {
-        y: 40,
-        opacity: 0,
-    },
-    {
-        y: 0,
-        opacity: 1,
-    }
-);
-tl.to(".world", {
-    y: -40,
-    opacity: 0,
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#pinned",
+            start: "top 15%",
+            end: "+=500%",
+            pin: true,
+            scrub: 1,
+        }
+    });
+
+    tl.to(".card01", { y: -40, opacity: 0 })
+        .fromTo(".card02", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
+
+        .to(".card02", { y: -40, opacity: 0 })
+        .fromTo(".card03", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
+
+        .to(".card03", { y: -40, opacity: 0 })
+        .fromTo(".card04", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
+
+        .to(".card04", { y: -40, opacity: 0 })
+        .fromTo(".card05", { y: 40, opacity: 0 }, { y: 0, opacity: 1 });
+
 });
 
 
-tl.fromTo(
-    ".greeting",
-    {
-        y: 40,
-        opacity: 0,
-    },
-    {
-        y: 0,
-        opacity: 1,
-    }
-);
-tl.to(".greeting", {
-    y: -40,
-    opacity: 0,
+
+// ★ 2) Tablet: 768px 이하 ~ 542px 이상 — 카드 2개씩
+mm.add("(max-width: 768px) and (min-width: 542px)", () => {
+
+    // 초기화 (대신 01,02는 보이게)
+    gsap.set([".card01", ".card02"], { opacity: 1 });
+    gsap.set([".card03", ".card04", ".card05"], { opacity: 0 });
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#pinned",
+            start: "top 15%",
+            end: "+=500%",
+            pin: true,
+            scrub: 1,
+        }
+    });
+
+    // 01+02 → 사라지고 03+04 등장
+    tl.to([".card01", ".card02"], { y: -40, opacity: 0 })
+        .fromTo([".card03", ".card04"],
+            { y: 40, opacity: 0 },
+            { y: 0, opacity: 1 }
+        )
+
+        // 03+04 → 사라지고 05 등장
+        .to([".card03", ".card04"], { y: -40, opacity: 0 })
+        .fromTo(".card05",
+            { y: 40, opacity: 0 },
+            { y: 0, opacity: 1 }
+        );
 });
+
+
+
+// ★ 3) Mobile: 541px 이하 — 다시 카드 1개씩
+mm.add("(max-width: 541px)", () => {
+
+    // 초기화
+    gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#pinned",
+            start: "top 15%",
+            end: "+=500%",
+            pin: true,
+            scrub: 1,
+        }
+    });
+
+    tl.to(".card01", { y: -40, opacity: 0 })
+        .fromTo(".card02", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
+
+        .to(".card02", { y: -40, opacity: 0 })
+        .fromTo(".card03", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
+
+        .to(".card03", { y: -40, opacity: 0 })
+        .fromTo(".card04", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
+
+        .to(".card04", { y: -40, opacity: 0 })
+        .fromTo(".card05", { y: 40, opacity: 0 }, { y: 0, opacity: 1 });
+
+});
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// const tl = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: "#pinned",
+//         start: "top 15%",
+//         end: () => "+=600%",
+//         pin: true,
+//         scrub: 1,
+//         invalidateOnRefresh: true,
+//     }
+// });
+
+// // 카드 배열
+// const cards = [".card01", ".card02", ".card03", ".card04", ".card05"];
+
+// cards.forEach((card, i) => {
+
+
+//     // 첫 번째 카드 제외한 나머지 → 등장 애니메이션
+//     if (i !== 0) {
+//         tl.fromTo(card,
+//             { y: 40, opacity: 0 },
+//             { y: 0, opacity: 1 }
+//         );
+//     }
+
+//     // 마지막 카드 제외한 모든 카드 → 사라지는 애니메이션
+//     if (i !== cards.length - 1) {
+//         tl.to(card,
+//             { y: -40, opacity: 0 }
+//         );
+//     }
+
+// });
 
 
 // preview Swiper 

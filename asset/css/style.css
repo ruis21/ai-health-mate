@@ -9458,34 +9458,24 @@ p {
   line-height: 1.6;
   letter-spacing: 0;
 }
-
-#pinned {
+.merit #pinned {
   position: relative;
-  background: lightskyblue;
 }
-#pinned > div {
+.merit #pinned .col {
   position: absolute;
+  height: 100vh;
 }
-#pinned .world,
-#pinned .greeting {
+.merit #pinned .card02,
+.merit #pinned .card03,
+.merit #pinned .card04,
+.merit #pinned .card05 {
   opacity: 0;
 }
 
-#red {
-  background: red;
+.preview {
+  margin-top: 37.5rem;
+  background-color: #ffffff;
 }
-
-#green {
-  background: green;
-}
-
-section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .preview .swiper-slide {
   background: #EEEEEE;
   height: 20rem;
@@ -9794,6 +9784,9 @@ section {
   .merit__card img {
     width: 100%;
   }
+  .merit #pinned .col {
+    position: static !important;
+  }
   .ask .typing-line {
     font-size: 1.375rem;
     font-weight: 600;
@@ -9915,6 +9908,9 @@ section {
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0;
+  }
+  .merit #pinned .col {
+    position: static !important;
   }
 }
 .about__bg {

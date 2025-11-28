@@ -273,6 +273,7 @@
 
 // merit section 
 .merit {
+
     &__card {
         @include flex(space-between, center, 5%);
         // width: 100%;
@@ -305,42 +306,75 @@
     }
 
 
+    #pinned {
+        position: relative;
+        // background: lightskyblue;
 
-}
+        .col {
+            position: absolute;
+            height: 100vh;
+        }
 
-
-
-#pinned {
-    position: relative;
-    background: lightskyblue;
-
-    >div {
-        position: absolute;
+        .card02,
+        .card03,
+        .card04,
+        .card05 {
+            opacity: 0;
+        }
     }
 
-    .world,
-    .greeting {
-        opacity: 0;
-    }
+    // #red {
+    //     background: red;
+    // }
+
+    // #green {
+    //     background: green;
+    // }
+
+    // section {
+    //     height: 100vh;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
 }
 
-#red {
-    background: red;
-}
 
-#green {
-    background: green;
-}
 
-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+// #pinned {
+//     position: relative;
+//     background: lightskyblue;
+
+//     >div {
+//         position: absolute;
+//     }
+
+//     .world,
+//     .greeting {
+//         opacity: 0;
+//     }
+// }
+
+// #red {
+//     background: red;
+// }
+
+// #green {
+//     background: green;
+// }
+
+// section {
+//     height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
 
 // preview section 
 .preview {
+    margin-top: rem(600);
+    background-color: $whiteColor01;
+
     .swiper-slide {
         // width: 50%;
         background: $grayColor04;
@@ -762,6 +796,13 @@ section {
             }
         }
 
+        #pinned {
+            .col {
+                position: static !important;
+                // height: 10px;
+            }
+        }
+
 
     }
 
@@ -904,6 +945,12 @@ section {
 
             .card-conts {
                 @include defineFont(rem(16), 400, 1.6);
+            }
+        }
+
+        #pinned {
+            .col {
+                position: static !important;
             }
         }
     }
