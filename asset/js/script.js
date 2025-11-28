@@ -30,7 +30,7 @@ $(function () {
 const ani4 = gsap.timeline();
 ani4.from("#section4 .parallax__item__img", {
     autoAlpha: 0,
-    scale: 5,
+    scale: 3,
     width: "100vw",
     height: "100vh"
 });
@@ -44,6 +44,67 @@ ScrollTrigger.create({
     pin: true,
     anticipatePin: 1,
     markers: true
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#pinned",
+        start: "top top",
+        end: () => `+=500%`,
+        pin: true,
+        pinSpacing: true,
+        scrub: 1,
+        invalidateOnRefresh: true,
+    },
+});
+
+tl.fromTo(
+    ".hello",
+    {
+        y: 0,
+        opacity: 1
+    },
+    {
+        y: -40,
+        opacity: 0,
+    }
+);
+
+
+tl.fromTo(
+    ".world",
+    {
+        y: 40,
+        opacity: 0,
+    },
+    {
+        y: 0,
+        opacity: 1,
+    }
+);
+tl.to(".world", {
+    y: -40,
+    opacity: 0,
+});
+
+
+tl.fromTo(
+    ".greeting",
+    {
+        y: 40,
+        opacity: 0,
+    },
+    {
+        y: 0,
+        opacity: 1,
+    }
+);
+tl.to(".greeting", {
+    y: -40,
+    opacity: 0,
 });
 
 

@@ -9213,6 +9213,18 @@ p {
   font-family: "Science Gothic", sans-serif;
   position: relative;
   z-index: 10;
+  display: inline-block;
+}
+.kv__text-wrap .ai::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0.9375rem;
+  background: linear-gradient(135deg, #0ED058, #0097F6);
+  height: 60%;
+  width: 5rem;
 }
 .kv__text-wrap h3, .kv__text-wrap .h3 {
   font-size: 2rem;
@@ -9232,15 +9244,6 @@ p {
   font-weight: 400;
   line-height: 1.3;
   letter-spacing: 0;
-}
-.kv__box {
-  position: relative;
-  background: linear-gradient(135deg, #0ED058, #0097F6);
-  width: 5rem;
-  height: 2.75rem;
-  top: 16.875rem;
-  left: 1.125rem;
-  z-index: 1;
 }
 .kv__btn:hover {
   background-color: #0ED058;
@@ -9324,9 +9327,10 @@ p {
   bottom: 20px;
   font-size: 5vw;
   line-height: 1;
+  width: 100%;
 }
 .introduce .parallax__item {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   display: flex;
@@ -9453,6 +9457,33 @@ p {
   font-weight: regular;
   line-height: 1.6;
   letter-spacing: 0;
+}
+
+#pinned {
+  position: relative;
+  background: lightskyblue;
+}
+#pinned > div {
+  position: absolute;
+}
+#pinned .world,
+#pinned .greeting {
+  opacity: 0;
+}
+
+#red {
+  background: red;
+}
+
+#green {
+  background: green;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .preview .swiper-slide {
@@ -9649,10 +9680,11 @@ p {
 
 @media (max-width: 1240px) {
   .kv {
-    height: 100%;
+    height: 80vh;
   }
   .kv__text-wrap {
-    padding: calc(9.375rem + 4.8125rem) 5rem 9.375rem;
+    height: 80vh;
+    padding: 0 5rem;
   }
   .kv__text-wrap h3, .kv__text-wrap .h3 {
     font-size: 1.75rem;
@@ -9666,6 +9698,11 @@ p {
     line-height: 1.3;
     letter-spacing: 0;
   }
+  .kv__text-wrap .ai::after {
+    top: 0.9375rem;
+    height: 55%;
+    width: 4.375rem;
+  }
   .kv__title {
     font-size: 3.125rem;
     font-weight: 600;
@@ -9677,14 +9714,6 @@ p {
     font-weight: 400;
     line-height: 1.3;
     letter-spacing: 0;
-  }
-  .kv__box {
-    background: linear-gradient(135deg, #0ED058, #0097F6);
-    width: 3.75rem;
-    height: 2.1875rem;
-    top: 15.125rem;
-    left: 5rem;
-    z-index: 0;
   }
 }
 @media (max-width: 1024px) {
@@ -9708,19 +9737,8 @@ p {
   .m-b--xxl {
     margin-bottom: 5rem;
   }
-  .kv {
-    height: 100%;
-  }
   .kv__text-wrap {
     padding: calc(9.375rem + 4.8125rem) 0 9.375rem;
-  }
-  .kv__box {
-    background: linear-gradient(135deg, #0ED058, #0097F6);
-    width: 3.75rem;
-    height: 2.1875rem;
-    top: 15.125rem;
-    left: 0rem;
-    z-index: 0;
   }
   .introduce__conts {
     padding: 30% 0;
@@ -9799,9 +9817,6 @@ p {
   .m-b--xxl {
     margin-bottom: 60px;
   }
-  .kv {
-    height: 100%;
-  }
   .kv__text-wrap h3, .kv__text-wrap .h3 {
     font-size: 1.125rem;
     font-weight: 400;
@@ -9814,6 +9829,11 @@ p {
     line-height: 1.3;
     letter-spacing: 0;
     z-index: 5;
+  }
+  .kv__text-wrap .ai::after {
+    top: 0.5rem;
+    height: 60%;
+    width: 2.5rem;
   }
   .kv__title {
     font-size: 1.875rem;
@@ -9835,13 +9855,6 @@ p {
     align-items: center;
     gap: 0.3125rem;
     flex-direction: row;
-  }
-  .kv__box {
-    width: 2.625rem;
-    height: 1.25rem;
-    top: 14.6875rem;
-    left: 0;
-    z-index: 0;
   }
   .introduce__title {
     font-size: 1.375rem;

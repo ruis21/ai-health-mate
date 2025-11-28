@@ -26,18 +26,21 @@
             font-family: "Science Gothic", sans-serif;
             position: relative;
             z-index: 10;
+            display: inline-block;
 
-            // &::before {
-            //     // position: relative;
-            //     z-index: 0;
-            //     left: 100px;
-            //     top: rem(-20);
-            //     display: inline-block;
-            //     content: '';
-            //     background: $gradientColor01;
-            //     height: 70px;
-            //     width: 100px;
-            // }
+            // ai 뒤에 그라데이션 박스
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                // bottom: 0;
+                top: rem(15);
+                background: $gradientColor01;
+                height: 60%;
+                width: rem(80);
+            }
         }
 
         h3 {
@@ -54,16 +57,7 @@
         }
     }
 
-    // ai 텍스트 배경박스
-    &__box {
-        position: relative;
-        background: $gradientColor01;
-        width: rem(80);
-        height: rem(44);
-        top: rem(270);
-        left: rem(18);
-        z-index: 1;
-    }
+
 
     &__btn {
         &:hover {
@@ -163,10 +157,11 @@
         bottom: 20px;
         font-size: 5vw;
         line-height: 1;
+        width: 100%;
     }
 
     .parallax__item {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         position: relative;
         display: flex;
@@ -310,6 +305,38 @@
     }
 
 
+
+}
+
+
+
+#pinned {
+    position: relative;
+    background: lightskyblue;
+
+    >div {
+        position: absolute;
+    }
+
+    .world,
+    .greeting {
+        opacity: 0;
+    }
+}
+
+#red {
+    background: red;
+}
+
+#green {
+    background: green;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // preview section 
@@ -585,10 +612,11 @@
 
     // kv 영역
     .kv {
-        height: 100%;
+        height: 80vh;
 
         &__text-wrap {
-            padding: calc(rem(150) + rem(77)) rem(80) rem(150);
+            height: 80vh;
+            padding: 0 rem(80);
 
             h3 {
                 @include defineFont(rem(28));
@@ -596,6 +624,12 @@
 
             .ai {
                 @include defineFont (rem(50), 600);
+
+                &::after {
+                    top: rem(15);
+                    height: 55%;
+                    width: rem(70);
+                }
             }
         }
 
@@ -608,14 +642,7 @@
             }
         }
 
-        &__box {
-            background: $gradientColor01;
-            width: rem(60);
-            height: rem(35);
-            top: rem(242);
-            left: rem(80);
-            z-index: 0;
-        }
+
     }
 
     .merit {
@@ -657,19 +684,10 @@
 
     // kv영역
     .kv {
-        height: 100%;
+        // height: 80vh;
 
         &__text-wrap {
             padding: calc(rem(150) + rem(77)) 0 rem(150);
-        }
-
-        &__box {
-            background: $gradientColor01;
-            width: rem(60);
-            height: rem(35);
-            top: rem(242);
-            left: rem(0);
-            z-index: 0;
         }
     }
 
@@ -779,7 +797,7 @@
 
     // kv영역
     .kv {
-        height: 100%;
+        // height: auto;
 
         &__text-wrap {
 
@@ -792,6 +810,12 @@
             .ai {
                 @include defineFont(rem(30), 600);
                 z-index: 5;
+
+                &::after {
+                    top: rem(8);
+                    height: 60%;
+                    width: rem(40);
+                }
             }
         }
 
@@ -810,13 +834,7 @@
 
         }
 
-        &__box {
-            width: rem(42);
-            height: rem(20);
-            top: rem(235);
-            left: 0;
-            z-index: 0;
-        }
+
     }
 
     //introduce 영역
