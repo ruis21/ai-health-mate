@@ -9249,6 +9249,34 @@ p {
   background-color: #0ED058;
 }
 
+main .container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .container .txt {
+  width: 70%;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+}
+main .container .txt span {
+  position: absolute;
+  font-size: 3rem;
+  line-height: 4.2rem;
+}
+
+.introduce {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .introduce__conts {
   position: relative;
   background-color: black;
@@ -9316,28 +9344,6 @@ p {
     opacity: 0;
   }
 }
-.introduce #section4 {
-  width: 100vw;
-  height: 100vh;
-  background-color: #222;
-}
-.introduce .parallax__item__num {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  font-size: 5vw;
-  line-height: 1;
-  width: 100%;
-}
-.introduce .parallax__item {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .solution {
   background-color: #191922;
   color: #ffffff;
@@ -10573,9 +10579,6 @@ p {
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0;
-}
-.faq__tab-menu li {
-  margin: 0.3125rem 0;
 }
 .faq__menu a {
   display: block;

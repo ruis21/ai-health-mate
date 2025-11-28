@@ -26,18 +26,35 @@ $(function () {
     });
 });
 
+
+// kv영역
+
+const tl1 = gsap.timeline();
+
+tl1.from(".line span", 1.8, {
+    y: 100,
+    ease: "power4.out",
+    delay: 1,
+    skewY: 7,
+    stagger: {
+        amount: 0.3
+    }
+})
+
+
+// introduce 영역
 //04 : 이미지 축소하기
 const ani4 = gsap.timeline();
-ani4.from("#section4 .parallax__item__img", {
+ani4.from("#introduce-sec .introduce__conts", {
     autoAlpha: 0,
-    scale: 3,
+    scale: 1,
     width: "100vw",
     height: "100vh"
 });
 
 ScrollTrigger.create({
     animation: ani4,
-    trigger: "#section4",
+    trigger: "#introduce-sec",
     start: "top top",
     end: "+=3000",
     scrub: true,
@@ -308,7 +325,7 @@ $(".faq__board-title").on("click", function (e) {
 });
 
 
-$(".inquiry__btn").addClass("active");
-$(".inquiry__btn").removeClass("active");
+// $(".inquiry__btn").addClass("active");
+// $(".inquiry__btn").removeClass("active");
 
 
