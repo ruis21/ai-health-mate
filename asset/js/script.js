@@ -191,8 +191,8 @@ var swiper = new Swiper(".previewSwiper", {
     spaceBetween: 15,
     // centeredSlides: true,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".preview-btn-next",
+        prevEl: ".preview-btn-prev",
     },
     breakpoints: {
         540: {
@@ -212,7 +212,6 @@ var swiper = new Swiper(".previewSwiper", {
 
 
 // partners Swiper 
-
 var swiper = new Swiper(".partnersSwiper", {
     slidesPerView: 3,
     spaceBetween: 20,

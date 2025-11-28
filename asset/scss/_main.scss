@@ -806,6 +806,11 @@
 
     }
 
+    // preview 영역
+    .preview {
+        margin-top: rem(80);
+    }
+
     // ask 영역
 
     .ask {
@@ -950,7 +955,7 @@
 
         #pinned {
             .col {
-                position: static !important;
+                // position: static !important;
             }
         }
     }
