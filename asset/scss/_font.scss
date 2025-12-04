@@ -12,24 +12,27 @@
 
 // Science Gothic
 @font-face {
-    font-family: "Science Gothic", sans-serif;
-    src: url('../font/ScienceGothic-Bold.woff') format('woff'),
-        url('../font/AnyConv.com__ScienceGothic-Bold.woff2') format('woff2'),
-        url('../font/AnyConv.com__ScienceGothic-Bold.eot') format('eot'),
-        url('../font/ScienceGothic-Bold.ttf') format('ttf');
+    font-family: "Science Gothic";
+    src: url("/asset/font/ScienceGothic-Bold.woff") format("woff"),
+        url("/asset/font/AnyConv.com__ScienceGothic-Bold.woff2") format("woff2"),
+        url("/asset/font/AnyConv.com__ScienceGothic-Bold.eot") format("eot"),
+        url("/asset/font/ScienceGothic-Bold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "Science Gothic", sans-serif;
-    src: url('../font/ScienceGothic-SemiBold.woff') format('woff'),
-        url('../font/AnyConv.com__ScienceGothic-SemiBold.woff2') format('woff2'),
-        url('../font/AnyConv.com__ScienceGothic-SemiBold.eot') format('eot'),
-        url('../font/ScienceGothic-SemiBold.ttf') format('ttf');
+    font-family: "Science Gothic";
+    src: url("/font/ScienceGothic-SemiBold.woff") format("woff"),
+        url("/font/AnyConv.com__ScienceGothic-SemiBold.woff2") format("woff2"),
+        url("/font/AnyConv.com__ScienceGothic-SemiBold.eot") format("eot"),
+        url("/font/ScienceGothic-SemiBold.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
+
 
 
 // Pretendard

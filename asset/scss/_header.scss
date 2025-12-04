@@ -16,7 +16,9 @@
             border: none;
 
             img {
-                width: 198px;
+                object-fit: cover;
+                // width: 120px;
+                height: 50px;
                 display: block;
             }
         }
