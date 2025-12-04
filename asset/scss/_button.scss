@@ -5,22 +5,20 @@
     color: $blackColor01;
     border-radius: rem(30);
     border: none;
-    @include defineFont (rem(18), 600);
+    @include defineFont (rem(18), 700);
     display: inline-flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: fit-content;
     gap: rem(20);
 
-    // } 라지사이즈는 이미 정의가 되어있어서 필요가없음.
-    @media(max-width: 768px) {
+    &--md {
         height: rem(48);
-
     }
 
-    @media(max-width: 541px) {
+    &--sm {
         height: rem(44);
         font-size: rem(16);
-
     }
 }
 
@@ -33,14 +31,14 @@
         border: 2px solid $whiteColor01;
 
         &:hover {
-            // background: $gradientColor01;
+            background: $gradientColor01;
             // color: $whiteColor01;
-            // border: 2px solid $gradientColor01;
-            background-color: $blackColor01;
+            // borde// r: 2px solid $gradientColor01;
         }
 
-
         &--md {
+
+            background-color: $blackColor01;
             height: rem(48);
         }
 
@@ -55,16 +53,17 @@
         span,
         p {
             @include gradient;
+
         }
 
         &:hover {
-            // background: $gradientColor01;
-            background-color: $blackColor01;
+            background: $gradientColor01;
 
-            span,
+            //   span,
             p {
-                // color: $whiteColor01;
-                @include gradient;
+
+                background-color: $blackColor01;
+                color: $whiteColor01;
             }
         }
 
@@ -87,7 +86,7 @@
 
 .membership {
     &__btn {
-        // @include gradient;
+        @include gradient;
         background: $whiteColor01;
         padding: rem(20) rem(88);
 
@@ -97,13 +96,6 @@
         }
     }
 
-    @media(max-width: 768px) {
-        .membership {
-            &__btn {
-                padding: rem(20) rem(40);
-            }
-        }
-    }
 }
 
 .inquiry {
@@ -111,11 +103,11 @@
         border-radius: 10px;
         width: 100%;
         color: $grayColor01;
-        text-align: center;
+        // text-align: center;
 
-        &.active {
+        &:hover {
             background-color: $primaryColor02;
-            color: $whiteColor01;
+            // coloror01;
         }
     }
 }
