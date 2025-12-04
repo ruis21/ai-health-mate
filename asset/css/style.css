@@ -8919,6 +8919,7 @@ p {
   border-radius: 1.875rem;
   border: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
   --bs-btn-font-weight: 700;
   font-size: 1.125rem;
   font-weight: 700;
@@ -8937,6 +8938,8 @@ p {
   height: 2.75rem;
   font-size: 1rem;
 =======
+=======
+>>>>>>> parent of 69294e3 (버전관리)
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.3;
@@ -8956,6 +8959,9 @@ p {
     height: 2.75rem;
     font-size: 1rem;
   }
+<<<<<<< HEAD
+>>>>>>> parent of 69294e3 (버전관리)
+=======
 >>>>>>> parent of 69294e3 (버전관리)
 }
 
@@ -8968,12 +8974,18 @@ p {
 }
 .ask__btn01:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: #3a3838;
   color: #ffffff;
   border: 2px solid linear-gradient(135deg, #0ED058, #0097F6);
 }
 .ask__btn01--md {
   background-color: #111111;
+=======
+  background-color: #111111;
+}
+.ask__btn01--md {
+>>>>>>> parent of 69294e3 (버전관리)
 =======
   background-color: #111111;
 }
@@ -8995,12 +9007,15 @@ p {
 }
 .ask__btn02:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: linear-gradient(135deg, #0ED058, #0097F6);
 }
 .ask__btn02:hover p {
   background-color: #111111;
   color: #ffffff;
 =======
+=======
+>>>>>>> parent of 69294e3 (버전관리)
   background-color: #111111;
 }
 .ask__btn02:hover span,
@@ -9008,6 +9023,9 @@ p {
   background: linear-gradient(135deg, #0ED058, #0097F6);
   color: transparent;
   -webkit-background-clip: text;
+<<<<<<< HEAD
+>>>>>>> parent of 69294e3 (버전관리)
+=======
 >>>>>>> parent of 69294e3 (버전관리)
 }
 .ask__btn02 span {
@@ -9024,9 +9042,12 @@ p {
 
 .membership__btn {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: linear-gradient(135deg, #0ED058, #0097F6);
   color: transparent;
   -webkit-background-clip: text;
+=======
+>>>>>>> parent of 69294e3 (버전관리)
 =======
 >>>>>>> parent of 69294e3 (버전관리)
   background: #ffffff;
@@ -9037,12 +9058,18 @@ p {
   color: #ffffff;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 69294e3 (버전관리)
 @media (max-width: 768px) {
   .membership .membership__btn {
     padding: 1.25rem 2.5rem;
   }
 }
+<<<<<<< HEAD
+>>>>>>> parent of 69294e3 (버전관리)
+=======
 >>>>>>> parent of 69294e3 (버전관리)
 
 .inquiry__btn {
@@ -9050,15 +9077,21 @@ p {
   width: 100%;
   color: #7E7E7E;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 .inquiry__btn:hover {
   background-color: #0097F6;
 =======
+=======
+>>>>>>> parent of 69294e3 (버전관리)
   text-align: center;
 }
 .inquiry__btn.active {
   background-color: #0097F6;
   color: #ffffff;
+<<<<<<< HEAD
+>>>>>>> parent of 69294e3 (버전관리)
+=======
 >>>>>>> parent of 69294e3 (버전관리)
 }
 
@@ -9303,8 +9336,13 @@ p {
 
 main .container {
 <<<<<<< HEAD
+<<<<<<< HEAD
   height: 100%;
   width: 100%;
+=======
+  height: 100vh;
+  width: 100vw;
+>>>>>>> parent of 69294e3 (버전관리)
 =======
   height: 100vh;
   width: 100vw;
@@ -9314,7 +9352,10 @@ main .container {
   justify-content: center;
   align-items: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
   padding: 60px 0;
+=======
+>>>>>>> parent of 69294e3 (버전관리)
 =======
 >>>>>>> parent of 69294e3 (버전관리)
 }
@@ -9328,7 +9369,10 @@ main .container .txt span {
   position: absolute;
   font-size: 3rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-weight: 600;
+=======
+>>>>>>> parent of 69294e3 (버전관리)
 =======
 >>>>>>> parent of 69294e3 (버전관리)
   line-height: 4.2rem;
