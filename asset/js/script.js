@@ -47,17 +47,17 @@ tl1.from(".line span", 1.8, {
 const ani4 = gsap.timeline();
 ani4.from("#introduce-sec .introduce__conts", {
     autoAlpha: 0,
-    scale: 1,
-    width: "100vw",
-    height: "100vh"
+    scale: 0.5,
+    transformOrigin: "center center",
+    ease: "power2.out"
 });
 
 ScrollTrigger.create({
     animation: ani4,
     trigger: "#introduce-sec",
     start: "top top",
-    end: "+=3000",
-    scrub: true,
+    end: "+=2000",
+    scrub: 1,
     pin: true,
     anticipatePin: 1,
     markers: true

@@ -5,6 +5,7 @@
     color: $blackColor01;
     border-radius: rem(30);
     border: none;
+    --bs-btn-font-weight: 700;
     @include defineFont (rem(18), 700);
     display: inline-flex;
     justify-content: center;
@@ -31,9 +32,9 @@
         border: 2px solid $whiteColor01;
 
         &:hover {
-            background: $gradientColor01;
-            // color: $whiteColor01;
-            // borde// r: 2px solid $gradientColor01;
+            background: $blackColor02;
+            color: $whiteColor01;
+            border: 2px solid $gradientColor01;
         }
 
         &--md {

@@ -17,30 +17,24 @@
 
     &__text-wrap {
         color: $whiteColor01;
-        height: 100vh;
-
-        @include flex(center, stretch, 0, column);
 
         .ai {
-            @include defineFont (rem(60), 600);
-            font-family: "Science Gothic", sans-serif;
+            @include defineFont (rem(80));
+            font-family: 'akira_expandedsuper_bold';
             position: relative;
             z-index: 10;
-            display: inline-block;
 
-            // ai 뒤에 그라데이션 박스
-            &::after {
-                content: '';
-                display: inline-block;
-                position: absolute;
-                z-index: -1;
-                left: 0;
-                // bottom: 0;
-                top: rem(15);
-                background: $gradientColor01;
-                height: 60%;
-                width: rem(80);
-            }
+            // &::before {
+            //     // position: relative;
+            //     z-index: 0;
+            //     left: 100px;
+            //     top: rem(-20);
+            //     display: inline-block;
+            //     content: '';
+            //     background: $gradientColor01;
+            //     height: 70px;
+            //     width: 100px;
+            // }
         }
 
         h3 {
@@ -49,15 +43,24 @@
     }
 
     &__title {
-        font-family: "Science Gothic", sans-serif;
-        @include defineFont (rem(60), 600);
+        font-family: 'akira_expandedsuper_bold';
+        @include defineFont (rem(70));
 
         span {
             @include defineFont (rem(80));
         }
     }
 
-
+    // ai 텍스트 배경박스
+    &__box {
+        position: relative;
+        background: $gradientColor01;
+        width: rem(110);
+        height: rem(54);
+        top: rem(275);
+        left: rem(20);
+        z-index: 1;
+    }
 
     &__btn {
         &:hover {
@@ -68,84 +71,43 @@
 }
 
 
-// html,
-// body {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh;
-// }
+// introduce section 
+.introduce {
+    // background-color: bisque;
 
-main {
-    .container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    &__wrap {
 
-        .txt {
-            width: 70%;
-            height: 70px;
-            position: relative;
+        .introduce__conts {
+            posit%n: relative;
+       %   background-color: black;
+            color: $whiteColor01;
+            padding: rem(260) 0;
             overflow: hidden;
 
-            span {
+            .introduce__video {
                 position: absolute;
-                font-size: 3rem;
-                line-height: 4.2rem;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.4;
+                z-index: 0;
+            }
+
+            .introduce__text {
+                position: relative;
+                z-index: 1;
+                padding: 20px;
+            }
+
+            .introduce__title,
+            .introduce__subtitle {
+                margin-top: 0;
+                margin-bottom: 0;
             }
         }
     }
-
-}
-
-// introduce section 
-.introduce {
-
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &__conts {
-        position: relative;
-        background-color: black;
-        color: $whiteColor01;
-        padding: rem(260) 0;
-        overflow: hidden;
-    }
-
-    &__video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.4;
-        z-index: 0;
-    }
-
-    &__title {
-        @include defineFont (rem(48), 600);
-    }
-
-    &__subtitle {
-        @include defineFont (rem(32), 600);
-        padding-top: rem(30);
-    }
-
-    &__text {
-        position: relative;
-        z-index: 1;
-        padding: 0 rem(20);
-    }
-
 
     &__arrow {
 
@@ -185,32 +147,6 @@ main {
         }
     }
 
-
-    #section4 {
-        // width: 100vw;
-        // height: 100vh;
-        // background-color: #222;
-    }
-
-    .parallax__item__num {
-        // position: absolute;
-        // right: 20px;
-        // bottom: 20px;
-        // font-size: 5vw;
-        // line-height: 1;
-        // width: 100%;
-    }
-
-    .parallax__item {
-        // width: 100vw;
-        // height: 100vh;
-        // position: relative;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-    }
-
-
 }
 
 // solution section 
@@ -219,33 +155,14 @@ main {
     color: $whiteColor01;
 
     &__title {
-        margin-bottom: rem(40);
-
         span {
             @include gradient;
-        }
-    }
-
-    &__subtitle {
-        margin-bottom: rem(40);
-        @include flex(center, center, 5%);
-        @include defineFont(rem(26));
-
-
-        .solution__items {
-
-            border: 1px solid $whiteColor01;
-            border-radius: rem(30);
-            padding: rem(10) rem(20);
-            color: $whiteColor01;
-            text-align: center;
         }
     }
 
     &__card-wrap {
         --bs-gutter-x: 1.5rem; // 가로 간격 32px
         --bs-gutter-y: 1.5rem; // 세로 간격 32px
-        padding: 0 10%;
     }
 
     .col {
@@ -263,6 +180,12 @@ main {
             }
         }
     }
+
+
+    // .row {
+    //     padding: 0 12%;
+    // }
+
 
 
     &__card {
@@ -296,7 +219,7 @@ main {
             }
 
             .card-text {
-                @include defineFont(rem(32), 600);
+                @include defineFont(rem(32), 600)
             }
         }
 
@@ -307,6 +230,20 @@ main {
     }
 
 
+    &__subtitle {
+        @include flex(center, center, 5%);
+        @include defineFont(rem(26));
+
+
+        .solution__items {
+
+            border: 1px solid $whiteColor01;
+            border-radius: rem(30);
+            padding: rem(10) rem(20);
+            color: $whiteColor01;
+            text-align: center;
+        }
+    }
 }
 
 
@@ -314,7 +251,6 @@ main {
 
 // merit section 
 .merit {
-
     &__card {
         @include flex(space-between, center, 5%);
         // width: 100%;
@@ -322,10 +258,6 @@ main {
         img {
             width: 50%
         }
-    }
-
-    .col {
-        top: rem(120);
     }
 
 
@@ -347,75 +279,10 @@ main {
     }
 
 
-    #pinned {
-        position: relative;
-        // background: lightskyblue;
-
-        .col {
-            position: absolute;
-            height: 100vh;
-        }
-
-        .card02,
-        .card03,
-        .card04,
-        .card05 {
-            opacity: 0;
-        }
-    }
-
-    // #red {
-    //     background: red;
-    // }
-
-    // #green {
-    //     background: green;
-    // }
-
-    // section {
-    //     height: 100vh;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    // }
 }
-
-
-
-// #pinned {
-//     position: relative;
-//     background: lightskyblue;
-
-//     >div {
-//         position: absolute;
-//     }
-
-//     .world,
-//     .greeting {
-//         opacity: 0;
-//     }
-// }
-
-// #red {
-//     background: red;
-// }
-
-// #green {
-//     background: green;
-// }
-
-// section {
-//     height: 100vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
 
 // preview section 
 .preview {
-    margin-top: rem(600);
-    background-color: $whiteColor01;
-
     .swiper-slide {
         // width: 50%;
         background: $grayColor04;
@@ -476,9 +343,7 @@ main {
             p,
             hr,
             span {
-                transition: all 0.3s ease-in-out;
                 color: $whiteColor01;
-                // border: $whiteColor01;
             }
 
             .preview__direct-btn {
@@ -687,29 +552,22 @@ main {
 
     // kv 영역
     .kv {
-        height: 80vh;
+        height: 100%;
 
         &__text-wrap {
-            height: 80vh;
-            padding: 0 rem(80);
+            padding: calc(rem(150) + rem(77)) rem(80) rem(150);
 
             h3 {
                 @include defineFont(rem(28));
             }
 
             .ai {
-                @include defineFont (rem(50), 600);
-
-                &::after {
-                    top: rem(15);
-                    height: 55%;
-                    width: rem(70);
-                }
+                @include defineFont (rem(50));
             }
         }
 
         &__title {
-            @include defineFont(rem(50), 600);
+            @include defineFont(rem(50));
 
             span {
 
@@ -717,20 +575,19 @@ main {
             }
         }
 
-
+        &__box {
+            background: $gradientColor01;
+            width: rem(70);
+            height: rem(35);
+            top: rem(240);
+            left: rem(80);
+            z-index: 0;
+        }
     }
 
     .merit {
         &__card {
             // flex-direction: column-reverse;
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    .solution {
-        &__card-wrap {
-            padding: 0;
         }
     }
 }
@@ -759,44 +616,32 @@ main {
 
     // kv영역
     .kv {
-        // height: 80vh;
+        height: 100%;
 
         &__text-wrap {
-            padding: calc(rem(150) + rem(77)) 0 rem(150);
+            padding: calc(rem(200) + rem(77)) 0 rem(200);
+        }
+
+        &__box {
+            background: $gradientColor01;
+            width: rem(70);
+            height: rem(35);
+            top: rem(290);
+            left: rem(0);
+            z-index: 0;
         }
     }
 
     // introduce 영역   
     .introduce {
-
-
-        &__conts {
-            padding: 30% 0;
-            // overflow: hidden;
-
-            // .introduce__video {
-            //     position: absolute;
-            //     top: 0;
-            //     left: 0;
-            //     width: 100%;
-            //     height: 100%;
-            //     object-fit: cover;
-            //     opacity: 0.4;
-            //     z-index: 0;
-            // }
-        }
-
         &__title {
-            @include defineFont(rem(36), 600);
-            word-break: keep-all;
+            @include defineFont(rem(36));
         }
 
         &__subtitle {
-            @include defineFont(rem(26), 600);
-            word-break: keep-all;
+            @include defineFont(rem(26));
         }
     }
-
 
     // solution 영역
     .solution {
@@ -804,8 +649,20 @@ main {
             gap: 2%;
         }
 
+        // .row {
+        //     padding: 0 15%;
+        // }
+
+        // .col {
+        //     gap: rem(20);
+        // }
+
         &__items {
             @include defineFont(rem(22));
+        }
+
+        .card-text {
+            @include defineFont(rem(26));
         }
 
     }
@@ -837,26 +694,14 @@ main {
             }
         }
 
-        #pinned {
-            .col {
-                position: static !important;
-                // height: 10px;
+        // ask 영역
+
+        .ask {
+            .typing-line {
+                @include defineFont(rem(32), 600);
             }
-        }
 
 
-    }
-
-    // preview 영역
-    .preview {
-        margin-top: rem(80);
-    }
-
-    // ask 영역
-
-    .ask {
-        .typing-line {
-            @include defineFont(rem(22), 600);
         }
     }
 }
@@ -884,7 +729,7 @@ main {
 
     // kv영역
     .kv {
-        // height: auto;
+        height: 100%;
 
         &__text-wrap {
 
@@ -895,81 +740,45 @@ main {
             }
 
             .ai {
-                @include defineFont(rem(30), 600);
+                @include defineFont(rem(30));
                 z-index: 5;
-
-                &::after {
-                    top: rem(8);
-                    height: 60%;
-                    width: rem(40);
-                }
             }
         }
 
         &__title {
-            @include defineFont(rem(30), 600);
-            margin-bottom: rem(30);
+            @include defineFont(rem(30));
 
             span {
                 @include defineFont(rem(30));
             }
-        }
-
-        &__subtitle {
-            margin-bottom: rem(30);
-            @include flex(space-evenly, center, rem(5));
 
         }
 
-
-    }
-
-    //introduce 영역
-
-    .introduce {
-
-        &__title {
-            @include defineFont (rem(22), 600);
-
+        &__box {
+            width: rem(42);
+            height: rem(20);
+            top: rem(285);
+            left: 0;
+            z-index: 0;
         }
-
-        &__subtitle {
-            @include defineFont (rem(18), 600);
-        }
-
     }
 
     // solution 영역
     .solution {
 
-        &__title {
-            margin-bottom: rem(30);
-        }
-
         &__subtitle {
-            @include flex(center, center, 1%);
-            margin-bottom: rem(30);
-
-            // flex-wrap: wrap;
-
-            .solution__items {
-                @include defineFont (rem(18));
-                padding: rem(6) rem(10);
-            }
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
 
-        &__card {
-            &:hover {
-                .card-text {
-                    @include defineFont(rem(22), 600);
-                }
-            }
+        &__items {
+            @include defineFont (rem(22));
         }
 
-        &__card-wrap {
-            padding: 0;
-        }
+        // .row {
+        //     padding: 0 45px;
+        // }
 
         .card-text {
             @include defineFont(rem(22))
@@ -980,7 +789,6 @@ main {
         }
 
     }
-
 
     // merit 영역 
     .merit {
@@ -993,12 +801,16 @@ main {
                 @include defineFont(rem(16), 400, 1.6);
             }
         }
-
-        #pinned {
-            .col {
-                // position: static !important;
-            }
-        }
     }
 
+
+    // preview 영역
+
+
+    // ask 영역
+    .ask {
+        .typing-line {
+            @include defineFont(rem(22), 600);
+        }
+    }
 }
