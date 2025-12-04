@@ -32,13 +32,12 @@
         border: 2px solid $whiteColor01;
 
         &:hover {
-            background: $blackColor02;
+            background: $blackColor01;
             color: $whiteColor01;
             border: 2px solid $gradientColor01;
         }
 
         &--md {
-
             background-color: $blackColor01;
             height: rem(48);
         }
@@ -54,15 +53,13 @@
         span,
         p {
             @include gradient;
-
         }
 
         &:hover {
-            background: $gradientColor01;
+            background: $blackColor01;
 
             //   span,
             p {
-
                 background-color: $blackColor01;
                 color: $whiteColor01;
             }

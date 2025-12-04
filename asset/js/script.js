@@ -1,5 +1,5 @@
 
-// header 메뉴 호버시 서브메뉴 및 배경 나타남
+// header 메뉴 호버시 서브메뉴 및 배경 나타남 =====================
 $(function () {
     $(".header__menu").on("mouseenter", function () {
         $(".header__sub-menu-list, .menu-bg").stop().slideDown();
@@ -27,7 +27,7 @@ $(function () {
 });
 
 
-// kv영역
+// kv영역 =====================================================
 
 const tl1 = gsap.timeline();
 
@@ -42,7 +42,7 @@ tl1.from(".line span", 1.8, {
 })
 
 
-// introduce 영역
+// introduce 영역 ==============================================
 //04 : 이미지 축소하기
 const ani4 = gsap.timeline();
 ani4.from("#introduce-sec .introduce__conts", {
@@ -64,7 +64,7 @@ ScrollTrigger.create({
 });
 
 
-// merit 애니메이션 테스트 
+// merit 애니메이션 테스트  =======================================
 gsap.registerPlugin(ScrollTrigger);
 
 let mm = gsap.matchMedia();
@@ -165,44 +165,8 @@ mm.add("(max-width: 541px)", () => {
 
 });
 
-// gsap.registerPlugin(ScrollTrigger);
 
-// const tl = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: "#pinned",
-//         start: "top 15%",
-//         end: () => "+=600%",
-//         pin: true,
-//         scrub: 1,
-//         invalidateOnRefresh: true,
-//     }
-// });
-
-// // 카드 배열
-// const cards = [".card01", ".card02", ".card03", ".card04", ".card05"];
-
-// cards.forEach((card, i) => {
-
-
-//     // 첫 번째 카드 제외한 나머지 → 등장 애니메이션
-//     if (i !== 0) {
-//         tl.fromTo(card,
-//             { y: 40, opacity: 0 },
-//             { y: 0, opacity: 1 }
-//         );
-//     }
-
-//     // 마지막 카드 제외한 모든 카드 → 사라지는 애니메이션
-//     if (i !== cards.length - 1) {
-//         tl.to(card,
-//             { y: -40, opacity: 0 }
-//         );
-//     }
-
-// });
-
-
-// preview Swiper 
+// preview Swiper ==============================================
 var swiper = new Swiper(".previewSwiper", {
     slidesPerView: 1,
     spaceBetween: 15,
@@ -228,7 +192,7 @@ var swiper = new Swiper(".previewSwiper", {
 });
 
 
-// partners Swiper 
+// partners Swiper =============================================
 var swiper = new Swiper(".partnersSwiper", {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -258,7 +222,7 @@ var swiper = new Swiper(".partnersSwiper", {
 
 
 
-// news Swiper 
+// news Swiper ================================================
 var newsSwiper = new Swiper(".newsSwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -293,7 +257,7 @@ var newsSwiper = new Swiper(".newsSwiper", {
     }
 });
 
-// faq__menu 클릭시 faq__board 내용이 등장
+// faq__menu 클릭시 faq__board 내용이 등장 ======================
 $(".faq__menu").on("click", function (e) {
     let idx = $(this).index();
 
@@ -307,10 +271,7 @@ $(".faq__menu").on("click", function (e) {
 });
 
 
-
-
 // faq title 클릭 시 contents 등장
-
 $(".faq__board-title").on("click", function (e) {
     // 스크롤 튕김 방지
     e.preventDefault();
@@ -320,7 +281,6 @@ $(".faq__board-title").on("click", function (e) {
 
     // 현재 요소 토글
     $(this).next().slideToggle();
-
 
 });
 

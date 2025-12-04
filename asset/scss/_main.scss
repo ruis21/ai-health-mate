@@ -1,4 +1,4 @@
-﻿// kv section 
+﻿// kv section ==============================================
 .kv {
 
     background: linear-gradient(to left,
@@ -68,15 +68,6 @@
 }
 
 
-// html,
-// body {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh;
-// }
-
 main {
     .container {
         height: 100%;
@@ -102,7 +93,7 @@ main {
 
 }
 
-// introduce section 
+// introduce section ==========================================
 .introduce {
 
     width: 100vw;
@@ -209,8 +200,6 @@ main {
         // align-items: center;
         // justify-content: center;
     }
-
-
 }
 
 // solution section 
@@ -259,7 +248,6 @@ main {
             &:hover {
                 background-color: $primaryColor02;
                 transition: all 0.3s ease-in-out;
-
             }
         }
     }
@@ -303,16 +291,11 @@ main {
         .card-text {
             @include defineFont(rem(32));
         }
-
     }
-
-
 }
 
 
-
-
-// merit section 
+// merit section ==============================================
 .merit {
 
     &__card {
@@ -345,7 +328,6 @@ main {
             @include defineFont(rem(22), regular, 1.6);
         }
     }
-
 
     #pinned {
         position: relative;
@@ -411,7 +393,7 @@ main {
 //     justify-content: center;
 // }
 
-// preview section 
+// preview section =============================================
 .preview {
     margin-top: rem(600);
     background-color: $whiteColor01;
@@ -540,7 +522,7 @@ main {
 }
 
 
-// ask section 
+// ask section ===============================================
 .ask {
     background: $gradientColor01;
     color: $whiteColor01;
