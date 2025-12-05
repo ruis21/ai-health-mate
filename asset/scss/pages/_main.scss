@@ -17,29 +17,22 @@
 
     &__text-wrap {
         color: $whiteColor01;
-        height: 100vh;
+        // height: 100vh;
 
-        @include flex(center, stretch, 0, column);
+        height: 100%;
+        width: 100vw;
+        // @include flex(center, center, 0 column);
 
-        .ai {
-            @include defineFont (rem(60), 600);
-            font-family: "Science Gothic", sans-serif;
+        .line {
+            width: 70%;
+            height: 70px;
             position: relative;
-            z-index: 10;
-            display: inline-block;
+            overflow: hidden;
 
-            // ai 뒤에 그라데이션 박스
-            &::after {
-                content: '';
-                display: inline-block;
+            .txt {
                 position: absolute;
-                z-index: -1;
-                left: 0;
-                // bottom: 0;
-                top: rem(15);
-                background: $gradientColor01;
-                height: 60%;
-                width: rem(80);
+                font-size: 3rem;
+                line-height: 4.2rem;
             }
         }
 
@@ -48,50 +41,73 @@
         }
     }
 
+    @include flex(center, stretch, 0, column);
+
+    .ai {
+        @include defineFont (rem(60), 600);
+        font-family: "Science-Gothic";
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+
+        // ai 뒤에 그라데이션 박스
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            // bottom: 0;
+            top: rem(15);
+            background: $gradientColor01;
+            height: 60%;
+            width: rem(80);
+        }
+    }
+
+
+
     &__title {
-        font-family: "Science Gothic", sans-serif;
+        font-family: "Science-Gothic", sans-serif;
         @include defineFont (rem(60), 600);
 
         span {
             @include defineFont (rem(80));
         }
     }
-
-
-
-    &__btn {
-        &:hover {
-            background-color: $primaryColor01;
-        }
-    }
-
 }
 
 
-main {
-    .container {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.test {
+    display: grid;
+    max-width: 1168px;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    grid-auto-flow: row;
+    align-items: center;
+    height: 90vh;
 
-        .txt {
-            width: 70%;
-            height: 70px;
-            position: relative;
-            overflow: hidden;
-
-            span {
-                position: absolute;
-                font-size: 3rem;
-                line-height: 4.2rem;
-            }
-        }
+    .headline {
+        grid-column: 3 / 12;
     }
 
+    h1 {
+        position: relative;
+        overflow: hidden;
+        height: 30px;
+        margin: 0;
+    }
+
+    .hide-text {
+        position: absolute;
+        z-index: 100;
+        top: 30px;
+    }
 }
+
+
+
 
 // introduce section ==========================================
 .introduce {

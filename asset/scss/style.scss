@@ -1,31 +1,31 @@
-@import 'variables';
-@import 'custom';
+@import './custom/variables';
+@import './custom/custom';
 @import '../../node_modules/bootstrap/scss/bootstrap';
-@import 'font';
-@import 'reset';
-@import 'mixin';
-@import 'extend';
-@import 'button';
+@import './custom/font';
+@import './custom/reset';
+@import './component/mixin';
+@import './custom/extend';
+@import './component/button';
 
 // header 
-@import 'header';
+@import './component/header';
 
 // main page
-@import 'main';
+@import './pages/main';
 
 // about page 
-@import 'about';
+@import './pages/about';
 
 // news page 
-@import 'news';
+@import './pages/news';
 
 // membership page
-@import 'membership';
+@import './pages/membership';
 
 // contact page
-@import 'faq';
-@import 'inquiry';
-@import 'map';
+@import './pages/faq';
+@import './pages/inquiry';
+@import './pages/map';
 
 // footer
-@import 'footer';
+@import './component/footer';

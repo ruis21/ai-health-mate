@@ -29,17 +29,18 @@ $(function () {
 
 // kv영역 =====================================================
 
+const myText = new SplitType('.kv__title');
+
 const tl1 = gsap.timeline();
 
-tl1.from(".line span", 1.8, {
-    y: 100,
-    ease: "power4.out",
-    delay: 1,
-    skewY: 7,
-    stagger: {
-        amount: 0.3
-    }
-})
+tl1.to('.char', {
+    y: 0,
+    opacity: 1,
+    stagger: 0.05,
+    delay: 0.2,
+    duration: 0.5,
+    ease: "power2.out"
+}, 0)
 
 
 // introduce 영역 ==============================================

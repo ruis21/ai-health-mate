@@ -23,6 +23,15 @@
     }
 }
 
+
+.kv {
+    &__btn {
+        &:hover {
+            background-color: $primaryColor01;
+        }
+    }
+}
+
 .ask {
     &__btn01 {
         background: transparent;
