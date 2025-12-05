@@ -9003,6 +9003,7 @@ p {
 }
 .inquiry__btn:hover {
   background-color: #0097F6;
+  color: #ffffff;
 }
 
 .header {
@@ -9547,7 +9548,7 @@ p {
 .preview__btn .swiper-button-next,
 .preview__btn .swiper-button-prev {
   position: relative;
-  top: -70px;
+  top: -4.375rem;
   margin-top: initial;
   left: initial;
   right: initial;
@@ -9555,8 +9556,8 @@ p {
   color: #ADADAD;
   border: 1px solid #7E7E7E;
   border-radius: 50%;
-  width: 53px;
-  height: 53px;
+  width: 3.3125rem;
+  height: 3.3125rem;
   color: #fff;
 }
 

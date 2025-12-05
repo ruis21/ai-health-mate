@@ -89,8 +89,6 @@
 }
 
 
-
-
 .membership {
     &__btn {
         @include gradient;
@@ -114,7 +112,7 @@
 
         &:hover {
             background-color: $primaryColor02;
-            // coloror01;
+            color: $whiteColor01;
         }
     }
 }

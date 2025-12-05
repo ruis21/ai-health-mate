@@ -420,13 +420,6 @@
         padding: rem(30);
     }
 
-    // .swiper-slide img {
-    //     display: block;
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: cover;
-    // }
-
     &__wrap {
         position: relative;
     }
@@ -445,9 +438,6 @@
         }
 
         p {
-            // white-space: nowrap;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
             color: $grayColor02;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -475,7 +465,6 @@
             span {
                 transition: all 0.3s ease-in-out;
                 color: $whiteColor01;
-                // border: $whiteColor01;
             }
 
             .preview__direct-btn {
@@ -519,17 +508,16 @@
         .swiper-button-next,
         .swiper-button-prev {
             position: relative;
-            top: -70px;
+            top: rem(-70);
             margin-top: initial;
             left: initial;
             right: initial;
             background-color: $whiteColor01;
             color: $grayColor02;
-            // background-color: rgba(0, 0, 0, 0.5);
             border: 1px solid $grayColor01;
             border-radius: 50%;
-            width: 53px;
-            height: 53px;
+            width: rem(53);
+            height: rem(53);
             color: #fff;
 
         }
