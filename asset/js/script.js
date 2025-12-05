@@ -29,18 +29,17 @@ $(function () {
 
 // kv영역 =====================================================
 
-const myText = new SplitType('.kv__title');
 
-const tl1 = gsap.timeline();
+// const tl1 = gsap.timeline();
 
-tl1.to('.char', {
-    y: 0,
-    opacity: 1,
-    stagger: 0.05,
-    delay: 0.2,
-    duration: 0.5,
-    ease: "power2.out"
-}, 0)
+// tl1.to('.char', {
+//     y: 0,
+//     opacity: 1,
+//     stagger: 0.05,
+//     delay: 0.2,
+//     duration: 0.5,
+//     ease: "power2.out"
+// }, 0)
 
 
 // introduce 영역 ==============================================
@@ -100,7 +99,8 @@ mm.add("(min-width: 769px)", () => {
 
 });
 
-
+console.log(ScrollTrigger); // 로드 확인
+console.log(document.querySelector('#pinned')); // 요소 존재 확인
 
 // ★ 2) Tablet: 768px 이하 ~ 542px 이상 — 카드 2개씩
 mm.add("(max-width: 768px) and (min-width: 542px)", () => {

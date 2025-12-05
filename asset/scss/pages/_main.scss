@@ -23,21 +23,22 @@
         width: 100vw;
         // @include flex(center, center, 0 column);
 
-        .line {
-            width: 70%;
-            height: 70px;
-            position: relative;
-            overflow: hidden;
+        // .line {
+        //     width: 70%;
+        //     height: 70px;
+        //     position: relative;
+        //     overflow: hidden;
 
-            .txt {
-                position: absolute;
-                font-size: 3rem;
-                line-height: 4.2rem;
-            }
-        }
+        //     .txt {
+        //         position: absolute;
+        //         font-size: 3rem;
+        //         line-height: 4.2rem;
+        //     }
+        // }
 
         h3 {
             @include defineFont (rem(32));
+            // color: $whiteColor01;
         }
     }
 
