@@ -105,7 +105,6 @@
     }
 
     &__wrap {
-        @include flex(center, flex-start, rem(40));
 
         h3 {
             color: $primaryColor02;
@@ -137,8 +136,8 @@
     &__grid {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        padding: rem(50) 0;
+        grid-template-columns: 1fr 2fr;
+        padding: rem(50) rem(20);
     }
 
     &__left {
@@ -320,18 +319,20 @@
             }
         }
 
+        &__grid {
+            grid-template-columns: 1fr;
+            margin: rem(50) 0;
+            grid-template-rows: 1fr;
+            gap: rem(40);
+        }
+
         &__wrap {
             flex-direction: column;
             flex-wrap: wrap;
         }
 
-        &__left-wrap {
-            width: 100%
-        }
-
-        &__right-wrap {
-            width: 90%;
-            margin-left: 10%;
+        &__left {
+            position: static;
         }
 
         &__right {
@@ -340,7 +341,6 @@
         }
 
         &__right-txt {
-            // flex-wrap: wrap;
             word-break: keep-all;
             width: 100%;
         }

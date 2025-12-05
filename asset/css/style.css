@@ -9978,13 +9978,6 @@ p {
 .history .txt-wrap {
   line-height: 2;
 }
-.history__wrap {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2.5rem;
-  flex-direction: row;
-}
 .history__wrap h3, .history__wrap .h3 {
   color: #0097F6;
 }
@@ -10009,8 +10002,8 @@ p {
 .history__grid {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  padding: 3.125rem 0;
+  grid-template-columns: 1fr 2fr;
+  padding: 3.125rem 1.25rem;
 }
 .history__left {
   position: sticky;
@@ -10160,16 +10153,18 @@ p {
     bottom: 6.25rem;
     right: 1.25rem;
   }
+  .history__grid {
+    grid-template-columns: 1fr;
+    margin: 3.125rem 0;
+    grid-template-rows: 1fr;
+    gap: 2.5rem;
+  }
   .history__wrap {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .history__left-wrap {
-    width: 100%;
-  }
-  .history__right-wrap {
-    width: 90%;
-    margin-left: 10%;
+  .history__left {
+    position: static;
   }
   .history__right {
     width: 100%;
@@ -10231,6 +10226,10 @@ p {
   position: relative;
   margin: 0 auto;
   column-gap: 3rem;
+}
+.news .newsSwiper {
+  width: 100%;
+  height: 100%;
 }
 .news .swiper-slide {
   background-color: #F5F5F5;
@@ -10301,7 +10300,7 @@ p {
   color: #F5F5F5;
   text-align: center;
   position: relative;
-  top: -12.5rem;
+  top: -6.25rem;
   z-index: -1;
 }
 .news__board-wrap h5, .news__board-wrap .h5,
@@ -10407,8 +10406,7 @@ p {
     color: #ADADAD;
   }
   .news__txt p {
-    display: none;
-    opacity: 0;
+    display: none !important;
   }
   .news__bg-txt p {
     display: none;
@@ -10730,7 +10728,7 @@ p {
 .inquiry__right-box label {
   display: block;
   width: 100%;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0;
@@ -10806,12 +10804,6 @@ p {
   .inquiry__left-box p {
     font-size: 1.125rem;
     font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 0;
-  }
-  .inquiry__right-box label {
-    font-size: 1.125rem;
-    font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
   }

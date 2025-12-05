@@ -23,7 +23,7 @@
         label {
             display: block;
             width: 100%;
-            @include defineFont (rem(22), 600)
+            @include defineFont (rem(18), 600)
         }
 
         fieldset {
@@ -112,14 +112,9 @@
         }
 
         &__right-box {
-            label {
-                @include defineFont (rem(18), 600);
-            }
 
             fieldset {
-
                 padding: rem(20);
-
             }
         }
 
