@@ -59,8 +59,8 @@ ScrollTrigger.create({
     end: "+=2000",
     scrub: 1,
     pin: true,
-    anticipatePin: 1,
-    markers: true
+    anticipatePin: 1
+    // markers: true  // 개발 완료 후 제거
 });
 
 
