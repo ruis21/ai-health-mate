@@ -235,7 +235,7 @@ var newsSwiper = new Swiper(".newsSwiper", {
         stretch: 0,
         depth: 100,
         modifier: 3,
-        slideShadows: true,
+        slideShadows: false,
     },
     navigation: {
         nextEl: ".swiper-button-next",

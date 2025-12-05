@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 
+
+    <!-- 부트스트랩 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="sanonymous">
 
+    <!-- swiper  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- style sheet  -->
     <link rel="stylesheet" href="./asset/css/style.css">
 
 
@@ -119,7 +126,7 @@
 
     <!-- about section -->
     <main>
-        <section class="about sec-pd-t about__bg" id="about-sec">
+        <section class="about sec-pd-t about__bg" id="about-sec" data-aos="fade-up" data-aos-duration="1500">
             <div class="container-xxl text-center">
 
                 <h2 class="about__title title m-b--xxl">ABOUT</h2>
@@ -138,7 +145,7 @@
         </section>
 
         <!-- vision section -->
-        <section class="vision sec-pd" id="vision-sec">
+        <section class="vision sec-pd" id="vision-sec" data-aos="fade-up" data-aos-duration="1500">
             <div class="container-xxl text-center">
                 <h2 class="vision__title title m-b--xxl">VISION</h2>
                 <div class="vision__wrap d-flex justify-content-between gap-5 position-relative">
@@ -164,7 +171,7 @@
 
 
         <!-- history section -->
-        <section class="history sec-pd" id="history-sec">
+        <section class="history sec-pd" id="history-sec" data-aos="fade-up" data-aos-duration="1500">
             <div class="container-xxl">
                 <h2 class="history_title title m-b--xxl text-center">HISTORY</h2>
                 <div class="history__wrap">
@@ -176,8 +183,6 @@
                         <img src="./asset/image/history-bg02.png" alt="히스토리 배경이미지">
                     </div>
 
-                    <!-- ======================================================================== -->
-                    <!-- ======================================================================== -->
 
 
                     <div class="history__grid-wrap">
@@ -408,7 +413,7 @@
 
         <!-- partners section -->
         <section class="partners sec-pd" id="partners-sec">
-            <div class="container-xxl">
+            <div class="container-xxl" data-aos="fade-up" data-aos-duration="1500">
                 <h2 class="partners__title title m-b--xxl">PARTNERS</h2>
                 <div class="swiper partnersSwiper" dir="ltr">
                     <div class="swiper-wrapper d-flex align-items-center">
@@ -511,6 +516,12 @@
 
     <!-- Swiper JS -->
     <script src="./asset/js/swiper-bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- gsap js  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
