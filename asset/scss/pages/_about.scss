@@ -134,76 +134,30 @@
         }
     }
 
-    &__left-wrap {
-        width: 40%;
+    &__grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: rem(50) 0;
     }
 
-    // -------------------------------------------------------
-    &__left-txt {
+    &__left {
         position: sticky;
-        top: rem(250);
-        z-index: 30;
+        top: rem(100); // 화면 상단으로부터의 거리
+        height: fit-content;
     }
-
-
-    &_right-wrap {
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        gap: 120px;
-    }
-
-    &__right {
-        min-height: 100vh;
-        /* 한 섹션이 화면을 꽉 채워야 감지가 확실함 */
-    }
-
-    // &__left-txt {
-    //     position: sticky;
-    //     top: rem(250);
-    //     min-height: 100vh; // 각 연도가 차지하는 공간
-    //     padding-bottom: 50vh; // 다음 연도와의 간격
-    //     z-index: 10;
-
-    //     // 각 연도의 z-index를 다르게
-    //     &:nth-child(1) {
-    //         z-index: 14;
-    //     }
-
-    //     // 2025년 (가장 위)
-    //     &:nth-child(2) {
-    //         z-index: 13;
-    //     }
-
-    //     // 2024년
-    //     &:nth-child(3) {
-    //         z-index: 12;
-    //     }
-
-    //     // 2023년
-    //     &:nth-child(4) {
-    //         z-index: 11;
-    //     }
-
-    //     // 2022년
-    // }
-
 
     &__right-wrap {
-        width: 60%;
-        min-height: 400vh; // ← Right가 충분히 길어야 sticky 효과 작동
         @include flex (flex-start, flex-start, rem(40), column);
     }
 
     &__right {
-        min-height: 90vh; // 각 연도의 left-txt와 매칭
-        margin-bottom: 5vh; // 박스 간 간격
         @include defineFont(rem(22));
         @include flex(flex-start, flex-start, rem(30), column);
     }
 
     &__right-txt {
-        @include flex(flex-start, flex-start, rem(40))
+        @include flex(flex-start, flex-start, rem(40));
     }
 
 }

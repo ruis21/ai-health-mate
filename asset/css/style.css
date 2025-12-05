@@ -10006,27 +10006,18 @@ p {
   bottom: 0;
   right: 6.25rem;
 }
-.history__left-wrap {
-  width: 40%;
+.history__grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 3.125rem 0;
 }
-.history__left-txt {
+.history__left {
   position: sticky;
-  top: 15.625rem;
-  z-index: 30;
-}
-.history_right-wrap {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 120px;
-}
-.history__right {
-  min-height: 100vh;
-  /* 한 섹션이 화면을 꽉 채워야 감지가 확실함 */
+  top: 6.25rem;
+  height: fit-content;
 }
 .history__right-wrap {
-  width: 60%;
-  min-height: 400vh;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -10034,8 +10025,6 @@ p {
   flex-direction: column;
 }
 .history__right {
-  min-height: 90vh;
-  margin-bottom: 5vh;
   font-size: 1.375rem;
   font-weight: 400;
   line-height: 1.3;
