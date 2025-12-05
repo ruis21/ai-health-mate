@@ -45,7 +45,7 @@
         margin: rem(10) 0;
         color: $whiteColor01;
         border-radius: rem(20);
-        @include defineFont (rem(32));
+        @include defineFont (rem(26));
     }
 
     &__card01 {
@@ -74,11 +74,11 @@
     &__circle-txt {
         p {
 
-            @include defineFont (rem(28));
+            @include defineFont (rem(26));
         }
 
         span {
-            @include defineFont (rem(48), 700);
+            @include defineFont (rem(32), 700);
         }
     }
 
@@ -332,11 +332,11 @@
     .vision {
         &__circle-txt {
             p {
-                @include defineFont (rem(26));
+                @include defineFont (rem(22));
             }
 
             span {
-                @include defineFont (rem(36), 700);
+                @include defineFont (rem(26), 700);
             }
         }
 
@@ -404,17 +404,17 @@
 @media (max-width:541px) {
     .vision {
         &__circle {
-            height: rem(300);
-            width: rem(300);
+            height: rem(250);
+            width: rem(250);
         }
 
         &__circle-txt {
             p {
-                @include defineFont (rem(22), 400, 1.5);
+                @include defineFont (rem(18), 400, 1.5);
             }
 
             span {
-                @include defineFont (rem(32), 700);
+                @include defineFont (rem(22), 700);
             }
         }
 

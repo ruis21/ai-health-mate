@@ -48,14 +48,14 @@ const ani4 = gsap.timeline();
 ani4.from("#introduce-sec .introduce__conts", {
     autoAlpha: 0,
     scale: 0.5,
-    transformOrigin: "center center",
+    transformOrigin: "center top",
     ease: "power2.out"
 });
 
 ScrollTrigger.create({
     animation: ani4,
     trigger: "#introduce-sec",
-    start: "top top",
+    start: "top 10%",
     end: "+=2000",
     scrub: 1,
     pin: true,
@@ -78,7 +78,7 @@ mm.add("(min-width: 769px)", () => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#pinned",
-            start: "top 15%",
+            start: "top 10%",
             end: "+=500%",
             pin: true,
             scrub: 1,
