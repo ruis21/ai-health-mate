@@ -98,7 +98,7 @@
 .introduce {
 
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
     @include flex(center);
 
@@ -106,11 +106,14 @@
         position: relative;
         background-color: black;
         color: $whiteColor01;
-        padding: rem(260) 0;
+        padding: rem(240) 0;
         overflow: hidden;
     }
 
     &__video {
+        display: block;
+        // width: 100%;
+        // height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -384,6 +387,7 @@
             }
 
             .preview__direct-btn {
+                vertical-align: center;
                 display: block;
                 transition: all 0.3s ease-in-out;
             }
@@ -461,39 +465,6 @@
         z-index: 0;
     }
 
-    // &__wrap {
-    //     word-break: keep-all;
-    //     font-size: rem(36);
-    //     font-weight: 700;
-    //     margin: rem(50);
-    //     width: rem(450);
-    //     text-align: center;
-    // }
-
-    // #cursor {
-    //     border-left: 2px solid #ffffff;
-    //     /* 커서 스타일 */
-    //     animation: blink 0.7s infinite;
-    //     display: inline-block;
-    //     margin-left: 2px;
-    //     height: 35px;
-    //     /* 폰트 크기와 동일하게 설정 */
-    //     vertical-align: middle;
-    // }
-
-    // @keyframes blink {
-    //     0% {
-    //         opacity: 1;
-    //     }
-
-    //     50% {
-    //         opacity: 0;
-    //     }
-
-    //     100% {
-    //         opacity: 1;
-    //     }
-    // }
 
     .typing-container {
         width: max-content;

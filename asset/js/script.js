@@ -46,7 +46,7 @@ $(function () {
 //04 : 이미지 축소하기
 const ani4 = gsap.timeline();
 ani4.from("#introduce-sec .introduce__conts", {
-    autoAlpha: 1,
+    autoAlpha: 0,
     scale: 0.5,
     transformOrigin: "center top",
     ease: "power2.out"
@@ -55,12 +55,12 @@ ani4.from("#introduce-sec .introduce__conts", {
 ScrollTrigger.create({
     animation: ani4,
     trigger: "#introduce-sec",
-    start: "top 10%",
+    start: "top top",
     end: "+=2000",
     scrub: 1,
     pin: true,
-    anticipatePin: 1
-    // markers: true  // 개발 완료 후 제거
+    anticipatePin: 1,
+    pinSpacing: true,
 });
 
 
@@ -282,20 +282,4 @@ $(".faq__board-title").on("click", function (e) {
     $(this).next().slideToggle();
 
 });
-
-
-// 존재 / 스타일 / 위치 확인
-console.log('cards count', document.querySelectorAll('.card01, .card02, .card03, .card04, .card05').length);
-document.querySelectorAll('.card01, .card02, .card03, .card04, .card05').forEach((el, i) => {
-    console.log(i, el.className,
-        'display=' + getComputedStyle(el).display,
-        'opacity=' + getComputedStyle(el).opacity,
-        'visibility=' + getComputedStyle(el).visibility,
-        'zIndex=' + getComputedStyle(el).zIndex,
-        'rect=', el.getBoundingClientRect()
-    );
-});
-// ScrollTrigger 상태 확인
-console.log('ScrollTriggers:', ScrollTrigger.getAll().map(t => ({ trigger: t.trigger, enabled: t.enabled })));
-
 
