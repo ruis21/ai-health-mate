@@ -8617,14 +8617,14 @@ textarea.form-control-lg {
   }
 }
 @font-face {
-  font-family: "Science-Gothic";
+  font-family: "Science Gothic";
   src: url("../font/ScienceGothic-SemiBold.woff") format("woff"), url("../font/ScienceGothic-Bold.woff2") format("woff2"), url("../font/ScienceGothic-Bold.eot") format("eot"), url("../font/ScienceGothic-Bold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Science-Gothic";
+  font-family: "Science Gothic";
   src: url("../font/ScienceGothic-SemiBold.woff") format("woff"), url("../font/ScienceGothic-SemiBold.woff2") format("woff2"), url("../font/ScienceGothic-SemiBold.eot") format("eot"), url("../font/ScienceGothic-SemiBold.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -8692,7 +8692,7 @@ textarea.form-control-lg {
 
 body {
   color: #111111;
-  font-family: "Pretendard", sans-serif;
+  font-family: " Pretendard", sans-serif;
 }
 
 html {
@@ -9213,7 +9213,7 @@ p {
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0;
-  font-family: "Science-Gothic";
+  font-family: "Science Gothic";
   position: relative;
   z-index: 10;
   display: inline-block;
@@ -9230,7 +9230,7 @@ p {
   width: 5rem;
 }
 .kv__title {
-  font-family: "Science-Gothic", sans-serif;
+  font-family: "Science Gothic";
   font-size: 3.75rem;
   font-weight: 600;
   line-height: 1.3;
@@ -9319,6 +9319,7 @@ p {
     opacity: 0;
   }
 }
+
 .solution {
   background-color: #191922;
   color: #ffffff;

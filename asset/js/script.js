@@ -46,7 +46,7 @@ $(function () {
 //04 : 이미지 축소하기
 const ani4 = gsap.timeline();
 ani4.from("#introduce-sec .introduce__conts", {
-    autoAlpha: 0,
+    autoAlpha: 1,
     scale: 0.5,
     transformOrigin: "center top",
     ease: "power2.out"
@@ -284,7 +284,18 @@ $(".faq__board-title").on("click", function (e) {
 });
 
 
-// $(".inquiry__btn").addClass("active");
-// $(".inquiry__btn").removeClass("active");
+// 존재 / 스타일 / 위치 확인
+console.log('cards count', document.querySelectorAll('.card01, .card02, .card03, .card04, .card05').length);
+document.querySelectorAll('.card01, .card02, .card03, .card04, .card05').forEach((el, i) => {
+    console.log(i, el.className,
+        'display=' + getComputedStyle(el).display,
+        'opacity=' + getComputedStyle(el).opacity,
+        'visibility=' + getComputedStyle(el).visibility,
+        'zIndex=' + getComputedStyle(el).zIndex,
+        'rect=', el.getBoundingClientRect()
+    );
+});
+// ScrollTrigger 상태 확인
+console.log('ScrollTriggers:', ScrollTrigger.getAll().map(t => ({ trigger: t.trigger, enabled: t.enabled })));
 
 

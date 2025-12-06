@@ -17,24 +17,8 @@
 
     &__text-wrap {
         color: $whiteColor01;
-        // height: 100vh;
 
         height: 100%;
-        // width: 100vw;
-        // @include flex(center, center, 0 column);
-
-        // .line {
-        //     width: 70%;
-        //     height: 70px;
-        //     position: relative;
-        //     overflow: hidden;
-
-        //     .txt {
-        //         position: absolute;
-        //         font-size: 3rem;
-        //         line-height: 4.2rem;
-        //     }
-        // }
 
         h3 {
             @include defineFont (rem(32));
@@ -46,7 +30,7 @@
 
     .ai {
         @include defineFont (rem(60), 600);
-        font-family: "Science-Gothic";
+        font-family: "Science Gothic";
         position: relative;
         z-index: 10;
         display: inline-block;
@@ -69,7 +53,7 @@
 
 
     &__title {
-        font-family: "Science-Gothic", sans-serif;
+        font-family: "Science Gothic";
         @include defineFont (rem(60), 600);
 
         span {
@@ -190,31 +174,6 @@
             }
         }
     }
-
-
-    #section4 {
-        // width: 100vw;
-        // height: 100vh;
-        // background-color: #222;
-    }
-
-    .parallax__item__num {
-        // position: absolute;
-        // right: 20px;
-        // bottom: 20px;
-        // font-size: 5vw;
-        // line-height: 1;
-        // width: 100%;
-    }
-
-    .parallax__item {
-        // width: 100vw;
-        // height: 100vh;
-        // position: relative;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-    }
 }
 
 // solution section 
@@ -318,7 +277,7 @@
         // width: 100%;
 
         img {
-            width: 50%
+            width: 50%;
         }
     }
 
@@ -361,52 +320,9 @@
         }
     }
 
-    // #red {
-    //     background: red;
-    // }
-
-    // #green {
-    //     background: green;
-    // }
-
-    // section {
-    //     height: 100vh;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    // }
 }
 
 
-
-// #pinned {
-//     position: relative;
-//     background: lightskyblue;
-
-//     >div {
-//         position: absolute;
-//     }
-
-//     .world,
-//     .greeting {
-//         opacity: 0;
-//     }
-// }
-
-// #red {
-//     background: red;
-// }
-
-// #green {
-//     background: green;
-// }
-
-// section {
-//     height: 100vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
 
 // preview section =============================================
 .preview {
@@ -704,11 +620,6 @@
 
     }
 
-    .merit {
-        &__card {
-            // flex-direction: column-reverse;
-        }
-    }
 }
 
 @media (max-width: 1024px) {
