@@ -64,6 +64,7 @@ ScrollTrigger.create({
 });
 
 
+
 // merit 애니메이션 테스트  =======================================
 gsap.registerPlugin(ScrollTrigger);
 
@@ -98,9 +99,6 @@ mm.add("(min-width: 769px)", () => {
         .fromTo(".card05", { y: 40, opacity: 0 }, { y: 0, opacity: 1 });
 
 });
-
-console.log(ScrollTrigger); // 로드 확인
-console.log(document.querySelector('#pinned')); // 요소 존재 확인
 
 // ★ 2) Tablet: 768px 이하 ~ 542px 이상 — 카드 2개씩
 mm.add("(max-width: 768px) and (min-width: 542px)", () => {
