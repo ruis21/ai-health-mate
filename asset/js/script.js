@@ -32,8 +32,8 @@ $(function () {
 
 const tl1 = gsap.timeline();
 
-tl1.from(".line span", 1.8, {
-    y: 100,
+tl1.from(".kv__text-wrap .line .ai,.kv__title, h3, .kv__btn", 1.8, {
+    y: 150,
     ease: "power4.out",
     delay: 1,
     skewY: 7,
@@ -71,23 +71,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 let mm = gsap.matchMedia();
 
-// ★ 1) PC: 769px 이상 — 카드 1개씩
+
+// ---------------------------------------------------------
+// PC (769px 이상) — 카드 1개씩
+// ---------------------------------------------------------
 mm.add("(min-width: 769px)", () => {
 
-    // 초기화
     gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
 
-    const tl2 = gsap.timeline({
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#pinned",
-            start: "top 10%",
+            start: "top 15%",
             end: "+=500%",
             pin: true,
             scrub: 1,
         }
     });
 
-    tl2.to(".card01", { y: -40, opacity: 0 })
+    tl.to(".card01", { y: -40, opacity: 0 })
         .fromTo(".card02", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
 
         .to(".card02", { y: -40, opacity: 0 })
@@ -98,50 +100,64 @@ mm.add("(min-width: 769px)", () => {
 
         .to(".card04", { y: -40, opacity: 0 })
         .fromTo(".card05", { y: 40, opacity: 0 }, { y: 0, opacity: 1 });
-
 });
 
-// ★ 2) Tablet: 768px 이하 ~ 542px 이상 — 카드 2개씩
+
+
+
+// ---------------------------------------------------------
+// Tablet (768~542px) — 카드 2개씩 (01+02 → 03+04 → 05)
+// ---------------------------------------------------------
 mm.add("(max-width: 768px) and (min-width: 542px)", () => {
 
-    // 초기화 (대신 01,02는 보이게)
+    // ★ 초기 상태: 1+2만 보이게
     gsap.set([".card01", ".card02"], { opacity: 1 });
     gsap.set([".card03", ".card04", ".card05"], { opacity: 0 });
 
-    const tl3 = gsap.timeline({
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#pinned",
-            start: "top 15%",
-            end: "+=500%",
+            start: "top 10%",
+            end: "+=600%",   // Tablet은 조금 더 길게
             pin: true,
             scrub: 1,
         }
     });
 
-    // 01+02 → 사라지고 03+04 등장
-    tl3.to([".card01", ".card02"], { y: -40, opacity: 0 })
-        .fromTo([".card03", ".card04"],
-            { y: 40, opacity: 0 },
-            { y: 0, opacity: 1 }
-        )
+    // 01+02 -> 사라짐
+    tl.to([".card01", ".card02"], { y: -40, opacity: 0 });
 
-        // 03+04 → 사라지고 05 등장
-        .to([".card03", ".card04"], { y: -40, opacity: 0 })
-        .fromTo(".card05",
-            { y: 40, opacity: 0 },
-            { y: 0, opacity: 1 }
-        );
+    // 03+04 -> 등장
+    tl.fromTo([".card03", ".card04"],
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 }
+    );
+
+    // ★ 유지! (없으면 바로 사라져서 안 보임)
+    tl.to({}, { duration: 0.8 });
+
+    // 03+04 -> 사라짐
+    tl.to([".card03", ".card04"], { y: -40, opacity: 0 });
+
+    // 05 -> 등장
+    tl.fromTo(".card05",
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1 }
+    );
+
 });
 
 
 
-// ★ 3) Mobile: 541px 이하 — 다시 카드 1개씩
+
+// ---------------------------------------------------------
+// Mobile (541px 이하) — 다시 1개씩
+// ---------------------------------------------------------
 mm.add("(max-width: 541px)", () => {
 
-    // 초기화
     gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
 
-    const tl4 = gsap.timeline({
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#pinned",
             start: "top 15%",
@@ -151,7 +167,7 @@ mm.add("(max-width: 541px)", () => {
         }
     });
 
-    tl4.to(".card01", { y: -40, opacity: 0 })
+    tl.to(".card01", { y: -40, opacity: 0 })
         .fromTo(".card02", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
 
         .to(".card02", { y: -40, opacity: 0 })
@@ -162,7 +178,6 @@ mm.add("(max-width: 541px)", () => {
 
         .to(".card04", { y: -40, opacity: 0 })
         .fromTo(".card05", { y: 40, opacity: 0 }, { y: 0, opacity: 1 });
-
 });
 
 
