@@ -45,23 +45,52 @@ tl1.from(".kv__text-wrap .line .ai,.kv__title, h3, .kv__btn", 1.8, {
 
 // introduce 영역 ==============================================
 //04 : 이미지 축소하기
-const ani4 = gsap.timeline();
-ani4.from("#introduce-sec .introduce__conts", {
-    autoAlpha: 0,
-    scale: 0.5,
-    transformOrigin: "center top",
-    ease: "power2.out"
+gsap.registerPlugin(ScrollTrigger);
+let mm = gsap.matchMedia();
+
+// PC (769px 이상)
+mm.add("(min-width: 769px)", () => {
+    const ani4 = gsap.timeline();
+    ani4.from("#introduce-sec .introduce__conts", {
+        autoAlpha: 0,
+        scale: 0.5,
+        transformOrigin: "center top",
+        ease: "power2.out"
+    });
+
+    ScrollTrigger.create({
+        animation: ani4,
+        trigger: "#introduce-sec",
+        start: "top top",
+        end: "+=2000",
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        pinSpacing: true,
+    });
 });
 
-ScrollTrigger.create({
-    animation: ani4,
-    trigger: "#introduce-sec",
-    start: "top top",
-    end: "+=2000",
-    scrub: 1,
-    pin: true,
-    anticipatePin: 1,
-    pinSpacing: true,
+
+// Tablet & Mobile (768px 이하)
+mm.add("(max-width: 768px)", () => {
+    const ani4 = gsap.timeline();
+    ani4.from("#introduce-sec .introduce__conts", {
+        autoAlpha: 0,
+        scale: 0.7,   // 모바일은 조금 덜 줄어들게
+        transformOrigin: "center center",
+        ease: "power1.out"
+    });
+
+    ScrollTrigger.create({
+        animation: ani4,
+        trigger: "#introduce-sec",
+        start: "top 15%",  // 내려간 위치에서 시작
+        end: "+=1200",     //  스크롤 길이를 줄임
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        pinSpacing: true,
+    });
 });
 
 
@@ -182,7 +211,7 @@ mm.add("(max-width: 541px)", () => {
 
 
 // preview Swiper ==============================================
-var swiper = new Swiper(".previewSwiper", {
+var previewSwiper = new Swiper(".previewSwiper", {
     slidesPerView: 1,
     spaceBetween: 15,
     // centeredSlides: true,
@@ -208,7 +237,7 @@ var swiper = new Swiper(".previewSwiper", {
 
 
 // partners Swiper =============================================
-var swiper = new Swiper(".partnersSwiper", {
+var partnersSwiper = new Swiper(".partnersSwiper", {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
@@ -298,4 +327,6 @@ $(".faq__board-title").on("click", function (e) {
     $(this).next().slideToggle();
 
 });
+
+
 
