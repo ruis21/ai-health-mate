@@ -9974,8 +9974,6 @@ p {
 }
 .about__text-wrap .line span {
   position: absolute;
-  font-size: 3rem;
-  line-height: 4.2rem;
 }
 .about img {
   margin: 0 auto;
@@ -10036,6 +10034,12 @@ p {
 
 .history {
   position: relative;
+  z-index: 1;
+  background-image: url(/asset/image/history-bg01.png), url(/asset/image/history-bg02.png);
+  background-position: left 100px top 150px, right 0 bottom 100px;
+  background-repeat: no-repeat;
+  background-attachment: fixed, fixed;
+  background-size: auto, auto;
 }
 .history .num {
   font-weight: 700;
@@ -10047,24 +10051,6 @@ p {
 .history__wrap h3, .history__wrap .h3 {
   color: #0097F6;
 }
-.history__bg01 {
-  position: relative;
-  z-index: -1;
-}
-.history__bg01 img {
-  position: fixed;
-  top: 6.25rem;
-  left: 9.375rem;
-}
-.history__bg02 {
-  position: relative;
-  z-index: -1;
-}
-.history__bg02 img {
-  position: fixed;
-  bottom: 0;
-  right: 6.25rem;
-}
 .history__grid {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -10073,7 +10059,7 @@ p {
 }
 .history__left {
   position: sticky;
-  top: 6.25rem;
+  top: 12.5rem;
   height: fit-content;
 }
 .history__right-wrap {
@@ -10246,6 +10232,9 @@ p {
   }
 }
 @media (max-width: 541px) {
+  .about__text-wrap .line {
+    height: 3.125rem;
+  }
   .vision__circle {
     height: 15.625rem;
     width: 15.625rem;
@@ -10878,6 +10867,10 @@ p {
 .map {
   width: 100%;
   border-radius: 0.625rem;
+}
+.map .map-api {
+  width: 100%;
+  height: 39.375rem;
 }
 .map__txt p {
   padding: 0 1.25rem;

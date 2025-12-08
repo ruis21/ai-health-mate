@@ -197,10 +197,10 @@ var previewSwiper = new Swiper(".previewSwiper", {
 
 const tl = gsap.timeline();
 
-tl.from(".about__text-wrap .line span", 1.8, {
+tl.from(".about__text-wrap .line span", 1.5, {
     y: 100,
     ease: "power4.out",
-    delay: 1,
+    // delay: 1,
     skewY: 7,
     stagger: {
         amount: 0.3

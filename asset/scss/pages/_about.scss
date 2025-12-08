@@ -40,8 +40,6 @@
 
             span {
                 position: absolute;
-                font-size: 3rem;
-                line-height: 4.2rem;
             }
 
         }
@@ -117,7 +115,13 @@
 // history section 
 .history {
     position: relative;
+    z-index: 1;
     // padding-left: rem(70);
+    background-image: url(/asset/image/history-bg01.png), url(/asset/image/history-bg02.png);
+    background-position: left 100px top 150px, right 0 bottom 100px;
+    background-repeat: no-repeat;
+    background-attachment: fixed, fixed;
+    background-size: auto, auto;
 
     .num {
         font-weight: 700;
@@ -135,27 +139,31 @@
         }
     }
 
-    &__bg01 {
-        position: relative;
-        z-index: -1;
+    // &__bg01 {
+    //     position: relative;
+    //     z-index: -1;
 
-        img {
-            position: fixed;
-            top: rem(100);
-            left: rem(150);
-        }
-    }
+    //     img {
+    //         position: fixed;
+    //         top: rem(100);
+    //         left: rem(150);
+    //         z-index: -1;
+    //         pointer-events: none;
+    //     }
+    // }
 
-    &__bg02 {
-        position: relative;
-        z-index: -1;
+    // &__bg02 {
+    //     position: relative;
+    //     z-index: -1;
 
-        img {
-            position: fixed;
-            bottom: 0;
-            right: rem(100);
-        }
-    }
+    //     img {
+    //         position: fixed;
+    //         bottom: 0;
+    //         right: rem(100);
+    //         z-index: -1;
+    //         pointer-events: none;
+    //     }
+    // }
 
     &__grid {
         display: grid;
@@ -166,7 +174,7 @@
 
     &__left {
         position: sticky;
-        top: rem(100); // 화면 상단으로부터의 거리
+        top: rem(200); // 화면 상단으로부터의 거리
         height: fit-content;
     }
 
@@ -382,6 +390,14 @@
 
 
 @media (max-width:541px) {
+    .about {
+        &__text-wrap {
+            .line {
+                height: rem(50);
+            }
+        }
+    }
+
     .vision {
         &__circle {
             height: rem(250);
