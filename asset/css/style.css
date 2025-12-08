@@ -9435,26 +9435,12 @@ p {
   letter-spacing: 0;
 }
 
-.merit {
-  width: 100%;
-  height: 100vh;
-}
-.merit .scroller {
-  height: 100%;
-}
 .merit__card-wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  height: 100vh;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
+  flex-direction: row;
+  height: 100vh;
 }
 .merit__txt-wrap {
   position: relative;
@@ -9462,7 +9448,7 @@ p {
   width: 450px;
   height: 80vh;
 }
-.merit .text {
+.merit .txt {
   position: absolute;
   left: 0%;
   top: 0%;
@@ -9471,7 +9457,6 @@ p {
   z-index: 1;
   width: 100%;
   height: 100%;
-  text-align: center;
   transform: translateY(100%);
   opacity: 0;
 }
