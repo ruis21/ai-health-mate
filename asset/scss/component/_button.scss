@@ -5,24 +5,29 @@
     color: $blackColor01;
     border-radius: rem(30);
     border: none;
-    --bs-btn-font-weight: 700;
-    @include defineFont (rem(18), 700);
+    // --bs-btn-font-weight: 700;
+    font-weight: 700 !important;
+    font-size: rem(18);
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
     gap: rem(20);
 
-    &--md {
+    // 중간 화면에서 md 크기
+    @media (max-width: 1024px) {
         height: rem(48);
+        font-size: rem(18);
+        padding: rem(15) rem(30);
     }
 
-    &--sm {
+    // 작은 화면에서 sm 크기
+    @media (max-width: 541px) {
         height: rem(44);
         font-size: rem(16);
+        padding: rem(12) rem(25);
     }
 }
-
 
 .kv {
     &__btn {

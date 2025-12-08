@@ -30,16 +30,17 @@ $(function () {
 // kv영역 =====================================================
 
 
-// const tl1 = gsap.timeline();
+const tl1 = gsap.timeline();
 
-// tl1.to('.char', {
-//     y: 0,
-//     opacity: 1,
-//     stagger: 0.05,
-//     delay: 0.2,
-//     duration: 0.5,
-//     ease: "power2.out"
-// }, 0)
+tl1.from(".line span", 1.8, {
+    y: 100,
+    ease: "power4.out",
+    delay: 1,
+    skewY: 7,
+    stagger: {
+        amount: 0.3
+    }
+})
 
 
 // introduce 영역 ==============================================
@@ -76,7 +77,7 @@ mm.add("(min-width: 769px)", () => {
     // 초기화
     gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
 
-    const tl = gsap.timeline({
+    const tl2 = gsap.timeline({
         scrollTrigger: {
             trigger: "#pinned",
             start: "top 10%",
@@ -86,7 +87,7 @@ mm.add("(min-width: 769px)", () => {
         }
     });
 
-    tl.to(".card01", { y: -40, opacity: 0 })
+    tl2.to(".card01", { y: -40, opacity: 0 })
         .fromTo(".card02", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
 
         .to(".card02", { y: -40, opacity: 0 })
@@ -107,7 +108,7 @@ mm.add("(max-width: 768px) and (min-width: 542px)", () => {
     gsap.set([".card01", ".card02"], { opacity: 1 });
     gsap.set([".card03", ".card04", ".card05"], { opacity: 0 });
 
-    const tl = gsap.timeline({
+    const tl3 = gsap.timeline({
         scrollTrigger: {
             trigger: "#pinned",
             start: "top 15%",
@@ -118,7 +119,7 @@ mm.add("(max-width: 768px) and (min-width: 542px)", () => {
     });
 
     // 01+02 → 사라지고 03+04 등장
-    tl.to([".card01", ".card02"], { y: -40, opacity: 0 })
+    tl3.to([".card01", ".card02"], { y: -40, opacity: 0 })
         .fromTo([".card03", ".card04"],
             { y: 40, opacity: 0 },
             { y: 0, opacity: 1 }
@@ -140,7 +141,7 @@ mm.add("(max-width: 541px)", () => {
     // 초기화
     gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
 
-    const tl = gsap.timeline({
+    const tl4 = gsap.timeline({
         scrollTrigger: {
             trigger: "#pinned",
             start: "top 15%",
@@ -150,7 +151,7 @@ mm.add("(max-width: 541px)", () => {
         }
     });
 
-    tl.to(".card01", { y: -40, opacity: 0 })
+    tl4.to(".card01", { y: -40, opacity: 0 })
         .fromTo(".card02", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
 
         .to(".card02", { y: -40, opacity: 0 })
