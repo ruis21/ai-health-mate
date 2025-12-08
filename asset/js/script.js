@@ -20,9 +20,13 @@ $(function () {
 
 
     // 모바일에서 m-nav 메뉴 클릭시 서브메뉴 등장
-    $(".m-header__menu a").on("click", function (event) {
-        event.preventDefault();
-        $(this).next(".m-header__sub-menu-list").stop().slideToggle();
+    $(".m-header__menu > a").on("click", function (event) {
+        // 서브메뉴가 있는 경우만 토글
+        if ($(this).next(".m-header__sub-menu-list").length > 0) {
+            event.preventDefault();
+            $(this).next(".m-header__sub-menu-list").stop().slideToggle();
+        }
+        // 서브메뉴가 없으면 그냥 페이지 이동
     });
 });
 
@@ -46,7 +50,6 @@ tl1.from(".kv__text-wrap .line .ai,.kv__title, h3, .kv__btn", 1.8, {
 // introduce 영역 ==============================================
 //04 : 이미지 축소하기
 gsap.registerPlugin(ScrollTrigger);
-let mm = gsap.matchMedia();
 
 // PC (769px 이상)
 mm.add("(min-width: 769px)", () => {
@@ -96,16 +99,16 @@ mm.add("(max-width: 768px)", () => {
 
 
 // merit 애니메이션 테스트  =======================================
+
 gsap.registerPlugin(ScrollTrigger);
 
-let mm = gsap.matchMedia();
-
+const mm = gsap.matchMedia();
 
 // ---------------------------------------------------------
 // PC (769px 이상) — 카드 1개씩
 // ---------------------------------------------------------
 mm.add("(min-width: 769px)", () => {
-
+    ScrollTrigger.refresh(true);
     gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
 
     const tl = gsap.timeline({
@@ -138,7 +141,7 @@ mm.add("(min-width: 769px)", () => {
 // Tablet (768~542px) — 카드 2개씩 (01+02 → 03+04 → 05)
 // ---------------------------------------------------------
 mm.add("(max-width: 768px) and (min-width: 542px)", () => {
-
+    ScrollTrigger.refresh(true);
     // ★ 초기 상태: 1+2만 보이게
     gsap.set([".card01", ".card02"], { opacity: 1 });
     gsap.set([".card03", ".card04", ".card05"], { opacity: 0 });
@@ -183,7 +186,7 @@ mm.add("(max-width: 768px) and (min-width: 542px)", () => {
 // Mobile (541px 이하) — 다시 1개씩
 // ---------------------------------------------------------
 mm.add("(max-width: 541px)", () => {
-
+    ScrollTrigger.refresh(true);
     gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
 
     const tl = gsap.timeline({
