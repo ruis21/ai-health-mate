@@ -306,53 +306,134 @@
 // merit section ==============================================
 .merit {
 
-    &__card {
-        @include flex(space-between, center, 5%);
-        // width: 100%;
 
-        img {
-            width: 50%;
-        }
+    .scroller {
+        height: 100vh;
     }
 
-    .col {
-        top: rem(120);
+    &__card-wrap {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 100vh;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
 
-
-    &__text {
-        width: 50%;
-
-        .card-num {
-            @include defineFont(rem(30), 600);
-            color: $primaryColor01;
-        }
-
-        .card-title {
-            @include defineFont(rem(36), 600);
-        }
-
-        .card-conts {
-            @include defineFont(rem(22), regular, 1.6);
-        }
-    }
-
-    #pinned {
+    &__txt-wrap {
         position: relative;
-        // background: lightskyblue;
-
-        .col {
-            position: absolute;
-            height: 100vh;
-        }
-
-        .card02,
-        .card03,
-        .card04,
-        .card05 {
-            opacity: 0;
-        }
+        overflow: hidden;
+        width: 450px;
+        height: 80vh;
     }
+
+    .text {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    &__img-wrap {
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+        max-width: 600px;
+        height: 80vh;
+    }
+
+    .img {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-image: url("/asset/image/merit-card01.jpg");
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .img02 {
+        background-image: url("/asset/image/merit-card02.jpg");
+    }
+
+    .img03 {
+        background-image: url("/asset/image/merit-card03.jpg");
+    }
+
+    .img04 {
+        background-image: url("/asset/image/merit-card04.jpg");
+    }
+
+    .img05 {
+        background-image: url("/asset/image/merit-card05.jpg");
+    }
+
+
+    // &__card {
+    //     @include flex(space-between, center, 5%);
+    //     // width: 100%;
+
+    //     img {
+    //         width: 50%;
+    //     }
+    // }
+
+    // .col {
+    //     top: rem(120);
+    // }
+
+
+    // &__text {
+    //     width: 50%;
+
+    //     .card-num {
+    //         @include defineFont(rem(30), 600);
+    //         color: $primaryColor01;
+    //     }
+
+    //     .card-title {
+    //         @include defineFont(rem(36), 600);
+    //     }
+
+    //     .card-conts {
+    //         @include defineFont(rem(22), regular, 1.6);
+    //     }
+    // }
+
+    // #pinned {
+    //     position: relative;
+    //     // background: lightskyblue;
+
+    //     .col {
+    //         position: absolute;
+    //         height: 100vh;
+    //     }
+
+    //     .card02,
+    //     .card03,
+    //     .card04,
+    //     .card05 {
+    //         opacity: 0;
+    //     }
+    // }
 
 }
 
@@ -711,8 +792,8 @@
 
     // merit 영역
     .merit {
-        &__text {
-            width: 100%;
+        &__txt {
+            // width: 100%;
 
             .card-num {
                 @include defineFont(rem(22), 600);
@@ -728,13 +809,13 @@
             }
         }
 
-        &__card {
-            flex-direction: column-reverse;
+        // &__card {
+        //     flex-direction: column-reverse;
 
-            img {
-                width: 100%;
-            }
-        }
+        //     img {
+        //         width: 100%;
+        //     }
+        // }
 
         // #pinned {
         //     .col {
