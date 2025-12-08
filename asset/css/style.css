@@ -9435,8 +9435,12 @@ p {
   letter-spacing: 0;
 }
 
-.merit .scroller {
+.merit {
+  width: 100%;
   height: 100vh;
+}
+.merit .scroller {
+  height: 100%;
 }
 .merit__card-wrap {
   display: -webkit-box;
