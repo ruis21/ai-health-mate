@@ -343,6 +343,20 @@
         // text-align: center;
         transform: translateY(100%);
         opacity: 0;
+
+        .card-num {
+            @include defineFont(rem(30), 600);
+            color: $primaryColor01;
+        }
+
+        .card-title {
+            @include defineFont(rem(36), 600);
+        }
+
+        .card-conts {
+            @include defineFont(rem(22), regular, 1.6);
+        }
+
     }
 
     &__img-wrap {

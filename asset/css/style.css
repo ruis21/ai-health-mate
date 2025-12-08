@@ -9460,6 +9460,25 @@ p {
   transform: translateY(100%);
   opacity: 0;
 }
+.merit .txt .card-num {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #0ED058;
+}
+.merit .txt .card-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+.merit .txt .card-conts {
+  font-size: 1.375rem;
+  font-weight: regular;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
 .merit__img-wrap {
   position: relative;
   overflow: hidden;

@@ -261,6 +261,62 @@ tl.from(".about__text-wrap .line span", 1.5, {
     }
 })
 
+// history gsap =============================
+// gsap.set(".history__grid", {
+//     opacity: 0,
+//     y: 50
+// });
+
+// const historyItems = gsap.utils.toArray(".history__grid");
+
+// // 전체 스크롤 길이만큼 pin
+// ScrollTrigger.create({
+//     trigger: "#history-sec",
+//     start: "top top",
+//     end: "+=" + historyItems.length * window.innerHeight,
+//     scrub: true,
+//     pin: true,
+// });
+
+// // 각 history 블록을 순서대로 등장/퇴장 처리
+// historyItems.forEach((item, i) => {
+
+//     gsap.timeline({
+//         scrollTrigger: {
+//             trigger: "#history-sec",
+//             start: () => "top -" + window.innerHeight * i,
+//             end: () => "+=" + window.innerHeight,
+//             scrub: true,
+//         }
+//     })
+//         .to(item, { opacity: 1, y: 0 })         // 등장
+//         .to(item, { opacity: 0, y: -50 });      // 사라짐
+// });
+
+// history__wrap: 스크롤에 따라 서서히 등장했다가 사라지게 함
+
+const items = gsap.utils.toArray('.history__grid');
+if (!items.length) return;
+
+// 초기 상태
+gsap.set(items, { autoAlpha: 0, y: 50 });
+
+items.forEach((el) => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: el,
+            start: "top 80%",  // 화면에 들어올 때
+            end: "bottom 20%",  // 화면을 벗어날 때
+            scrub: true,
+            invalidateOnRefresh: true,
+            // markers: true, // 디버그용
+        }
+    });
+
+    // 0 -> 0.5 : fade in, 0.5 -> 1 : fade out
+    tl.to(el, { autoAlpha: 1, y: 0, ease: "none" }, 0)
+        .to(el, { autoAlpha: 0, y: -50, ease: "none" }, 0.5);
+});
 
 // partners Swiper =============================================
 var partnersSwiper = new Swiper(".partnersSwiper", {
