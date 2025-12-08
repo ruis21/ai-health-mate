@@ -41,10 +41,9 @@
             @include defineFont(rem(18), 500);
         }
 
-        &:hover {
-            color: $whiteColor01;
+        &:hover>a {
             font-weight: 600;
-            // @include gradient;
+            @include gradient;
         }
     }
 
