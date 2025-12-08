@@ -8937,8 +8937,19 @@ p {
   }
 }
 
+.kv__btn {
+  position: absolute;
+  left: 0;
+  width: auto;
+  margin-top: 2.5rem;
+}
 .kv__btn:hover {
   background-color: #0ED058;
+}
+@media (max-width: 768px) {
+  .kv__btn {
+    margin-top: 1.25rem;
+  }
 }
 
 .ask__btn01 {
@@ -9197,22 +9208,32 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 0;
+  gap: 1.25rem;
   flex-direction: column;
-  font-family: "Science Gothic";
-  font-size: 3.75rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0;
 }
 .kv__text-wrap .line {
   width: 100%;
-  height: 70px;
+  height: 4.375rem;
   position: relative;
   overflow: hidden;
 }
 .kv__text-wrap .line:last-child {
   overflow: visible;
+}
+.kv__text-wrap .line .ai,
+.kv__text-wrap .line .kv__title {
+  font-family: "Science Gothic";
+  font-size: 4.375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+.kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
+  margin-top: 1.25rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
 }
 .kv__text-wrap .line .ai,
 .kv__text-wrap .line .kv__title,
@@ -9225,24 +9246,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.kv__text-wrap .line .kv__btn {
-  position: absolute;
-  left: 0;
-  width: auto;
-  left: 0;
-}
-.kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.3;
-  letter-spacing: 0;
-}
 .kv .ai {
-  font-size: 3.75rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0;
-  font-family: "Science Gothic";
   position: relative;
   z-index: 10;
   display: inline-block;
@@ -9253,10 +9257,10 @@ p {
   position: absolute;
   z-index: -1;
   left: 0;
-  top: 0.9375rem;
+  top: 1.25rem;
   background: linear-gradient(135deg, #0ED058, #0097F6);
-  height: 60%;
-  width: 5rem;
+  height: 72%;
+  width: 5.3125rem;
 }
 .kv__title {
   font-family: "Science Gothic";
@@ -9716,6 +9720,10 @@ p {
   }
   .kv__text-wrap {
     padding: 0 5rem;
+    gap: 0.625rem;
+  }
+  .kv__text-wrap .line {
+    height: 3.125rem;
   }
   .kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
     font-size: 1.75rem;
@@ -9723,26 +9731,26 @@ p {
     line-height: 1.3;
     letter-spacing: 0;
   }
-  .kv__text-wrap .ai {
+  .kv__text-wrap .line .ai {
     font-size: 3.125rem;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
   }
-  .kv__text-wrap .ai::after {
+  .kv__text-wrap .line .ai::after {
     top: 0.9375rem;
-    height: 55%;
-    width: 4.375rem;
+    height: 80%;
+    width: 3.875rem;
+  }
+  .kv__text-wrap .line .kv__title {
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
   }
   .kv__title {
     font-size: 3.125rem;
     font-weight: 600;
-    line-height: 1.3;
-    letter-spacing: 0;
-  }
-  .kv__title span {
-    font-size: 3.125rem;
-    font-weight: 400;
     line-height: 1.3;
     letter-spacing: 0;
   }
@@ -9771,11 +9779,8 @@ p {
   .kv__text-wrap {
     padding: calc(9.375rem + 4.8125rem) 0 9.375rem;
   }
-  .kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 0;
+  .kv__text-wrap .line {
+    height: 3.125rem;
   }
   .introduce__conts {
     width: 100%;
@@ -9854,23 +9859,33 @@ p {
   .m-b--xxl {
     margin-bottom: 60px;
   }
-  .kv__text-wrap h3, .kv__text-wrap .h3 {
+  .kv__text-wrap {
+    gap: 0;
+  }
+  .kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.3;
     letter-spacing: 0;
+    margin-top: 0.625rem;
   }
-  .kv__text-wrap .ai {
+  .kv__text-wrap .line .ai {
     font-size: 1.875rem;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
     z-index: 5;
   }
-  .kv__text-wrap .ai::after {
+  .kv__text-wrap .line .ai::after {
     top: 0.5rem;
-    height: 60%;
-    width: 2.5rem;
+    height: 45%;
+    width: 2.375rem;
+  }
+  .kv__text-wrap .line .kv__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
   }
   .kv__title {
     font-size: 1.875rem;
@@ -9969,29 +9984,32 @@ p {
   line-height: 1.3;
   letter-spacing: 0;
 }
-.about__txt span {
+.about__txt .line p {
   color: #0097F6;
   font-size: 2.25rem;
   font-weight: 600;
   line-height: 1.8;
   letter-spacing: 0;
 }
-.about__text-wrap {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-}
-.about__text-wrap .line {
-  width: 80%;
-  height: 70px;
-  position: relative;
-  overflow: hidden;
-}
-.about__text-wrap .line span {
-  position: absolute;
-}
 .about img {
   margin: 0 auto;
+}
+.about .pinned {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.about__txt {
+  margin-top: 20px;
+}
+.about .line {
+  font-size: 2rem;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .vision__wrap {
@@ -10181,7 +10199,7 @@ p {
     line-height: 1.3;
     letter-spacing: 0;
   }
-  .about__txt span {
+  .about__txt .line p {
     color: #0097F6;
     font-size: 1.375rem !important;
     line-height: 1 !important;
@@ -10604,6 +10622,8 @@ p {
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0;
+  flex-wrap: nowrap;
+  text-align: center;
 }
 .faq__menu a {
   display: block;
@@ -10629,7 +10649,10 @@ p {
   display: none;
 }
 .faq__board hr {
-  margin: 0;
+  border: 1px solid #7E7E7E;
+}
+.faq__board-list li.on {
+  color: #0ED058;
 }
 .faq__board-title {
   width: 100%;
@@ -10732,18 +10755,26 @@ p {
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
+    flex-wrap: nowrap;
+    overflow: auto;
+    white-space: nowrap;
+    gap: 0.9375rem;
+    border-radius: 0;
+  }
+  .faq__tab-menu::-webkit-scrollbar {
+    display: none;
+  }
+  .faq__menu a {
+    display: block;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1240px) and (max-width: 1024px) {
   .faq__tab-menu {
-    flex-wrap: wrap;
     background-color: #ffffff;
-    border-radius: 2.5rem;
-    color: none;
-    text-align: center;
   }
   .faq__menu {
     background-color: #EEEEEE;
+    width: fit-content;
     border-radius: 2.5rem;
     color: #7E7E7E;
   }
@@ -10753,8 +10784,6 @@ p {
     padding: 2.5rem 2.5rem;
   }
   .faq__tab-menu {
-    gap: 0;
-    justify-content: flex-start;
     margin-bottom: 7.5rem;
   }
 }
@@ -10784,7 +10813,7 @@ p {
   word-break: keep-all;
 }
 .inquiry__left-box span {
-  font-family: "akira_expandedsuper_bold";
+  font-family: "Science Gothic";
   font-size: 1.625rem;
   font-weight: 600;
   line-height: 1.3;

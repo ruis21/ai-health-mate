@@ -12,7 +12,7 @@
         word-break: keep-all;
 
         span {
-            font-family: 'akira_expandedsuper_bold';
+            font-family: 'Science Gothic';
             @include defineFont (rem(26), 600);
         }
     }
@@ -86,7 +86,6 @@
 @media (max-width:768px) {
 
     .inquiry {
-
 
         &__right-box {
             fieldset {

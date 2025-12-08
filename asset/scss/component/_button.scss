@@ -31,8 +31,18 @@
 
 .kv {
     &__btn {
+        position: absolute;
+        left: 0;
+        width: auto;
+        margin-top: rem(40);
+
         &:hover {
             background-color: $primaryColor01;
+        }
+
+        @media (max-width: 768px) {
+            // position: static;
+            margin-top: rem(20);
         }
     }
 }

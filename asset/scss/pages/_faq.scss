@@ -1,16 +1,12 @@
 .faq {
     &__tab-menu {
         @include flex(space-between, center);
-        // justify-content: space-between;
-        // align-items: center;
         background-color: $grayColor04;
         border-radius: rem(40);
         color: $grayColor01;
         @include defineFont(rem(22), 600);
-
-        li {
-            // margin: rem(5) 0;
-        }
+        flex-wrap: nowrap;
+        text-align: center;
     }
 
     &__menu {
@@ -19,7 +15,6 @@
         a {
             display: block;
             padding: rem(20) rem(30);
-
         }
 
         &.on {
@@ -27,8 +22,6 @@
             background-color: $primaryColor01;
             color: $whiteColor01;
             transition: all 0.3s ease-in-out;
-
-            // padding: 5px 20px;
         }
     }
 
@@ -48,11 +41,19 @@
         }
 
         hr {
-            margin: 0;
-            ;
+            // margin: 0;
+            border: 1px solid $grayColor01;
         }
 
+    }
 
+    &__board-list {
+        li {
+            &.on {
+                color: $primaryColor01;
+            }
+
+        }
     }
 
     /* 기본 아이콘 스타일 */
@@ -60,9 +61,11 @@
         width: 100%;
         @include flex(space-between, center, 5%);
 
+
         h5 {
             @include defineFont (rem(18), 600);
             padding: rem(30) 0;
+
         }
 
         .line {
@@ -160,25 +163,41 @@
     .faq {
         &__tab-menu {
             @include defineFont (rem(18), 600);
-        }
-    }
-}
+            flex-wrap: nowrap;
+            overflow: auto;
+            white-space: nowrap;
+            gap: rem(15);
+            border-radius: 0;
 
-@media (max-width:1024px) {
-    .faq {
-        &__tab-menu {
-            // justify-content: flex-start;
-            flex-wrap: wrap;
-            background-color: $whiteColor01;
-            border-radius: rem(40);
-            color: none;
-            text-align: center;
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
 
         &__menu {
-            background-color: $grayColor04;
-            border-radius: rem(40);
-            color: $grayColor01;
+            a {
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width:1024px) {
+        .faq {
+            &__tab-menu {
+                // justify-content: flex-start;
+                // flex-wrap: wrap;
+                background-color: $whiteColor01;
+                // border-radius: rem(40);
+                // color: none;
+                // text-align: center;
+            }
+
+            &__menu {
+                background-color: $grayColor04;
+                width: fit-content;
+                border-radius: rem(40);
+                color: $grayColor01;
+            }
         }
     }
 }
@@ -190,8 +209,6 @@
         }
 
         &__tab-menu {
-            gap: 0;
-            justify-content: flex-start;
             margin-bottom: rem(120);
         }
 
@@ -203,7 +220,6 @@
         &__board-title {
             h5 {
                 @include defineFont (rem(16), 600);
-
             }
         }
 

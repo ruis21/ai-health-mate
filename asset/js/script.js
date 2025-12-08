@@ -36,7 +36,6 @@ gsap.registerPlugin(ScrollTrigger);
 const mm = gsap.matchMedia();
 
 const tl1 = gsap.timeline();
-
 tl1.from(".kv__text-wrap .line .ai,.kv__title, h3, .kv__btn", 1.8, {
     y: 150,
     ease: "power4.out",
@@ -249,76 +248,99 @@ var previewSwiper = new Swiper(".previewSwiper", {
 
 // about text 등장효과 ================================
 
-const tl = gsap.timeline();
 
-tl.from(".about__text-wrap .line span", 1.5, {
-    y: 100,
-    ease: "power4.out",
-    // delay: 1,
-    skewY: 7,
-    stagger: {
-        amount: 0.3
+// gsap.registerPlugin(ScrollTrigger);
+
+// Create timeline for text animations
+const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".pinned",
+        start: "top top",
+        end: "+=1000px",
+        scrub: true,
+        pin: true,
+        pinSpacing: true,
     }
-})
-
-// history gsap =============================
-// gsap.set(".history__grid", {
-//     opacity: 0,
-//     y: 50
-// });
-
-// const historyItems = gsap.utils.toArray(".history__grid");
-
-// // 전체 스크롤 길이만큼 pin
-// ScrollTrigger.create({
-//     trigger: "#history-sec",
-//     start: "top top",
-//     end: "+=" + historyItems.length * window.innerHeight,
-//     scrub: true,
-//     pin: true,
-// });
-
-// // 각 history 블록을 순서대로 등장/퇴장 처리
-// historyItems.forEach((item, i) => {
-
-//     gsap.timeline({
-//         scrollTrigger: {
-//             trigger: "#history-sec",
-//             start: () => "top -" + window.innerHeight * i,
-//             end: () => "+=" + window.innerHeight,
-//             scrub: true,
-//         }
-//     })
-//         .to(item, { opacity: 1, y: 0 })         // 등장
-//         .to(item, { opacity: 0, y: -50 });      // 사라짐
-// });
-
-// history__wrap: 스크롤에 따라 서서히 등장했다가 사라지게 함
-
-const items = gsap.utils.toArray('.history__grid');
-if (!items.length) return;
-
-// 초기 상태
-gsap.set(items, { autoAlpha: 0, y: 50 });
-
-items.forEach((el) => {
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: el,
-            start: "top 80%",  // 화면에 들어올 때
-            end: "bottom 20%",  // 화면을 벗어날 때
-            scrub: true,
-            invalidateOnRefresh: true,
-            // markers: true, // 디버그용
-        }
-    });
-
-    // 0 -> 0.5 : fade in, 0.5 -> 1 : fade out
-    tl.to(el, { autoAlpha: 1, y: 0, ease: "none" }, 0)
-        .to(el, { autoAlpha: 0, y: -50, ease: "none" }, 0.5);
 });
 
+// Animate text items one after another
+tl.to(".about__text-wrap .line:nth-child(1)", { opacity: 1, y: 0, duration: 1 })
+    .to(".about__text-wrap .line:nth-child(2)", { opacity: 1, y: 0, duration: 1 }, "+=0.5")
+    .to(".about__text-wrap .line:nth-child(3)", { opacity: 1, y: 0, duration: 1 }, "+=0.5");
+
+
+
+// const tl = gsap.timeline();
+
+// tl.from(".about__text-wrap .line span", 1.5, {
+//     y: 100,
+//     ease: "power4.out",
+//     // delay: 1,
+//     skewY: 7,
+//     stagger: {
+//         amount: 0.3
+//     }
+// })
+
+
+
+// history gsap =============================
+gsap.utils.toArray(".history__grid").forEach((grid) => {
+
+    let left = grid.querySelector(".history__left");
+    let right = grid.querySelector(".history__right");
+
+    // 초기 상태 설정
+    gsap.set(left, { autoAlpha: 0, y: 30 });
+    gsap.set(right, { autoAlpha: 0, y: 50 });
+
+    // 왼쪽(year + title) 등장 애니메이션 (한 번만 재생)
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: grid,
+            start: "top 80%",
+            end: "top 60%",
+            scrub: true,
+            // markers: true
+        }
+    })
+        .to(left, {
+            autoAlpha: 1,
+            y: 0,
+            ease: "power1.out"
+        });
+
+    // 오른쪽 콘텐츠 등장 + 사라짐
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: grid,
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: true,
+            invalidateOnRefresh: true,
+        }
+    })
+        // 등장 (선명해짐)
+        .to(right, {
+            autoAlpha: 1,
+            y: 0,
+            ease: "none"
+        }, 0)
+        // 사라짐 (흐려지며 위로)
+        .to(right, {
+            autoAlpha: 0,
+            y: -50,
+            ease: "none"
+        }, 0.6);
+});
+
+
+
+
 // partners Swiper =============================================
+
+
+
 var partnersSwiper = new Swiper(".partnersSwiper", {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -400,7 +422,10 @@ $(".faq__board-title").on("click", function (e) {
     // 현재 요소 토글
     $(this).next().slideToggle();
 
+    // 리스트의 같은 인덱스 항목에만 on 클래스 추가
+    const idx = $(".faq__board-title").index(this);
+    $(".faq__board-list li").removeClass("on");
+    $(".faq__board-list li").eq(idx).addClass("on");
 });
-
 
 

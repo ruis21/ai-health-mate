@@ -17,13 +17,11 @@
         color: $whiteColor01;
         height: 100%;
         width: 100%;
-        @include flex(center, flex-start, 0, column);
-        font-family: "Science Gothic";
-        @include defineFont (rem(60), 600);
+        @include flex(center, flex-start, rem(20), column);
 
         .line {
             width: 100%;
-            height: 70px;
+            height: rem(70);
             position: relative;
             overflow: hidden;
 
@@ -31,6 +29,17 @@
                 // height: auto;
                 overflow: visible;
                 // margin-top: rem(30);
+            }
+
+            .ai,
+            .kv__title {
+                font-family: "Science Gothic";
+                @include defineFont (rem(70), 600);
+            }
+
+            h3 {
+                margin-top: rem(20);
+                @include defineFont (rem(32));
             }
 
             .ai,
@@ -43,17 +52,6 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
-
-            .kv__btn {
-                position: absolute;
-                left: 0;
-                width: auto;
-                left: 0;
-            }
-
-            h3 {
-                @include defineFont (rem(32));
-            }
         }
 
     }
@@ -61,8 +59,6 @@
 
 
     .ai {
-        @include defineFont (rem(60), 600);
-        font-family: "Science Gothic";
         position: relative;
         z-index: 10;
         display: inline-block;
@@ -74,11 +70,10 @@
             position: absolute;
             z-index: -1;
             left: 0;
-            // bottom: 0;
-            top: rem(15);
+            top: rem(20);
             background: $gradientColor01;
-            height: 60%;
-            width: rem(80);
+            height: 72%;
+            width: rem(85);
         }
     }
 
@@ -687,33 +682,38 @@
 
         &__text-wrap {
             padding: 0 rem(80);
+            gap: rem(10);
 
             .line {
+
+                height: rem(50);
 
                 h3 {
                     @include defineFont(rem(28));
                 }
-            }
 
-            .ai {
-                @include defineFont (rem(50), 600);
+                .ai {
+                    @include defineFont (rem(50), 600);
 
-                &::after {
-                    top: rem(15);
-                    height: 55%;
-                    width: rem(70);
+                    &::after {
+                        top: rem(15);
+                        height: 80%;
+                        width: rem(62);
+                    }
+                }
+
+                .kv__title {
+                    @include defineFont (rem(50), 600);
                 }
             }
+
         }
 
         &__title {
             @include defineFont(rem(50), 600);
 
-            span {
-
-                @include defineFont(rem(50));
-            }
         }
+
     }
 }
 
@@ -752,13 +752,17 @@
         // height: 80vh;
 
         &__text-wrap {
-            .line {
-                h3 {
-                    @include defineFont(rem(32));
-                }
-            }
-
             padding: calc(rem(150) + rem(77)) 0 rem(150);
+
+            .line {
+
+                height: rem(50);
+
+                // .ai,
+                // .kv__title {
+                //     @include defineFont (rem(32), 600);
+                // }
+            }
         }
     }
 
@@ -877,23 +881,32 @@
         // height: auto;
 
         &__text-wrap {
+            gap: 0;
 
-
-            h3 {
-                @include defineFont(rem(18));
-
-            }
-
-            .ai {
-                @include defineFont(rem(30), 600);
-                z-index: 5;
-
-                &::after {
-                    top: rem(8);
-                    height: 60%;
-                    width: rem(40);
+            .line {
+                h3 {
+                    @include defineFont(rem(18));
+                    margin-top: rem(10);
                 }
+
+                .ai {
+                    @include defineFont(rem(30), 600);
+                    z-index: 5;
+
+                    &::after {
+                        top: rem(8);
+                        height: 45%;
+                        width: rem(38);
+                    }
+                }
+
+                .kv__title {
+                    @include defineFont (rem(32), 600);
+                }
+
             }
+
+
         }
 
         &__title {
