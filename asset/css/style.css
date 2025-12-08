@@ -8943,7 +8943,6 @@ p {
 
 .ask__btn01 {
   background: transparent;
-  font-size: 1.0625rem;
   background-color: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
@@ -8952,13 +8951,6 @@ p {
   background: #111111;
   color: #ffffff;
   border: 2px solid linear-gradient(135deg, #0ED058, #0097F6);
-}
-.ask__btn01--md {
-  background-color: #111111;
-  height: 3rem;
-}
-.ask__btn01--sm {
-  height: 2.75rem;
 }
 .ask__btn02 {
   background: #ffffff;
@@ -8980,12 +8972,6 @@ p {
   background: linear-gradient(135deg, #0ED058, #0097F6);
   color: transparent;
   -webkit-background-clip: text;
-}
-.ask__btn02--md {
-  height: 3rem;
-}
-.ask__btn02--sm {
-  height: 2.75rem;
 }
 
 .membership__btn {
@@ -9213,6 +9199,11 @@ p {
   align-items: flex-start;
   gap: 0;
   flex-direction: column;
+  font-family: "Science Gothic";
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
 }
 .kv__text-wrap .line {
   width: 100%;
@@ -9221,9 +9212,7 @@ p {
   overflow: hidden;
 }
 .kv__text-wrap .line:last-child {
-  height: auto;
   overflow: visible;
-  margin-top: 1.875rem;
 }
 .kv__text-wrap .line .ai,
 .kv__text-wrap .line .kv__title,
@@ -9235,8 +9224,6 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
-  line-height: 4.2rem;
 }
 .kv__text-wrap .line .kv__btn {
   position: absolute;
@@ -9701,7 +9688,7 @@ p {
   .kv__text-wrap {
     padding: 0 5rem;
   }
-  .kv__text-wrap h3, .kv__text-wrap .h3 {
+  .kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
     font-size: 1.75rem;
     font-weight: 400;
     line-height: 1.3;
@@ -9754,6 +9741,12 @@ p {
   }
   .kv__text-wrap {
     padding: calc(9.375rem + 4.8125rem) 0 9.375rem;
+  }
+  .kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
   }
   .introduce__conts {
     width: 100%;
@@ -10316,12 +10309,12 @@ p {
   color: #fff;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.493);
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
 }
 .news .swiper-button-next::after,
 .news .swiper-button-prev::after {
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 .news__img {
   background-position: center;
@@ -10355,7 +10348,7 @@ p {
   color: #F5F5F5;
   text-align: center;
   position: relative;
-  top: -6.25rem;
+  top: -5rem;
   z-index: -1;
 }
 .news__board-wrap h5, .news__board-wrap .h5,

@@ -40,7 +40,6 @@
 .ask {
     &__btn01 {
         background: transparent;
-        font-size: rem(17);
         background-color: transparent;
         color: $whiteColor01;
         border: 2px solid $whiteColor01;
@@ -51,14 +50,14 @@
             border: 2px solid $gradientColor01;
         }
 
-        &--md {
-            background-color: $blackColor01;
-            height: rem(48);
-        }
+        // &--md {
+        //     background-color: $blackColor01;
+        //     height: rem(48);
+        // }
 
-        &--sm {
-            height: rem(44);
-        }
+        // &--sm {
+        //     height: rem(44);
+        // }
     }
 
     &__btn02 {
@@ -72,7 +71,6 @@
         &:hover {
             background: $blackColor01;
 
-            //   span,
             p {
                 background-color: $blackColor01;
                 color: $whiteColor01;
@@ -83,13 +81,13 @@
             @include gradient;
         }
 
-        &--md {
-            height: rem(48);
-        }
+        // &--md {
+        //     height: rem(48);
+        // }
 
-        &--sm {
-            height: rem(44);
-        }
+        // &--sm {
+        //     height: rem(44);
+        // }
     }
 }
 
