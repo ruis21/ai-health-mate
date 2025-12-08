@@ -306,22 +306,57 @@
 // merit section ==============================================
 .merit {
 
-    &__card {
-        @include flex(space-between, center, 5%);
-        // width: 100%;
 
-        img {
-            width: 50%;
-        }
+    .scroller {
+        height: 100vh;
     }
 
-    .col {
-        top: rem(120);
+    &__card-wrap {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 100vh;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        // background-color: #070707;
+    }
+
+    .img01 {
+        height: 100vh;
+        background-image: url("/asset/image/merit-card01.jpg");
     }
 
 
-    &__text {
-        width: 50%;
+    &__text-wrap {
+        position: relative;
+        overflow: hidden;
+        width: 450px;
+        height: 80vh;
+    }
+
+    .text {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-align: center;
+        background-color: #070707;
+
+        transform: translateY(100%);
+        opacity: 0;
 
         .card-num {
             @include defineFont(rem(30), 600);
@@ -337,22 +372,127 @@
         }
     }
 
-    #pinned {
-        position: relative;
-        // background: lightskyblue;
 
-        .col {
-            position: absolute;
-            height: 100vh;
-        }
-
-        .card02,
-        .card03,
-        .card04,
-        .card05 {
-            opacity: 0;
-        }
+    .card01-txt {
+        // color: blue;
     }
+
+    .card02-txt {
+        // color: red;
+    }
+
+    .card03-txt {
+        // color: purple;
+    }
+
+    .card04-txt {
+        // color: orange;
+    }
+
+    .card05-txt {
+        // color: orange;
+    }
+
+
+    &__img-wrap {
+        position: relative;
+        overflow: hidden;
+        width: 450px;
+        height: 80vh;
+    }
+
+    .img {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-image: url("/asset/image/merit-card01.jpg");
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    // .panel._2 {
+    //     z-index: 1;
+    //     background-image: url("../images/5f5a5b3515c4dd0c2c455925_110642301_938622823267359_7859124022958180678_n201.jpg");
+    // }
+
+    .img01 {
+        z-index: auto;
+    }
+
+    .img02 {
+        z-index: auto;
+        background-image: url(/asset/image/merit-card02.jpg);
+    }
+
+    .img03 {
+        z-index: auto;
+        background-image: url(/asset/image/merit-card03.jpg);
+    }
+
+    .img04 {
+        z-index: auto;
+        background-image: url(/asset/image/merit-card04.jpg);
+    }
+
+    .img05 {
+        z-index: auto;
+        background-image: url("/asset/image/merit-card05.jpg");
+    }
+
+
+    // &__card {
+    //     @include flex(space-between, center, 5%);
+    //     // width: 100%;
+
+    //     img {
+    //         width: 50%;
+    //     }
+    // }
+
+    // .col {
+    //     top: rem(120);
+    // }
+
+
+    // &__text {
+    //     width: 50%;
+
+    //     .card-num {
+    //         @include defineFont(rem(30), 600);
+    //         color: $primaryColor01;
+    //     }
+
+    //     .card-title {
+    //         @include defineFont(rem(36), 600);
+    //     }
+
+    //     .card-conts {
+    //         @include defineFont(rem(22), regular, 1.6);
+    //     }
+    // }
+
+    // #pinned {
+    //     position: relative;
+    //     // background: lightskyblue;
+
+    //     .col {
+    //         position: absolute;
+    //         height: 100vh;
+    //     }
+
+    //     .card02,
+    //     .card03,
+    //     .card04,
+    //     .card05 {
+    //         opacity: 0;
+    //     }
+    // }
 
 }
 
@@ -728,14 +868,6 @@
             }
         }
 
-        &__card {
-            flex-direction: column-reverse;
-
-            img {
-                width: 100%;
-            }
-        }
-
         // #pinned {
         //     .col {
         //         left: 0;
@@ -888,6 +1020,14 @@
 
             .card-conts {
                 @include defineFont(rem(16), 400, 1.6);
+            }
+        }
+
+        &__card {
+            flex-direction: column-reverse;
+
+            img {
+                width: 100%;
             }
         }
 
