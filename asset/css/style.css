@@ -9444,7 +9444,8 @@ p {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  height: 100vh;
+  min-height: 80vh;
+  padding: 3.75rem 0;
 }
 .merit__txt-wrap {
   position: relative;
@@ -9955,6 +9956,12 @@ p {
   }
   .solution .solution-pd {
     padding: 60px 0;
+  }
+  .merit__card-wrap {
+    flex-direction: column-reverse;
+  }
+  .merit__img-wrap {
+    width: 100%;
   }
   .merit__text .card-title {
     font-size: 1.375rem;

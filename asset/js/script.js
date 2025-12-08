@@ -106,7 +106,7 @@ images.forEach((image, i) => {
     var tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".merit__card-wrap",
-            start: () => "top -" + window.innerHeight * (i + 0.5),
+            start: () => "top -" + window.innerHeight * (i),
             end: () => "+=" + window.innerHeight,
             scrub: true,
             toggleActions: "play none reverse none",
@@ -125,7 +125,7 @@ texts.forEach((text, i) => {
     var tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".merit__card-wrap",
-            start: () => "top -" + window.innerHeight * i,
+            start: () => "top -" + window.innerHeight * (i),
             end: () => "+=" + window.innerHeight,
             scrub: true,
             toggleActions: "play none reverse none",

@@ -303,9 +303,16 @@
     // width: 100%;
     // height: 100vh;
 
+    .scroller {
+        // height: 100vh;
+    }
+
     &__card-wrap {
         @include flex(space-around, center);
-        height: 100vh;
+        // height: 100vh;
+        min-height: 80vh;
+        padding: rem(60) 0;
+        // overflow: hidden;
         // display: -webkit-box;
         // display: -webkit-flex;
         // display: -ms-flexbox;
@@ -987,6 +994,14 @@
 
     // merit 영역 
     .merit {
+        &__card-wrap {
+            flex-direction: column-reverse;
+        }
+
+        &__img-wrap {
+            width: 100%;
+        }
+
         &__text {
             .card-title {
                 @include defineFont(rem(22), 600);
@@ -996,6 +1011,8 @@
                 @include defineFont(rem(16), 400, 1.6);
             }
         }
+
+
 
         // #pinned {
         //     .col {
