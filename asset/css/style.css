@@ -9961,6 +9961,22 @@ p {
   line-height: 1.8;
   letter-spacing: 0;
 }
+.about__text-wrap {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.about__text-wrap .line {
+  width: 80%;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+}
+.about__text-wrap .line span {
+  position: absolute;
+  font-size: 3rem;
+  line-height: 4.2rem;
+}
 .about img {
   margin: 0 auto;
 }
@@ -10166,10 +10182,8 @@ p {
   }
   .about__txt span {
     color: #0097F6;
-    font-size: 1.375rem;
-    font-weight: 600;
-    line-height: 1.8;
-    letter-spacing: 0;
+    font-size: 1.375rem !important;
+    line-height: 1 !important;
   }
   .vision__circle-txt p {
     font-size: 1.375rem;

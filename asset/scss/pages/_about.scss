@@ -20,6 +20,31 @@
             color: $primaryColor02;
             @include defineFont (rem(36), 600, 1.8);
         }
+
+    }
+
+    &__text-wrap {
+        height: 100%;
+        width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        text-align: center;
+
+        .line {
+            width: 80%;
+            height: 70px;
+            position: relative;
+            overflow: hidden;
+
+            span {
+                position: absolute;
+                font-size: 3rem;
+                line-height: 4.2rem;
+            }
+
+        }
     }
 
 
@@ -73,7 +98,6 @@
 
     &__circle-txt {
         p {
-
             @include defineFont (rem(26));
         }
 
@@ -277,7 +301,9 @@
 
             span {
                 color: $primaryColor02;
-                @include defineFont (rem(22), 600, 1.8);
+                font-size: rem(22) !important;
+                line-height: 1.0 !important;
+                // @include defineFont (rem(22), 600, 1.8);
             }
         }
     }

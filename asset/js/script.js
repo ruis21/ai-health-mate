@@ -32,7 +32,8 @@ $(function () {
 
 
 // kv영역 =====================================================
-
+gsap.registerPlugin(ScrollTrigger);
+const mm = gsap.matchMedia();
 
 const tl1 = gsap.timeline();
 
@@ -47,9 +48,7 @@ tl1.from(".kv__text-wrap .line .ai,.kv__title, h3, .kv__btn", 1.8, {
 })
 
 
-// introduce 영역 ==============================================
-//04 : 이미지 축소하기
-gsap.registerPlugin(ScrollTrigger);
+// introduce 영역 ==============================
 
 // PC (769px 이상)
 mm.add("(min-width: 769px)", () => {
@@ -73,13 +72,12 @@ mm.add("(min-width: 769px)", () => {
     });
 });
 
-
 // Tablet & Mobile (768px 이하)
 mm.add("(max-width: 768px)", () => {
     const ani4 = gsap.timeline();
     ani4.from("#introduce-sec .introduce__conts", {
         autoAlpha: 0,
-        scale: 0.7,   // 모바일은 조금 덜 줄어들게
+        scale: 0.7,
         transformOrigin: "center center",
         ease: "power1.out"
     });
@@ -87,8 +85,8 @@ mm.add("(max-width: 768px)", () => {
     ScrollTrigger.create({
         animation: ani4,
         trigger: "#introduce-sec",
-        start: "top 15%",  // 내려간 위치에서 시작
-        end: "+=1200",     //  스크롤 길이를 줄임
+        start: "top 15%",
+        end: "+=1200",
         scrub: 1,
         pin: true,
         anticipatePin: 1,
@@ -97,18 +95,10 @@ mm.add("(max-width: 768px)", () => {
 });
 
 
+// merit 영역 =================================
 
-// merit 애니메이션 테스트  =======================================
-
-gsap.registerPlugin(ScrollTrigger);
-
-const mm = gsap.matchMedia();
-
-// ---------------------------------------------------------
-// PC (769px 이상) — 카드 1개씩
-// ---------------------------------------------------------
+// PC (769px 이상)
 mm.add("(min-width: 769px)", () => {
-    ScrollTrigger.refresh(true);
     gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
 
     const tl = gsap.timeline({
@@ -123,26 +113,16 @@ mm.add("(min-width: 769px)", () => {
 
     tl.to(".card01", { y: -40, opacity: 0 })
         .fromTo(".card02", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
-
         .to(".card02", { y: -40, opacity: 0 })
         .fromTo(".card03", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
-
         .to(".card03", { y: -40, opacity: 0 })
         .fromTo(".card04", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
-
         .to(".card04", { y: -40, opacity: 0 })
         .fromTo(".card05", { y: 40, opacity: 0 }, { y: 0, opacity: 1 });
 });
 
-
-
-
-// ---------------------------------------------------------
-// Tablet (768~542px) — 카드 2개씩 (01+02 → 03+04 → 05)
-// ---------------------------------------------------------
+// Tablet (768~542px)
 mm.add("(max-width: 768px) and (min-width: 542px)", () => {
-    ScrollTrigger.refresh(true);
-    // ★ 초기 상태: 1+2만 보이게
     gsap.set([".card01", ".card02"], { opacity: 1 });
     gsap.set([".card03", ".card04", ".card05"], { opacity: 0 });
 
@@ -150,43 +130,21 @@ mm.add("(max-width: 768px) and (min-width: 542px)", () => {
         scrollTrigger: {
             trigger: "#pinned",
             start: "top 10%",
-            end: "+=600%",   // Tablet은 조금 더 길게
+            end: "+=600%",
             pin: true,
             scrub: 1,
         }
     });
 
-    // 01+02 -> 사라짐
-    tl.to([".card01", ".card02"], { y: -40, opacity: 0 });
-
-    // 03+04 -> 등장
-    tl.fromTo([".card03", ".card04"],
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 }
-    );
-
-    // ★ 유지! (없으면 바로 사라져서 안 보임)
-    tl.to({}, { duration: 0.8 });
-
-    // 03+04 -> 사라짐
-    tl.to([".card03", ".card04"], { y: -40, opacity: 0 });
-
-    // 05 -> 등장
-    tl.fromTo(".card05",
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 }
-    );
-
+    tl.to([".card01", ".card02"], { y: -40, opacity: 0 })
+        .fromTo([".card03", ".card04"], { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
+        .to({}, { duration: 0.8 }) // 잠깐 유지
+        .to([".card03", ".card04"], { y: -40, opacity: 0 })
+        .fromTo(".card05", { y: 40, opacity: 0 }, { y: 0, opacity: 1 });
 });
 
-
-
-
-// ---------------------------------------------------------
-// Mobile (541px 이하) — 다시 1개씩
-// ---------------------------------------------------------
+// Mobile (541px 이하)
 mm.add("(max-width: 541px)", () => {
-    ScrollTrigger.refresh(true);
     gsap.set([".card02", ".card03", ".card04", ".card05"], { opacity: 0 });
 
     const tl = gsap.timeline({
@@ -201,17 +159,13 @@ mm.add("(max-width: 541px)", () => {
 
     tl.to(".card01", { y: -40, opacity: 0 })
         .fromTo(".card02", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
-
         .to(".card02", { y: -40, opacity: 0 })
         .fromTo(".card03", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
-
         .to(".card03", { y: -40, opacity: 0 })
         .fromTo(".card04", { y: 40, opacity: 0 }, { y: 0, opacity: 1 })
-
         .to(".card04", { y: -40, opacity: 0 })
         .fromTo(".card05", { y: 40, opacity: 0 }, { y: 0, opacity: 1 });
 });
-
 
 // preview Swiper ==============================================
 var previewSwiper = new Swiper(".previewSwiper", {
@@ -237,6 +191,21 @@ var previewSwiper = new Swiper(".previewSwiper", {
         },
     }
 });
+
+
+// about text 등장효과 ================================
+
+const tl = gsap.timeline();
+
+tl.from(".about__text-wrap .line span", 1.8, {
+    y: 100,
+    ease: "power4.out",
+    delay: 1,
+    skewY: 7,
+    stagger: {
+        amount: 0.3
+    }
+})
 
 
 // partners Swiper =============================================
@@ -289,18 +258,10 @@ var newsSwiper = new Swiper(".newsSwiper", {
     },
     loop: true,
     breakpoints: {
-        // 540: {
-        //     slidesPerView: 1
-        // },
+
         769: {
             slidesPerView: 1.2
         },
-        // 1024: {
-        //     slidesPerView: 2
-        // },
-        // 1240: {
-        //     slidesPerView: 3
-        // }
     }
 });
 
