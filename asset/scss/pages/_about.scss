@@ -136,6 +136,8 @@
 
 // history section 
 .history {
+    width: 100%;
+    height: 100%;
     position: relative;
     z-index: 1;
     // padding-left: rem(70);
@@ -155,7 +157,7 @@
     }
 
     &__wrap {
-        max-width: 64rem; // Tailwind 기준 5xl = 64rem = 1024px
+        // max-width: 64rem; // Tailwind 기준 5xl = 64rem = 1024px
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -164,24 +166,42 @@
         padding-bottom: 5rem;
     }
 
+    &__left-wrap {
+        width: 30%;
+        max-height: 100vh;
+        position: sticky;
+
+        h3 {
+            @include defineFont(rem(48), 700);
+            color: $primaryColor02;
+        }
+
+        h5 {
+            @include defineFont(rem(22), 600);
+        }
+    }
+
     &__right-wrap {
+        @include flex (flex-start, flex-start, rem(40), column);
         width: 70%;
-        margin-top: 4rem;
-        padding: 1rem;
-        font-size: 1.5rem;
-        line-height: 2rem;
+        // margin-top: 4rem;
+        // padding: 1rem;
+        // font-size: 1.5rem;
+        // line-height: 2rem;
     }
 
     &__right {
-        width: 24rem;
+        @include defineFont(rem(22));
+        @include flex(flex-start, flex-start, rem(30), column);
+        width: 100%;
         height: 24rem;
         padding: 1rem;
     }
 
-    &__left-wrap {
-        width: 50%;
-        max-height: 100vh;
+    &__right-txt {
+        @include flex(flex-start, flex-start, rem(40));
     }
+
 
 
     // &__bg01 {
@@ -223,29 +243,6 @@
     //     height: fit-content;
     // }
 
-    &__left-wrap {
-        h3 {
-            @include defineFont(rem(48), 700);
-            color: $primaryColor02;
-        }
-
-        h5 {
-            @include defineFont(rem(22), 600);
-        }
-    }
-
-    &__right-wrap {
-        @include flex (flex-start, flex-start, rem(40), column);
-    }
-
-    &__right {
-        @include defineFont(rem(22));
-        @include flex(flex-start, flex-start, rem(30), column);
-    }
-
-    &__right-txt {
-        @include flex(flex-start, flex-start, rem(40));
-    }
 
 }
 

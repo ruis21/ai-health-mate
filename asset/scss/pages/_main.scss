@@ -309,9 +309,9 @@
 
     &__card-wrap {
         @include flex(space-around, center);
-        // height: 100vh;
-        min-height: 80vh;
-        padding: rem(60) 0;
+        height: 100vh;
+        // min-height: 80vh;
+        // padding: rem(60) 0;
         // overflow: hidden;
         // display: -webkit-box;
         // display: -webkit-flex;
