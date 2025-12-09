@@ -140,7 +140,8 @@
     }
 
     input {
-        // border: none;
+        border: none;
+        outline: none;
 
         &:active {
             border: 1px solid $blackColor02;
@@ -153,7 +154,13 @@
         }
     }
 
+    select {
+        outline: none;
+        border: none;
+    }
+
 }
+
 
 .title {
     @include defineFont (rem(48), 600);

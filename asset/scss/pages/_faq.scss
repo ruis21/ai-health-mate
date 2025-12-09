@@ -115,24 +115,27 @@
         color: $grayColor01;
     }
 
-    &__search-box {
-        position: relative;
+    .field-box {
+        // position: relative;
+
 
         form {
-            position: absolute;
-            top: rem(-80);
-            right: 0;
+            float: right;
+            // position: absolute;
+            // top: rem(-80);
+            // right: 0;
+        }
 
-            input {
-                border: none;
-                outline: none;
-            }
+        .search-btn {
+            background-color: transparent;
+        }
 
-            .search-btn {
-                background-color: transparent;
-            }
+        select {
+            display: flex;
+            align-items: center;
         }
     }
+
 
     &__pagination {
         a {
