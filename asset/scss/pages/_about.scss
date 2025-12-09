@@ -162,24 +162,19 @@
         display: flex;
         padding-top: 5rem;
         padding-bottom: 5rem;
-
-        h3 {
-            color: $primaryColor02;
-        }
     }
 
-
     &__right-wrap {
-        width: 50%;
-        margin-top: 4rem; // 16 * 0.25rem = 4rem
+        width: 70%;
+        margin-top: 4rem;
         padding: 1rem;
         font-size: 1.5rem;
         line-height: 2rem;
     }
 
     &__right {
-        width: 24rem; // 384px
-        height: 24rem; // 384px
+        width: 24rem;
+        height: 24rem;
         padding: 1rem;
     }
 
@@ -227,6 +222,17 @@
     //     top: rem(200); // 화면 상단으로부터의 거리
     //     height: fit-content;
     // }
+
+    &__left-wrap {
+        h3 {
+            @include defineFont(rem(48), 700);
+            color: $primaryColor02;
+        }
+
+        h5 {
+            @include defineFont(rem(22), 600);
+        }
+    }
 
     &__right-wrap {
         @include flex (flex-start, flex-start, rem(40), column);
