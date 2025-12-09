@@ -177,80 +177,15 @@
         line-height: 2rem;
     }
 
-    // ----- 공통 스타일 -----
-    .h-screen {
-        height: 100vh;
-    }
-
-    .flex {
-        display: flex;
-    }
-
-    .items-center {
-        align-items: center;
-    }
-
-    .justify-center {
-        justify-content: center;
-    }
-
-    .text-white {
-        color: #fff;
-    }
-
-    .mx-auto {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .w-full {
-        width: 100%;
-    }
-
-    .py-20 {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-
-    .p-4 {
+    &__right {
+        width: 24rem; // 384px
+        height: 24rem; // 384px
         padding: 1rem;
     }
 
-    // ----- width utilities -----
-    .max-w-5xl {
-        max-width: 64rem; // Tailwind 기준 5xl = 64rem = 1024px
-    }
-
-    .w-1\/2 {
+    &__left-wrap {
         width: 50%;
-    }
-
-    .w-96 {
-        width: 24rem; // 384px
-    }
-
-    .h-96 {
-        height: 24rem; // 384px
-    }
-
-    // ----- spacing -----
-    .space-y-16>*+* {
-        margin-top: 4rem; // 16 * 0.25rem = 4rem
-    }
-
-    // ----- background colors -----
-    .bg-green-800 {
-        background-color: #166534;
-    }
-
-    .bg-red-500 {
-        background-color: #ef4444;
-    }
-
-    // ----- text sizes -----
-    .text-2xl {
-        font-size: 1.5rem;
-        line-height: 2rem;
+        max-height: 100vh;
     }
 
 
@@ -280,18 +215,18 @@
     //     }
     // }
 
-    &__grid {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 2fr;
-        padding: rem(50) rem(20);
-    }
+    // &__grid {
+    //     display: grid;
+    //     grid-template-rows: 1fr 1fr;
+    //     grid-template-columns: 1fr 2fr;
+    //     padding: rem(50) rem(20);
+    // }
 
-    &__left {
-        position: sticky;
-        top: rem(200); // 화면 상단으로부터의 거리
-        height: fit-content;
-    }
+    // &__left {
+    //     position: sticky;
+    //     top: rem(200); // 화면 상단으로부터의 거리
+    //     height: fit-content;
+    // }
 
     &__right-wrap {
         @include flex (flex-start, flex-start, rem(40), column);
