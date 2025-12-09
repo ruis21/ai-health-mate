@@ -36,29 +36,57 @@
     padding: 240px 0;
 }
 
-// tab menu 컴포넌트
+// contact tab menu 컴포넌트
 .tab-menu-custom {
     @include flex(center, center, rem(106));
     color: $grayColor02;
     @include defineFont (rem(32), 600);
 
     .tab-menu {
+        position: relative;
+
         &.on {
             color: $blackColor01;
-            text-decoration: underline;
+            // text-decoration: underline;
             transition: all 0.3s ease-in-out;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: rem(50);
+                left: 50%;
+                transform: translateX(-50%);
+                width: rem(7);
+                height: rem(7);
+                border-radius: 50%;
+                background-color: $blackColor01;
+            }
         }
+
     }
 
     li:hover {
         color: $blackColor01;
-        text-decoration: underline;
+        // text-decoration: underline;
         transition: all 0.3s ease-in-out;
     }
 
     @media (max-width: 1024px) {
         gap: rem(65);
         @include defineFont(rem(26), 600);
+    }
+
+    @media (max-width: 768px) {
+
+        .tab-menu {
+            &.on {
+                &::after {
+                    bottom: rem(35);
+                }
+            }
+
+        }
     }
 
     @media (max-width: 541px) {

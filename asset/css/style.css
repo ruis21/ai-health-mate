@@ -8795,14 +8795,27 @@ p {
   line-height: 1.3;
   letter-spacing: 0;
 }
+.tab-menu-custom .tab-menu {
+  position: relative;
+}
 .tab-menu-custom .tab-menu.on {
   color: #111111;
-  text-decoration: underline;
   transition: all 0.3s ease-in-out;
+}
+.tab-menu-custom .tab-menu.on::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 3.125rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background-color: #111111;
 }
 .tab-menu-custom li:hover {
   color: #111111;
-  text-decoration: underline;
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1024px) {
@@ -8812,6 +8825,11 @@ p {
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
+  }
+}
+@media (max-width: 768px) {
+  .tab-menu-custom .tab-menu.on::after {
+    bottom: 2.1875rem;
   }
 }
 @media (max-width: 541px) {
