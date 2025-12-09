@@ -71,7 +71,7 @@ images.forEach((image, i) => {
     var tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".merit__card-wrap",
-            start: () => "top -" + window.innerHeight * (i),
+            start: () => "top -" + window.innerHeight * (i + 0.5),
             end: () => "+=" + window.innerHeight,
             scrub: true,
             toggleActions: "play none reverse none",
@@ -89,8 +89,8 @@ var texts = gsap.utils.toArray(".merit__txt-wrap .txt");
 texts.forEach((text, i) => {
     var tl = gsap.timeline({
         scrollTrigger: {
-            trigger: ".merit__card-wrap",
-            start: () => "top -" + window.innerHeight * (i),
+            trigger: ".merit",
+            start: () => "top -" + window.innerHeight * i,
             end: () => "+=" + window.innerHeight,
             scrub: true,
             toggleActions: "play none reverse none",
@@ -114,6 +114,7 @@ ScrollTrigger.create({
     end: () => "+=" + (images.length + 1) * window.innerHeight,
     invalidateOnRefresh: true
 });
+
 
 // PC (769px 이상)
 // mm.add("(min-width: 769px)", () => {

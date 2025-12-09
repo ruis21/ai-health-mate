@@ -90,8 +90,8 @@ boxes.forEach((box, i) => {
 });
 
 // 왼쪽 고정 영역의 요소
-const leftYear = document.querySelector(".history__left-wrap h3");
-const leftTitle = document.querySelector(".history__left-wrap h5");
+// const leftYear = document.querySelector(".history__left-wrap h3");
+// const leftTitle = document.querySelector(".history__left-wrap h5");
 
 
 
