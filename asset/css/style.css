@@ -8959,7 +8959,6 @@ p {
   position: absolute;
   left: 0;
   width: auto;
-  margin-top: 2.5rem;
 }
 .kv__btn:hover {
   background-color: #0ED058;
@@ -9234,9 +9233,6 @@ p {
   height: 4.375rem;
   position: relative;
   overflow: hidden;
-}
-.kv__text-wrap .line:last-child {
-  overflow: visible;
 }
 .kv__text-wrap .line .ai,
 .kv__text-wrap .line .kv__title {
