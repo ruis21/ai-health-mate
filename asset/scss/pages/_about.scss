@@ -155,11 +155,104 @@
     }
 
     &__wrap {
+        max-width: 64rem; // Tailwind 기준 5xl = 64rem = 1024px
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
 
         h3 {
             color: $primaryColor02;
         }
     }
+
+
+    &__right-wrap {
+        width: 50%;
+        margin-top: 4rem; // 16 * 0.25rem = 4rem
+        padding: 1rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    // ----- 공통 스타일 -----
+    .h-screen {
+        height: 100vh;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .items-center {
+        align-items: center;
+    }
+
+    .justify-center {
+        justify-content: center;
+    }
+
+    .text-white {
+        color: #fff;
+    }
+
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .w-full {
+        width: 100%;
+    }
+
+    .py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .p-4 {
+        padding: 1rem;
+    }
+
+    // ----- width utilities -----
+    .max-w-5xl {
+        max-width: 64rem; // Tailwind 기준 5xl = 64rem = 1024px
+    }
+
+    .w-1\/2 {
+        width: 50%;
+    }
+
+    .w-96 {
+        width: 24rem; // 384px
+    }
+
+    .h-96 {
+        height: 24rem; // 384px
+    }
+
+    // ----- spacing -----
+    .space-y-16>*+* {
+        margin-top: 4rem; // 16 * 0.25rem = 4rem
+    }
+
+    // ----- background colors -----
+    .bg-green-800 {
+        background-color: #166534;
+    }
+
+    .bg-red-500 {
+        background-color: #ef4444;
+    }
+
+    // ----- text sizes -----
+    .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
 
     // &__bg01 {
     //     position: relative;
