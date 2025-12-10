@@ -11102,6 +11102,9 @@ p {
   line-height: 1.3;
   letter-spacing: 0;
 }
+.footer .footer-logo {
+  margin-left: -0.9375rem;
+}
 .footer__wrap {
   display: flex;
   justify-content: space-between;

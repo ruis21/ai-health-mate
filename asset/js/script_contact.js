@@ -18,10 +18,14 @@ $(".faq__board-title").on("click", function (e) {
     // 스크롤 튕김 방지
     e.preventDefault();
 
-    // 현재 클릭한 요소 외 나머지 닫기
-    $(".faq__board-conts").not($(this).next()).slideUp();
+    /// 아이콘 active 토글
+    $(this).toggleClass("active");
 
-    // 현재 요소 토글
+    // 다른 아이콘들은 active 제거
+    $(".faq__board-title").not(this).removeClass("active");
+
+    // 내용 열고 닫기
+    $(".faq__board-conts").not($(this).next()).slideUp();
     $(this).next().slideToggle();
 
     // 리스트의 같은 인덱스 항목에만 on 클래스 추가

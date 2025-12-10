@@ -13,6 +13,10 @@
         }
     }
 
+    .footer-logo {
+        margin-left: rem(-15)
+    }
+
     &__wrap {
         @include flex;
     }
