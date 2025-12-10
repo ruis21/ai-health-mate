@@ -6,7 +6,7 @@
             rgba(20, 20, 20, 0.5) 50%,
             rgba(20, 20, 20, 0.75) 75%,
             rgba(20, 20, 20, 1) 100%),
-        url("../image/kv-bg.jpg");
+        url("/asset/image/kv-bg02.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,13 +24,6 @@
             height: rem(70);
             position: relative;
             overflow: hidden;
-
-            &:last-child {
-                // height: auto;
-                // overflow: visible;
-                // margin-top: rem(30);
-                margin-bottom: 30px;
-            }
 
             .ai,
             .kv__title {
@@ -688,11 +681,12 @@
 
         &__text-wrap {
             padding: 0 rem(80);
-            gap: rem(10);
+            gap: 0;
 
             .line {
 
-                height: rem(50);
+                // padding: -50px;
+
 
                 h3 {
                     @include defineFont(rem(28));
@@ -703,7 +697,7 @@
 
                     &::after {
                         top: rem(15);
-                        height: 80%;
+                        height: 60%;
                         width: rem(62);
                     }
                 }
@@ -762,7 +756,7 @@
 
             .line {
 
-                height: rem(50);
+                // height: rem(60);
 
                 // .ai,
                 // .kv__title {
@@ -890,47 +884,30 @@
             gap: 0;
 
             .line {
+                height: 70px;
+
                 h3 {
                     @include defineFont(rem(18));
-                    margin-top: rem(10);
+                    // margin-top: rem(10);
                 }
 
                 .ai {
-                    @include defineFont(rem(30), 600);
+                    @include defineFont(rem(32), 600);
                     z-index: 5;
 
                     &::after {
                         top: rem(8);
-                        height: 45%;
+                        height: 36%;
                         width: rem(38);
                     }
                 }
 
                 .kv__title {
-                    @include defineFont (rem(32), 600);
+                    @include defineFont(rem(32), 600);
+                    margin-bottom: 0;
                 }
-
-            }
-
-
-        }
-
-        &__title {
-            @include defineFont(rem(30), 600);
-            margin-bottom: rem(30);
-
-            span {
-                @include defineFont(rem(30));
             }
         }
-
-        &__subtitle {
-            margin-bottom: rem(30);
-            @include flex(space-evenly, center, rem(5));
-
-        }
-
-
     }
 
     //introduce 영역

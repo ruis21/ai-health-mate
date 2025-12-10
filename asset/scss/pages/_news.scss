@@ -96,6 +96,19 @@
 
     &__board-wrap {
 
+        form {
+            @include flex (flex-end, center, rem(10));
+            margin-bottom: rem(30);
+        }
+
+        .search-btn {
+            background-color: transparent;
+        }
+
+    }
+
+    &__board {
+
         h5,
         p {
             padding: rem(10) 0;
@@ -193,7 +206,7 @@
             }
         }
 
-        &__board-wrap {
+        &__board {
 
             h5,
             p {

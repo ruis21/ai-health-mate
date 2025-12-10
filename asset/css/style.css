@@ -8908,6 +8908,7 @@ p {
 .field-box select {
   outline: none;
   border: none;
+  width: 200px;
 }
 
 .title {
@@ -9030,6 +9031,19 @@ p {
 .inquiry__btn:hover {
   background-color: #0097F6;
   color: #ffffff;
+}
+
+.news__new-btn::after {
+  content: "new";
+  background-color: #0ED058;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.3125rem;
+  display: inline-block;
 }
 
 .header {
@@ -9215,7 +9229,7 @@ p {
 }
 
 .kv {
-  background: linear-gradient(to left, rgba(20, 20, 20, 0) 10%, rgba(20, 20, 20, 0.25) 25%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("../image/kv-bg.jpg");
+  background: linear-gradient(to left, rgba(20, 20, 20, 0) 10%, rgba(20, 20, 20, 0.25) 25%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/asset/image/kv-bg02.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9749,10 +9763,7 @@ p {
   }
   .kv__text-wrap {
     padding: 0 5rem;
-    gap: 0.625rem;
-  }
-  .kv__text-wrap .line {
-    height: 3.125rem;
+    gap: 0;
   }
   .kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
     font-size: 1.75rem;
@@ -9768,7 +9779,7 @@ p {
   }
   .kv__text-wrap .line .ai::after {
     top: 0.9375rem;
-    height: 80%;
+    height: 60%;
     width: 3.875rem;
   }
   .kv__text-wrap .line .kv__title {
@@ -9807,9 +9818,6 @@ p {
   }
   .kv__text-wrap {
     padding: calc(9.375rem + 4.8125rem) 0 9.375rem;
-  }
-  .kv__text-wrap .line {
-    height: 3.125rem;
   }
   .introduce__conts {
     width: 100%;
@@ -9891,15 +9899,17 @@ p {
   .kv__text-wrap {
     gap: 0;
   }
+  .kv__text-wrap .line {
+    height: 70px;
+  }
   .kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.3;
     letter-spacing: 0;
-    margin-top: 0.625rem;
   }
   .kv__text-wrap .line .ai {
-    font-size: 1.875rem;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
@@ -9907,7 +9917,7 @@ p {
   }
   .kv__text-wrap .line .ai::after {
     top: 0.5rem;
-    height: 45%;
+    height: 36%;
     width: 2.375rem;
   }
   .kv__text-wrap .line .kv__title {
@@ -9915,27 +9925,7 @@ p {
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
-  }
-  .kv__title {
-    font-size: 1.875rem;
-    font-weight: 600;
-    line-height: 1.3;
-    letter-spacing: 0;
-    margin-bottom: 1.875rem;
-  }
-  .kv__title span {
-    font-size: 1.875rem;
-    font-weight: 400;
-    line-height: 1.3;
-    letter-spacing: 0;
-  }
-  .kv__subtitle {
-    margin-bottom: 1.875rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 0.3125rem;
-    flex-direction: row;
+    margin-bottom: 0;
   }
   .introduce__title {
     font-size: 1.375rem;
@@ -10434,18 +10424,29 @@ p {
   top: -5rem;
   z-index: -1;
 }
-.news__board-wrap h5, .news__board-wrap .h5,
-.news__board-wrap p {
+.news__board-wrap form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.625rem;
+  flex-direction: row;
+  margin-bottom: 1.875rem;
+}
+.news__board-wrap .search-btn {
+  background-color: transparent;
+}
+.news__board h5, .news__board .h5,
+.news__board p {
   padding: 0.625rem 0;
   margin: 0 2.5rem;
 }
-.news__board-wrap h5, .news__board-wrap .h5 {
+.news__board h5, .news__board .h5 {
   font-size: 1.375rem;
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0;
 }
-.news__board-wrap p {
+.news__board p {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.3;
@@ -10542,11 +10543,11 @@ p {
   .news__bg-txt p {
     display: none;
   }
-  .news__board-wrap h5, .news__board-wrap .h5,
-  .news__board-wrap p {
+  .news__board h5, .news__board .h5,
+  .news__board p {
     margin: 0 1.25rem;
   }
-  .news__board-wrap h5, .news__board-wrap .h5 {
+  .news__board h5, .news__board .h5 {
     font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.3;
@@ -10680,6 +10681,21 @@ p {
   color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
+.faq__search-box {
+  position: relative;
+}
+.faq__search-box form {
+  position: absolute;
+  top: -5rem;
+  right: 0;
+}
+.faq__search-box .search-btn {
+  background-color: transparent;
+}
+.faq__search-box select {
+  display: flex;
+  align-items: center;
+}
 .faq__board {
   height: 100%;
   width: 100%;
@@ -10755,16 +10771,6 @@ p {
   line-height: 1.3;
   letter-spacing: 0;
   color: #7E7E7E;
-}
-.faq .field-box form {
-  float: right;
-}
-.faq .field-box .search-btn {
-  background-color: transparent;
-}
-.faq .field-box select {
-  display: flex;
-  align-items: center;
 }
 .faq__pagination a {
   display: block;

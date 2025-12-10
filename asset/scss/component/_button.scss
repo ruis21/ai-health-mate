@@ -129,3 +129,20 @@
         }
     }
 }
+
+.news {
+    &__new-btn {
+
+        &::after {
+            content: 'new';
+            background-color: $primaryColor01;
+            color: $whiteColor01;
+            @include defineFont(rem(14), 600);
+            padding: rem(2) rem(4);
+            border-radius: rem(5);
+            // width: rem(34);
+            // height: rem(16);
+            display: inline-block;
+        }
+    }
+}
