@@ -301,7 +301,7 @@
     }
 
     &__txt-wrap {
-        width: 450px;
+        // width: 450px;
     }
 
     .txt {
@@ -347,6 +347,7 @@
     }
 
     &__img-wrap {
+        border-radius: rem(20);
         position: relative;
         margin: 10vh 0;
         width: 100%;

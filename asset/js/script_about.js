@@ -1,6 +1,7 @@
 // about text 등장효과 ================================
 
 gsap.registerPlugin(ScrollTrigger);
+const mm = gsap.matchMedia();
 
 // about영역 conts 페이드인효과
 const tl01 = gsap.timeline({
@@ -17,7 +18,7 @@ const tl01 = gsap.timeline({
     .to(".about__title", { opacity: 1, y: 0, duration: 0.6 })
     .to(".about__txt > p:first-child", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
     .to(".about__text-wrap", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
-    .to(".about__txt > p:last-child", { opacity: 1, y: 0, duration: 0.6, delay: 2 }, "-=0.3")
+    .to(".about__txt > p:last-child", { opacity: 1, y: 0, duration: 0.6, delay: 1.6 }, "-=0.3")
     .to(".about img", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3");
 
 
@@ -42,8 +43,9 @@ tl02.to(".about__text-wrap .line:nth-child(1)", { opacity: 1, y: 0, duration: 1 
 
 
 
-// history gsap =============================
+// history gsap ============================================
 
+// history left year : 년도부분 애니메이션
 let boxes = gsap.utils.toArray(".history__right"),
     container = document.querySelector(".history__left-wrap"),
     text = document.querySelector(".history__left h3"),
@@ -98,7 +100,7 @@ boxes.forEach((box, i) => {
 });
 
 
-
+// history left content : 내용부분 애니메이션
 gsap.set('.left01 h5', { opacity: 1 });  // ← 첫 번째는 보이게
 gsap.set('.left02 h5', { opacity: 0 });
 gsap.set('.left03 h5', { opacity: 0 });
@@ -125,11 +127,11 @@ tl03
     .to('.left02', { opacity: 1 }, '<')   //이전 애니메이션과 동시 시작
     .to('.left02 h5', { opacity: 1 }, '<')
 
-
     // 두번째 content 사라짐
     .to('.left02', { opacity: 0 })
     //두번째 content h5 위로 움직이면서 사라짐
     .to('.left02 h5', { opacity: 0 }, '<')
+
 
     // 세번째 content 나타남
     .to('.left03', { opacity: 1 }, '<')   //이전 애니메이션과 동시 시작
@@ -139,6 +141,7 @@ tl03
     .to('.left03', { opacity: 0 })
     //세 번째 content h5 위로 움직이면서 사라짐
     .to('.left03 h5', { opacity: 0 }, '<')
+
 
     // 네번째 content 나타남
     .to('.left04', { opacity: 1 }, '<')   //이전 애니메이션과 동시 시작
@@ -194,6 +197,57 @@ tl03
 //             ease: "none"
 //         }, 0.6);
 // });
+
+
+// history right content : 내용부분 애니메이션
+
+gsap.set('.right01', { opacity: 1 });  // ← 첫 번째는 보이게
+gsap.set('.right02', { opacity: 0 });
+gsap.set('.right03', { opacity: 0 });
+gsap.set('.right04', { opacity: 0 });
+
+
+gsap.set('.history__right', { yPercent: 800, opacity: 0 });
+// gsap.set('.content03 h2', { yPercent: 800, opacity: 0 });
+
+const tl04 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.history__wrap',
+        markers: true,
+        start: 'top top',   //section 화면 상단에 
+        end: 'bottom bottom',   //section 끝까지 스크롤되면 끝
+        scrub: 1
+    }
+});
+
+tl04
+    // 두번째 content 나타남
+    .to('.right02', { opacity: 1 }, '<')   //이전 애니메이션과 동시 시작
+    .to('.right02 .right-txt', { opacity: 1 }, '<')
+
+    // 두번째 content 사라짐
+    .to('.right02', { opacity: 0 })
+    //두번째 content h5 위로 움직이면서 사라짐
+    .to('.right02 .right-txt', { opacity: 0 }, '<')
+
+
+    // 세번째 content 나타남
+    .to('.right03', { opacity: 1 }, '<')   //이전 애니메이션과 동시 시작
+    .to('.right03 .right-txt', { opacity: 1 }, '<')
+
+    // 세번째 content 사라짐
+    .to('.right03', { opacity: 0 })
+    //세 번째 content h5 위로 움직이면서 사라짐
+    .to('.right03 .right-txt', { opacity: 0 }, '<')
+
+
+    // 네번째 content 나타남
+    .to('.right04', { opacity: 1 }, '<')   //이전 애니메이션과 동시 시작
+    .to('.right04 .right-txt', { opacity: 1 }, '<')
+
+mm.add("(max-width: 768px)", () => {
+
+});
 
 
 

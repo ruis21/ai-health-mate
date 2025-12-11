@@ -147,13 +147,7 @@
     }
 
     &__wrap {
-        // max-width: 64rem; // Tailwind 기준 5xl = 64rem = 1024px
-        // margin-left: auto;
-        // margin-right: auto;
-        width: 100%;
         display: flex;
-        // padding-top: 5rem;
-        // padding-bottom: 5rem;
         // =================================
         position: relative;
         width: 100%;
@@ -163,7 +157,6 @@
 
     &__left-wrap {
         width: 30%;
-        // max-height: 100vh;
         // ==================================
         // position: sticky;
         // top: 0;
@@ -194,16 +187,19 @@
         }
     }
 
-    .left02 {
-        opacity: 0;
-    }
-
-    .left03 {
-        opacity: 0;
-    }
-
+    .left02,
+    .left03,
     .left04 {
         opacity: 0;
+    }
+
+    &__year {
+        @include defineFont(rem(48), 700);
+        color: $primaryColor01;
+    }
+
+    &__conts {
+        @include defineFont(rem(22), 600);
     }
 
 
@@ -214,13 +210,34 @@
         // padding: 1rem;
         // font-size: 1.5rem;
         // line-height: 2rem;
+        // ==============================================
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        // ==============================================
     }
 
     &__right {
         @include defineFont(rem(22));
         @include flex(flex-start, flex-start, rem(30), column);
         width: 100%;
+        // =============================================
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // =============================================
+    }
 
+    .right02,
+    .right03,
+    .right04 {
+        opacity: 0;
     }
 
     &__right-txt {
@@ -431,13 +448,6 @@
             }
         }
 
-        &__grid {
-            grid-template-columns: 1fr;
-            margin: rem(50) 0;
-            grid-template-rows: 1fr;
-            gap: rem(40);
-        }
-
         &__wrap {
             flex-direction: column;
             flex-wrap: wrap;
@@ -445,6 +455,11 @@
 
         &__left {
             position: static;
+        }
+
+        &__year {
+            @include defineFont(rem(36), 700);
+            color: $primaryColor01;
         }
 
         &__right {
@@ -498,6 +513,15 @@
     }
 
     .history {
+
+        &__year {
+            @include defineFont(rem(26), 700);
+            color: $primaryColor01;
+        }
+
+        &__conts {
+            @include defineFont(rem(18), 600);
+        }
 
         &__right-wrap {
             width: 100%;
