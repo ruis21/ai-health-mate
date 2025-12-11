@@ -2,8 +2,28 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+// about영역 conts 페이드인효과
+const tl01 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".pinned",
+        start: "top top",
+        end: "+=1000px",
+        // scrub: 2,
+        // trigger: ".about",
+        // start: "top center",  // 화면의 80% 지점에서 시작
+        toggleActions: "play none none none"  // 한 번만 실행
+    }
+})
+    .to(".about__title", { opacity: 1, y: 0, duration: 0.6 })
+    .to(".about__txt > p:first-child", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
+    .to(".about__text-wrap", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
+    .to(".about__txt > p:last-child", { opacity: 1, y: 0, duration: 0.6, delay: 2 }, "-=0.3")
+    .to(".about img", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3");
+
+
+
 // Create timeline for text animations
-const tl = gsap.timeline({
+const tl02 = gsap.timeline({
     scrollTrigger: {
         trigger: ".pinned",
         start: "top top",
@@ -11,37 +31,24 @@ const tl = gsap.timeline({
         scrub: true,
         pin: true,
         pinSpacing: true,
-        makers: true
+        markers: true
     }
 });
 
-// Animate text items one after another
-tl.to(".about__text-wrap .line:nth-child(1)", { opacity: 1, y: 0, duration: 1 })
+// 텍스트 강조 애니메이션
+tl02.to(".about__text-wrap .line:nth-child(1)", { opacity: 1, y: 0, duration: 1 })
     .to(".about__text-wrap .line:nth-child(2)", { opacity: 1, y: 0, duration: 1 }, "+=0.5")
     .to(".about__text-wrap .line:nth-child(3)", { opacity: 1, y: 0, duration: 1 }, "+=0.5");
-
-
-
-// const tl = gsap.timeline();
-
-// tl.from(".about__text-wrap .line span", 1.5, {
-//     y: 100,
-//     ease: "power4.out",
-//     // delay: 1,
-//     skewY: 7,
-//     stagger: {
-//         amount: 0.3
-//     }
-// })
 
 
 
 // history gsap =============================
 
 let boxes = gsap.utils.toArray(".history__right"),
-    container = document.querySelector(".history__wrap"),
-    text = document.querySelector(".history__left-wrap h3"),
+    container = document.querySelector(".history__left-wrap"),
+    text = document.querySelector(".history__left h3"),
     padding = gsap.getProperty(container, "paddingTop", "px"),
+    years = ["2025년", "2024년", "2023년", "2022년"], // 년도 배열
 
 
     // create a ScrollTrigger for each box that we can use to calculate snapping (we'll look at the "start" of each in the onRefresh)
@@ -56,44 +63,86 @@ let boxes = gsap.utils.toArray(".history__right"),
 ScrollTrigger.create({
     trigger: ".history__wrap",
     markers: true,
-    pin: ".history__left-wrap",
+    pin: ".history__left-wrap",  // ← wrap을 pin
     pinSpacing: false,
-    start: "top top",
-    end: () =>
-        "+=" +
-        (boxes[boxes.length - 1].getBoundingClientRect().top -
-            boxes[0].getBoundingClientRect().top),
-    onRefresh: (self) => {
-        // re-populate the "snaps" Array with the progress values for where each box hits the target spot.
-        let distance = self.end - self.start;
-        snapTriggers.forEach(
-            (trigger, i) => (snaps[i] = (trigger.start - self.start) / distance)
-        );
-    },
-    snap: snaps
-});
+    start: "top 20%",
+    end: "bottom 80%",
+    // end: () =>
+    //     "+=" +
+    //     (boxes[boxes.length - 1].getBoundingClientRect().top -
+    //         boxes[0].getBoundingClientRect().top),
+    // onRefresh: (self) => {
+    //     // re-populate the "snaps" Array with the progress values for where each box hits the target spot.
+    //     let distance = self.end - self.start;
+    //     snapTriggers.forEach(
+    //         (trigger, i) => (snaps[i] = (trigger.start - self.start) / distance)
+    //     );
+},
+    // snap: snaps
+);
 
 
 // for swapping in the text for each section
 boxes.forEach((box, i) => {
     ScrollTrigger.create({
         trigger: box,
-        start: "top center",
-        end: "bottom center",
+        start: "top top",
+        end: "bottom top",
         onToggle: (self) => {
             if (self.isActive) {
-                // you could animate this in (fade it or whatever)
-                text.innerText = "202" + (i + 1);
+                // 년도 배열에서 가져오기
+                text.innerText = years[i];
             }
         }
     });
 });
 
-// 왼쪽 고정 영역의 요소
-// const leftYear = document.querySelector(".history__left-wrap h3");
-// const leftTitle = document.querySelector(".history__left-wrap h5");
 
 
+gsap.set('.left01 h5', { opacity: 1 });  // ← 첫 번째는 보이게
+gsap.set('.left02 h5', { opacity: 0 });
+gsap.set('.left03 h5', { opacity: 0 });
+gsap.set('.left04 h5', { opacity: 0 });
+
+const tl03 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.history__wrap',
+        markers: true,
+        start: 'top top',   //section 화면 상단에 
+        end: 'bottom bottom',   //section 끝까지 스크롤되면 끝
+        scrub: 1
+    }
+});
+
+tl03
+    // 첫번째 content 사라짐
+    .to('.left01', { opacity: 0 })
+    //첫번째 content h5 사라짐
+    .to('.left01 h5', { opacity: 0 }, '<')
+
+
+    // 두번째 content 나타남
+    .to('.left02', { opacity: 1 }, '<')   //이전 애니메이션과 동시 시작
+    .to('.left02 h5', { opacity: 1 }, '<')
+
+
+    // 두번째 content 사라짐
+    .to('.left02', { opacity: 0 })
+    //두번째 content h5 위로 움직이면서 사라짐
+    .to('.left02 h5', { opacity: 0 }, '<')
+
+    // 세번째 content 나타남
+    .to('.left03', { opacity: 1 }, '<')   //이전 애니메이션과 동시 시작
+    .to('.left03 h5', { opacity: 1 }, '<')
+
+    // 세번째 content 사라짐
+    .to('.left03', { opacity: 0 })
+    //세 번째 content h5 위로 움직이면서 사라짐
+    .to('.left03 h5', { opacity: 0 }, '<')
+
+    // 네번째 content 나타남
+    .to('.left04', { opacity: 1 }, '<')   //이전 애니메이션과 동시 시작
+    .to('.left04 h5', { opacity: 1 }, '<')
 
 
 // ==================== grid 애니메이션 ==========================
