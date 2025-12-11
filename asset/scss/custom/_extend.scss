@@ -135,8 +135,8 @@
         border: 1px solid $grayColor02;
         color: $grayColor02;
         border-radius: rem(30);
-        padding: rem(10) rem(20);
         @include defineFont (rem(16));
+        padding: rem(10) rem(20);
     }
 
     input {
@@ -157,7 +157,6 @@
     select {
         outline: none;
         border: none;
-        width: 200px;
     }
 
 }

@@ -8887,11 +8887,11 @@ p {
   border: 1px solid #ADADAD;
   color: #ADADAD;
   border-radius: 1.875rem;
-  padding: 0.625rem 1.25rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.3;
   letter-spacing: 0;
+  padding: 0.625rem 1.25rem;
 }
 .field-box input {
   border: none;
@@ -8908,7 +8908,6 @@ p {
 .field-box select {
   outline: none;
   border: none;
-  width: 200px;
 }
 
 .title {
@@ -10324,7 +10323,7 @@ p {
   .history__wrap {
     flex-direction: column;
   }
-  .history__year {
+  .history__left .history__year {
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 1.3;
@@ -10368,13 +10367,13 @@ p {
   .vision__card-wrap {
     width: 100%;
   }
-  .history__year {
+  .history__left .history__year {
     font-size: 1.625rem;
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0;
   }
-  .history__conts {
+  .history__left .history__conts {
     font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.3;
@@ -10493,6 +10492,14 @@ p {
 .news__board-wrap .search-btn {
   background-color: transparent;
 }
+.news__board-wrap select {
+  width: 12.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.625rem;
+  flex-direction: row;
+}
 .news__board h5, .news__board .h5,
 .news__board p {
   padding: 0.625rem 0;
@@ -10587,6 +10594,11 @@ p {
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   .news__txt span {
     font-size: 1rem;
@@ -10600,6 +10612,9 @@ p {
   }
   .news__bg-txt p {
     display: none;
+  }
+  .news form {
+    width: 100%;
   }
   .news__board h5, .news__board .h5,
   .news__board p {

@@ -444,9 +444,10 @@
             // flex-wrap: wrap;
         }
 
-
-        &__year {
-            @include defineFont(rem(36), 700);
+        &__left {
+            .history__year {
+                @include defineFont(rem(36), 700);
+            }
         }
 
         &__right {
@@ -501,14 +502,15 @@
 
     .history {
 
-        &__year {
-            @include defineFont(rem(26), 700);
-        }
+        &__left {
+            .history__year {
+                @include defineFont(rem(26), 700);
+            }
 
-        &__conts {
-            @include defineFont(rem(18), 600);
+            .history__conts {
+                @include defineFont(rem(18), 600);
+            }
         }
-
 
         &__right-wrap {
             width: 100%;
