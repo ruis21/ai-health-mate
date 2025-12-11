@@ -347,6 +347,7 @@
     }
 
     &__img-wrap {
+        border-radius: rem(20);
         position: relative;
         margin: 10vh 0;
         width: 100%;
@@ -836,7 +837,7 @@
             gap: 0;
 
             .line {
-                height: 70px;
+                height: rem(50);
 
                 h3 {
                     @include defineFont(rem(18));

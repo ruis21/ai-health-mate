@@ -207,6 +207,14 @@
     }
 
 
+    &__year {
+        @include defineFont(rem(48), 700);
+    }
+
+    &__conts {
+        @include defineFont(rem(22), 600);
+    }
+
     &__right-wrap {
         @include flex (flex-start, flex-start, rem(120), column);
         width: 70%;
@@ -431,20 +439,14 @@
             }
         }
 
-        &__grid {
-            grid-template-columns: 1fr;
-            margin: rem(50) 0;
-            grid-template-rows: 1fr;
-            gap: rem(40);
-        }
-
         &__wrap {
             flex-direction: column;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
         }
 
-        &__left {
-            position: static;
+
+        &__year {
+            @include defineFont(rem(36), 700);
         }
 
         &__right {
@@ -498,6 +500,15 @@
     }
 
     .history {
+
+        &__year {
+            @include defineFont(rem(26), 700);
+        }
+
+        &__conts {
+            @include defineFont(rem(18), 600);
+        }
+
 
         &__right-wrap {
             width: 100%;
