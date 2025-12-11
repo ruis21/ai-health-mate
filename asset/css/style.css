@@ -9819,7 +9819,7 @@ p {
   }
   .introduce__conts {
     width: 100%;
-    height: 100vw;
+    height: 100%;
   }
   .introduce__video {
     width: 100%;
@@ -9883,10 +9883,10 @@ p {
     margin: 10vh 0;
     height: 40vh;
   }
-  .merit .preview {
+  .preview {
     margin-top: 5rem;
   }
-  .merit .ask .typing-line {
+  .ask .typing-line {
     font-size: 1.375rem;
     font-weight: 600;
     line-height: 1.3;
@@ -9939,6 +9939,9 @@ p {
     line-height: 1.3;
     letter-spacing: 0;
     margin-bottom: 0;
+  }
+  .introduce__conts {
+    padding: 9.375rem 0;
   }
   .introduce__title {
     font-size: 1.375rem;

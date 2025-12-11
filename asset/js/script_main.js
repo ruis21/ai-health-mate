@@ -6,7 +6,7 @@ const tl1 = gsap.timeline();
 tl1.from(".kv__text-wrap .line .ai,.kv__title, h3, .kv__btn", 1.8, {
     y: 150,
     ease: "power4.out",
-    delay: 1,
+    delay: 0.3,
     skewY: 7,
     stagger: {
         amount: 0.3

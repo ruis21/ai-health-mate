@@ -720,7 +720,7 @@
 
         &__conts {
             width: 100%;
-            height: 100vw;
+            height: 100%;
             // padding: 0;
         }
 
@@ -791,21 +791,22 @@
             margin: 10vh 0;
             height: 40vh;
         }
+    }
 
-        // preview 영역
-        .preview {
-            margin-top: rem(80);
-        }
+    // preview 영역
+    .preview {
+        margin-top: rem(80);
+    }
 
-        // ask 영역
+    // ask 영역
 
-        .ask {
-            .typing-line {
-                @include defineFont(rem(22), 600);
-            }
+    .ask {
+        .typing-line {
+            @include defineFont(rem(22), 600);
         }
     }
 }
+
 
 
 @media (max-width: 541px) {
@@ -864,6 +865,12 @@
     //introduce 영역
 
     .introduce {
+
+        &__conts {
+
+            padding: rem(150) 0;
+
+        }
 
         &__title {
             @include defineFont (rem(22), 600);
