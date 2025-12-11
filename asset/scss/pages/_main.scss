@@ -294,48 +294,23 @@
 
 // merit section ==============================================
 .merit {
-    // width: 100%;
-    // height: 100vh;
 
     &__card-wrap {
-        // @include flex(space-around, center);
-        // height: 100vh;
-        // min-height: 80vh;
-        // padding: rem(60) 0;
-        // overflow: hidden;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        height: 100vh;
-        -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
         justify-content: space-around;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
     }
 
     &__txt-wrap {
-        position: relative;
-        overflow: hidden;
         width: 450px;
-        height: 80vh;
     }
 
     .txt {
-        position: absolute;
-        left: 0%;
-        top: 0%;
-        right: 0%;
-        bottom: 0%;
-        z-index: 1;
         width: 100%;
-        height: 100%;
-        text-align: center;
-        transform: translateY(100%);
-        opacity: 0;
+        height: 100vh;
+        padding: 10vh 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         .card-num {
             @include defineFont(rem(30), 600);
@@ -347,99 +322,73 @@
         }
 
         .card-conts {
-            @include defineFont(rem(22), regular, 1.6);
+            @include defineFont(rem(22), 400, 1.6);
         }
 
     }
 
+    .txt01 {
+        opacity: 1;
+    }
+
+    .txt02,
+    .txt03,
+    .txt04,
+    .txt05 {
+        opacity: 0;
+    }
+
+    .img-container {
+        position: sticky;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        // max-width: 600px;
+    }
+
     &__img-wrap {
         position: relative;
-        overflow: hidden;
-        width: 50%;
-        max-width: 600px;
+        margin: 10vh 0;
+        width: 100%;
         height: 80vh;
+        overflow: hidden;
     }
 
     .img {
         position: absolute;
-        left: 0%;
-        top: 0%;
-        right: 0%;
-        bottom: 0%;
-        z-index: 1;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
-        background-image: url("/asset/image/merit-card01.jpg");
-        background-position: 50% 50%;
-        // background-size: cover;
+        background-position: center;
+        background-size: auto; // cover할 경우 이미지가 줄어들어서 올라감
         background-repeat: no-repeat;
+    }
 
+    .img01 {
+        background-image: url("/asset/image/merit-card01.jpg");
+        z-index: 5;
     }
 
     .img02 {
         background-image: url("/asset/image/merit-card02.jpg");
+        z-index: 4;
     }
 
     .img03 {
         background-image: url("/asset/image/merit-card03.jpg");
+        z-index: 3;
     }
 
     .img04 {
         background-image: url("/asset/image/merit-card04.jpg");
+        z-index: 2;
     }
 
     .img05 {
         background-image: url("/asset/image/merit-card05.jpg");
+        z-index: 1;
     }
-
-
-    // &__card {
-    //     @include flex(space-between, center, 5%);
-    //     // width: 100%;
-
-    //     img {
-    //         width: 50%;
-    //     }
-    // }
-
-    // .col {
-    //     top: rem(120);
-    // }
-
-
-    // &__text {
-    //     width: 50%;
-
-    //     .card-num {
-    //         @include defineFont(rem(30), 600);
-    //         color: $primaryColor01;
-    //     }
-
-    //     .card-title {
-    //         @include defineFont(rem(36), 600);
-    //     }
-
-    //     .card-conts {
-    //         @include defineFont(rem(22), regular, 1.6);
-    //     }
-    // }
-
-    // #pinned {
-    //     position: relative;
-    //     // background: lightskyblue;
-
-    //     .col {
-    //         position: absolute;
-    //         height: 100vh;
-    //     }
-
-    //     .card02,
-    //     .card03,
-    //     .card04,
-    //     .card05 {
-    //         opacity: 0;
-    //     }
-    // }
 
 }
 
@@ -447,8 +396,7 @@
 
 // preview section =============================================
 .preview {
-    margin-top: rem(600);
-    background-color: $whiteColor01;
+    // background-color: $whiteColor01;
 
     .swiper-slide {
         // width: 50%;
@@ -808,53 +756,56 @@
 
     // merit 영역
     .merit {
-        &__txt {
-            // width: 100%;
 
-            .card-num {
-                @include defineFont(rem(22), 600);
-                color: $primaryColor01;
+        .txt {
+            justify-content: flex-start;
+
+            .txt-inner {
+                .card-num {
+                    @include defineFont(rem(22), 600);
+                    color: $primaryColor01;
+                }
+
+                .card-title {
+                    @include defineFont(rem(28), 600);
+                }
+
+                .card-conts {
+                    @include defineFont(rem(18), 400, 1.6);
+                }
             }
 
-            .card-title {
-                @include defineFont(rem(28), 600);
-            }
+        }
 
-            .card-conts {
-                @include defineFont(rem(18), 400, 1.6);
+        &__card-wrap {
+            flex-direction: column-reverse;
+
+            .img-container {
+                width: 100%;
+                height: 60vh;
+                margin: 10vh 0;
             }
         }
 
-        // &__card {
-        //     flex-direction: column-reverse;
+        &__img-wrap {
+            margin: 10vh 0;
+            height: 40vh;
+        }
 
-        //     img {
-        //         width: 100%;
-        //     }
-        // }
+        // preview 영역
+        .preview {
+            margin-top: rem(80);
+        }
 
-        // #pinned {
-        //     .col {
-        //         left: 0;
-        //         width: 100%;
-        //     }
-        // }
-    }
+        // ask 영역
 
-    // preview 영역
-    .preview {
-        margin-top: rem(80);
-    }
-
-    // ask 영역
-
-    .ask {
-        .typing-line {
-            @include defineFont(rem(22), 600);
+        .ask {
+            .typing-line {
+                @include defineFont(rem(22), 600);
+            }
         }
     }
 }
-
 
 
 @media (max-width: 541px) {
@@ -970,15 +921,8 @@
 
     // merit 영역 
     .merit {
-        &__card-wrap {
-            flex-direction: column-reverse;
-        }
 
-        &__img-wrap {
-            width: 100%;
-        }
-
-        &__text {
+        .txt-inner {
             .card-title {
                 @include defineFont(rem(22), 600);
             }
@@ -987,14 +931,6 @@
                 @include defineFont(rem(16), 400, 1.6);
             }
         }
-
-
-
-        // #pinned {
-        //     .col {
-        //         position: static !important;
-        //     }
-        // }
     }
 
 }

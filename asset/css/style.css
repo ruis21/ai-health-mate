@@ -9476,37 +9476,19 @@ p {
 }
 
 .merit__card-wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  height: 100vh;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 .merit__txt-wrap {
-  position: relative;
-  overflow: hidden;
   width: 450px;
-  height: 80vh;
 }
 .merit .txt {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  z-index: 1;
   width: 100%;
-  height: 100%;
-  text-align: center;
-  transform: translateY(100%);
-  opacity: 0;
+  height: 100vh;
+  padding: 10vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .merit .txt .card-num {
   font-size: 1.875rem;
@@ -9523,47 +9505,63 @@ p {
 }
 .merit .txt .card-conts {
   font-size: 1.375rem;
-  font-weight: regular;
+  font-weight: 400;
   line-height: 1.6;
   letter-spacing: 0;
 }
+.merit .txt01 {
+  opacity: 1;
+}
+.merit .txt02,
+.merit .txt03,
+.merit .txt04,
+.merit .txt05 {
+  opacity: 0;
+}
+.merit .img-container {
+  position: sticky;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+}
 .merit__img-wrap {
   position: relative;
-  overflow: hidden;
-  width: 50%;
-  max-width: 600px;
+  margin: 10vh 0;
+  width: 100%;
   height: 80vh;
+  overflow: hidden;
 }
 .merit .img {
   position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  z-index: 1;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/asset/image/merit-card01.jpg");
-  background-position: 50% 50%;
+  background-position: center;
+  background-size: auto;
   background-repeat: no-repeat;
+}
+.merit .img01 {
+  background-image: url("/asset/image/merit-card01.jpg");
+  z-index: 5;
 }
 .merit .img02 {
   background-image: url("/asset/image/merit-card02.jpg");
+  z-index: 4;
 }
 .merit .img03 {
   background-image: url("/asset/image/merit-card03.jpg");
+  z-index: 3;
 }
 .merit .img04 {
   background-image: url("/asset/image/merit-card04.jpg");
+  z-index: 2;
 }
 .merit .img05 {
   background-image: url("/asset/image/merit-card05.jpg");
+  z-index: 1;
 }
 
-.preview {
-  margin-top: 37.5rem;
-  background-color: #ffffff;
-}
 .preview .swiper-slide {
   background: #EEEEEE;
   height: 20rem;
@@ -9851,29 +9849,44 @@ p {
     line-height: 1.3;
     letter-spacing: 0;
   }
-  .merit__txt .card-num {
+  .merit .txt {
+    justify-content: flex-start;
+  }
+  .merit .txt .txt-inner .card-num {
     font-size: 1.375rem;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
     color: #0ED058;
   }
-  .merit__txt .card-title {
+  .merit .txt .txt-inner .card-title {
     font-size: 1.75rem;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
   }
-  .merit__txt .card-conts {
+  .merit .txt .txt-inner .card-conts {
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0;
   }
-  .preview {
+  .merit__card-wrap {
+    flex-direction: column-reverse;
+  }
+  .merit__card-wrap .img-container {
+    width: 100%;
+    height: 60vh;
+    margin: 10vh 0;
+  }
+  .merit__img-wrap {
+    margin: 10vh 0;
+    height: 40vh;
+  }
+  .merit .preview {
     margin-top: 5rem;
   }
-  .ask .typing-line {
+  .merit .ask .typing-line {
     font-size: 1.375rem;
     font-weight: 600;
     line-height: 1.3;
@@ -9975,19 +9988,13 @@ p {
   .solution .solution-pd {
     padding: 60px 0;
   }
-  .merit__card-wrap {
-    flex-direction: column-reverse;
-  }
-  .merit__img-wrap {
-    width: 100%;
-  }
-  .merit__text .card-title {
+  .merit .txt-inner .card-title {
     font-size: 1.375rem;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0;
   }
-  .merit__text .card-conts {
+  .merit .txt-inner .card-conts {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.6;
