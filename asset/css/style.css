@@ -9479,6 +9479,9 @@ p {
   display: flex;
   justify-content: space-around;
 }
+.merit__txt-wrap {
+  width: 450px;
+}
 .merit .txt {
   width: 100%;
   height: 100vh;
@@ -9522,7 +9525,6 @@ p {
   height: 100vh;
 }
 .merit__img-wrap {
-  border-radius: 1.25rem;
   position: relative;
   margin: 10vh 0;
   width: 100%;
@@ -10122,6 +10124,7 @@ p {
   line-height: 2;
 }
 .history__wrap {
+  width: 100%;
   display: flex;
   position: relative;
   width: 100%;
@@ -10153,23 +10156,14 @@ p {
   line-height: 1.3;
   letter-spacing: 0;
 }
-.history .left02,
-.history .left03,
-.history .left04 {
+.history .left02 {
   opacity: 0;
 }
-.history__year {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: 0;
-  color: #0ED058;
+.history .left03 {
+  opacity: 0;
 }
-.history__conts {
-  font-size: 1.375rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0;
+.history .left04 {
+  opacity: 0;
 }
 .history__right-wrap {
   display: flex;
@@ -10178,10 +10172,6 @@ p {
   gap: 7.5rem;
   flex-direction: column;
   width: 70%;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 100vh;
 }
 .history__right {
   font-size: 1.375rem;
@@ -10194,16 +10184,6 @@ p {
   gap: 1.875rem;
   flex-direction: column;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-}
-.history .right02,
-.history .right03,
-.history .right04 {
-  opacity: 0;
 }
 .history__right-txt {
   display: flex;
@@ -10328,19 +10308,18 @@ p {
     bottom: 6.25rem;
     right: 1.25rem;
   }
+  .history__grid {
+    grid-template-columns: 1fr;
+    margin: 3.125rem 0;
+    grid-template-rows: 1fr;
+    gap: 2.5rem;
+  }
   .history__wrap {
     flex-direction: column;
     flex-wrap: wrap;
   }
   .history__left {
     position: static;
-  }
-  .history__year {
-    font-size: 2.25rem;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 0;
-    color: #0ED058;
   }
   .history__right {
     width: 100%;
@@ -10379,19 +10358,6 @@ p {
   }
   .vision__card-wrap {
     width: 100%;
-  }
-  .history__year {
-    font-size: 1.625rem;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 0;
-    color: #0ED058;
-  }
-  .history__conts {
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.3;
-    letter-spacing: 0;
   }
   .history__right-wrap {
     width: 100%;
