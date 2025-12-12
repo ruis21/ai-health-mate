@@ -13,6 +13,10 @@
     height: 100vh;
     @include flex(center, flex-start, 0, column);
 
+    @include media-breakpoint-down(xl) {
+        height: 80vh;
+    }
+
     &__text-wrap {
         color: $whiteColor01;
         height: 100%;
@@ -34,6 +38,8 @@
             h3 {
                 margin-top: rem(20);
                 @include defineFont (rem(32));
+
+                @include media-breakpoint-down(xl) {}
             }
 
             .ai,
@@ -48,14 +54,17 @@
             }
         }
 
+        @include media-breakpoint-down(xl) {
+            padding: 0 rem(80);
+            gap: 0;
+        }
+
     }
 
     .kv {
-        height: 80vh;
 
         &__text-wrap {
-            padding: 0 rem(80);
-            gap: 0;
+
 
             .line {
 
