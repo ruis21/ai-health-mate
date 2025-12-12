@@ -13,8 +13,6 @@
     height: 100vh;
     @include flex(center, flex-start, 0, column);
 
-    @include 
-
     &__text-wrap {
         color: $whiteColor01;
         height: 100%;
@@ -667,7 +665,7 @@
 @media (max-width:1240px) {
 
     // kv 영역
-    
+
 }
 
 @media (max-width: 1024px) {
