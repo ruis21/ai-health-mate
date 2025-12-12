@@ -29,10 +29,11 @@
     letter-spacing: $letterSpacing;
 }
 
-@mixin media($grid-breakpoint) {
-    @media (max-width: $grid-breakpoint) {
+@mixin media($breakpoint) {
+    @media (max-width: $breakpoint) {
         @content;
     }
+<<<<<<< HEAD
 }
 
 @mixin bgSet ($imgPath, $position: center, $size: cover, $repeat: no-repeat) {
@@ -82,3 +83,6 @@ $breakpoint-tablet: 1024px;
 $breakpoint-medium: 768px;
 $breakpoint-mobile: 480px;
 $breakpoint-small: 360px;
+=======
+}
+>>>>>>> parent of cb0109f (edit)
