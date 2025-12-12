@@ -162,7 +162,7 @@
 }
 
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down('xl') {
     .faq {
         &__tab-menu {
             @include defineFont (rem(18), 600);
@@ -183,42 +183,34 @@
             }
         }
     }
-
-    @include media-breakpoint-down(lg) {
-        .faq {
-            &__tab-menu {
-                // justify-content: flex-start;
-                // flex-wrap: wrap;
-                background-color: $whiteColor01;
-                // border-radius: rem(40);
-                // color: none;
-                // text-align: center;
-            }
-
-            &__menu {
-                background-color: $grayColor04;
-                width: fit-content;
-                border-radius: rem(40);
-                color: $grayColor01;
-            }
-        }
-    }
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down('lg') {
     .faq {
-        &__board {
-            padding: rem(40) rem(40);
-        }
-
         &__tab-menu {
+            // justify-content: flex-start;
+            // flex-wrap: wrap;
+            background-color: $whiteColor01;
+            // border-radius: rem(40);
+            // color: none;
+            // text-align: center;
             margin-bottom: rem(120);
         }
 
+        &__menu {
+            background-color: $grayColor04;
+            width: fit-content;
+            border-radius: rem(40);
+            color: $grayColor01;
+        }
+
+        &__board {
+            padding: rem(40) rem(40);
+        }
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down('md') {
     .faq {
         &__board-title {
             h5 {

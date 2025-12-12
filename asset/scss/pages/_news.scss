@@ -157,7 +157,7 @@
 }
 
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down('xl') {
     .news {
         &__bg-txt {
             p {
@@ -168,7 +168,7 @@
     }
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down('lg') {
     .news {
         .swiper-slide a {
             @include flex (flex-start, center, 0px, column);

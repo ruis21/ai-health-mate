@@ -64,7 +64,7 @@
 }
 
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down('lg') {
     .inquiry {
         &__wrap {
             @include flex(center, center, 2%, column);
@@ -78,16 +78,7 @@
 
         &__right-box {
             width: 100%;
-        }
-    }
-}
 
-
-@include media-breakpoint-down(lg) {
-
-    .inquiry {
-
-        &__right-box {
             fieldset {
                 --bs-gutter-x: 1.5rem;
                 --bs-gutter-y: 1.5rem;
@@ -96,7 +87,7 @@
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down('md') {
     .inquiry {
         &__left-box {
             padding: rem(110) rem(40);

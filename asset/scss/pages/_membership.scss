@@ -58,7 +58,7 @@
 
 }
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down('xl') {
     .membership {
         &__card-wrap {
             padding: 0 20%;
@@ -71,7 +71,7 @@
     }
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down('lg') {
     .membership {
         &__card-wrap {
             padding: 0 20px;
@@ -79,7 +79,7 @@
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down('md') {
     .membership {
         &__card-txt {
             font-size: rem(16);

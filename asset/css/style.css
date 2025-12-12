@@ -9217,11 +9217,6 @@ p {
   gap: 0;
   flex-direction: column;
 }
-@media (max-width: 1239.98px) {
-  .kv {
-    height: 80vh;
-  }
-}
 .kv__text-wrap {
   color: #ffffff;
   height: 100%;
@@ -9263,41 +9258,6 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-@media (max-width: 1239.98px) {
-  .kv__text-wrap {
-    padding: 0 5rem;
-    gap: 0;
-  }
-}
-.kv .kv__text-wrap .line h3, .kv .kv__text-wrap .line .h3 {
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 1.3;
-  letter-spacing: 0;
-}
-.kv .kv__text-wrap .line .ai {
-  font-size: 3.125rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0;
-}
-.kv .kv__text-wrap .line .ai::after {
-  top: 0.9375rem;
-  height: 60%;
-  width: 3.875rem;
-}
-.kv .kv__text-wrap .line .kv__title {
-  font-size: 3.125rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0;
-}
-.kv .kv__title {
-  font-size: 3.125rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0;
 }
 .kv .ai {
   position: relative;
@@ -9773,12 +9733,50 @@ p {
   }
 }
 
+@media (max-width: 1239.98px) {
+  .kv {
+    height: 80vh;
+  }
+  .kv__text-wrap {
+    padding: 0 5rem;
+    gap: 0;
+  }
+  .kv__text-wrap .line h3, .kv__text-wrap .line .h3 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  .kv__text-wrap .line .ai {
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  .kv__text-wrap .line .ai::after {
+    top: 0.9375rem;
+    height: 60%;
+    width: 3.875rem;
+  }
+  .kv__text-wrap .line .kv__title {
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  .kv__title {
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+}
 @media (max-width: 1024px) {
   .solution__card-wrap {
     padding: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .title {
     font-size: 2.25rem;
     font-weight: 700;
@@ -9873,7 +9871,7 @@ p {
     letter-spacing: 0;
   }
 }
-@media (max-width: 541px) {
+@media (max-width: 540.98px) {
   .title {
     font-size: 1.625rem;
     font-weight: 700;
@@ -10108,7 +10106,6 @@ p {
   display: flex;
   position: relative;
   width: 100%;
-  height: 400vh;
 }
 .history__left-wrap {
   width: 30%;
@@ -10122,19 +10119,6 @@ p {
   display: flex;
   flex-direction: column;
   height: 80vh;
-}
-.history__left h3, .history__left .h3 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: 0;
-  color: #0097F6;
-}
-.history__left h5, .history__left .h5 {
-  font-size: 1.375rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0;
 }
 .history .left02 {
   opacity: 0;
@@ -10150,6 +10134,7 @@ p {
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: 0;
+  color: #0097F6;
 }
 .history__conts {
   font-size: 1.375rem;
@@ -10176,6 +10161,7 @@ p {
   gap: 1.875rem;
   flex-direction: column;
   width: 100%;
+  height: 80vh;
 }
 .history__right-txt {
   display: flex;
@@ -10216,6 +10202,9 @@ p {
 }
 
 @media (max-width: 1239.98px) {
+  .history {
+    background-position: left 6.25rem top 9.375rem, right 0 bottom 3.125rem;
+  }
   .history__bg01 img {
     left: 0;
     width: 31.25rem;
@@ -10851,9 +10840,10 @@ p {
     display: block;
   }
 }
-@media (max-width: 1239.98px) and (max-width: 767.98px) {
+@media (max-width: 767.98px) {
   .faq__tab-menu {
     background-color: #ffffff;
+    margin-bottom: 7.5rem;
   }
   .faq__menu {
     background-color: #EEEEEE;
@@ -10861,13 +10851,8 @@ p {
     border-radius: 2.5rem;
     color: #7E7E7E;
   }
-}
-@media (max-width: 767.98px) {
   .faq__board {
     padding: 2.5rem 2.5rem;
-  }
-  .faq__tab-menu {
-    margin-bottom: 7.5rem;
   }
 }
 @media (max-width: 540.98px) {
@@ -10964,8 +10949,6 @@ p {
   .inquiry__right-box {
     width: 100%;
   }
-}
-@media (max-width: 767.98px) {
   .inquiry__right-box fieldset {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 1.5rem;
@@ -11098,7 +11081,7 @@ p {
     width: 100%;
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 541px) {
   .map__txt p {
     padding: 0;
     font-size: 1.125rem;

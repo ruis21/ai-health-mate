@@ -157,7 +157,7 @@
         // =================================
         position: relative;
         width: 100%;
-        height: 400vh;
+        // height: 400vh;
         // ================================
     }
 
@@ -183,15 +183,6 @@
         flex-direction: column;
         // ==================================
         height: 80vh;
-
-        h3 {
-            @include defineFont(rem(48), 700);
-            color: $primaryColor02;
-        }
-
-        h5 {
-            @include defineFont(rem(22), 600);
-        }
     }
 
     .left02 {
@@ -209,6 +200,7 @@
 
     &__year {
         @include defineFont(rem(48), 700);
+        color: $primaryColor02;
     }
 
     &__conts {
@@ -228,7 +220,7 @@
         @include defineFont(rem(22));
         @include flex(flex-start, flex-start, rem(30), column);
         width: 100%;
-
+        height: 80vh;
     }
 
     &__right-txt {
@@ -320,8 +312,10 @@
 
 }
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down('xl') {
     .history {
+        background-position: left rem(100) top rem(150), right 0 bottom rem(50);
+
         &__bg01 {
             img {
                 left: 0;
@@ -341,7 +335,7 @@
 }
 
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down('lg') {
     .vision {
         &__path {
             display: none;
@@ -386,7 +380,7 @@
 
 }
 
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down('lg') {
     .about {
         &__txt {
             p {
@@ -469,7 +463,7 @@
 
 
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down('md') {
     .about {
         &__text-wrap {
             .line {
@@ -530,8 +524,4 @@
         }
     }
 
-}
-
-@include media-breakpoint-down(sm) {
-    .vision {}
 }

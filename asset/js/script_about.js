@@ -50,8 +50,6 @@ let boxes = gsap.utils.toArray(".history__right"),
     padding = gsap.getProperty(container, "paddingTop", "px"),
     years = ["2025년", "2024년", "2023년", "2022년"], // 년도 배열
 
-
-    // create a ScrollTrigger for each box that we can use to calculate snapping (we'll look at the "start" of each in the onRefresh)
     snapTriggers = boxes.map((box) =>
         ScrollTrigger.create({
             trigger: box,
@@ -66,27 +64,27 @@ ScrollTrigger.create({
     pin: ".history__left-wrap",  // ← wrap을 pin
     pinSpacing: false,
     start: "top 20%",
-    end: "bottom 80%",
-    // end: () =>
-    //     "+=" +
-    //     (boxes[boxes.length - 1].getBoundingClientRect().top -
-    //         boxes[0].getBoundingClientRect().top),
-    // onRefresh: (self) => {
-    //     // re-populate the "snaps" Array with the progress values for where each box hits the target spot.
-    //     let distance = self.end - self.start;
-    //     snapTriggers.forEach(
-    //         (trigger, i) => (snaps[i] = (trigger.start - self.start) / distance)
-    //     );
-},
-    // snap: snaps
-);
+    // end: "bottom 80%",
+    end: () =>
+        "+=" +
+        (boxes[boxes.length - 1].getBoundingClientRect().top -
+            boxes[0].getBoundingClientRect().top),
+    onRefresh: (self) => {
+        // re-populate the "snaps" Array with the progress values for where each box hits the target spot.
+        let distance = self.end - self.start;
+        snapTriggers.forEach(
+            (trigger, i) => (snaps[i] = (trigger.start - self.start) / distance)
+        );
+    },
+    snap: snaps
+});
 
 
 // for swapping in the text for each section
 boxes.forEach((box, i) => {
     ScrollTrigger.create({
         trigger: box,
-        start: "top top",
+        start: "top 10%",
         end: "bottom top",
         onToggle: (self) => {
             if (self.isActive) {
@@ -97,8 +95,7 @@ boxes.forEach((box, i) => {
     });
 });
 
-
-
+// 처음 셋팅
 gsap.set('.left01 h5', { opacity: 1 });  // ← 첫 번째는 보이게
 gsap.set('.left02 h5', { opacity: 0 });
 gsap.set('.left03 h5', { opacity: 0 });
@@ -145,63 +142,8 @@ tl03
     .to('.left04 h5', { opacity: 1 }, '<')
 
 
-// ==================== grid 애니메이션 ==========================
-// gsap.utils.toArray(".history__grid").forEach((grid) => {
-
-//     let left = grid.querySelector(".history__left");
-//     let right = grid.querySelector(".history__right");
-
-//     // 초기 상태 설정
-//     gsap.set(left, { autoAlpha: 0, y: 30 });
-//     gsap.set(right, { autoAlpha: 0, y: 50 });
-
-//     // 왼쪽(year + title) 등장 애니메이션 (한 번만 재생)
-//     gsap.timeline({
-//         scrollTrigger: {
-//             trigger: grid,
-//             start: "top 80%",
-//             end: "top 60%",
-//             scrub: true,
-//             // markers: true
-//         }
-//     })
-//         .to(left, {
-//             autoAlpha: 1,
-//             y: 0,
-//             ease: "power1.out"
-//         });
-
-//     // 오른쪽 콘텐츠 등장 + 사라짐
-//     gsap.timeline({
-//         scrollTrigger: {
-//             trigger: grid,
-//             start: "top 80%",
-//             end: "bottom 20%",
-//             scrub: true,
-//             invalidateOnRefresh: true,
-//         }
-//     })
-//         // 등장 (선명해짐)
-//         .to(right, {
-//             autoAlpha: 1,
-//             y: 0,
-//             ease: "none"
-//         }, 0)
-//         // 사라짐 (흐려지며 위로)
-//         .to(right, {
-//             autoAlpha: 0,
-//             y: -50,
-//             ease: "none"
-//         }, 0.6);
-// });
-
-
-
 
 // partners Swiper =============================================
-
-
-
 var partnersSwiper = new Swiper(".partnersSwiper", {
     slidesPerView: 3,
     spaceBetween: 20,
