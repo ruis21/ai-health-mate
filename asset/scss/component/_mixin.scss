@@ -41,3 +41,44 @@
     background-size: $size;
     background-repeat: $repeat;
 }
+
+
+// 공통 반응형 mixin
+@mixin responsive($device) {
+    @if $device =='pc' {
+        @media (max-width: v.$breakpoint-pc) {
+            @content;
+        }
+    }
+
+    @else if $device =='tablet' {
+        @media (max-width: v.$breakpoint-tablet) {
+            @content;
+        }
+    }
+
+    @else if $device =='medium' {
+        @media (max-width: v.$breakpoint-medium) {
+            @content;
+        }
+    }
+
+    @else if $device =='mobile' {
+        @media (max-width: v.$breakpoint-mobile) {
+            @content;
+        }
+    }
+
+    @else if $device =='small' {
+        @media (max-width: v.$breakpoint-small) {
+            @content;
+        }
+    }
+}
+
+// breakpoint
+$breakpoint-pc: 1240px;
+$breakpoint-tablet: 1024px;
+$breakpoint-medium: 768px;
+$breakpoint-mobile: 480px;
+$breakpoint-small: 360px;

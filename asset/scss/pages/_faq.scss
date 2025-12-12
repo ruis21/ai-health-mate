@@ -162,7 +162,7 @@
 }
 
 
-@media (max-width:1240px) {
+@include media-breakpoint-down(xl) {
     .faq {
         &__tab-menu {
             @include defineFont (rem(18), 600);
@@ -184,7 +184,7 @@
         }
     }
 
-    @media (max-width:1024px) {
+    @include media-breakpoint-down(lg) {
         .faq {
             &__tab-menu {
                 // justify-content: flex-start;
@@ -205,7 +205,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@include media-breakpoint-down(lg) {
     .faq {
         &__board {
             padding: rem(40) rem(40);
@@ -218,7 +218,7 @@
     }
 }
 
-@media (max-width: 541px) {
+@include media-breakpoint-down(md) {
     .faq {
         &__board-title {
             h5 {

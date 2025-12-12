@@ -64,7 +64,7 @@
 }
 
 
-@media (max-width:1024px) {
+@include media-breakpoint-down(lg) {
     .inquiry {
         &__wrap {
             @include flex(center, center, 2%, column);
@@ -83,7 +83,7 @@
 }
 
 
-@media (max-width:768px) {
+@include media-breakpoint-down(lg) {
 
     .inquiry {
 
@@ -96,7 +96,7 @@
     }
 }
 
-@media (max-width:541px) {
+@include media-breakpoint-down(md) {
     .inquiry {
         &__left-box {
             padding: rem(110) rem(40);

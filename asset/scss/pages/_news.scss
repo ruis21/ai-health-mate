@@ -162,7 +162,7 @@
 }
 
 
-@media (max-width: 1240px) {
+@include media-breakpoint-down(xl) {
     .news {
         &__bg-txt {
             p {
@@ -173,7 +173,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@include media-breakpoint-down(lg) {
     .news {
         .swiper-slide a {
             @include flex (flex-start, center, 0px, column);

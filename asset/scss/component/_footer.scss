@@ -37,7 +37,7 @@
     }
 }
 
-@media (max-width:768px) {
+@include media-breakpoint-down(lg) {
 
     .footer {
         &__wrap {

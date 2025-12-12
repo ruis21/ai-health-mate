@@ -2,11 +2,11 @@
 .sec-pd-t {
     padding: calc(rem(120) + rem(77)) 0 rem(120);
 
-    @media (max-width:768px) {
+    @include media-breakpoint-down(lg) {
         padding: calc(rem(80) + rem(77)) 0 rem(80);
     }
 
-    @media (max-width:541px) {
+    @include media-breakpoint-down(md) {
         padiing: calc(rem(60) + rem(77)) 0 rem(60);
     }
 }
@@ -14,11 +14,11 @@
 .sec-pd {
     padding: rem(120) 0;
 
-    @media (max-width:768px) {
+    @include media-breakpoint-down(lg) {
         padding: rem(80) 0;
     }
 
-    @media (max-width:541px) {
+    @include media-breakpoint-down(md) {
         padding: rem(60) 0;
     }
 }
@@ -72,12 +72,12 @@
         transition: all 0.3s ease-in-out;
     }
 
-    @media (max-width: 1024px) {
+    @include media-breakpoint-down(lg) {
         gap: rem(65);
         @include defineFont(rem(26), 600);
     }
 
-    @media (max-width: 768px) {
+    @include media-breakpoint-down(lg) {
 
         .tab-menu {
             &.on {
@@ -89,7 +89,7 @@
         }
     }
 
-    @media (max-width: 541px) {
+    @include media-breakpoint-down(md) {
         gap: rem(45);
         @include defineFont(rem(22), 600);
     }
@@ -116,13 +116,13 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @include media-breakpoint-down(lg) {
 
         gap: rem(65);
         @include defineFont(rem(18), 600);
     }
 
-    @media (max-width: 541px) {
+    @include media-breakpoint-down(md) {
         gap: rem(45);
         @include defineFont(rem(16), 600);
     }
@@ -166,11 +166,11 @@
     @include defineFont (rem(48), 600);
     text-align: center;
 
-    @media(max-width:768px) {
+    @include media-breakpoint-down(lg) {
         @include defineFont (rem(36));
     }
 
-    @media(max-width:541px) {
+    @include media-breakpoint-down(md) {
         @include defineFont (rem(26));
     }
 

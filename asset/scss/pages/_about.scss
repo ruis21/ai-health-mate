@@ -320,7 +320,7 @@
 
 }
 
-@media (max-width:1240px) {
+@include media-breakpoint-down(xl) {
     .history {
         &__bg01 {
             img {
@@ -341,7 +341,7 @@
 }
 
 
-@media (max-width:1024px) {
+@include media-breakpoint-down(lg) {
     .vision {
         &__path {
             display: none;
@@ -386,7 +386,7 @@
 
 }
 
-@media (max-width:768px) {
+@include media-breakpoint-down(lg) {
     .about {
         &__txt {
             p {
@@ -470,7 +470,7 @@
 
 
 
-@media (max-width:541px) {
+@include media-breakpoint-down(md) {
     .about {
         &__text-wrap {
             .line {
@@ -534,6 +534,6 @@
 
 }
 
-@media (max-width:393px) {
+@include media-breakpoint-down(sm) {
     .vision {}
 }

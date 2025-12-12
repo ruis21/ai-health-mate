@@ -195,7 +195,7 @@
     }
 
 
-    @media (max-width: 1024px) {
+    @include media-breakpoint-down(lg) {
         .hamburger-btn {
             display: flex;
         }

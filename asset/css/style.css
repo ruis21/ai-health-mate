@@ -10235,7 +10235,7 @@ p {
   letter-spacing: 0.3125rem;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1239.98px) {
   .history__bg01 img {
     left: 0;
     width: 31.25rem;
@@ -10245,7 +10245,7 @@ p {
     width: 25rem;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 767.98px) {
   .vision__path {
     display: none;
   }
@@ -10276,7 +10276,7 @@ p {
     letter-spacing: 0.3125rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .about__txt p {
     font-size: 1.125rem;
     font-weight: 400;
@@ -10344,7 +10344,7 @@ p {
     letter-spacing: 0.3125rem;
   }
 }
-@media (max-width: 541px) {
+@media (max-width: 540.98px) {
   .about__text-wrap .line {
     height: 3.125rem;
   }
