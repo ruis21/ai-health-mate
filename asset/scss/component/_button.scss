@@ -15,14 +15,14 @@
     gap: rem(20);
 
     // 중간 화면에서 md 크기
-    @media (max-width: 1024px) {
+    @include media-breakpoint-down(lg) {
         height: rem(48);
         font-size: rem(18);
         padding: rem(15) rem(30);
     }
 
     // 작은 화면에서 sm 크기
-    @media (max-width: 541px) {
+    @include media-breakpoint-down(md) {
         height: rem(44);
         font-size: rem(16);
         padding: rem(12) rem(25);
@@ -31,19 +31,11 @@
 
 .kv {
     &__btn {
-        position: absolute;
-        left: 0;
-        width: auto;
-        // margin-top: rem(40);
-
         &:hover {
             background-color: $primaryColor01;
         }
 
-        @media (max-width: 768px) {
-            // position: static;
-            margin-top: rem(20);
-        }
+        // 
     }
 }
 
@@ -130,19 +122,4 @@
     }
 }
 
-.news {
-    &__new-btn {
-
-        &::after {
-            content: 'new';
-            background-color: $primaryColor01;
-            color: $whiteColor01;
-            @include defineFont(rem(14), 600);
-            padding: rem(2) rem(4);
-            border-radius: rem(5);
-            // width: rem(34);
-            // height: rem(16);
-            display: inline-block;
-        }
-    }
-}
+.news {}
