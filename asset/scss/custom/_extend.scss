@@ -142,6 +142,7 @@
     input {
         border: none;
         outline: none;
+        height: rem(48);
 
         &:active {
             border: 1px solid $blackColor02;
@@ -155,6 +156,7 @@
     }
 
     select {
+        height: rem(48);
         outline: none;
         border: none;
         width: 200px;

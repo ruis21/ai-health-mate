@@ -206,18 +206,23 @@
             }
         }
 
-        &__board {
+        &__board-wrap {
 
-            h5,
-            p {
-                margin: 0 rem(20);
+            form {
+                margin-top: rem(30);
             }
 
-            h5 {
-                @include defineFont (rem(18), 600);
-            }
+            &__board {
 
+                h5,
+                p {
+                    margin: 0 rem(20);
+                }
+
+                h5 {
+                    @include defineFont (rem(18), 600);
+                }
+            }
         }
-
     }
 }
