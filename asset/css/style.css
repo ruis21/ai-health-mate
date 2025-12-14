@@ -10279,12 +10279,12 @@ p {
   .history__left-wrap {
     width: 100%;
     height: 100%;
-    background-color: aqua;
+    z-index: 100;
+    background-color: #ffffff;
   }
   .history__left {
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
   }
   .history__right {
     width: 100%;
