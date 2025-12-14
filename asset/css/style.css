@@ -9624,12 +9624,14 @@ p {
   gap: 0.9375rem;
   flex-direction: row;
   /* 가상요소 안 보이게 처리 */
-  /* 새로 디자인 */
 }
 .preview__btn .swiper-button-next:after,
 .preview__btn .swiper-button-prev:after {
   font-size: 1rem;
   color: #111111;
+}
+.preview__btn {
+  /* 새로 디자인 */
 }
 .preview__btn .swiper-button-next,
 .preview__btn .swiper-button-prev {
@@ -9651,14 +9653,6 @@ p {
   background: linear-gradient(135deg, #0ED058, #0097F6);
   color: #ffffff;
   position: relative;
-  /* 1번째 줄: 타이핑 중에는 커서 표시, 타이핑 끝나면 커서 제거 */
-  /* 마지막 줄: 앞줄이 끝난 뒤 시작
-     - typing: 글자 표시
-     - caret-typing-keep: 타이핑 동안 커서 지속(끝나도 유지)
-     - blink-caret: 타이핑 끝난 뒤 깜빡임 시작 */
-  /* 첫 줄 전용: 타이핑 기간에는 커서 보이고 끝에서 사라짐 */
-  /* 마지막 줄: 타이핑 기간 동안 커서 유지(끝나도 유지, 이후 blink가 작동) */
-  /* 마지막 줄 깜빡이 커서 (투명 <-> 흰색) */
 }
 .ask::before {
   content: "";
@@ -9690,9 +9684,18 @@ p {
   /* 폰트사이즈 36 */
   animation-fill-mode: forwards;
 }
+.ask {
+  /* 1번째 줄: 타이핑 중에는 커서 표시, 타이핑 끝나면 커서 제거 */
+}
 .ask .typing-line:nth-child(1) {
   animation: typing 1.2s steps(12, end) forwards, caret-typing 2.4s linear forwards;
   animation-delay: 0s, 0s;
+}
+.ask {
+  /* 마지막 줄: 앞줄이 끝난 뒤 시작
+     - typing: 글자 표시
+     - caret-typing-keep: 타이핑 동안 커서 지속(끝나도 유지)
+     - blink-caret: 타이핑 끝난 뒤 깜빡임 시작 */
 }
 .ask .typing-line:last-child {
   animation: typing 1.8s steps(18, end) forwards, caret-typing-keep 1.8s linear forwards, blink-caret 0.75s step-end infinite;
@@ -9707,6 +9710,9 @@ p {
     width: 100%;
   }
 }
+.ask {
+  /* 첫 줄 전용: 타이핑 기간에는 커서 보이고 끝에서 사라짐 */
+}
 @keyframes caret-typing {
   0% {
     border-right-color: rgba(255, 255, 255, 0.9);
@@ -9718,6 +9724,9 @@ p {
     border-right-color: transparent;
   }
 }
+.ask {
+  /* 마지막 줄: 타이핑 기간 동안 커서 유지(끝나도 유지, 이후 blink가 작동) */
+}
 @keyframes caret-typing-keep {
   0% {
     border-right-color: rgba(255, 255, 255, 0.9);
@@ -9725,6 +9734,9 @@ p {
   100% {
     border-right-color: rgba(255, 255, 255, 0.9);
   }
+}
+.ask {
+  /* 마지막 줄 깜빡이 커서 (투명 <-> 흰색) */
 }
 @keyframes blink-caret {
   0%, 100% {
@@ -10267,6 +10279,7 @@ p {
   .history__left-wrap {
     width: 100%;
     height: 100%;
+    background-color: aqua;
   }
   .history__left {
     width: 100%;
@@ -10666,9 +10679,6 @@ p {
     letter-spacing: 0;
   }
 }
-.faq {
-  /* 기본 아이콘 스타일 */
-}
 .faq__tab-menu {
   display: flex;
   justify-content: space-between;
@@ -10727,6 +10737,9 @@ p {
 }
 .faq__board-list li.on {
   color: #0ED058;
+}
+.faq {
+  /* 기본 아이콘 스타일 */
 }
 .faq__board-title {
   width: 100%;
@@ -11087,11 +11100,6 @@ p {
     font-size: 1rem;
   }
 }
-.footer {
-  background-color: #111111;
-  color: #F5F5F5;
-  padding: 5.125rem 0;
-}
 .footer__txt ul {
   font-size: 1.125rem;
   font-weight: 400;
@@ -11118,6 +11126,11 @@ p {
   align-items: center;
   flex-direction: row;
 }
+.footer {
+  background-color: #111111;
+  color: #F5F5F5;
+  padding: 5.125rem 0;
+}
 .footer img {
   display: block;
   width: 11.875rem;
@@ -11136,3 +11149,5 @@ p {
     flex-direction: column-reverse;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
