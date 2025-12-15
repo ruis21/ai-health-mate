@@ -63,15 +63,15 @@ const isMobile768 = () => window.innerWidth <= 768;
 
 
 // left-wrap 배경색 반응형 처리
-const mediaQuery = window.matchMedia("(max-width: 768px)");
-const leftWrap = document.querySelector(".history__left-wrap");
+// const mediaQuery = window.matchMedia("(max-width: 768px)");
+// const leftWrap = document.querySelector(".history__left-wrap");
 
-const applyBg = () => {
-    leftWrap.style.backgroundColor = mediaQuery.matches ? "#ffffff" : "transparent";
-}
+// const applyBg = () => {
+//     leftWrap.style.backgroundColor = mediaQuery.matches ? "#ffffff" : "transparent";
+// }
 
-applyBg();
-mediaQuery.addEventListener("change", applyBg);
+// applyBg();
+// mediaQuery.addEventListener("change", applyBg);
 
 
 // 처음 셋팅
@@ -139,8 +139,13 @@ mm.add("(min-width: 769px)", () => {
             snapTriggers.forEach(
                 (trigger, i) => (snaps[i] = (trigger.start - self.start) / distance)
             );
+            gsap.set(".history__left-wrap", {
+                height: "auto",  // 또는 원하는 값
+                // maxHeight: "none",
+            });
         },
         snap: snaps
+
     });
 
 
@@ -166,7 +171,7 @@ mm.add("(max-width: 768px)", () => {
     ScrollTrigger.create({
         trigger: ".history__wrap",
         start: "top 77px",
-        end: "bottom top",
+        end: "bottom bottom",
         pin: ".history__left-wrap",
         pinSpacing: false,
         pinType: "fixed"

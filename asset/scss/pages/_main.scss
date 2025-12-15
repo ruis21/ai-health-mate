@@ -1,6 +1,5 @@
 ﻿// kv section ==============================================
 .kv {
-    @include bgImg();
     background: linear-gradient(to left,
             rgba(20, 20, 20, 0) 10%,
             rgba(20, 20, 20, 0.25) 25%,
@@ -10,6 +9,7 @@
         url("/asset/image/kv-bg02.png");
     height: 100vh;
     @include flex(center, flex-start, 0, column);
+    @include bgImg();
 
     &__text-wrap {
         color: $whiteColor01;
@@ -271,6 +271,7 @@
     &__card-wrap {
         display: flex;
         justify-content: space-around;
+        height: calc(100% - rem(77));
     }
 
     &__txt-wrap {
@@ -315,14 +316,14 @@
         position: sticky;
         top: 0;
         width: 50%;
-        height: 100vh;
+        height: 100%;
         // max-width: 600px;
     }
 
     &__img-wrap {
         border-radius: rem(20);
         position: relative;
-        margin: 10vh 0;
+        margin: 15vh 0 5vh;
         width: 100%;
         height: 80vh;
         overflow: hidden;
