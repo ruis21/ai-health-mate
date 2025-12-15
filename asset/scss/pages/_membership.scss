@@ -1,6 +1,5 @@
 .membership {
     &__card-wrap {
-
         --bs-gutter-x: 1rem;
         --bs-gutter-y: 1rem;
         gap: 2%;
@@ -51,9 +50,7 @@
 
     &__bg {
         background-image: url("../image/membership-bg-grdient.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include bgImg();
     }
 
 }
@@ -67,6 +64,10 @@
 
         &__card {
             width: 100%;
+        }
+
+        &__bg {
+            background-size: 800px 800px;
         }
     }
 }

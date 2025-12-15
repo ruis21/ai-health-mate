@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     width: fit-content;
+    // height: fit-content;
     gap: rem(20);
 
     // 중간 화면에서 md 크기
@@ -34,8 +35,6 @@
         &:hover {
             background-color: $primaryColor01;
         }
-
-        // 
     }
 }
 

@@ -14,6 +14,20 @@
         span {
             font-family: 'Science Gothic';
             @include defineFont (rem(26), 600);
+            z-index: 10;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                z-index: -1;
+                left: rem(0);
+                top: rem(8);
+                background: $gradientColor01;
+                height: rem(16);
+                width: rem(30);
+            }
         }
     }
 

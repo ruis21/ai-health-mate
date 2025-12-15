@@ -1,10 +1,8 @@
 // about section
 .about {
     &__bg {
+        @include bgImg();
         background-image: url(../image/about-bg.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     //=====================================
@@ -137,6 +135,7 @@
     background-attachment: fixed, fixed;
     // background-size: auto, auto;
     background-size: 500px auto, 400px auto;
+
 
     .num {
         font-weight: 700;
@@ -315,6 +314,14 @@
     }
 
     .history {
+
+
+        &__title {
+            background-color: $whiteColor01;
+            padding: 200px;
+            width: 200px;
+            height: 200px;
+        }
 
         &__wrap {
             flex-direction: column;
