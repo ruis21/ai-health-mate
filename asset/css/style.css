@@ -9220,10 +9220,10 @@ p {
 }
 
 .kv {
-  background: linear-gradient(to left, rgba(20, 20, 20, 0) 10%, rgba(20, 20, 20, 0.25) 25%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/asset/image/kv-bg02.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background: linear-gradient(to left, rgba(20, 20, 20, 0) 10%, rgba(20, 20, 20, 0.25) 25%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/asset/image/kv-bg02.png");
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -9999,10 +9999,10 @@ p {
   }
 }
 .about__bg {
-  background-image: url(../image/about-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(../image/about-bg.jpg);
 }
 .about__title, .about__txt > p:first-child, .about__text-wrap, .about__txt > p:last-child,
 .about img {
@@ -10696,12 +10696,10 @@ p {
   border: 1px solid #ADADAD;
 }
 .membership__bg {
-  background-image: url("../image/membership-bg-grdient.png");
+  background: url("../image/membership-bg-grdient.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
-  width: 100%;
 }
 
 @media (max-width: 1239.98px) {
@@ -10713,12 +10711,8 @@ p {
     width: 100%;
   }
   .membership__bg {
-    background-image: url("../image/membership-bg-grdient.png");
-    background-position: bottom;
-    background-repeat: no-repeat;
     background-size: contain;
-    height: auto;
-    width: 100%;
+    background-position: bottom;
   }
 }
 @media (max-width: 767.98px) {
@@ -10729,6 +10723,17 @@ p {
 @media (max-width: 540.98px) {
   .membership__card-txt {
     font-size: 1rem;
+  }
+  .membership__card-txt li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.625rem;
+    flex-direction: row;
+    font-size: 1.125rem;
+  }
+  .membership__card-txt img {
+    margin-top: 0.3125rem;
   }
   .membership__card {
     height: 100%;
