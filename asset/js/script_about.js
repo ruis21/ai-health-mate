@@ -30,8 +30,7 @@ const tl02 = gsap.timeline({
         end: "+=1000px",
         scrub: true,
         pin: true,
-        pinSpacing: true,
-        markers: true
+        pinSpacing: true
     }
 });
 
@@ -63,44 +62,6 @@ let boxes = gsap.utils.toArray(".history__right"),
 const isMobile768 = () => window.innerWidth <= 768;
 
 
-ScrollTrigger.create({
-    trigger: ".history__wrap",
-    markers: true,
-    pin: ".history__left-wrap",  // ← wrap을 pin
-    pinSpacing: false,
-    start: isMobile768() ? "top 77px" : "top 20%",  // ← 768 이하: top 77px, 이상: top 20%
-    // end: "bottom 80%",
-    end: () =>
-        "+=" +
-        (boxes[boxes.length - 1].getBoundingClientRect().top -
-            boxes[0].getBoundingClientRect().top),
-    onRefresh: (self) => {
-        // re-populate the "snaps" Array with the progress values for where each box hits the target spot.
-        let distance = self.end - self.start;
-        snapTriggers.forEach(
-            (trigger, i) => (snaps[i] = (trigger.start - self.start) / distance)
-        );
-    },
-    snap: snaps
-});
-
-
-// for swapping in the text for each section
-boxes.forEach((box, i) => {
-    ScrollTrigger.create({
-        trigger: box,
-        start: "top 10%",
-        end: "bottom top",
-        onToggle: (self) => {
-            if (self.isActive) {
-                // 년도 배열에서 가져오기
-                text.innerText = years[i];
-            }
-        }
-    });
-});
-
-
 // left-wrap 배경색 반응형 처리
 const mediaQuery = window.matchMedia("(max-width: 768px)");
 const leftWrap = document.querySelector(".history__left-wrap");
@@ -112,6 +73,7 @@ const applyBg = () => {
 applyBg();
 mediaQuery.addEventListener("change", applyBg);
 
+
 // 처음 셋팅
 gsap.set('.left01 h5', { opacity: 1 });  // ← 첫 번째는 보이게
 gsap.set('.left02 h5', { opacity: 0 });
@@ -121,7 +83,6 @@ gsap.set('.left04 h5', { opacity: 0 });
 const tl03 = gsap.timeline({
     scrollTrigger: {
         trigger: '.history__wrap',
-        markers: true,
         start: 'top top',   //section 화면 상단에 
         end: 'bottom bottom',   //section 끝까지 스크롤되면 끝
         scrub: 1
@@ -166,7 +127,6 @@ mm.add("(min-width: 769px)", () => {
     // 데스크톱: 기존 코드 (pin 적용)
     ScrollTrigger.create({
         trigger: ".history__wrap",
-        markers: true,
         pin: ".history__left-wrap",
         pinSpacing: false,
         start: "top 20%",
@@ -182,7 +142,24 @@ mm.add("(min-width: 769px)", () => {
         },
         snap: snaps
     });
+
+
+    // for swapping in the text for each section
+    boxes.forEach((box, i) => {
+        ScrollTrigger.create({
+            trigger: box,
+            start: "top 10%",
+            end: "bottom top",
+            onToggle: (self) => {
+                if (self.isActive) {
+                    // 년도 배열에서 가져오기
+                    text.innerText = years[i];
+                }
+            }
+        });
+    });
 });
+
 
 mm.add("(max-width: 768px)", () => {
     // 모바일: fixed 방식으로 고정
@@ -195,13 +172,29 @@ mm.add("(max-width: 768px)", () => {
         pinType: "fixed"
     });
 
-    // 배경과 스타일 적용
-    // gsap.set(".history__left-wrap", {
-    //     backgroundColor: "black",
-    //     padding: "20px",
-    //     width: "100%"
-    // });
+    // for swapping in the text for each section(mobile)
+    boxes.forEach((box, i) => {
+        ScrollTrigger.create({
+            trigger: box,
+            start: "top 10%",
+            end: "bottom top",
+            onToggle: (self) => {
+                if (self.isActive) {
+                    // 년도 배열에서 가져오기
+                    text.innerText = years[i];
+                }
+            }
+        });
+    });
 });
+
+// 배경과 스타일 적용
+// gsap.set(".history__left-wrap", {
+//     backgroundColor: "black",
+//     padding: "20px",
+//     width: "100%"
+// });
+// });
 
 
 

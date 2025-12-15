@@ -131,18 +131,24 @@
 
 // field box 컴포넌트
 .field-box {
+    form {
+        margin: 0;
+    }
+
     label {
         border: 1px solid $grayColor02;
         color: $grayColor02;
         border-radius: rem(30);
         padding: rem(10) rem(20);
         @include defineFont (rem(16));
+        @include flex(space-between, center, rem(10));
     }
 
     input {
         border: none;
         outline: none;
         height: rem(48);
+        @include flex(space-between, center);
 
         &:active {
             border: 1px solid $blackColor02;

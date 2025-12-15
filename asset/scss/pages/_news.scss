@@ -99,6 +99,12 @@
         form {
             @include flex (flex-end, center, rem(10));
             margin-bottom: rem(30);
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            ;
         }
 
         .search-btn {
@@ -210,6 +216,29 @@
 
             form {
                 margin-top: rem(30);
+                @include flex (center, center, rem(10), column);
+
+                label {
+                    width: 100%;
+                }
+
+                select {
+                    width: 100%;
+                }
+
+                input {
+                    width: 100%;
+                    flex: 1;
+                    min-width: 0;
+                }
+
+                label select,
+                label input {
+                    flex: 1;
+                    min-width: 0;
+                }
+
+
             }
 
             &__board {
