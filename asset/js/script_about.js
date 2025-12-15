@@ -17,8 +17,8 @@ const tl01 = gsap.timeline({
     .to(".about__title", { opacity: 1, y: 0, duration: 0.6 })
     .to(".about__txt > p:first-child", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
     .to(".about__text-wrap", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
-    .to(".about__txt > p:last-child", { opacity: 1, y: 0, duration: 0.6, delay: 2 }, "-=0.3")
-    .to(".about img", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3");
+    .to(".about__txt > p:last-child", { opacity: 1, y: 0, duration: 0.6, delay: 1 }, "-=0.3")
+    .to(".about img", { opacity: 1.2, y: 0, duration: 0.6 }, "-=0.3");
 
 
 
@@ -44,6 +44,7 @@ tl02.to(".about__text-wrap .line:nth-child(1)", { opacity: 1, y: 0, duration: 1 
 
 // history gsap =============================
 
+// 년도 바뀌는 부분 스크롤트리거 
 let boxes = gsap.utils.toArray(".history__right"),
     container = document.querySelector(".history__left-wrap"),
     text = document.querySelector(".history__left h3"),
@@ -58,12 +59,16 @@ let boxes = gsap.utils.toArray(".history__right"),
     ),
     snaps = []; // where we'll store the progress value for each box's ScrollTrigger (start)
 
+// 반응형 처리 (768 이하에서 start 위치 조정)
+const isMobile768 = () => window.innerWidth <= 768;
+
+
 ScrollTrigger.create({
     trigger: ".history__wrap",
     markers: true,
     pin: ".history__left-wrap",  // ← wrap을 pin
     pinSpacing: false,
-    start: "top 20%",
+    start: isMobile768() ? "top 77px" : "top 20%",  // ← 768 이하: top 77px, 이상: top 20%
     // end: "bottom 80%",
     end: () =>
         "+=" +
@@ -94,6 +99,18 @@ boxes.forEach((box, i) => {
         }
     });
 });
+
+
+// left-wrap 배경색 반응형 처리
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+const leftWrap = document.querySelector(".history__left-wrap");
+
+const applyBg = () => {
+    leftWrap.style.backgroundColor = mediaQuery.matches ? "#ffffff" : "transparent";
+}
+
+applyBg();
+mediaQuery.addEventListener("change", applyBg);
 
 // 처음 셋팅
 gsap.set('.left01 h5', { opacity: 1 });  // ← 첫 번째는 보이게
