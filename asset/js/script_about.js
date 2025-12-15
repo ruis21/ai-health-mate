@@ -159,6 +159,51 @@ tl03
     .to('.left04 h5', { opacity: 1 }, '<')
 
 
+// 반응형 분기
+const mm = gsap.matchMedia();
+
+mm.add("(min-width: 769px)", () => {
+    // 데스크톱: 기존 코드 (pin 적용)
+    ScrollTrigger.create({
+        trigger: ".history__wrap",
+        markers: true,
+        pin: ".history__left-wrap",
+        pinSpacing: false,
+        start: "top 20%",
+        end: () =>
+            "+=" +
+            (boxes[boxes.length - 1].getBoundingClientRect().top -
+                boxes[0].getBoundingClientRect().top),
+        onRefresh: (self) => {
+            let distance = self.end - self.start;
+            snapTriggers.forEach(
+                (trigger, i) => (snaps[i] = (trigger.start - self.start) / distance)
+            );
+        },
+        snap: snaps
+    });
+});
+
+mm.add("(max-width: 768px)", () => {
+    // 모바일: fixed 방식으로 고정
+    ScrollTrigger.create({
+        trigger: ".history__wrap",
+        start: "top 77px",
+        end: "bottom top",
+        pin: ".history__left-wrap",
+        pinSpacing: false,
+        pinType: "fixed"
+    });
+
+    // 배경과 스타일 적용
+    // gsap.set(".history__left-wrap", {
+    //     backgroundColor: "black",
+    //     padding: "20px",
+    //     width: "100%"
+    // });
+});
+
+
 
 // partners Swiper =============================================
 var partnersSwiper = new Swiper(".partnersSwiper", {
