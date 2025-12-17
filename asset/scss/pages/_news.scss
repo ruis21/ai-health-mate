@@ -99,8 +99,17 @@
             width: 100%;
         }
 
+        select {
+            // width: 100%;
+            height: rem(30);
+            // padding: 0 rem(10);
+        }
+
         input {
-            width: 100%;
+            // width: 100%;
+            // flex: 1;
+            // padding: rem(10);
+            height: rem(30);
         }
 
         .search-btn {
