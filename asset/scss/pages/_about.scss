@@ -97,11 +97,11 @@
         @include flex(center);
         height: rem(350);
         width: rem(350);
-        // line-height: 350px;
+
         border: 2px solid $primaryColor01;
         border-radius: 50%;
         background-color: $whiteColor01;
-        // transform: translate(10%, 30%);
+
     }
 
     &__circle-txt {
@@ -135,6 +135,12 @@
     background-attachment: fixed, fixed;
     // background-size: auto, auto;
     background-size: 500px auto, 400px auto;
+
+    @include media-breakpoint-down('lg') {
+        background-image: none;
+        // background-color: transparent;
+        // background-attachment: unset;
+    }
 
 
     .num {
@@ -411,7 +417,9 @@
         }
 
         &__left-wrap {
-            height: 100%
+            // max-height: none;
+            // height: auto;
+            min-height: 120px;
         }
 
         &__left {

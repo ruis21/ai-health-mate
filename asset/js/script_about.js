@@ -9,8 +9,6 @@ const tl01 = gsap.timeline({
         start: "top top",
         end: "+=1000px",
         // scrub: 2,
-        // trigger: ".about",
-        // start: "top center",  // 화면의 80% 지점에서 시작
         toggleActions: "play none none none"  // 한 번만 실행
     }
 })
@@ -56,22 +54,10 @@ let boxes = gsap.utils.toArray(".history__right"),
             start: "top " + padding + "px"
         })
     ),
-    snaps = []; // where we'll store the progress value for each box's ScrollTrigger (start)
+    snaps = [];
 
 // 반응형 처리 (768 이하에서 start 위치 조정)
 const isMobile768 = () => window.innerWidth <= 768;
-
-
-// left-wrap 배경색 반응형 처리
-// const mediaQuery = window.matchMedia("(max-width: 768px)");
-// const leftWrap = document.querySelector(".history__left-wrap");
-
-// const applyBg = () => {
-//     leftWrap.style.backgroundColor = mediaQuery.matches ? "#ffffff" : "transparent";
-// }
-
-// applyBg();
-// mediaQuery.addEventListener("change", applyBg);
 
 
 // 처음 셋팅
@@ -141,7 +127,7 @@ mm.add("(min-width: 769px)", () => {
             );
             gsap.set(".history__left-wrap", {
                 height: "auto",  // 또는 원하는 값
-                // maxHeight: "none",
+                maxHeight: "none",
             });
         },
         snap: snaps
@@ -192,15 +178,6 @@ mm.add("(max-width: 768px)", () => {
         });
     });
 });
-
-// 배경과 스타일 적용
-// gsap.set(".history__left-wrap", {
-//     backgroundColor: "black",
-//     padding: "20px",
-//     width: "100%"
-// });
-// });
-
 
 
 // partners Swiper =============================================

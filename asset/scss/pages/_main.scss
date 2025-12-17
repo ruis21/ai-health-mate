@@ -508,83 +508,10 @@
         display: block;
         overflow: hidden;
         white-space: nowrap;
-        // box-sizing: content-box;
         width: 0;
-        border-right: .15em solid transparent;
-        /* 기본은 투명 */
+        border-right: .15em solid $whiteColor01;
         @include defineFont(rem(36), 600);
-        /* 폰트사이즈 36 */
-        animation-fill-mode: forwards;
-    }
-
-    /* 1번째 줄: 타이핑 중에는 커서 표시, 타이핑 끝나면 커서 제거 */
-    .typing-line:nth-child(1) {
-        animation:
-            typing 1.2s steps(12, end) forwards,
-            caret-typing 2.4s linear forwards;
-        animation-delay: 0s, 0s;
-    }
-
-    /* 마지막 줄: 앞줄이 끝난 뒤 시작
-       - typing: 글자 표시
-       - caret-typing-keep: 타이핑 동안 커서 지속(끝나도 유지)
-       - blink-caret: 타이핑 끝난 뒤 깜빡임 시작 */
-    .typing-line:last-child {
-        animation:
-            typing 1.8s steps(18, end) forwards,
-            caret-typing-keep 1.8s linear forwards,
-            blink-caret .75s step-end infinite;
-        /* delays: 시작(2.7s), caret-typing-keep 같은 시작(2.7s), blink 시작은 타이핑 끝난 뒤(4.5s) */
-        animation-delay: 2.7s, 2.7s, 4.5s;
-    }
-
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 100%;
-        }
-    }
-
-    /* 첫 줄 전용: 타이핑 기간에는 커서 보이고 끝에서 사라짐 */
-    @keyframes caret-typing {
-        0% {
-            border-right-color: rgba(255, 255, 255, 0.9);
-        }
-
-        99% {
-            border-right-color: rgba(255, 255, 255, 0.9);
-        }
-
-        100% {
-            border-right-color: transparent;
-        }
-    }
-
-    /* 마지막 줄: 타이핑 기간 동안 커서 유지(끝나도 유지, 이후 blink가 작동) */
-    @keyframes caret-typing-keep {
-        0% {
-            border-right-color: rgba(255, 255, 255, 0.9);
-        }
-
-        100% {
-            border-right-color: rgba(255, 255, 255, 0.9);
-        }
-    }
-
-    /* 마지막 줄 깜빡이 커서 (투명 <-> 흰색) */
-    @keyframes blink-caret {
-
-        0%,
-        100% {
-            border-right-color: transparent;
-        }
-
-        50% {
-            border-right-color: rgba(255, 255, 255, 0.9);
-        }
+        /* CSS animation 제거 - JS(GSAP)에서만 제어 */
     }
 }
 

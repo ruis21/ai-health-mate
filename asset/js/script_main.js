@@ -29,7 +29,7 @@ mm.add("(min-width: 769px)", () => {
     ScrollTrigger.create({
         animation: ani4,
         trigger: "#introduce-sec",
-        start: "top top",
+        start: "top 15%",
         end: "+=2000",
         scrub: 1,
         pin: true,
@@ -338,6 +338,59 @@ var previewSwiper = new Swiper(".previewSwiper", {
 });
 
 
+// ask section =======================================================
+(function () {
+    const askSection = document.querySelector('.ask');
+    if (!askSection) return;
+
+    const typingLines = gsap.utils.toArray('.ask .typing-line');
+    if (!typingLines.length) return;
+
+    console.log('ask typing animation init', typingLines.length, 'lines');
+
+    ScrollTrigger.create({
+        trigger: '.ask',
+        start: 'top 60%',
+        onEnter: () => {
+            console.log('ask section entered - animation start');
+
+            // 초기 상태 강제 설정
+            gsap.set(typingLines, { width: 0 });
+
+            const tl = gsap.timeline();
+
+            // 1번째 줄: 타이핑 (0 ~ 1.2s)
+            tl.to(typingLines[0], {
+                width: '100%',
+                duration: 1.2,
+                ease: 'steps(12, end)'
+            }, 0)
+                // 1번째 줄 커서 제거 (1.2s)
+                .to(typingLines[0], {
+                    borderRightColor: 'transparent',
+                    duration: 0.1
+                }, 1.2);
+
+            // 2번째 줄: 타이핑 (1.3s ~ 3.1s)
+            if (typingLines[1]) {
+                tl.to(typingLines[1], {
+                    width: '100%',
+                    duration: 1.8,
+                    ease: 'steps(18, end)'
+                }, 1.3) // 1번째 줄 끝난 직후(0.1초 후) 시작
+                    // 2번째 줄 커서 깜빡임 시작 (3.1s부터 무한 반복)
+                    .to(typingLines[1], {
+                        borderRightColor: 'rgba(255, 255, 255, 0)',
+                        duration: 0.375,
+                        ease: 'none',
+                        repeat: -1,
+                        yoyo: true
+                    }, 3.1);
+            }
+        },
+        once: true
+    });
+})();
 
 
 

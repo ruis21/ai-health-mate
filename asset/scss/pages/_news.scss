@@ -91,6 +91,7 @@
     }
 
     &__board-wrap {
+        margin-top: rem(50);
 
         form {
             @include flex (flex-end, center, rem(10));
@@ -100,7 +101,6 @@
 
         input {
             width: 100%;
-            ;
         }
 
         .search-btn {
@@ -220,12 +220,15 @@
 
                 select {
                     width: 100%;
+                    height: rem(30);
+                    padding: 0 rem(10);
                 }
 
                 input {
                     width: 100%;
                     flex: 1;
-                    min-width: 0;
+                    padding: rem(10);
+                    height: rem(30);
                 }
 
                 label select,

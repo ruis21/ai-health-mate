@@ -47,7 +47,6 @@
 
         &.on {
             color: $blackColor01;
-            // text-decoration: underline;
             transition: all 0.3s ease-in-out;
 
             &::after {
@@ -98,10 +97,11 @@
 // faq tab-menu custom 
 
 .faq__tab-menu {
-    @include flex;
+    @include flex(space-between, center);
     background-color: $grayColor04;
     border-radius: rem(40);
     color: $grayColor01;
+    text-align: center;
     @include defineFont(rem(22), 600);
 
     a {
@@ -116,8 +116,9 @@
         }
     }
 
-    @include media-breakpoint-down(lg) {
 
+    @include media-breakpoint-down(lg) {
+        border-radius: 0;
         gap: rem(65);
         @include defineFont(rem(18), 600);
     }

@@ -1,13 +1,5 @@
 .faq {
     &__tab-menu {
-        @include flex(space-between, center);
-        background-color: $grayColor04;
-        // border-radius: rem(40);
-        color: $grayColor01;
-        @include defineFont(rem(22), 600);
-        // flex-wrap: wrap;
-        text-align: center;
-
         // ↓ 아래 추가
         overflow-x: auto; // 가로 스크롤 활성화
         overflow-y: hidden; // 세로 스크롤 제거
@@ -36,22 +28,16 @@
     &__search-box {
         position: relative;
 
-        form {
-            // float: right;
+        label {
             position: absolute;
-            top: rem(-80);
+            margin-top: rem(-80);
             right: 0;
+            height: rem(50);
         }
 
         .search-btn {
             background-color: transparent;
         }
-
-        select {
-            display: flex;
-            align-items: center;
-        }
-
     }
 
     &__board {
@@ -197,32 +183,39 @@
         &__tab-menu {
             background-color: $whiteColor01;
             margin-bottom: rem(120);
-
-            label {
-                height: rem(50);
-            }
-
-            input {
-                height: rem(50);
-            }
         }
 
         &__menu {
             background-color: $grayColor04;
-            width: fit-content;
             border-radius: rem(40);
-            color: $grayColor01;
 
             a {
                 padding: rem(12) rem(25);
             }
         }
 
+        &__search-box {
+
+            label {
+                width: 100%;
+                // height: rem(50);
+                margin-top: rem(-70);
+            }
+
+            input {
+                padding: rem(10);
+                height: rem(20);
+            }
+        }
+
+
+
         &__board {
             padding: rem(40) rem(40);
         }
     }
 }
+
 
 @include media-breakpoint-down('md') {
     .faq {
