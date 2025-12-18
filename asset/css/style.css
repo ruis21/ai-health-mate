@@ -8890,7 +8890,7 @@ p {
 }
 .field-box label {
   border: 1px solid #ADADAD;
-  color: #ADADAD;
+  color: #7E7E7E;
   border-radius: 1.875rem;
   padding: 0.625rem 1.25rem;
   font-size: 1rem;
@@ -8900,17 +8900,14 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.625rem;
   flex-direction: row;
+  width: fit-content;
 }
 .field-box input {
   border: none;
   outline: none;
-  height: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+  padding: 0 1.25rem;
+  width: fit-content;
 }
 .field-box input:active {
   border: 1px solid #3a3838;
@@ -8924,7 +8921,8 @@ p {
   height: 3rem;
   outline: none;
   border: none;
-  width: 200px;
+  width: 12.5rem;
+  padding: 1.25rem;
 }
 
 .title {
@@ -8964,6 +8962,7 @@ p {
   align-items: center;
   width: fit-content;
   gap: 1.25rem;
+  text-align: center;
 }
 @media (max-width: 767.98px) {
   .btn {
@@ -9027,6 +9026,12 @@ p {
 .membership__btn:hover {
   background: linear-gradient(135deg, #0ED058, #0097F6);
   color: #ffffff;
+}
+@media (max-width: 540.98px) {
+  .membership__btn {
+    padding: 0.9375rem 2.5rem;
+    font-size: 1rem;
+  }
 }
 
 .inquiry__btn {
@@ -9826,6 +9831,9 @@ p {
     margin: 10vh 0;
     height: 40vh;
   }
+  .merit__img-wrap .img {
+    background-size: cover;
+  }
   .preview {
     margin-top: 5rem;
   }
@@ -10425,9 +10433,13 @@ p {
 }
 .news__board-wrap select {
   height: 1.875rem;
+  padding: 0 0.75rem;
+  line-height: 1.875rem;
 }
 .news__board-wrap input {
   height: 1.875rem;
+  padding: 0 0.75rem;
+  line-height: 1.875rem;
 }
 .news__board-wrap .search-btn {
   background-color: transparent;
@@ -10555,12 +10567,14 @@ p {
     width: 100%;
     height: 1.875rem;
     padding: 0 0.625rem;
+    line-height: 1.875rem;
   }
   .news__board-wrap form input {
     width: 100%;
     flex: 1;
-    padding: 0.625rem;
+    padding: 0 0.625rem;
     height: 1.875rem;
+    line-height: 1.875rem;
   }
   .news__board-wrap form label select,
   .news__board-wrap form label input {
@@ -10749,14 +10763,11 @@ p {
   color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
-.faq__search-box {
-  position: relative;
-}
 .faq__search-box label {
-  position: absolute;
   margin-top: -5rem;
-  right: 0;
-  height: 3.125rem;
+  margin-bottom: 1.875rem;
+  width: fit-content;
+  float: right;
 }
 .faq__search-box .search-btn {
   background-color: transparent;
@@ -10895,8 +10906,11 @@ p {
     margin-top: -4.375rem;
   }
   .faq__search-box input {
-    padding: 0.625rem;
-    height: 1.25rem;
+    width: 100%;
+    flex: 1;
+    padding: 0 0.625rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
   }
   .faq__board {
     padding: 2.5rem 2.5rem;

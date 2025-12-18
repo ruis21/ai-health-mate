@@ -14,6 +14,7 @@
     width: fit-content;
     // height: fit-content;
     gap: rem(20);
+    text-align: center;
 
     // 중간 화면에서 md 크기
     @include media-breakpoint-down(lg) {
@@ -81,14 +82,6 @@
         span {
             @include gradient;
         }
-
-        // &--md {
-        //     height: rem(48);
-        // }
-
-        // &--sm {
-        //     height: rem(44);
-        // }
     }
 }
 
@@ -102,6 +95,13 @@
         &:hover {
             background: $gradientColor01;
             color: $whiteColor01;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__btn {
+            padding: rem(15) rem(40);
+            font-size: rem(16);
         }
     }
 

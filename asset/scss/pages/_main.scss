@@ -596,16 +596,6 @@
 
         &__text-wrap {
             padding: calc(rem(150) + rem(77)) 0 rem(150);
-
-            .line {
-
-                // height: rem(60);
-
-                // .ai,
-                // .kv__title {
-                //     @include defineFont (rem(32), 600);
-                // }
-            }
         }
     }
 
@@ -685,6 +675,10 @@
         &__img-wrap {
             margin: 10vh 0;
             height: 40vh;
+
+            .img {
+                background-size: cover;
+            }
         }
     }
 

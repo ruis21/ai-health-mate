@@ -29,7 +29,7 @@ mm.add("(min-width: 769px)", () => {
     ScrollTrigger.create({
         animation: ani4,
         trigger: "#introduce-sec",
-        start: "top 15%",
+        start: "top 12%",
         end: "+=2000",
         scrub: 1,
         pin: true,

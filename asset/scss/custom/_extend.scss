@@ -138,18 +138,19 @@
 
     label {
         border: 1px solid $grayColor02;
-        color: $grayColor02;
+        color: $grayColor01;
         border-radius: rem(30);
         padding: rem(10) rem(20);
         @include defineFont (rem(16));
-        @include flex(space-between, center, rem(10));
+        @include flex(space-between, center);
+        width: fit-content;
     }
 
     input {
         border: none;
         outline: none;
-        height: rem(48);
-        @include flex(space-between, center);
+        padding: 0 rem(20);
+        width: fit-content;
 
         &:active {
             border: 1px solid $blackColor02;
@@ -166,9 +167,9 @@
         height: rem(48);
         outline: none;
         border: none;
-        width: 200px;
+        width: rem(200);
+        padding: rem(20);
     }
-
 }
 
 

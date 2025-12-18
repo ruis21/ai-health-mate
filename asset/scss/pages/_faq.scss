@@ -26,13 +26,12 @@
     }
 
     &__search-box {
-        position: relative;
 
         label {
-            position: absolute;
             margin-top: rem(-80);
-            right: 0;
-            height: rem(50);
+            margin-bottom: rem(30);
+            width: fit-content;
+            float: right;
         }
 
         .search-btn {
@@ -56,7 +55,6 @@
         }
 
         hr {
-            // margin: 0;
             border: 1px solid $grayColor01;
         }
 
@@ -203,12 +201,13 @@
             }
 
             input {
-                padding: rem(10);
-                height: rem(20);
+                width: 100%;
+                flex: 1;
+                padding: 0 rem(10);
+                height: rem(30);
+                line-height: rem(30);
             }
         }
-
-
 
         &__board {
             padding: rem(40) rem(40);
