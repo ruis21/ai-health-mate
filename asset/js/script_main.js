@@ -22,7 +22,7 @@ mm.add("(min-width: 769px)", () => {
     ani4.from("#introduce-sec .introduce__conts", {
         autoAlpha: 0,
         scale: 0.5,
-        transformOrigin: "center top",
+        transformOrigin: "center center",
         ease: "power2.out"
     });
 
@@ -249,67 +249,10 @@ gsap.fromTo(".txt05",
             trigger: ".txt05",
             start: "40% 80%",
             end: "center 60%",
-            scrub: true,
-            markers: true
+            scrub: true
         }
     }
 );
-
-// 💡 img05는 마지막이라 사라지는 애니메이션 없음!
-
-
-// gsap.set(".merit__img-wrap .img", { zIndex: (i, target, targets) => targets.length - i });
-
-// var images = gsap.utils.toArray(".merit__img-wrap .img:not(:last-of-type)");
-
-// images.forEach((image, i) => {
-//     var tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: ".merit__card-wrap",
-//             start: () => "top -" + window.innerHeight * (i + 0.5),
-//             end: () => "+=" + window.innerHeight,
-//             scrub: true,
-//             toggleActions: "play none reverse none",
-//             invalidateOnRefresh: true
-//         }
-//     });
-
-//     tl.to(image, { height: 0 });
-// });
-
-// gsap.set(".merit__txt-wrap .txt", { zIndex: (i, target, targets) => targets.length - i });
-
-// var texts = gsap.utils.toArray(".merit__txt-wrap .txt");
-
-// texts.forEach((text, i) => {
-//     var tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: ".merit",
-//             start: () => "top -" + window.innerHeight * i,
-//             end: () => "+=" + window.innerHeight,
-//             scrub: true,
-//             toggleActions: "play none reverse none",
-//             invalidateOnRefresh: true
-//         }
-//     });
-
-//     tl.to(text, { duration: 0.33, opacity: 1, y: "50%" }).to(
-//         text,
-//         { duration: 0.33, opacity: 0, y: "0%" },
-//         0.66
-//     );
-// });
-
-// ScrollTrigger.create({
-//     trigger: ".merit__card-wrap",
-//     scrub: true,
-//     markers: true,
-//     pin: true,
-//     start: () => "top top",
-//     end: () => "+=" + (images.length + 1) * window.innerHeight,
-//     invalidateOnRefresh: true
-// });
-
 
 
 // preview Swiper ==============================================
