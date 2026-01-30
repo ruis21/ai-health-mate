@@ -73,16 +73,16 @@
     .hamburger-btn {
         position: absolute;
         right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        // top: 50%;
+        // transform: translateY(-50%);
         width: 25px;
-        height: 20px; // 50px → 20px로 줄임
+        height: 20px;
         display: none;
         flex-direction: column;
-        justify-content: space-between; // space-around → space-between
+        justify-content: space-between;
         background: none;
         border: none;
-        padding: 0; // padding 제거
+        padding: 0;
 
 
         .line {
@@ -106,10 +106,6 @@
 
     .hamburger-btn.active .line:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
-    }
-
-    &__nav {
-        display: none;
     }
 
 
@@ -172,15 +168,6 @@
             }
         }
     }
-
-    // .bg-line {
-    //     height: rem(1);
-    //     background-color: $grayColor05;
-    //     opacity: 0.5;
-    //     width: 100%;
-    //     position: fixed;
-    //     top: rem(77);
-    // }
 
 
     .menu-bg {

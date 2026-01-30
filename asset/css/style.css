@@ -9115,8 +9115,6 @@ p {
 .header .hamburger-btn {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
   width: 25px;
   height: 20px;
   display: none;
@@ -9141,9 +9139,6 @@ p {
 }
 .header .hamburger-btn.active .line:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
-}
-.header__nav {
-  display: none;
 }
 .header .m-header__nav {
   display: none;
@@ -9443,7 +9438,6 @@ p {
   align-items: center;
   gap: 5%;
   flex-direction: column;
-  position: relative;
   transition: 0.3s all ease;
 }
 .solution__card img {
@@ -9965,9 +9959,6 @@ p {
 .about img {
   opacity: 0;
   transform: translateY(30px);
-}
-.about__circle {
-  color: #ffffff;
 }
 .about__txt p {
   font-size: 2rem;
