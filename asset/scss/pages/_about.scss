@@ -18,10 +18,6 @@
 
     //=====================================
 
-    // &__circle {
-    //     color: $whiteColor01;
-    // }
-
     &__txt {
         p {
             @include defineFont (rem(32));
@@ -34,11 +30,9 @@
 
     }
 
-
     img {
         margin: 0 auto;
     }
-
 
     .pinned {
         // height: 100vh;
@@ -58,7 +52,6 @@
         opacity: 0;
         transform: translateY(20px);
     }
-
 }
 
 
