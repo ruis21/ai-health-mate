@@ -9043,6 +9043,10 @@ p {
   background-color: #0097F6;
   color: #ffffff;
 }
+.inquiry__btn:disabled {
+  background-color: #ADADAD;
+  color: #ffffff;
+}
 
 .header {
   background-color: rgba(0, 0, 0, 0.9);

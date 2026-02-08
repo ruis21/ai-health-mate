@@ -73,3 +73,41 @@ if (tabMenu) {
     // 초기 커서 설정
     tabMenu.style.cursor = 'grab';
 }
+
+// 폼 제출 버튼 활성화/비활성화 검증 ==============================
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('form').forEach(f => validateForm(f));
+});
+
+function validateForm(formElement) {
+    const submitBtn = formElement.querySelector('.inquiry__btn');
+    if (!submitBtn) return;
+
+    // required 필드들 가져오기
+    const requiredFields = formElement.querySelectorAll('[required]');
+
+    function checkFormValidity() {
+        let allValid = true;
+
+        requiredFields.forEach(field => {
+            if (field.type === 'checkbox') {
+                if (!field.checked) allValid = false;
+            } else if (field.tagName === 'INPUT' || field.tagName === 'TEXTAREA') {
+                if (!field.value.trim()) allValid = false;
+            }
+        });
+
+        // 버튼 활성화/비활성화
+        submitBtn.disabled = !allValid;
+    }
+
+    // 초기 상태 체크
+    checkFormValidity();
+
+    // 이벤트 리스너 등록
+    requiredFields.forEach(field => {
+        field.addEventListener('input', checkFormValidity);
+        field.addEventListener('change', checkFormValidity);
+    });
+}

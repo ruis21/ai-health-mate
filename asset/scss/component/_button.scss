@@ -109,7 +109,10 @@
             background-color: $primaryColor02;
             color: $whiteColor01;
         }
+
+        &:disabled {
+            background-color: $grayColor02;
+            color: $whiteColor01;
+        }
     }
 }
-
-.news {}
