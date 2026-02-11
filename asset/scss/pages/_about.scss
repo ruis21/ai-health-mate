@@ -5,8 +5,6 @@
         background-image: url(../image/about-bg.jpg);
     }
 
-    //=====================================
-
     &__title,
     &__txt>p:first-child,
     &__text-wrap,
@@ -15,8 +13,6 @@
         opacity: 0;
         transform: translateY(30px);
     }
-
-    //=====================================
 
     &__txt {
         p {
@@ -40,7 +36,6 @@
         @include flex(center, center);
         position: relative;
     }
-
 
     &__txt {
         margin-top: rem(20);
@@ -107,12 +102,10 @@
         }
     }
 
-
     &__path {
         top: rem(70);
         right: rem(300);
     }
-
 }
 
 // history section 
@@ -131,10 +124,7 @@
 
     @include media-breakpoint-down('lg') {
         background-image: none;
-        // background-color: transparent;
-        // background-attachment: unset;
     }
-
 
     .num {
         font-weight: 700;
@@ -148,37 +138,24 @@
     &__wrap {
         width: 100%;
         display: flex;
-        // =================================
         position: relative;
         width: 100%;
         height: 100%;
-        // height: 400vh;
-        // ================================
     }
-
-
 
     &__left-wrap {
         width: 30%;
-        // max-height: 100vh;
-        // ==================================
-        // position: sticky;
-        // top: 0;
-        // width: 100%;
         height: 100%;
-        // ==================================
     }
 
     &__left {
-        // ==================================;
+
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        // height: 100vh;
         display: flex;
         flex-direction: column;
-        // ==================================
         height: 80vh;
     }
 
@@ -193,7 +170,6 @@
     .left04 {
         opacity: 0;
     }
-
 
     &__year {
         @include defineFont(rem(48), 700);
@@ -237,9 +213,6 @@
     }
 
     .swiper-slide {
-        // text-align: center;
-        // font-size: 18px;
-        // background: #444;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -262,11 +235,9 @@
 @include media-breakpoint-down('xl') {
     .history {
         background-position: left 0 top rem(50), right rem(50) bottom rem(50);
-        // background-size: auto, auto;
         background-size: 400px auto, 350px auto;
     }
 }
-
 
 @include media-breakpoint-down('lg') {
 
@@ -314,8 +285,6 @@
     }
 
     .history {
-
-
         &__title {
             background-color: $whiteColor01;
             padding: 200px;
@@ -365,9 +334,7 @@
             @include defineFont (rem(80), 600, 1.2, rem(5));
         }
     }
-
 }
-
 
 @include media-breakpoint-down('md') {
     .about {

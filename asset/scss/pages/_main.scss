@@ -47,8 +47,6 @@
         }
     }
 
-
-
     .ai {
         position: relative;
         z-index: 10;
@@ -68,8 +66,6 @@
         }
     }
 
-
-
     &__title {
         font-family: "Science Gothic";
         @include defineFont (rem(60), 600);
@@ -85,8 +81,6 @@
         }
     }
 }
-
-
 
 
 // introduce section ==========================================
@@ -131,7 +125,6 @@
         z-index: 1;
         padding: 0 rem(20);
     }
-
 
     &__arrow {
 

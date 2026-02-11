@@ -188,6 +188,7 @@ var partnersSwiper = new Swiper(".partnersSwiper", {
     freeMode: true,
     speed: 3500,
     allowTouchMove: false,
+    simulateTouch: false,
     autoplay: {
         delay: 0,
         disableOnInteraction: false
