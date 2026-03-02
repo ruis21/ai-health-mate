@@ -17,7 +17,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- style sheet  -->
-    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
@@ -29,7 +29,7 @@
         <div class="container-xxl header__wrap">
             <h1 class="header__logo">
                 <a href="index.html">
-                    <img src="./asset/image/new-logo.png" alt="로고 이미지">
+                    <img src="./assets/image/new-logo.png" alt="로고 이미지">
                 </a>
             </h1>
 
@@ -163,7 +163,7 @@
                     <div class="transit mt-5">
                         <div class="subway">
                             <div class="subway__title">
-                                <img src="./asset/image/map-subway-icon.png" alt="지하철 아이콘">
+                                <img src="./assets/image/map-subway-icon.png" alt="지하철 아이콘">
                                 <h3>지하철 이용 시</h3>
                             </div>
                             <hr>
@@ -176,7 +176,7 @@
                         </div>
                         <div class="bus">
                             <div class="bus__title">
-                                <img src="./asset/image/map-bus-icon.png" alt="버스 아이콘">
+                                <img src="./assets/image/map-bus-icon.png" alt="버스 아이콘">
                                 <h3>버스 이용 시</h3>
                             </div>
                             <hr>
@@ -198,7 +198,7 @@
     <footer class="footer">
         <div class="container-xxl footer__wrap">
             <div class="footer__txt">
-                <img src="./asset/image/new-footer-logo.png" alt="푸터 로고" class="footer-logo">
+                <img src="./assets/image/new-footer-logo.png" alt="푸터 로고" class="footer-logo">
                 <ul class="pt-3 flex-wrap">
                     <li>
                         <a href="#">회사소개</a>
@@ -224,10 +224,10 @@
             </div>
             <div class="footer__sns d-flex gap-3">
                 <a href="#">
-                    <img src="./asset/image/facebook-icon.png" alt="페이스북 아이콘">
+                    <img src="./assets/image/facebook-icon.png" alt="페이스북 아이콘">
                 </a>
                 <a href="#">
-                    <img src="./asset/image/youtube-icon.png" alt="유투브 아이콘">
+                    <img src="./assets/image/youtube-icon.png" alt="유투브 아이콘">
                 </a>
             </div>
         </div>
@@ -235,7 +235,7 @@
 
 
     <!-- jquery js  -->
-    <script src="./asset/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
 
     <!-- bootstrap js  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -243,7 +243,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Swiper JS -->
-    <script src="./asset/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -256,39 +256,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
 
-    <!-- 카카오 지도 API  -->
-    <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e783ade556bb48627750e7750bb6ade"></script>
-    <script>
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-            mapOption = {
-                center: new kakao.maps.LatLng(37.499804, 127.032523), // 지도의 중심좌표
-                level: 4 // 지도의 확대 레벨
+    <!-- 카카오 지도 API (로드 완료 후 초기화) -->
+    <script type="text/javascript">
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=9e783ade556bb48627750e7750bb6ade&autoload=false';
+            script.async = true;
+            script.onload = function() {
+                kakao.maps.load(function() {
+                    var mapContainer = document.getElementById('map');
+                    if (!mapContainer) return;
+                    var mapOption = {
+                        center: new kakao.maps.LatLng(37.499804, 127.032523),
+                        level: 4
+                    };
+                    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+                    var imageSrc = 'https://i.ifh.cc/gDMlJ8.png',
+                        imageSize = new kakao.maps.Size(50, 70),
+                        imageOption = { offset: new kakao.maps.Point(27, 69) };
+                    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+                        markerPosition = new kakao.maps.LatLng(37.499804, 127.032523);
+                    var marker = new kakao.maps.Marker({
+                        position: markerPosition,
+                        image: markerImage
+                    });
+                    marker.setMap(map);
+                });
             };
-
-        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-        var imageSrc = 'https://i.ifh.cc/gDMlJ8.png', // 마커이미지의 주소입니다    
-            imageSize = new kakao.maps.Size(50, 70), // 마커이미지의 크기입니다
-            imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-
-        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-            markerPosition = new kakao.maps.LatLng(37.499804, 127.032523); // 마커가 표시될 위치입니다
-
-        // 마커를 생성합니다
-        var marker = new kakao.maps.Marker({
-            position: markerPosition,
-            image: markerImage // 마커이미지 설정 
-        });
-
-        // 마커가 지도 위에 표시되도록 설정합니다
-        marker.setMap(map);
-
+            document.head.appendChild(script);
+        })();
     </script>
 
-    <script src="./asset/js/script_header.js"></script>
-    <script src="./asset/js/script_contact.js"></script>
+    <script src="./assets/js/script_header.js"></script>
+    <script src="./assets/js/script_contact.js"></script>
 
 
 </body>
