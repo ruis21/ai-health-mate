@@ -256,7 +256,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
 
-    <!-- 카카오 지도 API (로드 완료 후 초기화) -->
+    <!-- 카카오 지도 API (로드 완료 후 초기화, AOS 노출 시 relayout) -->
     <script type="text/javascript">
         (function() {
             var script = document.createElement('script');
@@ -282,6 +282,17 @@
                         image: markerImage
                     });
                     marker.setMap(map);
+
+                    // AOS로 섹션이 보일 때 지도 크기 재계산 (안 하면 지도가 0x0으로 초기화되어 안 보일 수 있음)
+                    function relayoutMap() {
+                        if (map) map.relayout();
+                    }
+                    var mapSec = document.getElementById('map-sec');
+                    if (mapSec) {
+                        mapSec.addEventListener('aos:in', relayoutMap);
+                    }
+                    window.addEventListener('load', relayoutMap);
+                    setTimeout(relayoutMap, 800);
                 });
             };
             document.head.appendChild(script);
