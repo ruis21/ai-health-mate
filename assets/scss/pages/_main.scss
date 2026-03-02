@@ -1,4 +1,4 @@
-﻿// kv section ==============================================
+// kv section ==============================================
 .kv {
     background: linear-gradient(to left,
             rgba(20, 20, 20, 0) 10%,
@@ -6,7 +6,7 @@
             rgba(20, 20, 20, 0.5) 50%,
             rgba(20, 20, 20, 0.75) 75%,
             rgba(20, 20, 20, 1) 100%),
-        url("/asset/image/kv-bg02.png");
+        url("/assets/image/kv-bg02.png");
     height: 100vh;
     @include flex(center, flex-start, 0, column);
     @include bgImg();
@@ -330,27 +330,27 @@
     }
 
     .img01 {
-        background-image: url("/asset/image/merit-card01.jpg");
+        background-image: url("/assets/image/merit-card01.jpg");
         z-index: 5;
     }
 
     .img02 {
-        background-image: url("/asset/image/merit-card02.jpg");
+        background-image: url("/assets/image/merit-card02.jpg");
         z-index: 4;
     }
 
     .img03 {
-        background-image: url("/asset/image/merit-card03.jpg");
+        background-image: url("/assets/image/merit-card03.jpg");
         z-index: 3;
     }
 
     .img04 {
-        background-image: url("/asset/image/merit-card04.jpg");
+        background-image: url("/assets/image/merit-card04.jpg");
         z-index: 2;
     }
 
     .img05 {
-        background-image: url("/asset/image/merit-card05.jpg");
+        background-image: url("/assets/image/merit-card05.jpg");
         z-index: 1;
     }
 

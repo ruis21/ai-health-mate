@@ -9323,7 +9323,7 @@ p {
 }
 
 .kv {
-  background: linear-gradient(to left, rgba(20, 20, 20, 0) 10%, rgba(20, 20, 20, 0.25) 25%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/asset/image/kv-bg02.png");
+  background: linear-gradient(to left, rgba(20, 20, 20, 0) 10%, rgba(20, 20, 20, 0.25) 25%, rgba(20, 20, 20, 0.5) 50%, rgba(20, 20, 20, 0.75) 75%, rgb(20, 20, 20) 100%), url("/assets/image/kv-bg02.png");
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -9641,23 +9641,23 @@ p {
   background-repeat: no-repeat;
 }
 .merit .img01 {
-  background-image: url("/asset/image/merit-card01.jpg");
+  background-image: url("/assets/image/merit-card01.jpg");
   z-index: 5;
 }
 .merit .img02 {
-  background-image: url("/asset/image/merit-card02.jpg");
+  background-image: url("/assets/image/merit-card02.jpg");
   z-index: 4;
 }
 .merit .img03 {
-  background-image: url("/asset/image/merit-card03.jpg");
+  background-image: url("/assets/image/merit-card03.jpg");
   z-index: 3;
 }
 .merit .img04 {
-  background-image: url("/asset/image/merit-card04.jpg");
+  background-image: url("/assets/image/merit-card04.jpg");
   z-index: 2;
 }
 .merit .img05 {
-  background-image: url("/asset/image/merit-card05.jpg");
+  background-image: url("/assets/image/merit-card05.jpg");
   z-index: 1;
 }
 
@@ -10160,7 +10160,7 @@ p {
   height: 100%;
   position: relative;
   z-index: 1;
-  background-image: url(/asset/image/history-bg01.png), url(/asset/image/history-bg02.png);
+  background-image: url(/assets/image/history-bg01.png), url(/assets/image/history-bg02.png);
   background-position: left 3.125rem top 6.25rem, right 6.25rem bottom 3.125rem;
   background-repeat: no-repeat;
   background-attachment: fixed, fixed;
