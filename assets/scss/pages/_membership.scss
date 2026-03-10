@@ -6,12 +6,12 @@
     }
 
     &__card {
-        @include flex(center, center, 0px, column);
+        @include flex(stretch, center, 0px, column);
         width: 32%;
         gap: 2%;
         border: 1px solid $grayColor02;
         border-radius: rem(20);
-        padding: rem(30);
+        padding: rem(60) rem(30);
         height: rem(588);
         // height: 100%;
         line-height: 2.0;
@@ -38,16 +38,21 @@
     &__card-txt {
 
         li {
-            @include flex(flex-start, stretch, rem(10));
-            font-size: rem(48);
+            @include flex(flex-start, start, rem(10));
+            font-size: rem(18);
+
+            img {
+                margin-top: rem(10);
+            }
         }
     }
 
     &__btn {
-        // @include gradient;
-        // border: 1px solid $grayColor02;
-        position: absolute;
-        top: 200px;
+        @include gradient;
+        border: 1px solid $grayColor02;
+        // position: absolute;
+        // bottom: rem(60);
+        margin-top: auto;
     }
 
     &__bg {
@@ -78,7 +83,7 @@
 @include media-breakpoint-down('lg') {
     .membership {
         &__card-wrap {
-            padding: 0 20px;
+            padding: 0 rem(20);
         }
     }
 }
@@ -87,6 +92,7 @@
     .membership {
         &__card-txt {
             font-size: rem(16);
+            margin-bottom: rem(30);
 
             li {
                 @include flex(flex-start, flex-start, rem(10));
@@ -113,6 +119,10 @@
             h4 {
                 @include defineFont (rem(22), 600);
             }
+        }
+
+        &__btn {
+            bottom: rem(30);
         }
     }
 }
