@@ -414,8 +414,6 @@
                 transition: all 0.3s ease-in-out;
             }
         }
-
-
     }
 
     &__direct-btn {
@@ -542,12 +540,8 @@
 
         &__title {
             @include defineFont(rem(50), 600);
-
         }
-
     }
-
-
 }
 
 @media (max-width: 1024px) {
@@ -557,8 +551,6 @@
         }
     }
 }
-
-
 
 @include media-breakpoint-down('lg') {
 
@@ -582,7 +574,6 @@
 
     // kv영역
     .kv {
-
         &__text-wrap {
             padding: calc(rem(150) + rem(77)) 0 rem(150);
         }
@@ -590,8 +581,6 @@
 
     // introduce 영역   
     .introduce {
-
-
         &__conts {
             width: 100%;
             height: 100%;
@@ -614,7 +603,6 @@
             word-break: keep-all;
         }
     }
-
 
     // solution 영역
     .solution {
@@ -648,7 +636,6 @@
                     @include defineFont(rem(18), 400, 1.6);
                 }
             }
-
         }
 
         &__card-wrap {
@@ -684,8 +671,6 @@
         }
     }
 }
-
-
 
 @include media-breakpoint-down('md') {
 
@@ -778,8 +763,22 @@
             }
         }
 
-
         &__card {
+            transform: translateY(-90px);
+
+            img {
+                opacity: 0;
+            }
+
+            ul {
+                opacity: 1;
+            }
+
+            .card-text {
+                @include defineFont(rem(22), 600);
+                transition: 0.3s all ease;
+            }
+
             &:hover {
                 .card-text {
                     @include defineFont(rem(22), 600);
