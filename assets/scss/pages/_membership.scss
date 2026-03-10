@@ -98,7 +98,7 @@
             margin-bottom: rem(30);
 
             li {
-                @include flex(flex-start, flex-start, rem(10));
+                @include flex(start, center, rem(10));
                 font-size: rem(18);
             }
 

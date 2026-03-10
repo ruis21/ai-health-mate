@@ -10816,8 +10816,8 @@ p {
   }
   .membership__card-txt li {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: start;
+    align-items: center;
     gap: 0.625rem;
     flex-direction: row;
     font-size: 1.125rem;
