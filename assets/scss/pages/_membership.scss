@@ -50,8 +50,6 @@
     &__btn {
         @include gradient;
         border: 1px solid $grayColor02;
-        // position: absolute;
-        // bottom: rem(60);
         margin-top: auto;
     }
 
@@ -71,6 +69,7 @@
 
         &__card {
             width: 100%;
+            height: rem(520);
         }
 
         &__bg {
@@ -84,6 +83,10 @@
     .membership {
         &__card-wrap {
             padding: 0 rem(20);
+        }
+
+        &__btn {
+            padding: rem(15) rem(40);
         }
     }
 }
@@ -123,6 +126,14 @@
 
         &__btn {
             bottom: rem(30);
+        }
+    }
+}
+
+@include media-breakpoint-down('sm') {
+    .membership {
+        &__card-txt {
+            margin-bottom: rem(30);
         }
     }
 }

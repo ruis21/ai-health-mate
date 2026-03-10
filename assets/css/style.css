@@ -10794,6 +10794,7 @@ p {
   }
   .membership__card {
     width: 100%;
+    height: 32.5rem;
   }
   .membership__bg {
     background-size: contain;
@@ -10803,6 +10804,9 @@ p {
 @media (max-width: 767.98px) {
   .membership__card-wrap {
     padding: 0 1.25rem;
+  }
+  .membership__btn {
+    padding: 0.9375rem 2.5rem;
   }
 }
 @media (max-width: 540.98px) {
@@ -10845,6 +10849,11 @@ p {
   }
   .membership__btn {
     bottom: 1.875rem;
+  }
+}
+@media (max-width: 392.98px) {
+  .membership__card-txt {
+    margin-bottom: 1.875rem;
   }
 }
 .faq__tab-menu {
