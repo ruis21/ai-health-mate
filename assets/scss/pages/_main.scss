@@ -384,7 +384,7 @@
         @include flex(space-between, stretch, 0px, column);
         position: relative;
 
-        h5 {
+        h3 {
             @include defineFont (rem(20), 600);
             @include lineClamp2;
         }

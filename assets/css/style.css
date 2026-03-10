@@ -9520,6 +9520,13 @@ p {
   color: #ffffff;
   text-align: center;
 }
+.solution__subtitle .solution__arrow {
+  list-style: none;
+  line-height: 0;
+}
+.solution__subtitle .solution__arrow img {
+  display: block;
+}
 .solution__card-wrap {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 1.5rem;
@@ -9678,7 +9685,7 @@ p {
   flex-direction: column;
   position: relative;
 }
-.preview__card h5, .preview__card .h5 {
+.preview__card h3, .preview__card .h3 {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.3;
