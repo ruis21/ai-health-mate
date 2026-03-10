@@ -17,7 +17,7 @@
 
             img {
                 object-fit: cover;
-                width: 150px;
+                width: rem(150);
                 // height: 50px;
                 display: block;
             }
@@ -26,7 +26,7 @@
 
     &__menu-list {
         @include flex(space-between, center, 3%);
-        margin-right: 20px;
+        margin-right: rem(20);
     }
 
     &__menu {
@@ -51,7 +51,7 @@
     &__sub-menu-list {
         position: absolute;
         z-index: 5;
-        top: 75px;
+        top: rem(75);
         display: none;
     }
 
@@ -59,7 +59,7 @@
         a {
             display: block;
             // width: 200px;
-            padding: 15px 10px;
+            padding: rem(15) rem(10);
         }
 
         &:hover a {
@@ -71,11 +71,11 @@
     // hamburget-btn
     .hamburger-btn {
         position: absolute;
-        right: 20px;
+        right: rem(20);
         // top: 50%;
         // transform: translateY(-50%);
-        width: 25px;
-        height: 20px;
+        width: rem(25);
+        height: rem(20);
         display: none;
         flex-direction: column;
         justify-content: space-between;
@@ -150,8 +150,15 @@
                 background-color: $whiteColor01;
                 width: 100%;
                 position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.2s ease, visibility 0.2s ease;
             }
 
+            &.is-open .line {
+                opacity: 1;
+                visibility: visible;
+            }
         }
 
         &__sub-menu-list {
