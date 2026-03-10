@@ -183,14 +183,21 @@
         @include flex(center, center, 5%);
         @include defineFont(rem(26));
 
-
         .solution__items {
-
             border: 1px solid $whiteColor01;
             border-radius: rem(30);
             padding: rem(10) rem(20);
             color: $whiteColor01;
             text-align: center;
+        }
+
+        .solution__arrow {
+            list-style: none;
+            line-height: 0;
+
+            img {
+                display: block;
+            }
         }
     }
 
