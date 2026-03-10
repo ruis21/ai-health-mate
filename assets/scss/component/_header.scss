@@ -37,7 +37,7 @@
 
         a {
             display: block;
-            width: 140px;
+            width: rem(140);
             @include defineFont(rem(18), 500);
         }
 
@@ -68,7 +68,6 @@
         }
     }
 
-
     // hamburget-btn
     .hamburger-btn {
         position: absolute;
@@ -88,7 +87,7 @@
         .line {
             display: block;
             width: 100%;
-            height: 2px;
+            height: rem(2);
             background: $whiteColor01;
             transition: 0.3s;
         }
@@ -130,7 +129,7 @@
 
         &__menu {
             @include defineFont(rem(22), 500);
-            // position: relative;
+            position: relative;
             z-index: 5;
 
 
@@ -147,9 +146,10 @@
             }
 
             .line {
-                height: 1.5px;
+                height: rem(1.5);
                 background-color: $whiteColor01;
                 width: 100%;
+                position: absolute;
             }
 
         }

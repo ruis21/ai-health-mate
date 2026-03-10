@@ -18,11 +18,12 @@ $(function () {
 
 
     // 모바일에서 m-nav 메뉴 클릭시 서브메뉴 등장
+    // .line이 a와 ul 사이에 있어도 서브메뉴를 찾을 수 있도록 nextAll 사용
     $(".m-header__menu > a").on("click", function (event) {
-        // 서브메뉴가 있는 경우만 토글
-        if ($(this).next(".m-header__sub-menu-list").length > 0) {
+        var $subList = $(this).nextAll(".m-header__sub-menu-list").first();
+        if ($subList.length > 0) {
             event.preventDefault();
-            $(this).next(".m-header__sub-menu-list").stop().slideToggle();
+            $subList.stop().slideToggle();
         }
         // 서브메뉴가 없으면 그냥 페이지 이동
     });
