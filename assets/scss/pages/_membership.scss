@@ -38,14 +38,16 @@
     &__card-txt {
 
         li {
-            @include flex(flex-start, center, rem(10));
-            font-size: rem(18);
+            @include flex(flex-start, stretch, rem(10));
+            font-size: rem(48);
         }
     }
 
     &__btn {
-        @include gradient;
-        border: 1px solid $grayColor02;
+        // @include gradient;
+        // border: 1px solid $grayColor02;
+        position: absolute;
+        top: 200px;
     }
 
     &__bg {

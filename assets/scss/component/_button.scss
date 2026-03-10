@@ -82,6 +82,8 @@
         @include gradient;
         background: $whiteColor01;
         padding: rem(20) rem(88);
+        border: 1px solid $grayColor02;
+
 
         &:hover {
             background: $gradientColor01;
