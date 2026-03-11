@@ -249,9 +249,7 @@
 
             .line p {
                 color: $primaryColor02;
-                font-size: rem(22) !important;
-                line-height: 1.0 !important;
-                // @include defineFont (rem(22), 600, 1.8);
+                font-size: rem(22);
             }
         }
     }
